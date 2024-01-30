@@ -6,13 +6,31 @@
 //
 
 import UIKit
-import SnapKit
 
 class KeyboardViewController: UIInputViewController {
+    var currentTextBuffer = "" {
+        didSet {
+            previewLabel.text = "«\(currentTextBuffer)»"
+        }
+    }
 
-    @IBOutlet var nextKeyboardButton: UIButton!
+    private lazy var nextKeyboardButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
+        button.sizeToFit()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
+        return button
+    }()
 
-    lazy var keyboardView: RussianKeyboardView = {
+    private lazy var previewLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .black
+        label.textAlignment = .center
+        return label
+    }()
+    private lazy var keyboardView: RussianKeyboardView = {
         let view = RussianKeyboardView()
         view.delegate = self
         return view
@@ -26,27 +44,30 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.addSubview(previewLabel)
+        view.addSubview(keyboardView)
+        view.addSubview(nextKeyboardButton)
         
-        // Perform custom UI setup here
-        self.nextKeyboardButton = UIButton(type: .system)
-        
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-        
-        self.view.addSubview(self.nextKeyboardButton)
-        
-        self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        previewLabel.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview().inset(4)
+            make.height.equalTo(20)
+        }
+        keyboardView.snp.makeConstraints { make in
+            make.top.equalTo(previewLabel.snp.bottom)
+            make.leading.trailing.bottom.equalToSuperview()
+        }
+        nextKeyboardButton.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
     
     override func viewWillLayoutSubviews() {
         self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
         super.viewWillLayoutSubviews()
     }
-    
+
     override func textWillChange(_ textInput: UITextInput?) {
         // The app is about to change the document's contents. Perform any preparation here.
     }
@@ -63,11 +84,17 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
+    
 
 }
 
 extension KeyboardViewController: RussianKeyboardViewDelegate {
     func russianKeyboardView(_ keyboardView: RussianKeyboardView, didTapKey key: String) {
-        textDocumentProxy.insertText(key)
+        if key == "space" {
+            textDocumentProxy.insertText(currentTextBuffer.replacingOccurrences(of: "А", with: "Ә"))
+            currentTextBuffer = ""
+        } else {
+            currentTextBuffer.append(key)
+        }
     }
 }

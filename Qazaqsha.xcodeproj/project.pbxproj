@@ -15,8 +15,11 @@
 		0B800E5A2B681AD000EADCA9 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E592B681AD000EADCA9 /* SnapKit-Dynamic */; };
 		0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */; };
 		0B800E662B681AEE00EADCA9 /* Batyrma.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0B800E6D2B681BFE00EADCA9 /* KeybaordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E6C2B681BFE00EADCA9 /* KeybaordButton.swift */; };
+		0B800E6D2B681BFE00EADCA9 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E6C2B681BFE00EADCA9 /* KeyboardButton.swift */; };
 		0B800E6F2B681C3E00EADCA9 /* RussianKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E6E2B681C3E00EADCA9 /* RussianKeyboardView.swift */; };
+		0B800E732B6829CC00EADCA9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E722B6829CC00EADCA9 /* SnapKit */; };
+		0B800E752B6829CC00EADCA9 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */; };
+		0B800E762B6829CC00EADCA9 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,17 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B800E772B6829CC00EADCA9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0B800E762B6829CC00EADCA9 /* SnapKit-Dynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +66,7 @@
 		0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Batyrma.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0B800E632B681AEE00EADCA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B800E6C2B681BFE00EADCA9 /* KeybaordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybaordButton.swift; sourceTree = "<group>"; };
+		0B800E6C2B681BFE00EADCA9 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		0B800E6E2B681C3E00EADCA9 /* RussianKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RussianKeyboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B800E732B6829CC00EADCA9 /* SnapKit in Frameworks */,
+				0B800E752B6829CC00EADCA9 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +98,7 @@
 				0B800E472B681A8900EADCA9 /* Qazaqsha */,
 				0B800E602B681AEE00EADCA9 /* Batyrma */,
 				0B800E462B681A8900EADCA9 /* Products */,
+				0B800E712B6829CC00EADCA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,10 +135,17 @@
 			children = (
 				0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */,
 				0B800E6E2B681C3E00EADCA9 /* RussianKeyboardView.swift */,
-				0B800E6C2B681BFE00EADCA9 /* KeybaordButton.swift */,
+				0B800E6C2B681BFE00EADCA9 /* KeyboardButton.swift */,
 				0B800E632B681AEE00EADCA9 /* Info.plist */,
 			);
 			path = Batyrma;
+			sourceTree = "<group>";
+		};
+		0B800E712B6829CC00EADCA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,12 +181,17 @@
 				0B800E5B2B681AEE00EADCA9 /* Sources */,
 				0B800E5C2B681AEE00EADCA9 /* Frameworks */,
 				0B800E5D2B681AEE00EADCA9 /* Resources */,
+				0B800E772B6829CC00EADCA9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Batyrma;
+			packageProductDependencies = (
+				0B800E722B6829CC00EADCA9 /* SnapKit */,
+				0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */,
+			);
 			productName = Batyrma;
 			productReference = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -241,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B800E6F2B681C3E00EADCA9 /* RussianKeyboardView.swift in Sources */,
-				0B800E6D2B681BFE00EADCA9 /* KeybaordButton.swift in Sources */,
+				0B800E6D2B681BFE00EADCA9 /* KeyboardButton.swift in Sources */,
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +565,16 @@
 			productName = SnapKit;
 		};
 		0B800E592B681AD000EADCA9 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		0B800E722B6829CC00EADCA9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";

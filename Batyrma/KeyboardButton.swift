@@ -1,5 +1,5 @@
 //
-//  KeybaordButton.swift
+//  KeyboardButton.swift
 //  Batyrma
 //
 //  Created by Daulet Almagambetov on 29.01.2024.

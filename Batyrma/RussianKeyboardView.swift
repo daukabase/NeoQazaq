@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 // delegate for key tap
 protocol RussianKeyboardViewDelegate: AnyObject {
@@ -64,6 +65,12 @@ private extension RussianKeyboardView {
             }
             stackView.addArrangedSubview(rowStackView)
         }
+
+        let spaceStack = createRowStackView()
+        let spaceKey = createKeyButton(title: "space")
+        spaceStack.addArrangedSubview(spaceKey)
+
+        stackView.addArrangedSubview(spaceStack)
     }
 
     func createRowStackView() -> UIStackView {
