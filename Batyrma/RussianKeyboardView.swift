@@ -39,7 +39,7 @@ struct RussianKeyboardViewModel {
             case .lowercased:
                 return .uppercasedOnce
             case .uppercasedOnce:
-                return .uppercased
+                return .lowercased
             case .uppercased:
                 return .lowercased
             }
@@ -144,6 +144,7 @@ class RussianKeyboardView: UIView {
         let viewModel = LetterKeyButtonViewModel(
             title: "space",
             value: " ",
+            font: UIFont.systemFont(ofSize: 16),
             onPress: { [weak self] value in
                 guard let self else { return }
                 self.delegate?.russianKeyboardView(self, didTapKey: value)
@@ -226,16 +227,19 @@ private extension RussianKeyboardView {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
-        stackView.spacing = 5
+        stackView.spacing = 6
+        stackView.snp.makeConstraints { make in
+            make.height.equalTo(44)
+        }
         return stackView
     }
 
     func createLastRowStackView() -> UIStackView {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fill
         stackView.alignment = .fill
-        stackView.spacing = 5
+        stackView.spacing = 7
         
         stackView.addArrangedSubview(numbersLayoutKeyButton)
         stackView.addArrangedSubview(emojiKeyButton)
@@ -251,6 +255,9 @@ private extension RussianKeyboardView {
             make.width.equalTo(44)
         }
 
+        stackView.snp.makeConstraints { make in
+            make.height.equalTo(44)
+        }
         return stackView
     }
 
@@ -298,7 +305,15 @@ struct LetterKey {
 struct LetterKeyButtonViewModel {
     let title: String
     let value: String
+    let font: UIFont
     var onPress: (String) -> Void
+
+    init(title: String, value: String, font: UIFont = UIFont.systemFont(ofSize: 24), onPress: @escaping (String) -> Void) {
+        self.title = title
+        self.value = value
+        self.font = font
+        self.onPress = onPress
+    }
 }
 
 final class LetterKeyButton: UIButton {
@@ -321,6 +336,7 @@ final class LetterKeyButton: UIButton {
         self.viewModel = viewModel
         setTitle(viewModel.title, for: .normal)
         addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        titleLabel?.font = viewModel.font
     }
 
     private func setupViews() {

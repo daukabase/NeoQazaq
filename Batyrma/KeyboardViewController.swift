@@ -90,11 +90,6 @@ class KeyboardViewController: UIInputViewController {
 
 extension KeyboardViewController: RussianKeyboardViewDelegate {
     func russianKeyboardView(_ keyboardView: RussianKeyboardView, didTapKey key: String) {
-        if key == "space" {
-            textDocumentProxy.insertText(currentTextBuffer.replacingOccurrences(of: "А", with: "Ә"))
-            currentTextBuffer = ""
-        } else {
-            currentTextBuffer.append(key)
-        }
+        currentTextBuffer.append(key)
     }
 }
