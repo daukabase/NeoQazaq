@@ -1,0 +1,8 @@
+ruby 3.1.4
+swiftformat 0.52.11
+xcodegen 2.37.0
+swiftlint 0.54.0
+swiftgen 6.6.2
+sourcery 2.1.2
+xchtmlreport 2.3.3
+pre-commit 3.6.0

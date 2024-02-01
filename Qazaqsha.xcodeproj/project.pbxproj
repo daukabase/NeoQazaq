@@ -20,6 +20,7 @@
 		0B800E732B6829CC00EADCA9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E722B6829CC00EADCA9 /* SnapKit */; };
 		0B800E752B6829CC00EADCA9 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */; };
 		0B800E762B6829CC00EADCA9 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		0B800E632B681AEE00EADCA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B800E6C2B681BFE00EADCA9 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		0B800E6E2B681C3E00EADCA9 /* RussianKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RussianKeyboardView.swift; sourceTree = "<group>"; };
+		0BCA611E2B6BC73F0038FAFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		0B800E3C2B681A8900EADCA9 = {
 			isa = PBXGroup;
 			children = (
+				0BCA611D2B6BC7280038FAFB /* Resources */,
 				0B800E472B681A8900EADCA9 /* Qazaqsha */,
 				0B800E602B681AEE00EADCA9 /* Batyrma */,
 				0B800E462B681A8900EADCA9 /* Products */,
@@ -146,6 +149,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BCA611D2B6BC7280038FAFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0BCA611E2B6BC73F0038FAFB /* Images.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
