@@ -3,6 +3,16 @@
     {
       "filename" : "keyEmojiEmpty.svg",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "keyEmojiFilled.svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {

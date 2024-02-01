@@ -23,8 +23,9 @@ struct RussianKeyboardViewModel {
             }
         }()
         static let russianUppercasedKeys = [
-            ["Й", "Ц", "У", "К", "Е", "Н", "Г", "Ш", "Щ", "З", "Х", "Ъ"],
+            ["Й", "Ц", "У", "К", "Е", "Н", "Г", "Ш", "Щ", "З", "Х"],
             ["Ф", "Ы", "В", "А", "П", "Р", "О", "Л", "Д", "Ж", "Э"],
+            // TODO: добавить твердый знак
             ["Я", "Ч", "С", "М", "И", "Т", "Ь", "Б", "Ю"]
         ]
     }
@@ -44,6 +45,18 @@ struct RussianKeyboardViewModel {
                 return .lowercased
             }
         }
+
+        var image: UIImage? {
+            switch self {
+            case .lowercased:
+                return Shift.resizedLowercasedImage
+            case .uppercased:
+                return Asset.Images.keyUppercased.image
+            case .uppercasedOnce:
+                return Asset.Images.keyUppercasedOnce.image
+            }
+        }
+        private static let resizedLowercasedImage = Asset.Images.keyLowercased.image.resized(to: CGSize(width: 28, height: 28), with: .alwaysOriginal)
     }
 
     var shift: Shift = .lowercased
@@ -71,9 +84,9 @@ class RussianKeyboardView: UIView {
     private lazy var shiftKeyButton: ActionKeyButton = {
         let button = ActionKeyButton()
         let viewModel = ActionKeyButtonViewModel(
-            image: UIImage(),
+            image: Asset.Images.keyLowercased.image,
             title: nil,
-            backgroundColor: .lightGray,
+            backgroundColor: Asset.Colors.lightSecondary.color,
             onTap: { [weak self] in
                 guard let self else { return }
                 self.viewModel.shift = self.viewModel.shift.next
@@ -91,9 +104,9 @@ class RussianKeyboardView: UIView {
     private lazy var backspaceKeyButton: ActionKeyButton = {
         let button = ActionKeyButton()
         let viewModel = ActionKeyButtonViewModel(
-            image: UIImage(),
+            image: Asset.Images.keyBackspace.image,
             title: nil,
-            backgroundColor: .lightGray,
+            backgroundColor: Asset.Colors.lightSecondary.color,
             onTap: { [weak self] in
                 guard let self else { return }
                 print("backspace")
@@ -110,7 +123,7 @@ class RussianKeyboardView: UIView {
         let viewModel = ActionKeyButtonViewModel(
             image: nil,
             title: "123",
-            backgroundColor: .lightGray,
+            backgroundColor: Asset.Colors.lightSecondary.color,
             onTap: { [weak self] in
                 guard let self else { return }
                 print("numbers")
@@ -125,9 +138,9 @@ class RussianKeyboardView: UIView {
     private lazy var emojiKeyButton: ActionKeyButton = {
         let button = ActionKeyButton()
         let viewModel = ActionKeyButtonViewModel(
-            image: UIImage(),
+            image: Asset.Images.keyEmoji.image,
             title: nil,
-            backgroundColor: .lightGray,
+            backgroundColor: Asset.Colors.lightSecondary.color,
             onTap: { [weak self] in
                 guard let self else { return }
                 print("emoji")
@@ -146,8 +159,7 @@ class RussianKeyboardView: UIView {
             value: " ",
             font: UIFont.systemFont(ofSize: 16),
             onPress: { [weak self] value in
-                guard let self else { return }
-                self.delegate?.russianKeyboardView(self, didTapKey: value)
+                self?.onTap(value: value)
             }
         )
 
@@ -158,9 +170,9 @@ class RussianKeyboardView: UIView {
     private lazy var returnKeyButton: ActionKeyButton = {
         let button = ActionKeyButton()
         let viewModel = ActionKeyButtonViewModel(
-            image: UIImage(),
-            title: nil,
-            backgroundColor: .lightGray,
+            image: nil,
+            title: "return",
+            backgroundColor: Asset.Colors.lightSecondary.color,
             onTap: { [weak self] in
                 guard let self else { return }
                 
@@ -185,17 +197,20 @@ class RussianKeyboardView: UIView {
     
     func render() {
         setupRowsFor(stackView: stackView)
+        shiftKeyButton.setImage(viewModel.shift.image, for: .normal)
     }
 }
 
 private extension RussianKeyboardView {
     func setupViews() {
+        backgroundColor = Asset.Colors.keyboardBackground.color
         addSubview(stackView)
         stackView.snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(5)
         }
 
         setupRowsFor(stackView: stackView)
+        shiftKeyButton.setImage(viewModel.shift.image, for: .normal)
     }
 
     func setupRowsFor(stackView: UIStackView) {
@@ -266,13 +281,8 @@ private extension RussianKeyboardView {
             let model = LetterKeyButtonViewModel(
                 title: viewModel.shift == .lowercased ? key.lowercased : key.uppercased,
                 value: viewModel.shift == .lowercased ? key.lowercased : key.uppercased,
-                onPress: { [weak self] key in
-                    guard let self else { return }
-                    self.delegate?.russianKeyboardView(self, didTapKey: key)
-
-                    if self.viewModel.shift == .uppercasedOnce {
-                        self.viewModel.shift = self.viewModel.shift.next
-                    }
+                onPress: { [weak self] value in
+                    self?.onTap(value: value)
                 }
             )
             let button = LetterKeyButton()
@@ -285,6 +295,16 @@ private extension RussianKeyboardView {
         let button = LetterKeyButton()
         button.configure(viewModel: model)
         return button
+    }
+
+    // MARK: - Actions
+
+    private func onTap(value: String) {
+        delegate?.russianKeyboardView(self, didTapKey: value)
+
+        if viewModel.shift == .uppercasedOnce {
+            viewModel.shift = viewModel.shift.next
+        }
     }
 }
 
@@ -344,8 +364,13 @@ final class LetterKeyButton: UIButton {
         layer.borderWidth = Constants.borderWidth
         layer.borderColor = Constants.borderColor
         titleLabel?.font = UIFont.systemFont(ofSize: 24)
-        setTitleColor(.black, for: .normal)
-        backgroundColor = .white
+        setTitleColor(Asset.Colors.lightInk.color, for: .normal)
+
+        contentHorizontalAlignment = .center
+        contentVerticalAlignment = .center
+        titleLabel?.textAlignment = .center
+        
+        backgroundColor = Asset.Colors.lightPrimary.color
     }
 
     @objc
@@ -435,5 +460,12 @@ extension UIStackView {
             $0.removeFromSuperview()
             NSLayoutConstraint.deactivate($0.constraints)
         }
+    }
+}
+extension UIImage {
+    func resized(to size: CGSize, with renderingMode: RenderingMode) -> UIImage {
+        return UIGraphicsImageRenderer(size: size).image { _ in
+            draw(in: CGRect(origin: .zero, size: size))
+        }.withRenderingMode(renderingMode)
     }
 }

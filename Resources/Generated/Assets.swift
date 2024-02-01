@@ -25,6 +25,7 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Colors {
+    internal static let keyboardBackground = ColorAsset(name: "keyboardBackground")
     internal static let lightAction = ColorAsset(name: "lightAction")
     internal static let lightInk = ColorAsset(name: "lightInk")
     internal static let lightPrimary = ColorAsset(name: "lightPrimary")
@@ -32,8 +33,7 @@ internal enum Asset {
   }
   internal enum Images {
     internal static let keyBackspace = ImageAsset(name: "keyBackspace")
-    internal static let keyEmojiEmpty = ImageAsset(name: "keyEmojiEmpty")
-    internal static let keyEmojiFilled = ImageAsset(name: "keyEmojiFilled")
+    internal static let keyEmoji = ImageAsset(name: "keyEmoji")
     internal static let keyLowercased = ImageAsset(name: "keyLowercased")
     internal static let keyUppercased = ImageAsset(name: "keyUppercased")
     internal static let keyUppercasedOnce = ImageAsset(name: "keyUppercasedOnce")

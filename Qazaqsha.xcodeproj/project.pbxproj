@@ -22,6 +22,7 @@
 		0B800E762B6829CC00EADCA9 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
+		0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		0B800E6E2B681C3E00EADCA9 /* RussianKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RussianKeyboardView.swift; sourceTree = "<group>"; };
 		0BCA611E2B6BC73F0038FAFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0BCA61202B6BC8D50038FAFB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		0BCA61252B6BCA060038FAFB /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,9 +159,18 @@
 			isa = PBXGroup;
 			children = (
 				0BCA611E2B6BC73F0038FAFB /* Images.xcassets */,
+				0BCA61242B6BCA060038FAFB /* Generated */,
 				0BCA61202B6BC8D50038FAFB /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0BCA61242B6BCA060038FAFB /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				0BCA61252B6BCA060038FAFB /* Assets.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 			files = (
 				0B800E6F2B681C3E00EADCA9 /* RussianKeyboardView.swift in Sources */,
 				0B800E6D2B681BFE00EADCA9 /* KeyboardButton.swift in Sources */,
+				0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */,
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
