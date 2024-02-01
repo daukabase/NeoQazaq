@@ -25,11 +25,12 @@
  xcassets:
    inputs:
      - Resources/Images.xcassets
+     - Resources/Colors.xcassets
    outputs:
      - templateName: swift5
        params:
          forceProvidesNamespaces: true
-       output: Images+Generated.swift
+       output: Resources/Generated/Assets.swift
 
 
 ## Generate constants for your storyboards and XIBs.

@@ -21,6 +21,7 @@
 		0B800E752B6829CC00EADCA9 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */; };
 		0B800E762B6829CC00EADCA9 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
+		0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		0B800E6C2B681BFE00EADCA9 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		0B800E6E2B681C3E00EADCA9 /* RussianKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RussianKeyboardView.swift; sourceTree = "<group>"; };
 		0BCA611E2B6BC73F0038FAFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0BCA61202B6BC8D50038FAFB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				0BCA611E2B6BC73F0038FAFB /* Images.xcassets */,
+				0BCA61202B6BC8D50038FAFB /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */,
+				0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
