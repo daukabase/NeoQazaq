@@ -11,56 +11,7 @@ import SnapKit
 // delegate for key tap
 protocol RussianKeyboardViewDelegate: AnyObject {
     func russianKeyboardView(_ keyboardView: RussianKeyboardView, didTapKey key: String)
-}
-
-struct RussianKeyboardViewModel {
-    enum Constants {
-        static let russianKeys = {
-            russianUppercasedKeys.map { row in
-                row.map { key in
-                    LetterKey(uppercased: key, lowercased: key.lowercased())
-                }
-            }
-        }()
-        static let russianUppercasedKeys = [
-            ["Й", "Ц", "У", "К", "Е", "Н", "Г", "Ш", "Щ", "З", "Х"],
-            ["Ф", "Ы", "В", "А", "П", "Р", "О", "Л", "Д", "Ж", "Э"],
-            // TODO: добавить твердый знак
-            ["Я", "Ч", "С", "М", "И", "Т", "Ь", "Б", "Ю"]
-        ]
-    }
-
-    enum Shift: Equatable {
-        case lowercased
-        case uppercasedOnce
-        case uppercased
-
-        var next: Shift {
-            switch self {
-            case .lowercased:
-                return .uppercasedOnce
-            case .uppercasedOnce:
-                return .lowercased
-            case .uppercased:
-                return .lowercased
-            }
-        }
-
-        var image: UIImage? {
-            switch self {
-            case .lowercased:
-                return Shift.resizedLowercasedImage
-            case .uppercased:
-                return Asset.Images.keyUppercased.image
-            case .uppercasedOnce:
-                return Asset.Images.keyUppercasedOnce.image
-            }
-        }
-        private static let resizedLowercasedImage = Asset.Images.keyLowercased.image.resized(to: CGSize(width: 28, height: 28), with: .alwaysOriginal)
-    }
-
-    var shift: Shift = .lowercased
-    let letterKeys: [[LetterKey]] = Constants.russianKeys
+    func russianKeyboardViewDidTapBackspace(_ keyboardView: RussianKeyboardView)
 }
 
 class RussianKeyboardView: UIView {
@@ -109,7 +60,7 @@ class RussianKeyboardView: UIView {
             backgroundColor: Asset.Colors.lightSecondary.color,
             onTap: { [weak self] in
                 guard let self else { return }
-                print("backspace")
+                self.delegate?.russianKeyboardViewDidTapBackspace(self)
             },
             onDoubleTap: nil
         )
@@ -206,7 +157,7 @@ private extension RussianKeyboardView {
         backgroundColor = Asset.Colors.keyboardBackground.color
         addSubview(stackView)
         stackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(5)
+            make.edges.equalToSuperview().inset(1)
         }
 
         setupRowsFor(stackView: stackView)
@@ -305,167 +256,5 @@ private extension RussianKeyboardView {
         if viewModel.shift == .uppercasedOnce {
             viewModel.shift = viewModel.shift.next
         }
-    }
-}
-
-
-// struct that has two states for uppercased and lowercased letter with init
-struct LetterKey {
-    let uppercased: String
-    let lowercased: String
-
-    init(uppercased: String, lowercased: String) {
-        self.uppercased = uppercased
-        self.lowercased = lowercased
-    }
-}
-
-// MARK: - LetterKeyButton
-
-struct LetterKeyButtonViewModel {
-    let title: String
-    let value: String
-    let font: UIFont
-    var onPress: (String) -> Void
-
-    init(title: String, value: String, font: UIFont = UIFont.systemFont(ofSize: 24), onPress: @escaping (String) -> Void) {
-        self.title = title
-        self.value = value
-        self.font = font
-        self.onPress = onPress
-    }
-}
-
-final class LetterKeyButton: UIButton {
-    enum Constants {
-        static let cornerRadius: CGFloat = 5
-        static let borderWidth: CGFloat = 0.5
-        static let borderColor: CGColor = UIColor.lightGray.cgColor
-    }
-
-    private var viewModel = LetterKeyButtonViewModel(title: "", value: "", onPress: { _ in })
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) { fatalError() }
-
-    func configure(viewModel: LetterKeyButtonViewModel) {
-        self.viewModel = viewModel
-        setTitle(viewModel.title, for: .normal)
-        addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        titleLabel?.font = viewModel.font
-    }
-
-    private func setupViews() {
-        layer.cornerRadius = Constants.cornerRadius
-        layer.borderWidth = Constants.borderWidth
-        layer.borderColor = Constants.borderColor
-        titleLabel?.font = UIFont.systemFont(ofSize: 24)
-        setTitleColor(Asset.Colors.lightInk.color, for: .normal)
-
-        contentHorizontalAlignment = .center
-        contentVerticalAlignment = .center
-        titleLabel?.textAlignment = .center
-        
-        backgroundColor = Asset.Colors.lightPrimary.color
-    }
-
-    @objc
-    private func buttonPressed(_ sender: UIButton) {
-        viewModel.onPress(viewModel.value)
-    }
-}
-
-// MARK: - ActionButton
-
-struct ActionKeyButtonViewModel {
-    let image: UIImage?
-    let title: String?
-    let backgroundColor: UIColor
-    var onTap: () -> Void
-    var onDoubleTap: (() -> Void)?
-
-    static let initial = ActionKeyButtonViewModel(
-        image: UIImage(), 
-        title: nil,
-        backgroundColor: .white,
-        onTap: {},
-        onDoubleTap: {}
-    )
-}
-
-final class ActionKeyButton: UIButton {
-    enum Constants {
-        static let cornerRadius: CGFloat = 5
-        static let borderWidth: CGFloat = 0.5
-        static let borderColor: CGColor = UIColor.lightGray.cgColor
-    }
-
-    private var viewModel = ActionKeyButtonViewModel.initial
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-
-    required init?(coder aDecoder: NSCoder) { fatalError() }
-
-    func configure(viewModel: ActionKeyButtonViewModel) {
-        self.viewModel = viewModel
-
-        setImage(viewModel.image, for: .normal)
-        setTitle(viewModel.title, for: .normal)
-        backgroundColor = viewModel.backgroundColor
-
-        addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-
-        if viewModel.onDoubleTap != nil {
-            addDoubleTapGesture()
-        }
-    }
-
-    private func addDoubleTapGesture() {
-        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(buttonDoubleTapped))
-        doubleTapGesture.numberOfTapsRequired = 2
-        addGestureRecognizer(doubleTapGesture)
-    }
-
-    private func setupViews() {
-        layer.cornerRadius = Constants.cornerRadius
-        layer.borderWidth = Constants.borderWidth
-        layer.borderColor = Constants.borderColor
-        titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        setTitleColor(.black, for: .normal)
-        backgroundColor = .white
-    }
-
-    @objc
-    private func buttonTapped(_ sender: UIButton) {
-        viewModel.onTap()
-    }
-
-    @objc
-    private func buttonDoubleTapped(_ sender: UIButton) {
-        viewModel.onDoubleTap?()
-    }
-}
-
-extension UIStackView {
-    func removeAllArrangedSubviews() {
-        arrangedSubviews.forEach {
-            removeArrangedSubview($0)
-            $0.removeFromSuperview()
-            NSLayoutConstraint.deactivate($0.constraints)
-        }
-    }
-}
-extension UIImage {
-    func resized(to size: CGSize, with renderingMode: RenderingMode) -> UIImage {
-        return UIGraphicsImageRenderer(size: size).image { _ in
-            draw(in: CGRect(origin: .zero, size: size))
-        }.withRenderingMode(renderingMode)
     }
 }

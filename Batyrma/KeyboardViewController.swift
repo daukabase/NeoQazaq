@@ -8,9 +8,14 @@
 import UIKit
 
 class KeyboardViewController: UIInputViewController {
-    var currentTextBuffer = "" {
+    let provider: AutocompleteProvider = QazaqAutocompleteProvider()
+    var currentTextBuffer: String? {
         didSet {
-            previewLabel.text = "«\(currentTextBuffer)»"
+            if let currentTextBuffer = currentTextBuffer {
+                previewLabel.text = "«\(currentTextBuffer)»"
+            } else {
+                previewLabel.text = "«»"
+            }
         }
     }
 
@@ -84,12 +89,30 @@ class KeyboardViewController: UIInputViewController {
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
     }
-    
 
 }
 
 extension KeyboardViewController: RussianKeyboardViewDelegate {
+    func russianKeyboardViewDidTapBackspace(_ keyboardView: RussianKeyboardView) {
+        textDocumentProxy.deleteBackward()
+    }
+
     func russianKeyboardView(_ keyboardView: RussianKeyboardView, didTapKey key: String) {
-        currentTextBuffer.append(key)
+        let currentWord = textDocumentProxy.currentWord ?? ""
+        let primarySuggestion = provider.suggestions(for: currentWord).first?.text
+
+        if key == .space {
+            if let primarySuggestion = primarySuggestion {
+                textDocumentProxy.replaceCurrentWord(with: primarySuggestion)
+                textDocumentProxy.insertText(.space)
+            } else {
+                textDocumentProxy.insertText(key)
+            }
+        } else {
+            textDocumentProxy.insertText(key)
+        }
+        
+        let updatedSuggestion = provider.suggestions(for: textDocumentProxy.currentWord ?? "").first?.text
+        currentTextBuffer = updatedSuggestion
     }
 }
