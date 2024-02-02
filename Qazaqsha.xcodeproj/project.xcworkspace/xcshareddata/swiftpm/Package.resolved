@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "keyboardkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/daukabase/KeyboardKit.git",
+      "state" : {
+        "revision" : "ea367aa0e06df86a8b8bb89c62dc7510da287a0d",
+        "version" : "9.0.0"
+      }
+    },
+    {
       "identity" : "snapkit?tab=readme-ov-file",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit?tab=readme-ov-file",

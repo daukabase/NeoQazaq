@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B800E492B681A8900EADCA9 /* QazaqshaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */; };
 		0B800E4B2B681A8900EADCA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E4A2B681A8900EADCA9 /* ContentView.swift */; };
 		0B800E4D2B681A8A00EADCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */; };
@@ -28,10 +29,10 @@
 		0BCA61302B6BD11A0038FAFB /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */; };
 		0BCA61322B6BD1270038FAFB /* LetterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61312B6BD1270038FAFB /* LetterKey.swift */; };
 		0BCA61352B6BD14C0038FAFB /* RussianKeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61342B6BD14C0038FAFB /* RussianKeyboardViewModel.swift */; };
-		0BCA613B2B6BDC090038FAFB /* AutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613A2B6BDC090038FAFB /* AutocompleteProvider.swift */; };
 		0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */; };
 		0BCA613F2B6BDC310038FAFB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613E2B6BDC310038FAFB /* String+.swift */; };
 		0BCA61412B6BDC3E0038FAFB /* UITextDocumentProxy+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61402B6BDC3E0038FAFB /* UITextDocumentProxy+.swift */; };
+		0BCA61452B6BDCC60038FAFB /* WordSuggestionsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,10 +89,10 @@
 		0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		0BCA61312B6BD1270038FAFB /* LetterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterKey.swift; sourceTree = "<group>"; };
 		0BCA61342B6BD14C0038FAFB /* RussianKeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RussianKeyboardViewModel.swift; sourceTree = "<group>"; };
-		0BCA613A2B6BDC090038FAFB /* AutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteProvider.swift; sourceTree = "<group>"; };
 		0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqAutocompleteProvider.swift; sourceTree = "<group>"; };
 		0BCA613E2B6BDC310038FAFB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0BCA61402B6BDC3E0038FAFB /* UITextDocumentProxy+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextDocumentProxy+.swift"; sourceTree = "<group>"; };
+		0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionsEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B800E732B6829CC00EADCA9 /* SnapKit in Frameworks */,
+				0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */,
 				0B800E752B6829CC00EADCA9 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +160,7 @@
 		0B800E602B681AEE00EADCA9 /* Batyrma */ = {
 			isa = PBXGroup;
 			children = (
+				0BCA61432B6BDCB50038FAFB /* WordSuggestionsEngine */,
 				0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */,
 				0BCA61392B6BDBF40038FAFB /* AutocompleteProvider */,
 				0BCA61382B6BD1C20038FAFB /* Views */,
@@ -242,7 +245,6 @@
 		0BCA61392B6BDBF40038FAFB /* AutocompleteProvider */ = {
 			isa = PBXGroup;
 			children = (
-				0BCA613A2B6BDC090038FAFB /* AutocompleteProvider.swift */,
 				0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */,
 			);
 			path = AutocompleteProvider;
@@ -254,6 +256,14 @@
 				0BCA613E2B6BDC310038FAFB /* String+.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		0BCA61432B6BDCB50038FAFB /* WordSuggestionsEngine */ = {
+			isa = PBXGroup;
+			children = (
+				0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */,
+			);
+			path = WordSuggestionsEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +309,7 @@
 			packageProductDependencies = (
 				0B800E722B6829CC00EADCA9 /* SnapKit */,
 				0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */,
+				0B386FC42B6D128C008F0622 /* KeyboardKit */,
 			);
 			productName = Batyrma;
 			productReference = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */;
@@ -329,10 +340,64 @@
 			knownRegions = (
 				en,
 				Base,
+				smn,
+				de,
+				ar,
+				el,
+				fa,
+				mk,
+				sq,
+				uk,
+				mt,
+				nb,
+				es,
+				sw,
+				is,
+				sl,
+				pt_BR,
+				da,
+				et,
+				it,
+				bg,
+				sk,
+				"sr-Latn",
+				kk,
+				pt_PT,
+				sr,
+				ms,
+				be,
+				ckb,
+				sv,
+				cs,
+				he_IL,
+				fil,
+				hy,
+				chr,
+				mn,
+				hu,
+				ka,
+				haw,
+				tr,
+				pl,
+				se,
+				ga_IE,
+				lv,
+				lt,
+				ru,
+				uz,
+				fr,
+				fi,
+				id,
+				nl,
+				ro,
+				fo,
+				hr,
+				ca,
 			);
 			mainGroup = 0B800E3C2B681A8900EADCA9;
 			packageReferences = (
 				0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 			);
 			productRefGroup = 0B800E462B681A8900EADCA9 /* Products */;
 			projectDirPath = "";
@@ -379,7 +444,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BCA613B2B6BDC090038FAFB /* AutocompleteProvider.swift in Sources */,
 				0BCA612E2B6BD1070038FAFB /* UIStackView+.swift in Sources */,
 				0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */,
 				0B800E6F2B681C3E00EADCA9 /* RussianKeyboardView.swift in Sources */,
@@ -392,6 +456,7 @@
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
 				0BCA613F2B6BDC310038FAFB /* String+.swift in Sources */,
 				0BCA61352B6BD14C0038FAFB /* RussianKeyboardViewModel.swift in Sources */,
+				0BCA61452B6BDCC60038FAFB /* WordSuggestionsEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +733,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daukabase/KeyboardKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit?tab=readme-ov-file";
@@ -679,6 +752,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0B386FC42B6D128C008F0622 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
+		};
 		0B800E572B681AD000EADCA9 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */;

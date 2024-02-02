@@ -6,40 +6,60 @@
 //
 
 import Foundation
-
-struct Suggestion {
-    var isAutocorrectionEnabled = false
-    var text: String
-}
-
-struct GeneratedSimilarWord {
-    let word: String
-    // from 0 to 1
-    let similarity: Double
-}
+import KeyboardKit
 
 class QazaqAutocompleteProvider: AutocompleteProvider {
-    var isAutocorrectEnabled = true
+    let suggestionEngine: WordSuggestionsEngine = QazaqWordSuggestionsEngine()
 
-    func suggestions(for text: String) -> [Suggestion] {
-        generateSimilarWords(for: text)
-            .filter { $0.similarity > 0.8 }
-            .map {
-                Suggestion(isAutocorrectionEnabled: isAutocorrectEnabled, text: $0.word)
-            }
+    init(context: AutocompleteContext) {
+        self.context = context
     }
 
-    private func generateSimilarWords(for text: String) -> [GeneratedSimilarWord] {
-        if text == "озен" {
-            return [GeneratedSimilarWord(word: "өзен", similarity: 1)]
-        } else if text == "жумыс" {
-            return [GeneratedSimilarWord(word: "жұмыс", similarity: 1)]
-        } else if text == "jumys" {
-            return [GeneratedSimilarWord(word: "жұмыс", similarity: 1)]
-        } else if text == "озенде" {
-            return [GeneratedSimilarWord(word: "өзенде", similarity: 1)]
-        } else {
-            return []
-        }
+    private var context: AutocompleteContext
+    
+    var locale: Locale = .current
+    
+    var canIgnoreWords: Bool { false }
+    var canLearnWords: Bool { false }
+    var ignoredWords: [String] = []
+    var learnedWords: [String] = []
+    
+    func hasIgnoredWord(_ word: String) -> Bool { false }
+    func hasLearnedWord(_ word: String) -> Bool { false }
+    func ignoreWord(_ word: String) {}
+    func learnWord(_ word: String) {}
+    func removeIgnoredWord(_ word: String) {}
+    func unlearnWord(_ word: String) {}
+    
+    func autocompleteSuggestions(
+        for text: String
+    ) async throws -> [Autocomplete.Suggestion] {
+        guard text.count > 0 else { return [] }
+        return suggestions(for: text)
+            .map {
+                var suggestion = $0
+                suggestion.isAutocorrect = $0.isAutocorrect && context.isAutocorrectEnabled
+                return suggestion
+            }
+    }
+}
+
+private extension QazaqAutocompleteProvider {
+    func suggestions(for text: String) -> [Autocomplete.Suggestion] {
+        var engineSuggestions = suggestionEngine.suggestWords(for: text)
+            .filter { $0.similarity > 0.8 }
+            .enumerated()
+            .map { index, value in
+                if index == 1 {
+                    Autocomplete.Suggestion(text: value.word, subtitle: "Баскасы")
+                } else {
+                    Autocomplete.Suggestion(text: value.word, isAutocorrect: true)
+                }
+            }
+
+        let plainText = Autocomplete.Suggestion(text: text, isUnknown: true)
+        let suggestions = [plainText] + engineSuggestions
+
+        return suggestions
     }
 }

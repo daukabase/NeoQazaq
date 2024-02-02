@@ -5,114 +5,74 @@
 //  Created by Daulet Almagambetov on 29.01.2024.
 //
 
-import UIKit
+import KeyboardKit
+import SwiftUI
 
-class KeyboardViewController: UIInputViewController {
-    let provider: AutocompleteProvider = QazaqAutocompleteProvider()
-    var currentTextBuffer: String? {
-        didSet {
-            if let currentTextBuffer = currentTextBuffer {
-                previewLabel.text = "«\(currentTextBuffer)»"
-            } else {
-                previewLabel.text = "«»"
-            }
-        }
-    }
+/**
+ This keyboard demonstrates how to setup KeyboardKit and how
+ to customize the standard configuration.
 
-    private lazy var nextKeyboardButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle(NSLocalizedString("Next Keyboard", comment: "Title for 'Next Keyboard' button"), for: [])
-        button.sizeToFit()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
-        return button
-    }()
+ To use this keyboard, you must enable it in system settings
+ ("Settings/General/Keyboards"). It needs full access to get
+ access to features like haptic feedback.
+ */
+class KeyboardViewController: KeyboardInputViewController {
 
-    private lazy var previewLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .black
-        label.textAlignment = .center
-        return label
-    }()
-    private lazy var keyboardView: RussianKeyboardView = {
-        let view = RussianKeyboardView()
-        view.delegate = self
-        return view
-    }()
-
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
-        
-        // Add custom view sizing constraints here
-    }
-    
+    /**
+     This function is called when the controller loads. Here,
+     we make demo-specific service configurations.
+     */
     override func viewDidLoad() {
+        
+        /// 💡 Setup a fake autocomplete provider.
+        ///
+        /// This fake provider will provide fake suggestions.
+        /// Try the Pro demo for real suggestions.
+        services.autocompleteProvider = QazaqAutocompleteProvider(
+            context: state.autocompleteContext
+        )
+        
+        /// 💡 Setup a demo-specific callout action provider.
+        ///
+        /// The demo provider adds "keyboard" callout action
+        /// buttons to the "k" key.
+        services.calloutActionProvider = StandardCalloutActionProvider(keyboardContext: state.keyboardContext)
+        
+        /// 💡 Setup a demo-specific layout provider.
+        ///
+        /// The demo provider adds a "next locale" button if
+        /// needed, as well as a rocket emoji button.
+        services.layoutProvider = StandardKeyboardLayoutProvider(
+            baseProvider: RussianKeyboardLayoutProvider()
+        )
+
+        state.keyboardContext.needsInputModeSwitchKey = false
+        /// 💡 Setup a custom keyboard locale.
+        ///
+        /// Without KeyboardKit Pro, changing locale will by
+        /// default only affects localized texts.
+        state.keyboardContext.setLocale(.russian)
+
+        /// 💡 Add more locales to the keyboard.
+        ///
+        /// The demo layout provider will add a "next locale"
+        /// button if you have more than one locale.
+        state.keyboardContext.localePresentationLocale = KeyboardLocale.russian.locale
+        state.keyboardContext.locales = [KeyboardLocale.russian.locale]
+
+        /// 💡 Configure the space long press behavior.
+        ///
+        /// The locale context menu will only open up if the
+        /// keyboard has multiple locales.
+        state.keyboardContext.spaceLongPressBehavior = .moveInputCursor
+        
+        /// 💡 Setup audio and haptic feedback.
+        ///
+        /// The code below enabled haptic feedback and plays
+        /// a rocket sound when a rocket button is tapped.
+        state.feedbackConfiguration.isHapticFeedbackEnabled = true
+        
+        /// 💡 Call super to perform the base initialization.
         super.viewDidLoad()
-
-        view.addSubview(previewLabel)
-        view.addSubview(keyboardView)
-        view.addSubview(nextKeyboardButton)
-        
-        previewLabel.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview().inset(4)
-            make.height.equalTo(20)
-        }
-        keyboardView.snp.makeConstraints { make in
-            make.top.equalTo(previewLabel.snp.bottom)
-            make.leading.trailing.bottom.equalToSuperview()
-        }
-        nextKeyboardButton.snp.makeConstraints { make in
-            make.leading.equalToSuperview()
-            make.bottom.equalToSuperview()
-        }
-    }
-    
-    override func viewWillLayoutSubviews() {
-        self.nextKeyboardButton.isHidden = !self.needsInputModeSwitchKey
-        super.viewWillLayoutSubviews()
-    }
-
-    override func textWillChange(_ textInput: UITextInput?) {
-        // The app is about to change the document's contents. Perform any preparation here.
-    }
-    
-    override func textDidChange(_ textInput: UITextInput?) {
-        // The app has just changed the document's contents, the document context has been updated.
-        
-        var textColor: UIColor
-        let proxy = self.textDocumentProxy
-        if proxy.keyboardAppearance == UIKeyboardAppearance.dark {
-            textColor = UIColor.white
-        } else {
-            textColor = UIColor.black
-        }
-        self.nextKeyboardButton.setTitleColor(textColor, for: [])
-    }
-
-}
-
-extension KeyboardViewController: RussianKeyboardViewDelegate {
-    func russianKeyboardViewDidTapBackspace(_ keyboardView: RussianKeyboardView) {
-        textDocumentProxy.deleteBackward()
-    }
-
-    func russianKeyboardView(_ keyboardView: RussianKeyboardView, didTapKey key: String) {
-        let currentWord = textDocumentProxy.currentWord ?? ""
-        let primarySuggestion = provider.suggestions(for: currentWord).first?.text
-
-        if key == .space {
-            if let primarySuggestion = primarySuggestion {
-                textDocumentProxy.replaceCurrentWord(with: primarySuggestion)
-                textDocumentProxy.insertText(.space)
-            } else {
-                textDocumentProxy.insertText(key)
-            }
-        } else {
-            textDocumentProxy.insertText(key)
-        }
-        
-        let updatedSuggestion = provider.suggestions(for: textDocumentProxy.currentWord ?? "").first?.text
-        currentTextBuffer = updatedSuggestion
     }
 }
