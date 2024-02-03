@@ -43,7 +43,7 @@ class KeyboardViewController: KeyboardInputViewController {
         /// The demo provider adds a "next locale" button if
         /// needed, as well as a rocket emoji button.
         services.layoutProvider = StandardKeyboardLayoutProvider(
-            baseProvider: RussianKeyboardLayoutProvider()
+            baseProvider: NeoQazaqKeyboardLayoutProvider()
         )
 
         state.keyboardContext.needsInputModeSwitchKey = false
@@ -51,14 +51,14 @@ class KeyboardViewController: KeyboardInputViewController {
         ///
         /// Without KeyboardKit Pro, changing locale will by
         /// default only affects localized texts.
-        state.keyboardContext.setLocale(.russian)
+        state.keyboardContext.setLocale(.kazakh)
 
         /// 💡 Add more locales to the keyboard.
         ///
         /// The demo layout provider will add a "next locale"
         /// button if you have more than one locale.
-        state.keyboardContext.localePresentationLocale = KeyboardLocale.russian.locale
-        state.keyboardContext.locales = [KeyboardLocale.russian.locale]
+        state.keyboardContext.localePresentationLocale = KeyboardLocale.kazakh.locale
+        state.keyboardContext.locales = [KeyboardLocale.kazakh.locale]
 
         /// 💡 Configure the space long press behavior.
         ///
