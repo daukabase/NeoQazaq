@@ -23,7 +23,7 @@ protocol WordSuggestionsEngine {
 
 // zatEsim (possible tail change к -> г) + <septik>
 
-func datasetFileURL() -> [String: String]{
+func datasetFileURL() -> [String: String] {
     if let fileURL = Bundle.main.url(forResource: "ShalaqazaqDataset", withExtension: "json") {
         do {
             // Read the file content
@@ -57,12 +57,44 @@ class QazaqWordSuggestionsEngine: WordSuggestionsEngine {
 
         return jsonData
     }()
-
+    
     func suggestWords(for text: String) -> [GeneratedSimilarWord] {
-        let word = QazaqWordSuggestionsEngine.dataset[text].map {
-            GeneratedSimilarWord(word: $0, similarity: 1)
+        guard let (root, suffix) = findRootAndSuffix(for: text) else {
+            return []
         }
-        return [word].compactMap { $0 }
+        
+        if let suffix {
+            return [
+                GeneratedSimilarWord(word: root + suffix, similarity: 0.9),
+                GeneratedSimilarWord(word: root, similarity: 0.9)
+            ]
+        } else {
+            return [GeneratedSimilarWord(word: root, similarity: 1.0)]
+        }
+    }
+
+    func findRootAndSuffix(for text: String) -> (String, String?)? {
+        guard let root = findRootFromDatabase(for: text) else {
+            return nil
+        }
+
+        let hasSuffixes = root.count <= text.count
+        let suffix = hasSuffixes ? text[root.count ..< text.count] : nil
+        return (root, suffix)
+    }
+
+    func findRootFromDatabase(for text: String) -> String? {
+        var count = text.count
+        
+        while count > 1 {
+            let targetRoot = text[0 ..< count]
+            if let root = QazaqWordSuggestionsEngine.dataset[targetRoot] {
+                return root
+            }
+            count = count - 1
+        }
+
+        return nil
     }
 }
 

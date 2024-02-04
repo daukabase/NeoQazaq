@@ -1,0 +1,52 @@
+{
+    "suffixes": [
+        {
+            "text": "-дық",
+            "type": "nominalizer",
+            "forms": ["-дық", "-тық", "-дік", "-тік"],
+            "combination_rules": {
+                "preceding_vowel": "any",
+                "preceding_consonant": "any",
+                "additional_conditions": "used to form nouns from adjectives or verbs"
+            },
+            "frequency": "common",
+            "examples": ["білімдік", "құрметтік"]
+        },
+        {
+            "text": "-мен",
+            "type": "comitative case",
+            "forms": ["-мен", "-бен", "-пен"],
+            "combination_rules": {
+                "preceding_vowel": "any",
+                "preceding_consonant": "depends on phonetic harmony",
+                "additional_conditions": "used to indicate accompaniment"
+            },
+            "frequency": "common",
+            "examples": ["досымен", "кітаппен"]
+        },
+        {
+            "text": "-да",
+            "type": "locative case",
+            "forms": ["-да", "-де", "-та", "-те"],
+            "combination_rules": {
+                "preceding_vowel": "any",
+                "preceding_consonant": "any",
+                "additional_conditions": "used to indicate location or time"
+            },
+            "frequency": "common",
+            "examples": ["үйде", "мектепте"]
+        },
+        {
+            "text": "-дан",
+            "type": "ablative case",
+            "forms": ["-дан", "-ден", "-тан", "-тен"],
+            "combination_rules": {
+                "preceding_vowel": "any",
+                "preceding_consonant": "any",
+                "additional_conditions": "used to indicate origin or source"
+            },
+            "frequency": "common",
+            "examples": ["мектептен", "қаладан"]
+        }
+    ]
+}
