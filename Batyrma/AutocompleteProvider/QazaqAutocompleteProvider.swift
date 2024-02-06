@@ -9,7 +9,7 @@ import Foundation
 import KeyboardKit
 
 class QazaqAutocompleteProvider: AutocompleteProvider {
-    let suggestionEngine: WordSuggestionsEngine = QazaqWordSuggestionsEngine()
+    let suggestionEngine: WordSuggestionsEngine = QazaqWordSuggestionsEngineV2()
 
     init(context: AutocompleteContext) {
         self.context = context
@@ -46,15 +46,10 @@ class QazaqAutocompleteProvider: AutocompleteProvider {
 
 private extension QazaqAutocompleteProvider {
     func suggestions(for text: String) -> [Autocomplete.Suggestion] {
-        var engineSuggestions = suggestionEngine.suggestWords(for: text)
-            .filter { $0.similarity > 0.8 }
+        let engineSuggestions = suggestionEngine.suggestWords(for: text)
             .enumerated()
             .map { index, value in
-                if index == 1 {
-                    Autocomplete.Suggestion(text: value.word, subtitle: "Баскасы")
-                } else {
-                    Autocomplete.Suggestion(text: value.word, isAutocorrect: true)
-                }
+                Autocomplete.Suggestion(text: value.word, isAutocorrect: value.similarity > 0.95)
             }
 
         let plainText = Autocomplete.Suggestion(text: text, isUnknown: true)
