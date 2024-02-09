@@ -46,15 +46,34 @@ class QazaqAutocompleteProvider: AutocompleteProvider {
 
 private extension QazaqAutocompleteProvider {
     func suggestions(for text: String) -> [Autocomplete.Suggestion] {
-        let engineSuggestions = suggestionEngine.suggestWords(for: text)
+        let lowercased = text.lowercased()
+        let uppercasedIndices = uppercasedCharactersIndices(of: text)
+        let engineSuggestions = suggestionEngine.suggestWords(for: lowercased)
             .enumerated()
             .map { index, value in
-                Autocomplete.Suggestion(text: value.word, isAutocorrect: value.similarity > 0.95)
+                // If user typed in uppercase, we should return suggestions in uppercase
+                let word = uppercaseLettersOfTextFor(uppercasedIndices: uppercasedIndices, text: value.word)
+                return Autocomplete.Suggestion(text: word, isAutocorrect: value.similarity > 0.95)
             }
 
         let plainText = Autocomplete.Suggestion(text: text, isUnknown: true)
         let suggestions = [plainText] + engineSuggestions
 
         return suggestions
+    }
+
+    func uppercasedCharactersIndices(of text: String) -> Set<Int> {
+        Set(text.enumerated().compactMap { index, character in
+            character.isUppercase ? index : nil
+        })
+    }
+
+    func uppercaseLettersOfTextFor(uppercasedIndices: Set<Int>, text: String) -> String {
+        text.enumerated().map { (index, value) in
+            if uppercasedIndices.contains(index) {
+                return value.uppercased()
+            }
+            return value.lowercased()
+        }.joined()
     }
 }
