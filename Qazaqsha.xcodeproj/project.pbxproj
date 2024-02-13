@@ -14,14 +14,9 @@
 		0B800E4B2B681A8900EADCA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E4A2B681A8900EADCA9 /* ContentView.swift */; };
 		0B800E4D2B681A8A00EADCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */; };
 		0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4F2B681A8A00EADCA9 /* Preview Assets.xcassets */; };
-		0B800E582B681AD000EADCA9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E572B681AD000EADCA9 /* SnapKit */; };
-		0B800E5A2B681AD000EADCA9 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E592B681AD000EADCA9 /* SnapKit-Dynamic */; };
 		0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */; };
 		0B800E662B681AEE00EADCA9 /* Batyrma.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0B800E6F2B681C3E00EADCA9 /* RussianKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E6E2B681C3E00EADCA9 /* RussianKeyboardView.swift */; };
-		0B800E732B6829CC00EADCA9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E722B6829CC00EADCA9 /* SnapKit */; };
-		0B800E752B6829CC00EADCA9 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */; };
-		0B800E762B6829CC00EADCA9 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
@@ -65,7 +60,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0B800E762B6829CC00EADCA9 /* SnapKit-Dynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,8 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B800E582B681AD000EADCA9 /* SnapKit in Frameworks */,
-				0B800E5A2B681AD000EADCA9 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,9 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B800E732B6829CC00EADCA9 /* SnapKit in Frameworks */,
 				0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */,
-				0B800E752B6829CC00EADCA9 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +281,6 @@
 			);
 			name = Qazaqsha;
 			packageProductDependencies = (
-				0B800E572B681AD000EADCA9 /* SnapKit */,
-				0B800E592B681AD000EADCA9 /* SnapKit-Dynamic */,
 			);
 			productName = Qazaqsha;
 			productReference = 0B800E452B681A8900EADCA9 /* Qazaqsha.app */;
@@ -313,8 +301,6 @@
 			);
 			name = Batyrma;
 			packageProductDependencies = (
-				0B800E722B6829CC00EADCA9 /* SnapKit */,
-				0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */,
 				0B386FC42B6D128C008F0622 /* KeyboardKit */,
 			);
 			productName = Batyrma;
@@ -402,7 +388,6 @@
 			);
 			mainGroup = 0B800E3C2B681A8900EADCA9;
 			packageReferences = (
-				0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 			);
 			productRefGroup = 0B800E462B681A8900EADCA9 /* Products */;
@@ -749,14 +734,6 @@
 				minimumVersion = 9.1.0;
 			};
 		};
-		0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit?tab=readme-ov-file";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -764,26 +741,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
 			productName = KeyboardKit;
-		};
-		0B800E572B681AD000EADCA9 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		0B800E592B681AD000EADCA9 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-		0B800E722B6829CC00EADCA9 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		0B800E742B6829CC00EADCA9 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0B800E562B681AD000EADCA9 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
