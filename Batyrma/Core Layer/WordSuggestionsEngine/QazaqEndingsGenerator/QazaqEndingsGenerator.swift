@@ -50,6 +50,19 @@ struct QazaqEndingsGenerator {
         }.flatMap { $0 }
     }
 
+    func generateTazaOutput(for input: String, root: String) -> String? {
+        let shalaDataset = QazaqEndingsGenerator().generateShalaqazaqDatasetForEndings(for: root)
+
+        for i in (input.count - 1..<input.count + 1).reversed() {
+            let subString = input[0..<i]
+            if let taza = shalaDataset[subString] {
+                return taza
+            }
+        }
+
+        return nil
+    }
+
     // TODO: generate data for cases with
     // endings like "қазақ" and "қазағым"
 

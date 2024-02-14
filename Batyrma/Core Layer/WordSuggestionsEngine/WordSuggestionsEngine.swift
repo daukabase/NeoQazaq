@@ -49,11 +49,6 @@ class QazaqWordSuggestionsEngine: WordSuggestionsEngine {
     }
 
     // MARK: - Private
-    
-    private func correctEndings(for root: String, suffix: String) -> String? {
-        let endings = QazaqWordSuggestionsEngine.dataset[root]
-        return endings?.first
-    }
 
     private func findRootAndSuffix(for text: String) -> (String, String?)? {
         guard let root = findRootFromDatabase(for: text) else {
@@ -71,7 +66,18 @@ class QazaqWordSuggestionsEngine: WordSuggestionsEngine {
         while count > 1 {
             let targetRoot = text[0 ..< count]
             if let root = QazaqWordSuggestionsEngine.dataset[targetRoot] {
+                print("Found root: \(root)")
                 return root
+            }
+            if let last = targetRoot.last,
+               let altered = PossessiveService.Constants.consonantAlteration[String(last)] {
+                let alteredRoot = String(targetRoot.dropLast() + altered)
+
+                print("Altered value: \(alteredRoot)")
+                if let root = QazaqWordSuggestionsEngine.dataset[alteredRoot] {
+                    print("Found altered root: \(alteredRoot)")
+                    return root
+                }
             }
             count = count - 1
         }
@@ -115,10 +121,18 @@ class QazaqWordSuggestionsEngineV2: WordSuggestionsEngine {
             .sorted(by: { $0.percentage > $1.percentage })
             .map { variation -> GeneratedSimilarWord in
                 let word = {
-                    if let suffix = suffix(for: text, root: variation.taza) {
+                    guard let suffix = suffix(for: text, root: variation.taza) else {
+                        return variation.taza
+                    }
+
+                    guard let correctedEnding = QazaqEndingsGenerator().generateTazaOutput(
+                        for: text,
+                        root: variation.taza
+                    ) else {
                         return variation.taza + suffix
                     }
-                    return variation.taza
+
+                    return correctedEnding
                 }()
                 return GeneratedSimilarWord(word: word, similarity: variation.percentage)
             }
@@ -129,10 +143,24 @@ class QazaqWordSuggestionsEngineV2: WordSuggestionsEngine {
 
         while count > 1 {
             let targetRoot = text[0 ..< count]
-            let variations = Self.dataset[targetRoot]
-            
-            if let variations, !variations.isEmpty {
+
+            if let variations = Self.dataset[targetRoot], !variations.isEmpty {
                 return variations
+            }
+
+            if 
+                let last = targetRoot.last,
+                let altered = PossessiveService.Constants.consonantAlterationReversed[String(last)]
+            {
+                let alteredRoot = String(targetRoot.dropLast() + altered)
+
+                print("Altered value: \(alteredRoot)")
+                if let variations = Self.dataset[alteredRoot],
+                   !variations.isEmpty
+                {
+                    print("Found altered root: \(alteredRoot)")
+                    return variations
+                }
             }
 
             count = count - 1

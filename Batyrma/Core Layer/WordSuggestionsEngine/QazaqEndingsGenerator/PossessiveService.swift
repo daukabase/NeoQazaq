@@ -7,6 +7,18 @@
 
 
 class PossessiveService: Service {
+    enum Constants {
+        static let consonantAlteration = [
+            "қ": "ғ",
+            "п": "б",
+            "к": "г"
+        ]
+        static let consonantAlterationReversed = [
+            "ғ": "қ",
+            "б": "п",
+            "г": "к"
+        ]
+    }
     private var possessive: Form
     private var quantitative: Quantity
     private let hardVowels = "аоуұы"
@@ -14,11 +26,7 @@ class PossessiveService: Service {
     private var vowels: String {
         return hardVowels + softVowels
     }
-    private let consonantAlteration = [
-        "қ": "ғ",
-        "п": "б",
-        "к": "г"
-    ]
+    private let consonantAlteration = Constants.consonantAlteration
     
     private let darDerConsonants = "лмнңжз"
     private let tarTerConsonants = "пфкқтсшщхцчһбвгд"

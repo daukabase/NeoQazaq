@@ -8,20 +8,6 @@
 import Foundation
 
 extension String {
-    subscript (bounds: CountableClosedRange<Int>) -> String {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return String(self[start...end])
-    }
-
-    subscript (bounds: CountableRange<Int>) -> String {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return String(self[start..<end])
-    }
-}
-
-extension String {
     var length: Int {
         return count
     }
@@ -38,9 +24,9 @@ extension String {
         return self[0 ..< max(0, toIndex)]
     }
 
-    subscript (r: Range<Int>) -> String {
-        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
-                                            upper: min(length, max(0, r.upperBound))))
+    subscript (_r: Range<Int>) -> String {
+        let range = Range(uncheckedBounds: (lower: max(0, min(length, _r.lowerBound)),
+                                            upper: min(length, max(0, _r.upperBound))))
         let start = index(startIndex, offsetBy: range.lowerBound)
         let end = index(start, offsetBy: range.upperBound - range.lowerBound)
         return String(self[start ..< end])
