@@ -17,12 +17,6 @@ protocol WordSuggestionsEngine {
     func suggestWords(for text: String) -> [GeneratedSimilarWord]
 }
 
-
-// канагат тан дыр ыл ма ган дык тар ын ыз дан
-//
-
-// zatEsim (possible tail change к -> г) + <septik>
-
 class QazaqWordSuggestionsEngine: WordSuggestionsEngine {
     static let dataset: [String: String] = {
         let decoder = JSONDecoder()
@@ -37,6 +31,8 @@ class QazaqWordSuggestionsEngine: WordSuggestionsEngine {
         return jsonData
     }()
     
+    // MARK: - WordSuggestionsEngine
+
     func suggestWords(for text: String) -> [GeneratedSimilarWord] {
         guard let (root, suffix) = findRootAndSuffix(for: text) else {
             return []
@@ -52,7 +48,14 @@ class QazaqWordSuggestionsEngine: WordSuggestionsEngine {
         }
     }
 
-    func findRootAndSuffix(for text: String) -> (String, String?)? {
+    // MARK: - Private
+    
+    private func correctEndings(for root: String, suffix: String) -> String? {
+        let endings = QazaqWordSuggestionsEngine.dataset[root]
+        return endings?.first
+    }
+
+    private func findRootAndSuffix(for text: String) -> (String, String?)? {
         guard let root = findRootFromDatabase(for: text) else {
             return nil
         }
@@ -62,7 +65,7 @@ class QazaqWordSuggestionsEngine: WordSuggestionsEngine {
         return (root, suffix)
     }
 
-    func findRootFromDatabase(for text: String) -> String? {
+    private func findRootFromDatabase(for text: String) -> String? {
         var count = text.count
         
         while count > 1 {
