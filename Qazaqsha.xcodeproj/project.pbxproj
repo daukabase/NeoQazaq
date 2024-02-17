@@ -10,6 +10,8 @@
 		0B1E44F62B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */; };
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B386FC72B6D6D26008F0622 /* ShalaqazaqDataset.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B386FC62B6D6D26008F0622 /* ShalaqazaqDataset.json */; };
+		0B5066EB2B80AE0000C01D14 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
+		0B5066ED2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5066EC2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift */; };
 		0B7943232B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7943222B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift */; };
 		0B7943252B7D1E3700CCA7AB /* PossessiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7943242B7D1E3700CCA7AB /* PossessiveService.swift */; };
 		0B7943272B7D1E5500CCA7AB /* QuantitativeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7943262B7D1E5500CCA7AB /* QuantitativeService.swift */; };
@@ -67,6 +69,8 @@
 /* Begin PBXFileReference section */
 		0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShalaqazaqDatasetV2.json; sourceTree = "<group>"; };
 		0B386FC62B6D6D26008F0622 /* ShalaqazaqDataset.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShalaqazaqDataset.json; sourceTree = "<group>"; };
+		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
+		0B5066EC2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqWordsDatasetLoader.swift; sourceTree = "<group>"; };
 		0B7943222B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqEndingsGenerator.swift; sourceTree = "<group>"; };
 		0B7943242B7D1E3700CCA7AB /* PossessiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossessiveService.swift; sourceTree = "<group>"; };
 		0B7943262B7D1E5500CCA7AB /* QuantitativeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitativeService.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				0B386FC62B6D6D26008F0622 /* ShalaqazaqDataset.json */,
+				0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */,
 				0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */,
 				0BCA611E2B6BC73F0038FAFB /* Images.xcassets */,
 				0BCA61242B6BCA060038FAFB /* Generated */,
@@ -234,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */,
+				0B5066EC2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift */,
 				0B7943212B7D1DFD00CCA7AB /* QazaqEndingsGenerator */,
 			);
 			path = WordSuggestionsEngine;
@@ -402,6 +408,7 @@
 			files = (
 				0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */,
 				0B1E44F62B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json in Resources */,
+				0B5066EB2B80AE0000C01D14 /* qazaqWordsList.txt in Resources */,
 				0B386FC72B6D6D26008F0622 /* ShalaqazaqDataset.json in Resources */,
 				0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */,
 			);
@@ -433,6 +440,7 @@
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
 				0BCA613F2B6BDC310038FAFB /* String+.swift in Sources */,
 				0BCA61452B6BDCC60038FAFB /* WordSuggestionsEngine.swift in Sources */,
+				0B5066ED2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift in Sources */,
 				0B7943252B7D1E3700CCA7AB /* PossessiveService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
