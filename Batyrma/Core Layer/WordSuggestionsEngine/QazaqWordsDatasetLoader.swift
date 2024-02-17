@@ -35,7 +35,7 @@ final class QazaqWordsDatasetLoader {
         }
     }
 
-    private func loadData() {
+    func loadData() {
         Task {
             try await loadShalaqazaqDataset()
         }

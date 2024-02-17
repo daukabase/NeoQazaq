@@ -23,7 +23,8 @@ class KeyboardViewController: KeyboardInputViewController {
      we make demo-specific service configurations.
      */
     override func viewDidLoad() {
-        
+        debugPrint("[DEBUG] VIEW DID LOAD")
+        QazaqWordsDatasetLoader.shared.loadData()
         /// 💡 Setup a fake autocomplete provider.
         ///
         /// This fake provider will provide fake suggestions.
@@ -46,7 +47,6 @@ class KeyboardViewController: KeyboardInputViewController {
             baseProvider: NeoQazaqKeyboardLayoutProvider()
         )
 
-        state.keyboardContext.needsInputModeSwitchKey = false
         /// 💡 Setup a custom keyboard locale.
         ///
         /// Without KeyboardKit Pro, changing locale will by
@@ -74,5 +74,19 @@ class KeyboardViewController: KeyboardInputViewController {
         
         /// 💡 Call super to perform the base initialization.
         super.viewDidLoad()
+    }
+
+    override func viewWillSetupKeyboard() {
+        super.viewWillSetupKeyboard()
+        setup { controller in
+            SystemKeyboard(
+                state: controller.state,
+                services: controller.services,
+                buttonContent: { $0.view },
+                buttonView: { $0.view },
+                emojiKeyboard: { $0.view },
+                toolbar: { $0.view }
+            )
+        }
     }
 }

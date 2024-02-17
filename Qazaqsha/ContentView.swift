@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State
-    var text = ""
+    var text = "" {
+        didSet {
+            print(text)
+        }
+    }
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,14 +26,18 @@ struct ContentView: View {
             Text("Then Open Batyrman - Qazaqsha -> Turn Allow Full Access")
                 .multilineTextAlignment(.center)
                 .padding(20)
-            Spacer(minLength: 16)
-            TextField("Placeholder", text: $text).padding(20).border(Color.gray, width: 1)
+            Text("After you have don't steps above\n try to type \"салем\"\nand tap to the space button")
+                .multilineTextAlignment(.center)
+                .padding(20)
+            TextField("Type салем and type space ", text: $text).padding(20).border(Color.gray, width: 1)
             Spacer()
         }
         .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
