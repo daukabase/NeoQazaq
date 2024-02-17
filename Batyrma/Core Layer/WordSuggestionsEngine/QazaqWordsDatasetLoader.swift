@@ -13,17 +13,14 @@ struct SuggestionVariation: Codable {
 }
 
 final class QazaqWordsDatasetLoader {
+    static let shared = QazaqWordsDatasetLoader()
+
     private let serialQueue = DispatchQueue(label: "com.yourapp.datasetLoaderQueue")
     private var shalaqazaqDatasetCache: [String: [SuggestionVariation]]?
     private var qazaqWordsDatasetCache: Set<String>?
     
-    func loadData() {
-        Task {
-            try await loadShalaqazaqDataset()
-        }
-        Task {
-            try await loadWords()
-        }
+    private init() {
+        loadData()
     }
 
     func shalaqazaqVariations() -> [String: [SuggestionVariation]] {
@@ -35,6 +32,15 @@ final class QazaqWordsDatasetLoader {
     func qazaqWordsList() -> Set<String> {
         serialQueue.sync {
             return qazaqWordsDatasetCache ?? Set()
+        }
+    }
+
+    private func loadData() {
+        Task {
+            try await loadShalaqazaqDataset()
+        }
+        Task {
+            try await loadWords()
         }
     }
 

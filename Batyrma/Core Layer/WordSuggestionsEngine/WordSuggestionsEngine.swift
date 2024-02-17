@@ -18,12 +18,9 @@ protocol WordSuggestionsEngine {
 }
 
 final class QazaqWordSuggestionsEngineV2: WordSuggestionsEngine {
-    private let qazaqWordsDatasetLoader: QazaqWordsDatasetLoader
+    private let qazaqWordsDatasetLoader = QazaqWordsDatasetLoader.shared
 
-    init() {
-        self.qazaqWordsDatasetLoader = QazaqWordsDatasetLoader()
-        qazaqWordsDatasetLoader.loadData()
-    }
+    init() {}
 
     func suggestWords(for text: String) -> [GeneratedSimilarWord] {
         guard let variations = findRootVariationsFromDatabase(for: text) else {
