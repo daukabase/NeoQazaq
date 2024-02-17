@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/daukabase/KeyboardKit.git",
       "state" : {
-        "revision" : "443585458b41ef5e750ceb4c7358628acd1bdabf",
-        "version" : "9.2.0"
+        "revision" : "955b6bccf991cc7cde3dbf11cfca50e242e5fb7b",
+        "version" : "9.2.1"
       }
     }
   ],

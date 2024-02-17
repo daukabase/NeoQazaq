@@ -33,7 +33,7 @@ extension String {
 }
 
 
-func json(filename: String) -> [String: String] {
+func json(filename: String) -> [String: [String: Double]] {
     if let fileURL = Bundle.main.url(forResource: filename, withExtension: "json") {
         do {
             // Read the file content
@@ -41,7 +41,7 @@ func json(filename: String) -> [String: String] {
             
             // Decode the JSON data
             let decoder = JSONDecoder()
-            let jsonData = try decoder.decode([String: String].self, from: data)
+            let jsonData = try decoder.decode([String: [String: Double]].self, from: data)
             
             return jsonData
         } catch {
@@ -127,20 +127,32 @@ func printAsJsonString(data: Any) {
     }
 }
 
-let shalaqazaqJsonDatasetFileURL = json(filename: "ShalaqazaqDataset")
-let qazaqWordsList: [String] = datasetFileURL(filename: "qazaqWordsList", ext: "txt")
+var currentShalaDataset = json(filename: "ShalaqazaqDataset")
+let qazaqWordsList: Set<String> = Set(datasetFileURL(filename: "qazaqWordsList", ext: "txt"))
 let rusMostCommonWordsDataset: [String] = datasetFileURL(filename: "rusWords", ext: "txt")
 
-qazaqWordsList.filter { $0.count <= 2 }.forEach {
-    print($0)
+var newShalaDataset: [String: [String: Double]] = [:]
+
+qazaqWordsList.forEach { word in
+    let hasQazChar = word.contains(where: {
+        kazakhUniqueCharacters.contains(String($0))
+    })
+
+    guard hasQazChar else { return }
+
+    let shala = replaceQazaqCharsWithShalaqazaqIfNeeded(in: word)
+    
+    if !currentShalaDataset.keys.contains(shala) {
+        print("new shala [\(shala)] with taza [\(word)]")
+        currentShalaDataset[shala] = [word : 1.0]
+    }
+
+    if !currentShalaDataset[shala]!.keys.contains(word) {
+        print("old shala [\(shala)] added taza [\(word)]")
+        currentShalaDataset[shala]![word] = 0.93
+        let shalaDataset = currentShalaDataset[shala]?.mapValues { _ in 0.9 }
+        currentShalaDataset[shala] = shalaDataset
+    }
 }
 
-
-
-
-//let russianCommonWords = rusWordsListdatasetFileURL()
-//russianCommonWords.forEach { rusWord in
-//    if shalaDataset[rusWord] != nil {
-//        print("RUS DUPLICATE: \(rusWord)")
-//    }
-//}
+printAsJsonString(data: currentShalaDataset)
