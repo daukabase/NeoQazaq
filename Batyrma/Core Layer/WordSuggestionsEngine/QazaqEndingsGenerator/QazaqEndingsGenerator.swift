@@ -56,11 +56,18 @@ struct QazaqEndingsGenerator {
         for i in (input.count - 1..<input.count + 1).reversed() {
             let subString = input[0..<i]
             if let taza = shalaDataset[subString] {
-                return taza
+                let suffix = suffix(for: input, root: subString) ?? ""
+                return taza + suffix
             }
         }
 
         return nil
+    }
+
+    func suffix(for text: String, root: String) -> String? {
+        let hasSuffixes = root.count <= text.count
+        let suffix = hasSuffixes ? text[root.count ..< text.count] : nil
+        return suffix
     }
 
     // TODO: generate data for cases with
