@@ -15,7 +15,7 @@ struct SuggestionVariation: Codable {
 final class QazaqWordsDatasetLoader {
     static let shared = QazaqWordsDatasetLoader()
 
-    private let serialQueue = DispatchQueue(label: "com.yourapp.datasetLoaderQueue")
+    private let serialQueue = DispatchQueue(label: "com.qazaqsha.batyrma.datasetLoaderQueue")
     private var shalaqazaqDatasetCache: [String: [SuggestionVariation]]?
     private var qazaqWordsDatasetCache: Set<String>?
     
