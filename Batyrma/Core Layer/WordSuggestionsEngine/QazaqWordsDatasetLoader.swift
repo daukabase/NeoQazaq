@@ -46,7 +46,6 @@ final class QazaqWordsDatasetLoader {
 
     private func loadShalaqazaqDataset() async throws {
         let loadStartDate = Date()
-        print("Prepare loading shala")
         guard shalaqazaqDatasetCache == nil else {
             return
         }
