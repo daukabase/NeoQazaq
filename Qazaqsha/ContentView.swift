@@ -19,12 +19,14 @@ struct ContentView: View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-            Text("Open: Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard -> Qazaqsha")
+            Text("Install\nSettings -> General -> Keyboard -> Keyboards -> Add New Keyboard -> Qazaqsha")
                 .multilineTextAlignment(.center)
-                .padding(20)
-            Text("Optional:  Settings -> General -> Keyboard -> Keyboards -> Batyrma - Qazaqsha -> Turn Allow Full Access")
+                .padding(.horizontal, 20)
+                .padding(.vertical, 8)
+            Text("(Optional)\nSettings -> General -> Keyboard -> Keyboards -> Batyrma - Qazaqsha -> Turn Allow Full Access")
                 .multilineTextAlignment(.center)
-                .padding(20)
+                .padding(.horizontal, 20)
+                .padding(.vertical, 8)
             Text(
                 """
                 After you have done steps above
@@ -34,8 +36,8 @@ struct ContentView: View {
                 shalaqazaq word "казагым" -> "қазағым"🤩
                 """
             )
-                .multilineTextAlignment(.center)
-                .padding(20)
+                .multilineTextAlignment(.leading)
+                .padding(.horizontal, 20)
             TextField("Type салем and type space ", text: $text).padding(20).border(Color.gray, width: 1)
             Spacer()
         }
