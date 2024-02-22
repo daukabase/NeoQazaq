@@ -19,7 +19,6 @@ struct ContentView: View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-                .foregroundStyle(.tint)
             Text("Open Settings -> General -> Keyboard -> Keyboards -> Add New Keyboard -> Batyrma - Qazaqsha")
                 .multilineTextAlignment(.center)
                 .padding(20)

@@ -20,7 +20,6 @@ protocol Service {
 }
 
 struct QazaqEndingsGenerator {
-    
     let qazToShala: [String: [String]] = [
         "ә": ["а"],
         "ғ": ["г"],
@@ -51,9 +50,9 @@ struct QazaqEndingsGenerator {
     }
 
     func generateTazaOutput(for input: String, root: String) -> String? {
-        let shalaDataset = QazaqEndingsGenerator().generateShalaqazaqDatasetForEndings(for: root)
+        let shalaDataset = generateShalaqazaqDatasetForEndings(for: root)
 
-        for i in (input.count - 1..<input.count + 1).reversed() {
+        for i in (input.count - 1 ..< input.count + 1).reversed() {
             let subString = input[0..<i]
             if let taza = shalaDataset[subString] {
                 let suffix = suffix(for: input, root: subString) ?? ""
@@ -70,22 +69,29 @@ struct QazaqEndingsGenerator {
         return suffix
     }
 
-    // TODO: generate data for cases with
-    // endings like "қазақ" and "қазағым"
-
-    /// if user typed "казагым" input root must be "қазақ" not "қазағ"
+    /// Make dataset for shalaqazaq ending for root
+    /// For example, for input "озеннин" clean kazakh root is "өзен"
+    /// This algorithm will generate all possible endings for word "өзен"
+    /// Then convert unique kazakh words to russian shala variants
+    /// Final dataset gonna be like that:
+    /// [
+    /// "озенде": "өзен",
+    /// "озеннин": "өзеннің"
+    /// "озеним": "өзенім",
+    /// ...
+    /// ]
     func generateShalaqazaqDatasetForEndings(for root: String) -> [String: String] {
         var shalaqazaqDataset: [String: String] = [:]
-        generateEndings(for: root)
-            .forEach { wordWithEnding in
-                let shalaEndigns = generateShalaWords(for: wordWithEnding, targetShala: "", currentIndex: 0)
-                shalaEndigns.forEach { shalaEnding in
-                    shalaqazaqDataset[shalaEnding] = wordWithEnding
-                }
+        generateEndings(for: root).forEach { wordWithEnding in
+            let shalaEndings = generateShalaWords(for: wordWithEnding, targetShala: "", currentIndex: 0)
+            shalaEndings.forEach { shalaEnding in
+                shalaqazaqDataset[shalaEnding] = wordWithEnding
             }
+        }
         return shalaqazaqDataset
     }
 
+    // backtracking like approach
     private func generateShalaWords(for word: String, targetShala: String, currentIndex: Int) -> [String] {
         var targetShala = targetShala
         for index in (currentIndex ..< word.count) {
