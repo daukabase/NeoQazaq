@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "iPhone_App_60_3x.png",
       "idiom" : "universal"
     }
   ],

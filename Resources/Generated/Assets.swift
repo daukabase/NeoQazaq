@@ -32,6 +32,8 @@ internal enum Asset {
     internal static let lightSecondary = ColorAsset(name: "lightSecondary")
   }
   internal enum Images {
+    internal static let appIconWelcome = ImageAsset(name: "appIconWelcome")
+    internal static let appleSettingsGear = ImageAsset(name: "appleSettingsGear")
     internal static let keyBackspace = ImageAsset(name: "keyBackspace")
     internal static let keyEmoji = ImageAsset(name: "keyEmoji")
     internal static let keyLowercased = ImageAsset(name: "keyLowercased")
