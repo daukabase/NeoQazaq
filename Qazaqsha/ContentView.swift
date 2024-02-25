@@ -9,25 +9,39 @@ import SwiftUI
 
 struct ContentView: View {
     enum Constants {
-        static let iconSize = CGSize(width: 24, height: 24)
-        static let indexItemSize = CGSize(width: 24, height: 24)
+        static let iconSize = CGSize(width: 32, height: 32)
+        static let indexItemSize = CGSize(width: 28, height: 28)
+        static let iOSIconRoundedCornersScale: CGFloat = 10 / 57
+        static let appName = "TazaQazaq"
+        static let keyboardName = "Batyrma"
     }
 
-//    @State
-//    var text = "" {
-//        didSet {
-//            print(text)
-//        }
-//    }
-
     var body: some View {
-        VStack {
-            
+        welcomeView
+        Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+        setupStepsView
+        Spacer()
+        policyView
+    }
+
+    var welcomeView: some View {
+        VStack(alignment: .center, content: {
+            Text("Welcome to \(Constants.appName)").foregroundColor(.black)
+            Text("Follow steps below to setup keyboard").foregroundColor(.gray)
+        })
+    }
+
+    var policyView: some View {
+        Text("This is policy privacy for \(Constants.appName)")
+    }
+
+    var setupStepsView: some View {
+        VStack(alignment: .leading, spacing: 12) {
             ForEach(0 ..< 6, id: \.self) { index in
                 switch index {
                 case 0:
                     iconText(
-                        index: index, 
+                        index: index,
                         icon: Asset.Images.appleSettingsGear.swiftUIImage,
                         text: "Open Settings"
                     )
@@ -35,7 +49,7 @@ struct ContentView: View {
                     iconText(
                         index: index,
                         icon: Asset.Images.appIconWelcome.swiftUIImage,
-                        text: "Keyboards"
+                        text: Constants.appName
                     )
                 case 2:
                     iconText(
@@ -46,13 +60,11 @@ struct ContentView: View {
                 case 3:
                     iconText(
                         index: index,
-                        icon: nil,
-                        text: "Enable Batyrma"
+                        text: "Enable \(Constants.keyboardName)"
                     )
                 case 4:
                     iconText(
                         index: index,
-                        icon: nil,
                         text: "Allow Full Access",
                         subtitle: "Optional"
                     )
@@ -66,40 +78,47 @@ struct ContentView: View {
                 }
             }
         }
-        .padding()
+        .padding(.leading, 36)
     }
 
     func iconText(index: Int, icon: Image? = nil, text: String, subtitle: String? = nil) -> some View {
-        HStack(alignment: .center, spacing: 4) {
+        HStack(alignment: .center, spacing: 12) {
             indexView(index: index + 1)
 
+            Spacer().frame(width: 12)
+
             if let icon {
-                icon.frame(width: Constants.iconSize.width, height: Constants.iconSize.height)
+                icon
+                    .resizable()
+                    .frame(width: Constants.iconSize.width, height: Constants.iconSize.height)
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(RoundedRectangle(
+                        cornerRadius: Constants.iOSIconRoundedCornersScale * Constants.iconSize.width,
+                        style: .continuous
+                    ))
             }
 
             VStack(alignment: .leading, content: {
-                Text(text).foregroundColor(Asset.Colors.lightPrimary.swiftUIColor)
+                Text(text).foregroundColor(.black)
 
                 if let subtitle {
-                    Text(subtitle).foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
+                    Text(subtitle).foregroundColor(.gray)
                 }
             })
+
+            Spacer()
         }
+        .frame(height: 40)
     }
 
     func indexView(index: Int) -> some View {
-        ZStack(alignment: .center) {
-            Rectangle()
-                .fill(Color.green)
-                .frame(width: Constants.indexItemSize.width + 1, height: Constants.indexItemSize.width + 1)
-                .background(Asset.Colors.lightSecondary.swiftUIColor)
-                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-
-            Text(String(index))
-                .frame(width: Constants.indexItemSize.width, height: Constants.indexItemSize.height)
-                .background(Asset.Colors.lightPrimary.swiftUIColor)
-                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-        }
+        Text(String(index))
+            .frame(width: Constants.indexItemSize.width - 1, height: Constants.indexItemSize.height - 1)
+            .foregroundColor(.black)
+            .background(
+                Circle()
+                    .strokeBorder(.black, lineWidth: 1)
+            )
     }
 }
 

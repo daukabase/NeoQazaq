@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B1E44F62B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */; };
 		0B30DA722B8B2D5000215711 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
+		0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
+		0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B5066EB2B80AE0000C01D14 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
 		0B5066ED2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5066EC2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift */; };
@@ -399,6 +401,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */,
+				0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */,
 				0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */,
 				0B800E4D2B681A8A00EADCA9 /* Assets.xcassets in Resources */,
 			);
@@ -512,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -569,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -592,6 +596,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = /Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Qazaqsha/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TazaQazaq;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -625,6 +630,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = /Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Qazaqsha/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TazaQazaq;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
