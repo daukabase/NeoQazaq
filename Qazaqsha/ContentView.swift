@@ -14,11 +14,14 @@ struct ContentView: View {
         static let iOSIconRoundedCornersScale: CGFloat = 10 / 57
         static let appName = "TazaQazaq"
         static let keyboardName = "Batyrma"
+        static let appURL = URL(string: UIApplication.openSettingsURLString)!
     }
+
+    @Environment(\.openURL) var openURL
 
     var body: some View {
         welcomeView
-        Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
+        Spacer()
         setupStepsView
         Spacer()
         policyView
@@ -32,7 +35,7 @@ struct ContentView: View {
     }
 
     var policyView: some View {
-        Text("This is policy privacy for \(Constants.appName)")
+        Text("By installing, you are agreeing to \(Constants.appName)'s privacy policy")
     }
 
     var setupStepsView: some View {
@@ -49,7 +52,8 @@ struct ContentView: View {
                     iconText(
                         index: index,
                         icon: Asset.Images.appIconWelcome.swiftUIImage,
-                        text: Constants.appName
+                        text: Constants.appName,
+                        openAppEnabled: true
                     )
                 case 2:
                     iconText(
@@ -81,7 +85,13 @@ struct ContentView: View {
         .padding(.leading, 36)
     }
 
-    func iconText(index: Int, icon: Image? = nil, text: String, subtitle: String? = nil) -> some View {
+    func iconText(
+        index: Int,
+        icon: Image? = nil,
+        text: String,
+        subtitle: String? = nil,
+        openAppEnabled: Bool = false
+    ) -> some View {
         HStack(alignment: .center, spacing: 12) {
             indexView(index: index + 1)
 
@@ -99,7 +109,19 @@ struct ContentView: View {
             }
 
             VStack(alignment: .leading, content: {
-                Text(text).foregroundColor(.black)
+                HStack {
+                    Text(text).foregroundColor(.black)
+
+                    if openAppEnabled {
+                        Button(action: {
+                            openURL(URL(string: UIApplication.openSettingsURLString)!)
+                            
+                            print("hello")
+                        }, label: {
+                            Text("open").foregroundStyle(.blue)
+                        })
+                    }
+                }
 
                 if let subtitle {
                     Text(subtitle).foregroundColor(.gray)
@@ -124,6 +146,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        VStack {
+            ContentView()
+        }
     }
 }
