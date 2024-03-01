@@ -24,6 +24,11 @@
 		0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4F2B681A8A00EADCA9 /* Preview Assets.xcassets */; };
 		0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */; };
 		0B800E662B681AEE00EADCA9 /* Batyrma.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
+		0BA294182B91E43F001465DF /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294172B91E43F001465DF /* UserDefaults+.swift */; };
+		0BA294192B91E494001465DF /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294172B91E43F001465DF /* UserDefaults+.swift */; };
+		0BA2941A2B91E5D6001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
+		0BA2941B2B91E5DD001465DF /* AppSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* AppSetupView.swift */; };
 		0BAB0BC32B8114D000DB06F5 /* QazaqshaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */; };
 		0BAB0BC42B8115E800DB06F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E4A2B681A8900EADCA9 /* ContentView.swift */; };
 		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
@@ -87,6 +92,10 @@
 		0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Batyrma.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0B800E632B681AEE00EADCA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BA294132B91DF9A001465DF /* Qazaqsha.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Qazaqsha.entitlements; sourceTree = "<group>"; };
+		0BA294142B91E0EA001465DF /* Batyrma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Batyrma.entitlements; sourceTree = "<group>"; };
+		0BA294152B91E22A001465DF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		0BA294172B91E43F001465DF /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		0BAB0BC52B811AB600DB06F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BCA611E2B6BC73F0038FAFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0BCA61202B6BC8D50038FAFB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -151,9 +160,11 @@
 		0B800E472B681A8900EADCA9 /* Qazaqsha */ = {
 			isa = PBXGroup;
 			children = (
+				0BA294132B91DF9A001465DF /* Qazaqsha.entitlements */,
 				0BAB0BC52B811AB600DB06F5 /* Info.plist */,
 				0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */,
 				0B800E4A2B681A8900EADCA9 /* ContentView.swift */,
+				0BA294152B91E22A001465DF /* OnboardingView.swift */,
 				0B30DA752B8BB67900215711 /* AppSetupView.swift */,
 				0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */,
 				0B800E4E2B681A8A00EADCA9 /* Preview Content */,
@@ -172,6 +183,7 @@
 		0B800E602B681AEE00EADCA9 /* Batyrma */ = {
 			isa = PBXGroup;
 			children = (
+				0BA294142B91E0EA001465DF /* Batyrma.entitlements */,
 				0BEA16A22B7BE054000154C6 /* Core Layer */,
 				0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */,
 				0BCA61312B6BD1270038FAFB /* LetterKey.swift */,
@@ -238,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				0BCA613E2B6BDC310038FAFB /* String+.swift */,
+				0BA294172B91E43F001465DF /* UserDefaults+.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -432,6 +445,8 @@
 				0B800E4B2B681A8900EADCA9 /* ContentView.swift in Sources */,
 				0B800E492B681A8900EADCA9 /* QazaqshaApp.swift in Sources */,
 				0B30DA762B8BB67900215711 /* AppSetupView.swift in Sources */,
+				0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */,
+				0BA294192B91E494001465DF /* UserDefaults+.swift in Sources */,
 				0B30DA722B8B2D5000215711 /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,13 +460,16 @@
 				0BAB0BC42B8115E800DB06F5 /* ContentView.swift in Sources */,
 				0BCA61322B6BD1270038FAFB /* LetterKey.swift in Sources */,
 				0B7943272B7D1E5500CCA7AB /* QuantitativeService.swift in Sources */,
+				0BA2941B2B91E5DD001465DF /* AppSetupView.swift in Sources */,
 				0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */,
 				0BCA61302B6BD11A0038FAFB /* UIImage+.swift in Sources */,
+				0BA294182B91E43F001465DF /* UserDefaults+.swift in Sources */,
 				0B7943232B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift in Sources */,
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
 				0BCA613F2B6BDC310038FAFB /* String+.swift in Sources */,
 				0BAB0BC32B8114D000DB06F5 /* QazaqshaApp.swift in Sources */,
 				0BCA61452B6BDCC60038FAFB /* WordSuggestionsEngine.swift in Sources */,
+				0BA2941A2B91E5D6001465DF /* OnboardingView.swift in Sources */,
 				0B5066ED2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift in Sources */,
 				0B7943252B7D1E3700CCA7AB /* PossessiveService.swift in Sources */,
 			);
@@ -593,6 +611,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
@@ -627,6 +646,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
@@ -658,6 +678,7 @@
 		0B800E682B681AEE00EADCA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Batyrma/Batyrma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JNA8QM22SG;
@@ -684,6 +705,7 @@
 		0B800E692B681AEE00EADCA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Batyrma/Batyrma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JNA8QM22SG;

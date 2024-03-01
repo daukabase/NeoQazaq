@@ -16,14 +16,17 @@ import SwiftUI
  ("Settings/General/Keyboards"). It needs full access to get
  access to features like haptic feedback.
  */
-class KeyboardViewController: KeyboardInputViewController {
+final class KeyboardViewController: KeyboardInputViewController {
+    @UserDefault("isKeyboardExtensionEnabled", store: .localAppGroup)
+    var isKeyboardInstalled: Bool = false
 
     /**
      This function is called when the controller loads. Here,
      we make demo-specific service configurations.
      */
     override func viewDidLoad() {
-        debugPrint("[DEBUG] VIEW DID LOAD")
+        isKeyboardInstalled = true
+
         QazaqWordsDatasetLoader.shared.loadData()
         /// 💡 Setup a fake autocomplete provider.
         ///

@@ -10,6 +10,8 @@ import KeyboardKit
 
 class QazaqAutocompleteProvider: AutocompleteProvider {
     let suggestionEngine: WordSuggestionsEngine = QazaqWordSuggestionsEngineV2()
+    @UserDefault("isAutocompleteEnabled", store: .localAppGroup)
+    var isAutocompleteEnabled: Bool = false
 
     init(context: AutocompleteContext) {
         self.context = context
@@ -38,7 +40,7 @@ class QazaqAutocompleteProvider: AutocompleteProvider {
         return suggestions(for: text)
             .map {
                 var suggestion = $0
-                suggestion.isAutocorrect = $0.isAutocorrect && context.isAutocorrectEnabled
+                suggestion.isAutocorrect = $0.isAutocorrect && context.isAutocorrectEnabled && isAutocompleteEnabled
                 return suggestion
             }
     }
