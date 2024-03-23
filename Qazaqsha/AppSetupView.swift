@@ -12,11 +12,12 @@ struct AppSetupView: View {
         static let iconSize = CGSize(width: 32, height: 32)
         static let indexItemSize = CGSize(width: 28, height: 28)
         static let iOSIconRoundedCornersScale: CGFloat = 10 / 57
-        static let appName = "TazaQazaq"
-        static let keyboardName = "Batyrma"
+        static let appName = "NeoQazaq"
+        static let keyboardName = appName
         static let appURL = URL(string: UIApplication.openSettingsURLString)!
     }
 
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.openURL) var openURL
 
     var body: some View {
@@ -29,8 +30,8 @@ struct AppSetupView: View {
 
     var welcomeView: some View {
         VStack(alignment: .center, content: {
-            Text("Welcome to \(Constants.appName)").foregroundColor(.black)
-            Text("Follow steps below to setup keyboard").foregroundColor(.gray)
+            Text("Welcome to \(Constants.appName)").foregroundColor(Asset.Colors.text.swiftUIColor)
+            Text("Follow steps below to setup keyboard").foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
         })
     }
 
@@ -110,7 +111,7 @@ struct AppSetupView: View {
 
             VStack(alignment: .leading, content: {
                 HStack {
-                    Text(text).foregroundColor(.black)
+                    Text(text).foregroundColor(Asset.Colors.text.swiftUIColor)
 
                     if openAppEnabled {
                         Button(action: {
@@ -118,13 +119,13 @@ struct AppSetupView: View {
                             
                             print("hello")
                         }, label: {
-                            Text("open").foregroundStyle(.blue)
+                            Text("open").foregroundStyle(Asset.Colors.lightAction.swiftUIColor)
                         })
                     }
                 }
 
                 if let subtitle {
-                    Text(subtitle).foregroundColor(.gray)
+                    Text(subtitle).foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
                 }
             })
 
@@ -136,10 +137,10 @@ struct AppSetupView: View {
     func indexView(index: Int) -> some View {
         Text(String(index))
             .frame(width: Constants.indexItemSize.width - 1, height: Constants.indexItemSize.height - 1)
-            .foregroundColor(.black)
+            .foregroundColor(Asset.Colors.text.swiftUIColor)
             .background(
                 Circle()
-                    .strokeBorder(.black, lineWidth: 1)
+                    .strokeBorder(Asset.Colors.text.swiftUIColor, lineWidth: 1)
             )
     }
 }

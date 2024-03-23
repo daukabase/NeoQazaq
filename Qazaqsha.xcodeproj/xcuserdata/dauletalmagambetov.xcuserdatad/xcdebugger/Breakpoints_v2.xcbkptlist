@@ -52,5 +52,194 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A967966-F8AD-4569-9D95-C701A337E65E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Batyrma/Extensions/Swift/UserDefaults+.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "init(wrappedType:key:store:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2A967966-F8AD-4569-9D95-C701A337E65E - b0d612344417d654"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (&#x3c4;_0_0) -&gt; () in Qazaqsha.UserDefault&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.ExpressibleByNilLiteral&gt;.init&lt;&#x3c4;_0_0&gt;(wrappedType: &#x3c4;_1_0.Type, key: Swift.String, store: __C.NSUserDefaults) -&gt; Qazaqsha.UserDefault&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Qazaqsha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Batyrma/Extensions/Swift/UserDefaults+.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "2A967966-F8AD-4569-9D95-C701A337E65E - 24b9ec871ab3c23f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (&#x3c4;_0_0) -&gt; () in Batyrma.UserDefault&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.ExpressibleByNilLiteral&gt;.init&lt;&#x3c4;_0_0&gt;(wrappedType: &#x3c4;_1_0.Type, key: Swift.String, store: __C.NSUserDefaults) -&gt; Batyrma.UserDefault&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Batyrma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Batyrma/Extensions/Swift/UserDefaults+.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "2A967966-F8AD-4569-9D95-C701A337E65E - b0d612344417d654"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (&#x3c4;_0_0) -&gt; () in Qazaqsha.UserDefault&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.ExpressibleByNilLiteral&gt;.init&lt;&#x3c4;_0_0&gt;(wrappedType: &#x3c4;_1_0.Type, key: Swift.String, store: __C.NSUserDefaults) -&gt; Qazaqsha.UserDefault&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Qazaqsha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Batyrma/Extensions/Swift/UserDefaults+.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "452">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C12998D-6AC1-4826-ABE8-AA7D376514FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Batyrma/Extensions/Swift/UserDefaults+.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "UserDefault"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "6C12998D-6AC1-4826-ABE8-AA7D376514FE - 512edb85179d679e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;&#x3c4;_1_0&gt;) -&gt; () in Qazaqsha.UserDefault.init&lt;&#x3c4;_0_0 where &#x3c4;_0_0 == Swift.Optional&lt;&#x3c4;_1_0&gt;, &#x3c4;_1_0: Swift.RawRepresentable&gt;(key: Swift.String, store: __C.NSUserDefaults) -&gt; Qazaqsha.UserDefault&lt;Swift.Optional&lt;&#x3c4;_1_0&gt;&gt;"
+                  moduleName = "Qazaqsha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Batyrma/Extensions/Swift/UserDefaults+.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "6C12998D-6AC1-4826-ABE8-AA7D376514FE - 2fe5dc98673db289"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;&#x3c4;_1_0&gt;) -&gt; () in Batyrma.UserDefault.init&lt;&#x3c4;_0_0 where &#x3c4;_0_0 == Swift.Optional&lt;&#x3c4;_1_0&gt;, &#x3c4;_1_0: Swift.RawRepresentable&gt;(key: Swift.String, store: __C.NSUserDefaults) -&gt; Batyrma.UserDefault&lt;Swift.Optional&lt;&#x3c4;_1_0&gt;&gt;"
+                  moduleName = "Batyrma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Batyrma/Extensions/Swift/UserDefaults+.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "6C12998D-6AC1-4826-ABE8-AA7D376514FE - 512edb85179d679e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;&#x3c4;_1_0&gt;) -&gt; () in Qazaqsha.UserDefault.init&lt;&#x3c4;_0_0 where &#x3c4;_0_0 == Swift.Optional&lt;&#x3c4;_1_0&gt;, &#x3c4;_1_0: Swift.RawRepresentable&gt;(key: Swift.String, store: __C.NSUserDefaults) -&gt; Qazaqsha.UserDefault&lt;Swift.Optional&lt;&#x3c4;_1_0&gt;&gt;"
+                  moduleName = "Qazaqsha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Batyrma/Extensions/Swift/UserDefaults+.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5502DE6-23FF-43FD-8E70-73D17EF31CFF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Batyrma/Extensions/Swift/UserDefaults+.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "init(defaultValue:key:store:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C5502DE6-23FF-43FD-8E70-73D17EF31CFF - 1b75354292df4b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &#x3c4;_0_0 in Qazaqsha.UserDefault&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.RawRepresentable&gt;.init(defaultValue: &#x3c4;_0_0, key: Swift.String, store: __C.NSUserDefaults) -&gt; Qazaqsha.UserDefault&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Qazaqsha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Batyrma/Extensions/Swift/UserDefaults+.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "C5502DE6-23FF-43FD-8E70-73D17EF31CFF - a461228323a958cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &#x3c4;_0_0 in Batyrma.UserDefault&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.RawRepresentable&gt;.init(defaultValue: &#x3c4;_0_0, key: Swift.String, store: __C.NSUserDefaults) -&gt; Batyrma.UserDefault&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Batyrma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Batyrma/Extensions/Swift/UserDefaults+.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "C5502DE6-23FF-43FD-8E70-73D17EF31CFF - 1b75354292df4b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &#x3c4;_0_0 in Qazaqsha.UserDefault&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.RawRepresentable&gt;.init(defaultValue: &#x3c4;_0_0, key: Swift.String, store: __C.NSUserDefaults) -&gt; Qazaqsha.UserDefault&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Qazaqsha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Batyrma/Extensions/Swift/UserDefaults+.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "792">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

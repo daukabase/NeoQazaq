@@ -36,7 +36,6 @@
 		0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
 		0BCA612E2B6BD1070038FAFB /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */; };
 		0BCA61302B6BD11A0038FAFB /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */; };
-		0BCA61322B6BD1270038FAFB /* LetterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61312B6BD1270038FAFB /* LetterKey.swift */; };
 		0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */; };
 		0BCA613F2B6BDC310038FAFB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613E2B6BDC310038FAFB /* String+.swift */; };
 		0BCA61452B6BDCC60038FAFB /* WordSuggestionsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */; };
@@ -102,7 +101,6 @@
 		0BCA61252B6BCA060038FAFB /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
-		0BCA61312B6BD1270038FAFB /* LetterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterKey.swift; sourceTree = "<group>"; };
 		0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqAutocompleteProvider.swift; sourceTree = "<group>"; };
 		0BCA613E2B6BDC310038FAFB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionsEngine.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 				0BA294142B91E0EA001465DF /* Batyrma.entitlements */,
 				0BEA16A22B7BE054000154C6 /* Core Layer */,
 				0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */,
-				0BCA61312B6BD1270038FAFB /* LetterKey.swift */,
 				0BCA612B2B6BD0F20038FAFB /* Extensions */,
 				0B800E632B681AEE00EADCA9 /* Info.plist */,
 			);
@@ -458,7 +455,6 @@
 				0BCA612E2B6BD1070038FAFB /* UIStackView+.swift in Sources */,
 				0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */,
 				0BAB0BC42B8115E800DB06F5 /* ContentView.swift in Sources */,
-				0BCA61322B6BD1270038FAFB /* LetterKey.swift in Sources */,
 				0B7943272B7D1E5500CCA7AB /* QuantitativeService.swift in Sources */,
 				0BA2941B2B91E5DD001465DF /* AppSetupView.swift in Sources */,
 				0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */,
@@ -619,7 +615,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = /Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Qazaqsha/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TazaQazaq;
+				INFOPLIST_KEY_CFBundleDisplayName = NeoQazaq;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -654,7 +650,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = /Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Qazaqsha/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TazaQazaq;
+				INFOPLIST_KEY_CFBundleDisplayName = NeoQazaq;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -684,7 +680,7 @@
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Batyrma/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Batyrma;
+				INFOPLIST_KEY_CFBundleDisplayName = NeoQazaq;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -693,7 +689,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha.Batyrma;
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -711,7 +707,7 @@
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Batyrma/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Batyrma;
+				INFOPLIST_KEY_CFBundleDisplayName = NeoQazaq;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -720,7 +716,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 7.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha.Batyrma;
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;

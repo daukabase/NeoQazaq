@@ -7,7 +7,11 @@
 
 import SwiftUI
 
+
 class ContentViewModel: ObservableObject {
+    private enum Constants {
+        static let neoQazaqKeyboardExtensionIdentifier = "com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq"
+    }
     func isKeyboardExtensionEnabled() -> Bool {
         guard let appBundleIdentifier = Bundle.main.bundleIdentifier else {
             fatalError("isKeyboardExtensionEnabled(): Cannot retrieve bundle identifier.")
@@ -17,14 +21,7 @@ class ContentViewModel: ObservableObject {
             return false
         }
 
-        let keyboardExtensionBundleIdentifierPrefix = appBundleIdentifier + "."
-        for keyboard in keyboards {
-            if keyboard.hasPrefix(keyboardExtensionBundleIdentifierPrefix) {
-                return true
-            }
-        }
-
-        return false
+        return keyboards.contains(Constants.neoQazaqKeyboardExtensionIdentifier)
     }
 }
 

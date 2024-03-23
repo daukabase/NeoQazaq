@@ -40,7 +40,9 @@ class QazaqAutocompleteProvider: AutocompleteProvider {
         return suggestions(for: text)
             .map {
                 var suggestion = $0
-                suggestion.isAutocorrect = $0.isAutocorrect && context.isAutocorrectEnabled && isAutocompleteEnabled
+                suggestion.isAutocorrect = $0.isAutocorrect
+                    && context.isAutocorrectEnabled
+                    && isAutocompleteEnabled == true
                 return suggestion
             }
     }

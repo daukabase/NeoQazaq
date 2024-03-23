@@ -8,7 +8,7 @@
 import SwiftUI
 
 public extension UserDefaults {
-    static let localAppGroup = UserDefaults(suiteName: "group.com.almagambetov.daulet.qazaqsh")!
+    static let localAppGroup = UserDefaults(suiteName: "group.com.almagambetov.qazaqsha")!
 }
 
 @propertyWrapper
