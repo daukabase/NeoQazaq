@@ -13,6 +13,12 @@
 		0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0B30DA762B8BB67900215711 /* AppSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* AppSetupView.swift */; };
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
+		0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
+		0B4BA0C22BC2F0E000F6E182 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
+		0B4BA0C62BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
+		0B4BA0CA2BC2F0EF00F6E182 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B5066EB2B80AE0000C01D14 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
 		0B62F2022BC2EC170069E5CF /* WordSuggestionsEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */; };
 		0B62F2082BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
@@ -51,6 +57,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0B4BA0C32BC2F0E000F6E182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B981F4B2BC2ECC1000308C2;
+			remoteInfo = QazaqFoundation;
+		};
+		0B4BA0C72BC2F0E000F6E182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B62F1FD2BC2EC170069E5CF;
+			remoteInfo = WordSuggestionsEngine;
+		};
+		0B4BA0CB2BC2F0EF00F6E182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B981F4B2BC2ECC1000308C2;
+			remoteInfo = QazaqFoundation;
+		};
 		0B62F2092BC2EC170069E5CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
@@ -96,6 +123,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0B4BA0CD2BC2F0EF00F6E182 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0B4BA0CA2BC2F0EF00F6E182 /* QazaqFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0B62F2152BC2EC170069E5CF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,6 +163,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0B4BA0C62BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Embed Frameworks */,
+				0B4BA0C22BC2F0E000F6E182 /* QazaqFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +241,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */,
 				0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */,
+				0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,10 +473,12 @@
 				0B62F1FA2BC2EC170069E5CF /* Sources */,
 				0B62F1FB2BC2EC170069E5CF /* Frameworks */,
 				0B62F1FC2BC2EC170069E5CF /* Resources */,
+				0B4BA0CD2BC2F0EF00F6E182 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0B4BA0CC2BC2F0EF00F6E182 /* PBXTargetDependency */,
 			);
 			name = WordSuggestionsEngine;
 			productName = WordSuggestionsEngine;
@@ -495,6 +540,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				0B4BA0C42BC2F0E000F6E182 /* PBXTargetDependency */,
+				0B4BA0C82BC2F0E000F6E182 /* PBXTargetDependency */,
 			);
 			name = Batyrma;
 			packageProductDependencies = (
@@ -774,6 +821,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0B4BA0C42BC2F0E000F6E182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */;
+			targetProxy = 0B4BA0C32BC2F0E000F6E182 /* PBXContainerItemProxy */;
+		};
+		0B4BA0C82BC2F0E000F6E182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */;
+			targetProxy = 0B4BA0C72BC2F0E000F6E182 /* PBXContainerItemProxy */;
+		};
+		0B4BA0CC2BC2F0EF00F6E182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */;
+			targetProxy = 0B4BA0CB2BC2F0EF00F6E182 /* PBXContainerItemProxy */;
+		};
 		0B62F20A2BC2EC170069E5CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */;
