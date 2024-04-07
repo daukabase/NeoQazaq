@@ -116,8 +116,6 @@ struct AppSetupView: View {
                     if openAppEnabled {
                         Button(action: {
                             openURL(URL(string: UIApplication.openSettingsURLString)!)
-                            
-                            print("hello")
                         }, label: {
                             Text("open").foregroundStyle(Asset.Colors.lightAction.swiftUIColor)
                         })

@@ -13,6 +13,7 @@ final class QazaqWordSuggestionsEngineTests: XCTestCase {
 
     override func setUp() {
         engine = QazaqWordSuggestionsEngineV2()
+        QazaqWordsDatasetLoader.shared.loadData()
     }
 
     override func tearDown() {

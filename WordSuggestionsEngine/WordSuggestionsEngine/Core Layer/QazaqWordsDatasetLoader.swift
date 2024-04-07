@@ -13,12 +13,21 @@ struct SuggestionVariation: Codable {
 }
 
 public final class QazaqWordsDatasetLoader {
+    enum DatasetLoadError: Error {
+        case shalaqazaqLoadingFailed
+        case qazaqDictionaryLoadingFailed
+    }
+
     public static let shared = QazaqWordsDatasetLoader()
 
     private let serialQueue = DispatchQueue(label: "com.qazaqsha.batyrma.datasetLoaderQueue")
     private var shalaqazaqDatasetCache: [String: [SuggestionVariation]]?
     private var qazaqWordsDatasetCache: Set<String>?
-    
+
+    private var currentBundle: Bundle {
+        return Bundle(for: type(of: self))
+    }
+
     private init() {
         loadData()
     }
@@ -51,10 +60,11 @@ public final class QazaqWordsDatasetLoader {
         }
         print("Started loading shala")
 
-        let decoder = JSONDecoder()
-        let fileURL = Bundle.main.url(forResource: "ShalaqazaqDatasetV2", withExtension: "json")!
+        guard let fileURL = currentBundle.url(forResource: "ShalaqazaqDatasetV2", withExtension: "json") else {
+            throw DatasetLoadError.shalaqazaqLoadingFailed
+        }
         let data = try Data(contentsOf: fileURL)
-        let json = try decoder.decode([String: [String: Double]].self, from: data)
+        let json = try JSONDecoder().decode([String: [String: Double]].self, from: data)
 
         let shalaqazaqDataset = json.mapValues { rawVariations -> [SuggestionVariation] in
             rawVariations.map { (key, value) in
@@ -74,11 +84,16 @@ public final class QazaqWordsDatasetLoader {
             return
         }
         print("Started loading words")
-        let fileURL = Bundle.main.url(forResource: "qazaqWordsList", withExtension: "txt")!
+
+        guard let fileURL = currentBundle.url(forResource: "qazaqWordsList", withExtension: "txt") else {
+            throw DatasetLoadError.qazaqDictionaryLoadingFailed
+        }
+
         let data = try Data(contentsOf: fileURL)
         let textData = String(data: data, encoding: .utf8)!
             .split(separator: "\n")
             .map(String.init)
+
         print("Ended loading words: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
         serialQueue.sync {
             self.qazaqWordsDatasetCache = Set(textData)
