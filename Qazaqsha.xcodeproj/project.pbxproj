@@ -264,6 +264,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4BA0CE2BC2F12800F6E182 /* WordSuggestionsEngine */ = {
+			isa = PBXGroup;
+			children = (
+				0B62F20D2BC2EC170069E5CF /* WordSuggestionsEngineTests */,
+				0B62F1FF2BC2EC170069E5CF /* WordSuggestionsEngine */,
+			);
+			path = WordSuggestionsEngine;
+			sourceTree = "<group>";
+		};
 		0B62F1FF2BC2EC170069E5CF /* WordSuggestionsEngine */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,8 +297,7 @@
 				0BCA611D2B6BC7280038FAFB /* Resources */,
 				0B800E472B681A8900EADCA9 /* Qazaqsha */,
 				0B800E602B681AEE00EADCA9 /* Batyrma */,
-				0B62F1FF2BC2EC170069E5CF /* WordSuggestionsEngine */,
-				0B62F20D2BC2EC170069E5CF /* WordSuggestionsEngineTests */,
+				0B4BA0CE2BC2F12800F6E182 /* WordSuggestionsEngine */,
 				0B981F4D2BC2ECC1000308C2 /* QazaqFoundation */,
 				0B800E462B681A8900EADCA9 /* Products */,
 				0B800E712B6829CC00EADCA9 /* Frameworks */,
