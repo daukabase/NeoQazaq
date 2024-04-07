@@ -55,12 +55,13 @@ private extension QazaqAutocompleteProvider {
         let lowercased = text.lowercased()
         let uppercasedIndices = uppercasedCharactersIndices(of: text)
         let engineSuggestions = suggestionEngine.suggestWords(for: lowercased)
-            .enumerated()
-            .map { index, value in
+            .sorted(by: { $0.similarity > $1.similarity })
+            .map { value in
                 // If user typed in uppercase, we should return suggestions in uppercase
                 let word = uppercaseLettersOfTextFor(uppercasedIndices: uppercasedIndices, text: value.word)
                 return Autocomplete.Suggestion(text: word, isAutocorrect: value.similarity > 0.95)
             }
+            .prefix(2)
 
         let plainText = Autocomplete.Suggestion(text: text, isUnknown: true)
         let suggestions = [plainText] + engineSuggestions

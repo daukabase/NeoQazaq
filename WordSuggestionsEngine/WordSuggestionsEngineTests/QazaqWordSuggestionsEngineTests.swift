@@ -14,6 +14,8 @@ final class QazaqWordSuggestionsEngineTests: XCTestCase {
     override func setUp() {
         engine = QazaqWordSuggestionsEngineV2()
         QazaqWordsDatasetLoader.shared.loadData()
+        // need some time to load data from memory
+        sleep(1)
     }
 
     override func tearDown() {
@@ -23,8 +25,18 @@ final class QazaqWordSuggestionsEngineTests: XCTestCase {
     // MARK: - Base case
 
     func test_baseWords() {
-        suggestion(for: "казак", isEqualTo: "казақ")
+        Constants.shalaAndTazaMap.forEach { (shala, expectedTaza) in
+            suggestion(for: shala, isEqualTo: expectedTaza)
+        }
     }
+
+    func test_baseWords_endings() {
+        suggestion(for: "казагым", isEqualTo: "қазағым")
+        suggestion(for: "казагын", isEqualTo: "қазағың")
+        suggestion(for: "казагы", isEqualTo: "қазағы")
+    }
+
+    // MARK: - Private
 
     func suggestion(for word: String, isEqualTo expected: String) {
         let suggestedWords = engine.suggestWords(for: word)
@@ -37,4 +49,13 @@ final class QazaqWordSuggestionsEngineTests: XCTestCase {
 
         XCTAssertEqual(suggestedWords, expected)
     }
+}
+
+private enum Constants {
+    static let shalaAndTazaMap: [(String, String)] = [
+        ("казак", "қазақ"),
+        ("ертен", "ертең"),
+        ("ренжигиш", "ренжігіш"),
+        ("даулеттилик","дәулеттілік")
+    ]
 }
