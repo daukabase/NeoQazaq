@@ -17,7 +17,7 @@
 		0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0B4BA0C62BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
-		0B4BA0CA2BC2F0EF00F6E182 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B4BA0CA2BC2F0EF00F6E182 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0B4BA0CF2BC2F4D200F6E182 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
 		0B4BA0D02BC2F4D700F6E182 /* ShalaqazaqDatasetV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */; };
 		0B62F2022BC2EC170069E5CF /* WordSuggestionsEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */; };
@@ -54,6 +54,10 @@
 		0BD2012A2BC2EDA50065DBC1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613E2B6BDC310038FAFB /* String+.swift */; };
 		0BD2012B2BC2EDAC0065DBC1 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */; };
 		0BD2012C2BC2EDAC0065DBC1 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */; };
+		0BEDB0122BC30B830034027D /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
+		0BEDB0132BC30B830034027D /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0BEDB0162BC30B830034027D /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
+		0BEDB0172BC30B830034027D /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,20 @@
 			remoteGlobalIDString = 0B981F4B2BC2ECC1000308C2;
 			remoteInfo = QazaqFoundation;
 		};
+		0BEDB0142BC30B830034027D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B981F4B2BC2ECC1000308C2;
+			remoteInfo = QazaqFoundation;
+		};
+		0BEDB0182BC30B830034027D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B62F1FD2BC2EC170069E5CF;
+			remoteInfo = WordSuggestionsEngine;
+		};
 		0BEF66812BC2DCAF00829036 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
@@ -165,6 +183,18 @@
 			files = (
 				0B4BA0C62BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Embed Frameworks */,
 				0B4BA0C22BC2F0E000F6E182 /* QazaqFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BEDB01A2BC30B830034027D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0BEDB0172BC30B830034027D /* WordSuggestionsEngine.framework in Embed Frameworks */,
+				0BEDB0132BC30B830034027D /* QazaqFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +288,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEDB0162BC30B830034027D /* WordSuggestionsEngine.framework in Frameworks */,
+				0BEDB0122BC30B830034027D /* QazaqFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +342,7 @@
 				0B4BA0CE2BC2F12800F6E182 /* WordSuggestionsEngine */,
 				0B981F4D2BC2ECC1000308C2 /* QazaqFoundation */,
 				0B800E462B681A8900EADCA9 /* Products */,
-				0B800E712B6829CC00EADCA9 /* Frameworks */,
+				0BEDB0112BC30B830034027D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -359,13 +391,6 @@
 				0B800E632B681AEE00EADCA9 /* Info.plist */,
 			);
 			path = Batyrma;
-			sourceTree = "<group>";
-		};
-		0B800E712B6829CC00EADCA9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		0B981F3B2BC2EC8F000308C2 /* Core Layer */ = {
@@ -457,6 +482,13 @@
 				0BCA61392B6BDBF40038FAFB /* AutocompleteProvider */,
 			);
 			path = "Core Layer";
+			sourceTree = "<group>";
+		};
+		0BEDB0112BC30B830034027D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,11 +624,14 @@
 				0BEF66792BC2DCAF00829036 /* Sources */,
 				0BEF667A2BC2DCAF00829036 /* Frameworks */,
 				0BEF667B2BC2DCAF00829036 /* Resources */,
+				0BEDB01A2BC30B830034027D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0BEF66822BC2DCAF00829036 /* PBXTargetDependency */,
+				0BEDB0152BC30B830034027D /* PBXTargetDependency */,
+				0BEDB0192BC30B830034027D /* PBXTargetDependency */,
 			);
 			name = QazaqshaTests;
 			productName = QazaqshaTests;
@@ -877,6 +912,16 @@
 			target = 0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */;
 			targetProxy = 0B981F5F2BC2ECC2000308C2 /* PBXContainerItemProxy */;
 		};
+		0BEDB0152BC30B830034027D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */;
+			targetProxy = 0BEDB0142BC30B830034027D /* PBXContainerItemProxy */;
+		};
+		0BEDB0192BC30B830034027D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */;
+			targetProxy = 0BEDB0182BC30B830034027D /* PBXContainerItemProxy */;
+		};
 		0BEF66822BC2DCAF00829036 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0B800E442B681A8900EADCA9 /* Qazaqsha */;
@@ -911,9 +956,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -945,9 +993,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -965,9 +1016,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
 			};
 			name = Debug;
@@ -984,9 +1038,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
 			};
 			name = Release;
@@ -1118,7 +1175,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
@@ -1139,6 +1196,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1153,7 +1213,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
@@ -1174,6 +1234,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1201,9 +1264,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1228,9 +1294,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1260,9 +1329,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1294,9 +1366,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1314,9 +1389,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqshaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
 			};
 			name = Debug;
@@ -1333,9 +1411,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqshaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
 			};
 			name = Release;
