@@ -13,11 +13,8 @@
 		0B30DA762B8BB67900215711 /* AppSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* AppSetupView.swift */; };
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
-		0B4BA0C22BC2F0E000F6E182 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
-		0B4BA0C62BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
-		0B4BA0CA2BC2F0EF00F6E182 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0B4BA0CF2BC2F4D200F6E182 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
 		0B4BA0D02BC2F4D700F6E182 /* ShalaqazaqDatasetV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */; };
 		0B62F2022BC2EC170069E5CF /* WordSuggestionsEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */; };
@@ -31,7 +28,6 @@
 		0B800E4D2B681A8A00EADCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */; };
 		0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4F2B681A8A00EADCA9 /* Preview Assets.xcassets */; };
 		0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */; };
-		0B800E662B681AEE00EADCA9 /* Batyrma.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0B981F422BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F3C2BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift */; };
 		0B981F432BC2EC8F000308C2 /* WordSuggestionsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F3D2BC2EC8F000308C2 /* WordSuggestionsEngine.swift */; };
 		0B981F442BC2EC8F000308C2 /* PossessiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F3F2BC2EC8F000308C2 /* PossessiveService.swift */; };
@@ -55,9 +51,10 @@
 		0BD2012B2BC2EDAC0065DBC1 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */; };
 		0BD2012C2BC2EDAC0065DBC1 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */; };
 		0BEDB0122BC30B830034027D /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
-		0BEDB0132BC30B830034027D /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0BEDB0132BC30B830034027D /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BEDB0162BC30B830034027D /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
-		0BEDB0172BC30B830034027D /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0BEDB0172BC30B830034027D /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0BEDB01B2BC30F540034027D /* Batyrma.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,13 +100,6 @@
 			remoteGlobalIDString = 0B62F1FD2BC2EC170069E5CF;
 			remoteInfo = WordSuggestionsEngine;
 		};
-		0B800E642B681AEE00EADCA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B800E5E2B681AEE00EADCA9;
-			remoteInfo = Batyrma;
-		};
 		0B981F5F2BC2ECC2000308C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
@@ -131,6 +121,13 @@
 			remoteGlobalIDString = 0B62F1FD2BC2EC170069E5CF;
 			remoteInfo = WordSuggestionsEngine;
 		};
+		0BEDB01C2BC30F540034027D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B800E5E2B681AEE00EADCA9;
+			remoteInfo = Batyrma;
+		};
 		0BEF66812BC2DCAF00829036 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
@@ -147,7 +144,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0B4BA0CA2BC2F0EF00F6E182 /* QazaqFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,29 +160,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0B800E6A2B681AEE00EADCA9 /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				0B800E662B681AEE00EADCA9 /* Batyrma.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B800E772B6829CC00EADCA9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0B4BA0C62BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Embed Frameworks */,
-				0B4BA0C22BC2F0E000F6E182 /* QazaqFoundation.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0BEDB01A2BC30B830034027D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +170,17 @@
 				0BEDB0132BC30B830034027D /* QazaqFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BEDB01E2BC30F540034027D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0BEDB01B2BC30F540034027D /* Batyrma.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -559,15 +543,15 @@
 				0B800E412B681A8900EADCA9 /* Sources */,
 				0B800E422B681A8900EADCA9 /* Frameworks */,
 				0B800E432B681A8900EADCA9 /* Resources */,
-				0B800E6A2B681AEE00EADCA9 /* Embed Foundation Extensions */,
 				0B62F2152BC2EC170069E5CF /* Embed Frameworks */,
+				0BEDB01E2BC30F540034027D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0B800E652B681AEE00EADCA9 /* PBXTargetDependency */,
 				0B62F2122BC2EC170069E5CF /* PBXTargetDependency */,
 				0B981F602BC2ECC2000308C2 /* PBXTargetDependency */,
+				0BEDB01D2BC30F540034027D /* PBXTargetDependency */,
 			);
 			name = Qazaqsha;
 			packageProductDependencies = (
@@ -583,7 +567,6 @@
 				0B800E5B2B681AEE00EADCA9 /* Sources */,
 				0B800E5C2B681AEE00EADCA9 /* Frameworks */,
 				0B800E5D2B681AEE00EADCA9 /* Resources */,
-				0B800E772B6829CC00EADCA9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -902,11 +885,6 @@
 			target = 0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */;
 			targetProxy = 0B62F2112BC2EC170069E5CF /* PBXContainerItemProxy */;
 		};
-		0B800E652B681AEE00EADCA9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0B800E5E2B681AEE00EADCA9 /* Batyrma */;
-			targetProxy = 0B800E642B681AEE00EADCA9 /* PBXContainerItemProxy */;
-		};
 		0B981F602BC2ECC2000308C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */;
@@ -921,6 +899,11 @@
 			isa = PBXTargetDependency;
 			target = 0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */;
 			targetProxy = 0BEDB0182BC30B830034027D /* PBXContainerItemProxy */;
+		};
+		0BEDB01D2BC30F540034027D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B800E5E2B681AEE00EADCA9 /* Batyrma */;
+			targetProxy = 0BEDB01C2BC30F540034027D /* PBXContainerItemProxy */;
 		};
 		0BEF66822BC2DCAF00829036 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
