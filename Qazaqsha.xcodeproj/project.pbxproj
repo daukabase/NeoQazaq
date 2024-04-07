@@ -32,7 +32,6 @@
 		0B981F452BC2EC8F000308C2 /* QuantitativeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F402BC2EC8F000308C2 /* QuantitativeService.swift */; };
 		0B981F462BC2EC8F000308C2 /* QazaqEndingsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F412BC2EC8F000308C2 /* QazaqEndingsGenerator.swift */; };
 		0B981F502BC2ECC1000308C2 /* QazaqFoundation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F4F2BC2ECC1000308C2 /* QazaqFoundation.docc */; };
-		0B981F562BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B981F5E2BC2ECC2000308C2 /* QazaqFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B981F4E2BC2ECC1000308C2 /* QazaqFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B981F612BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B981F622BC2ECC2000308C2 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -79,20 +78,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0B800E5E2B681AEE00EADCA9;
 			remoteInfo = Batyrma;
-		};
-		0B981F572BC2ECC2000308C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B981F4B2BC2ECC1000308C2;
-			remoteInfo = QazaqFoundation;
-		};
-		0B981F592BC2ECC2000308C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0B800E442B681A8900EADCA9;
-			remoteInfo = Qazaqsha;
 		};
 		0B981F5F2BC2ECC2000308C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -171,7 +156,6 @@
 		0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QazaqFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B981F4E2BC2ECC1000308C2 /* QazaqFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QazaqFoundation.h; sourceTree = "<group>"; };
 		0B981F4F2BC2ECC1000308C2 /* QazaqFoundation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = QazaqFoundation.docc; sourceTree = "<group>"; };
-		0B981F552BC2ECC2000308C2 /* QazaqFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QazaqFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA294132B91DF9A001465DF /* Qazaqsha.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Qazaqsha.entitlements; sourceTree = "<group>"; };
 		0BA294142B91E0EA001465DF /* Batyrma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Batyrma.entitlements; sourceTree = "<group>"; };
 		0BA294152B91E22A001465DF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -227,14 +211,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0B981F522BC2ECC2000308C2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B981F562BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0BEF667A2BC2DCAF00829036 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,7 +262,6 @@
 				0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */,
 				0B62F2072BC2EC170069E5CF /* WordSuggestionsEngineTests.xctest */,
 				0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */,
-				0B981F552BC2ECC2000308C2 /* QazaqFoundationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -547,25 +522,6 @@
 			productReference = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0B981F542BC2ECC2000308C2 /* QazaqFoundationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0B981F662BC2ECC2000308C2 /* Build configuration list for PBXNativeTarget "QazaqFoundationTests" */;
-			buildPhases = (
-				0B981F512BC2ECC2000308C2 /* Sources */,
-				0B981F522BC2ECC2000308C2 /* Frameworks */,
-				0B981F532BC2ECC2000308C2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0B981F582BC2ECC2000308C2 /* PBXTargetDependency */,
-				0B981F5A2BC2ECC2000308C2 /* PBXTargetDependency */,
-			);
-			name = QazaqFoundationTests;
-			productName = QazaqFoundationTests;
-			productReference = 0B981F552BC2ECC2000308C2 /* QazaqFoundationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		0BEF667C2BC2DCAF00829036 /* QazaqshaTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BEF66852BC2DCAF00829036 /* Build configuration list for PBXNativeTarget "QazaqshaTests" */;
@@ -609,10 +565,6 @@
 					};
 					0B981F4B2BC2ECC1000308C2 = {
 						CreatedOnToolsVersion = 15.1;
-					};
-					0B981F542BC2ECC2000308C2 = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 0B800E442B681A8900EADCA9;
 					};
 					0BEF667C2BC2DCAF00829036 = {
 						CreatedOnToolsVersion = 15.1;
@@ -695,7 +647,6 @@
 				0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */,
 				0B62F2062BC2EC170069E5CF /* WordSuggestionsEngineTests */,
 				0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */,
-				0B981F542BC2ECC2000308C2 /* QazaqFoundationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -738,13 +689,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0B981F4A2BC2ECC1000308C2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0B981F532BC2ECC2000308C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -820,13 +764,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0B981F512BC2ECC2000308C2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0BEF66792BC2DCAF00829036 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -856,16 +793,6 @@
 			isa = PBXTargetDependency;
 			target = 0B800E5E2B681AEE00EADCA9 /* Batyrma */;
 			targetProxy = 0B800E642B681AEE00EADCA9 /* PBXContainerItemProxy */;
-		};
-		0B981F582BC2ECC2000308C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */;
-			targetProxy = 0B981F572BC2ECC2000308C2 /* PBXContainerItemProxy */;
-		};
-		0B981F5A2BC2ECC2000308C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0B800E442B681A8900EADCA9 /* Qazaqsha */;
-			targetProxy = 0B981F592BC2ECC2000308C2 /* PBXContainerItemProxy */;
 		};
 		0B981F602BC2ECC2000308C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1297,44 +1224,6 @@
 			};
 			name = Release;
 		};
-		0B981F672BC2ECC2000308C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JNA8QM22SG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
-			};
-			name = Debug;
-		};
-		0B981F682BC2ECC2000308C2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JNA8QM22SG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
-			};
-			name = Release;
-		};
 		0BEF66832BC2DCAF00829036 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1426,15 +1315,6 @@
 			buildConfigurations = (
 				0B981F642BC2ECC2000308C2 /* Debug */,
 				0B981F652BC2ECC2000308C2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0B981F662BC2ECC2000308C2 /* Build configuration list for PBXNativeTarget "QazaqFoundationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0B981F672BC2ECC2000308C2 /* Debug */,
-				0B981F682BC2ECC2000308C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
