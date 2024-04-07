@@ -15,6 +15,12 @@
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B5066EB2B80AE0000C01D14 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
 		0B5066ED2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5066EC2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift */; };
+		0B62F2022BC2EC170069E5CF /* WordSuggestionsEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */; };
+		0B62F2082BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
+		0B62F20F2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F20E2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift */; };
+		0B62F2102BC2EC170069E5CF /* WordSuggestionsEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B62F2132BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
+		0B62F2142BC2EC170069E5CF /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B7943232B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7943222B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift */; };
 		0B7943252B7D1E3700CCA7AB /* PossessiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7943242B7D1E3700CCA7AB /* PossessiveService.swift */; };
 		0B7943272B7D1E5500CCA7AB /* QuantitativeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7943262B7D1E5500CCA7AB /* QuantitativeService.swift */; };
@@ -24,9 +30,17 @@
 		0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4F2B681A8A00EADCA9 /* Preview Assets.xcassets */; };
 		0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */; };
 		0B800E662B681AEE00EADCA9 /* Batyrma.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0B981F422BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F3C2BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift */; };
+		0B981F432BC2EC8F000308C2 /* WordSuggestionsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F3D2BC2EC8F000308C2 /* WordSuggestionsEngine.swift */; };
+		0B981F442BC2EC8F000308C2 /* PossessiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F3F2BC2EC8F000308C2 /* PossessiveService.swift */; };
+		0B981F452BC2EC8F000308C2 /* QuantitativeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F402BC2EC8F000308C2 /* QuantitativeService.swift */; };
+		0B981F462BC2EC8F000308C2 /* QazaqEndingsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F412BC2EC8F000308C2 /* QazaqEndingsGenerator.swift */; };
+		0B981F502BC2ECC1000308C2 /* QazaqFoundation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F4F2BC2ECC1000308C2 /* QazaqFoundation.docc */; };
+		0B981F562BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
+		0B981F5E2BC2ECC2000308C2 /* QazaqFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B981F4E2BC2ECC1000308C2 /* QazaqFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B981F612BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
+		0B981F622BC2ECC2000308C2 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
-		0BA294182B91E43F001465DF /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294172B91E43F001465DF /* UserDefaults+.swift */; };
-		0BA294192B91E494001465DF /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294172B91E43F001465DF /* UserDefaults+.swift */; };
 		0BA2941A2B91E5D6001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
 		0BA2941B2B91E5DD001465DF /* AppSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* AppSetupView.swift */; };
 		0BAB0BC32B8114D000DB06F5 /* QazaqshaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */; };
@@ -34,14 +48,36 @@
 		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
-		0BCA612E2B6BD1070038FAFB /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */; };
-		0BCA61302B6BD11A0038FAFB /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */; };
 		0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */; };
-		0BCA613F2B6BDC310038FAFB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613E2B6BDC310038FAFB /* String+.swift */; };
 		0BCA61452B6BDCC60038FAFB /* WordSuggestionsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */; };
+		0BD201292BC2EDA20065DBC1 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294172B91E43F001465DF /* UserDefaults+.swift */; };
+		0BD2012A2BC2EDA50065DBC1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613E2B6BDC310038FAFB /* String+.swift */; };
+		0BD2012B2BC2EDAC0065DBC1 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */; };
+		0BD2012C2BC2EDAC0065DBC1 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0B62F2092BC2EC170069E5CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B62F1FD2BC2EC170069E5CF;
+			remoteInfo = WordSuggestionsEngine;
+		};
+		0B62F20B2BC2EC170069E5CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B800E442B681A8900EADCA9;
+			remoteInfo = Qazaqsha;
+		};
+		0B62F2112BC2EC170069E5CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B62F1FD2BC2EC170069E5CF;
+			remoteInfo = WordSuggestionsEngine;
+		};
 		0B800E642B681AEE00EADCA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
@@ -49,9 +85,49 @@
 			remoteGlobalIDString = 0B800E5E2B681AEE00EADCA9;
 			remoteInfo = Batyrma;
 		};
+		0B981F572BC2ECC2000308C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B981F4B2BC2ECC1000308C2;
+			remoteInfo = QazaqFoundation;
+		};
+		0B981F592BC2ECC2000308C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B800E442B681A8900EADCA9;
+			remoteInfo = Qazaqsha;
+		};
+		0B981F5F2BC2ECC2000308C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B981F4B2BC2ECC1000308C2;
+			remoteInfo = QazaqFoundation;
+		};
+		0BEF66812BC2DCAF00829036 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B800E3D2B681A8900EADCA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B800E442B681A8900EADCA9;
+			remoteInfo = Qazaqsha;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0B62F2152BC2EC170069E5CF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0B981F622BC2ECC2000308C2 /* QazaqFoundation.framework in Embed Frameworks */,
+				0B62F2142BC2EC170069E5CF /* WordSuggestionsEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0B800E6A2B681AEE00EADCA9 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,6 +156,11 @@
 		0B30DA752B8BB67900215711 /* AppSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetupView.swift; sourceTree = "<group>"; };
 		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
 		0B5066EC2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqWordsDatasetLoader.swift; sourceTree = "<group>"; };
+		0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WordSuggestionsEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordSuggestionsEngine.h; sourceTree = "<group>"; };
+		0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = WordSuggestionsEngine.docc; sourceTree = "<group>"; };
+		0B62F2072BC2EC170069E5CF /* WordSuggestionsEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordSuggestionsEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B62F20E2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionsEngineTests.swift; sourceTree = "<group>"; };
 		0B7943222B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqEndingsGenerator.swift; sourceTree = "<group>"; };
 		0B7943242B7D1E3700CCA7AB /* PossessiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossessiveService.swift; sourceTree = "<group>"; };
 		0B7943262B7D1E5500CCA7AB /* QuantitativeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitativeService.swift; sourceTree = "<group>"; };
@@ -91,6 +172,15 @@
 		0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Batyrma.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0B800E632B681AEE00EADCA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B981F3C2BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QazaqWordsDatasetLoader.swift; sourceTree = "<group>"; };
+		0B981F3D2BC2EC8F000308C2 /* WordSuggestionsEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSuggestionsEngine.swift; sourceTree = "<group>"; };
+		0B981F3F2BC2EC8F000308C2 /* PossessiveService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PossessiveService.swift; sourceTree = "<group>"; };
+		0B981F402BC2EC8F000308C2 /* QuantitativeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantitativeService.swift; sourceTree = "<group>"; };
+		0B981F412BC2EC8F000308C2 /* QazaqEndingsGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QazaqEndingsGenerator.swift; sourceTree = "<group>"; };
+		0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QazaqFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B981F4E2BC2ECC1000308C2 /* QazaqFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QazaqFoundation.h; sourceTree = "<group>"; };
+		0B981F4F2BC2ECC1000308C2 /* QazaqFoundation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = QazaqFoundation.docc; sourceTree = "<group>"; };
+		0B981F552BC2ECC2000308C2 /* QazaqFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QazaqFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA294132B91DF9A001465DF /* Qazaqsha.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Qazaqsha.entitlements; sourceTree = "<group>"; };
 		0BA294142B91E0EA001465DF /* Batyrma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Batyrma.entitlements; sourceTree = "<group>"; };
 		0BA294152B91E22A001465DF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -104,13 +194,31 @@
 		0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqAutocompleteProvider.swift; sourceTree = "<group>"; };
 		0BCA613E2B6BDC310038FAFB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionsEngine.swift; sourceTree = "<group>"; };
+		0BEF667D2BC2DCAF00829036 /* QazaqshaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QazaqshaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0B62F1FB2BC2EC170069E5CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B62F2042BC2EC170069E5CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B62F2082BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0B800E422B681A8900EADCA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B981F612BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */,
+				0B62F2132BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,9 +230,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B981F492BC2ECC1000308C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B981F522BC2ECC2000308C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B981F562BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BEF667A2BC2DCAF00829036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B62F1FF2BC2EC170069E5CF /* WordSuggestionsEngine */ = {
+			isa = PBXGroup;
+			children = (
+				0B981F3B2BC2EC8F000308C2 /* Core Layer */,
+				0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */,
+				0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */,
+			);
+			path = WordSuggestionsEngine;
+			sourceTree = "<group>";
+		};
+		0B62F20D2BC2EC170069E5CF /* WordSuggestionsEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B62F20E2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift */,
+			);
+			path = WordSuggestionsEngineTests;
+			sourceTree = "<group>";
+		};
 		0B7943212B7D1DFD00CCA7AB /* QazaqEndingsGenerator */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +289,9 @@
 				0BCA611D2B6BC7280038FAFB /* Resources */,
 				0B800E472B681A8900EADCA9 /* Qazaqsha */,
 				0B800E602B681AEE00EADCA9 /* Batyrma */,
+				0B62F1FF2BC2EC170069E5CF /* WordSuggestionsEngine */,
+				0B62F20D2BC2EC170069E5CF /* WordSuggestionsEngineTests */,
+				0B981F4D2BC2ECC1000308C2 /* QazaqFoundation */,
 				0B800E462B681A8900EADCA9 /* Products */,
 				0B800E712B6829CC00EADCA9 /* Frameworks */,
 			);
@@ -151,6 +302,11 @@
 			children = (
 				0B800E452B681A8900EADCA9 /* Qazaqsha.app */,
 				0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */,
+				0BEF667D2BC2DCAF00829036 /* QazaqshaTests.xctest */,
+				0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */,
+				0B62F2072BC2EC170069E5CF /* WordSuggestionsEngineTests.xctest */,
+				0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */,
+				0B981F552BC2ECC2000308C2 /* QazaqFoundationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,7 +340,6 @@
 				0BA294142B91E0EA001465DF /* Batyrma.entitlements */,
 				0BEA16A22B7BE054000154C6 /* Core Layer */,
 				0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */,
-				0BCA612B2B6BD0F20038FAFB /* Extensions */,
 				0B800E632B681AEE00EADCA9 /* Info.plist */,
 			);
 			path = Batyrma;
@@ -195,6 +350,36 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B981F3B2BC2EC8F000308C2 /* Core Layer */ = {
+			isa = PBXGroup;
+			children = (
+				0B981F3C2BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift */,
+				0B981F3D2BC2EC8F000308C2 /* WordSuggestionsEngine.swift */,
+				0B981F3E2BC2EC8F000308C2 /* QazaqEndingsGenerator */,
+			);
+			path = "Core Layer";
+			sourceTree = "<group>";
+		};
+		0B981F3E2BC2EC8F000308C2 /* QazaqEndingsGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				0B981F3F2BC2EC8F000308C2 /* PossessiveService.swift */,
+				0B981F402BC2EC8F000308C2 /* QuantitativeService.swift */,
+				0B981F412BC2EC8F000308C2 /* QazaqEndingsGenerator.swift */,
+			);
+			path = QazaqEndingsGenerator;
+			sourceTree = "<group>";
+		};
+		0B981F4D2BC2ECC1000308C2 /* QazaqFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				0BCA612B2B6BD0F20038FAFB /* Extensions */,
+				0B981F4E2BC2ECC1000308C2 /* QazaqFoundation.h */,
+				0B981F4F2BC2ECC1000308C2 /* QazaqFoundation.docc */,
+			);
+			path = QazaqFoundation;
 			sourceTree = "<group>";
 		};
 		0BCA611D2B6BC7280038FAFB /* Resources */ = {
@@ -273,7 +458,63 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0B62F1F92BC2EC170069E5CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B62F2102BC2EC170069E5CF /* WordSuggestionsEngine.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B981F472BC2ECC1000308C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B981F5E2BC2ECC2000308C2 /* QazaqFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B62F21A2BC2EC170069E5CF /* Build configuration list for PBXNativeTarget "WordSuggestionsEngine" */;
+			buildPhases = (
+				0B62F1F92BC2EC170069E5CF /* Headers */,
+				0B62F1FA2BC2EC170069E5CF /* Sources */,
+				0B62F1FB2BC2EC170069E5CF /* Frameworks */,
+				0B62F1FC2BC2EC170069E5CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordSuggestionsEngine;
+			productName = WordSuggestionsEngine;
+			productReference = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0B62F2062BC2EC170069E5CF /* WordSuggestionsEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B62F21B2BC2EC170069E5CF /* Build configuration list for PBXNativeTarget "WordSuggestionsEngineTests" */;
+			buildPhases = (
+				0B62F2032BC2EC170069E5CF /* Sources */,
+				0B62F2042BC2EC170069E5CF /* Frameworks */,
+				0B62F2052BC2EC170069E5CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B62F20A2BC2EC170069E5CF /* PBXTargetDependency */,
+				0B62F20C2BC2EC170069E5CF /* PBXTargetDependency */,
+			);
+			name = WordSuggestionsEngineTests;
+			productName = WordSuggestionsEngineTests;
+			productReference = 0B62F2072BC2EC170069E5CF /* WordSuggestionsEngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0B800E442B681A8900EADCA9 /* Qazaqsha */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B800E532B681A8A00EADCA9 /* Build configuration list for PBXNativeTarget "Qazaqsha" */;
@@ -282,11 +523,14 @@
 				0B800E422B681A8900EADCA9 /* Frameworks */,
 				0B800E432B681A8900EADCA9 /* Resources */,
 				0B800E6A2B681AEE00EADCA9 /* Embed Foundation Extensions */,
+				0B62F2152BC2EC170069E5CF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0B800E652B681AEE00EADCA9 /* PBXTargetDependency */,
+				0B62F2122BC2EC170069E5CF /* PBXTargetDependency */,
+				0B981F602BC2ECC2000308C2 /* PBXTargetDependency */,
 			);
 			name = Qazaqsha;
 			packageProductDependencies = (
@@ -316,6 +560,61 @@
 			productReference = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B981F632BC2ECC2000308C2 /* Build configuration list for PBXNativeTarget "QazaqFoundation" */;
+			buildPhases = (
+				0B981F472BC2ECC1000308C2 /* Headers */,
+				0B981F482BC2ECC1000308C2 /* Sources */,
+				0B981F492BC2ECC1000308C2 /* Frameworks */,
+				0B981F4A2BC2ECC1000308C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QazaqFoundation;
+			productName = QazaqFoundation;
+			productReference = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0B981F542BC2ECC2000308C2 /* QazaqFoundationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B981F662BC2ECC2000308C2 /* Build configuration list for PBXNativeTarget "QazaqFoundationTests" */;
+			buildPhases = (
+				0B981F512BC2ECC2000308C2 /* Sources */,
+				0B981F522BC2ECC2000308C2 /* Frameworks */,
+				0B981F532BC2ECC2000308C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B981F582BC2ECC2000308C2 /* PBXTargetDependency */,
+				0B981F5A2BC2ECC2000308C2 /* PBXTargetDependency */,
+			);
+			name = QazaqFoundationTests;
+			productName = QazaqFoundationTests;
+			productReference = 0B981F552BC2ECC2000308C2 /* QazaqFoundationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0BEF667C2BC2DCAF00829036 /* QazaqshaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BEF66852BC2DCAF00829036 /* Build configuration list for PBXNativeTarget "QazaqshaTests" */;
+			buildPhases = (
+				0BEF66792BC2DCAF00829036 /* Sources */,
+				0BEF667A2BC2DCAF00829036 /* Frameworks */,
+				0BEF667B2BC2DCAF00829036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BEF66822BC2DCAF00829036 /* PBXTargetDependency */,
+			);
+			name = QazaqshaTests;
+			productName = QazaqshaTests;
+			productReference = 0BEF667D2BC2DCAF00829036 /* QazaqshaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -326,11 +625,29 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					0B62F1FD2BC2EC170069E5CF = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					0B62F2062BC2EC170069E5CF = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 0B800E442B681A8900EADCA9;
+					};
 					0B800E442B681A8900EADCA9 = {
 						CreatedOnToolsVersion = 15.1;
 					};
 					0B800E5E2B681AEE00EADCA9 = {
 						CreatedOnToolsVersion = 15.1;
+					};
+					0B981F4B2BC2ECC1000308C2 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					0B981F542BC2ECC2000308C2 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 0B800E442B681A8900EADCA9;
+					};
+					0BEF667C2BC2DCAF00829036 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 0B800E442B681A8900EADCA9;
 					};
 				};
 			};
@@ -405,11 +722,30 @@
 			targets = (
 				0B800E442B681A8900EADCA9 /* Qazaqsha */,
 				0B800E5E2B681AEE00EADCA9 /* Batyrma */,
+				0BEF667C2BC2DCAF00829036 /* QazaqshaTests */,
+				0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */,
+				0B62F2062BC2EC170069E5CF /* WordSuggestionsEngineTests */,
+				0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */,
+				0B981F542BC2ECC2000308C2 /* QazaqFoundationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0B62F1FC2BC2EC170069E5CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B62F2052BC2EC170069E5CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0B800E432B681A8900EADCA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,9 +768,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B981F4A2BC2ECC1000308C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B981F532BC2ECC2000308C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BEF667B2BC2DCAF00829036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0B62F1FA2BC2EC170069E5CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B981F422BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift in Sources */,
+				0B62F2022BC2EC170069E5CF /* WordSuggestionsEngine.docc in Sources */,
+				0B981F432BC2EC8F000308C2 /* WordSuggestionsEngine.swift in Sources */,
+				0B981F442BC2EC8F000308C2 /* PossessiveService.swift in Sources */,
+				0B981F452BC2EC8F000308C2 /* QuantitativeService.swift in Sources */,
+				0B981F462BC2EC8F000308C2 /* QazaqEndingsGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B62F2032BC2EC170069E5CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B62F20F2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0B800E412B681A8900EADCA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,7 +821,6 @@
 				0B800E492B681A8900EADCA9 /* QazaqshaApp.swift in Sources */,
 				0B30DA762B8BB67900215711 /* AppSetupView.swift in Sources */,
 				0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */,
-				0BA294192B91E494001465DF /* UserDefaults+.swift in Sources */,
 				0B30DA722B8B2D5000215711 /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,17 +829,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BCA612E2B6BD1070038FAFB /* UIStackView+.swift in Sources */,
 				0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */,
 				0BAB0BC42B8115E800DB06F5 /* ContentView.swift in Sources */,
 				0B7943272B7D1E5500CCA7AB /* QuantitativeService.swift in Sources */,
 				0BA2941B2B91E5DD001465DF /* AppSetupView.swift in Sources */,
 				0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */,
-				0BCA61302B6BD11A0038FAFB /* UIImage+.swift in Sources */,
-				0BA294182B91E43F001465DF /* UserDefaults+.swift in Sources */,
 				0B7943232B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift in Sources */,
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
-				0BCA613F2B6BDC310038FAFB /* String+.swift in Sources */,
 				0BAB0BC32B8114D000DB06F5 /* QazaqshaApp.swift in Sources */,
 				0BCA61452B6BDCC60038FAFB /* WordSuggestionsEngine.swift in Sources */,
 				0BA2941A2B91E5D6001465DF /* OnboardingView.swift in Sources */,
@@ -471,17 +844,184 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B981F482BC2ECC1000308C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BD201292BC2EDA20065DBC1 /* UserDefaults+.swift in Sources */,
+				0BD2012A2BC2EDA50065DBC1 /* String+.swift in Sources */,
+				0BD2012C2BC2EDAC0065DBC1 /* UIImage+.swift in Sources */,
+				0B981F502BC2ECC1000308C2 /* QazaqFoundation.docc in Sources */,
+				0BD2012B2BC2EDAC0065DBC1 /* UIStackView+.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B981F512BC2ECC2000308C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BEF66792BC2DCAF00829036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0B62F20A2BC2EC170069E5CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */;
+			targetProxy = 0B62F2092BC2EC170069E5CF /* PBXContainerItemProxy */;
+		};
+		0B62F20C2BC2EC170069E5CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B800E442B681A8900EADCA9 /* Qazaqsha */;
+			targetProxy = 0B62F20B2BC2EC170069E5CF /* PBXContainerItemProxy */;
+		};
+		0B62F2122BC2EC170069E5CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B62F1FD2BC2EC170069E5CF /* WordSuggestionsEngine */;
+			targetProxy = 0B62F2112BC2EC170069E5CF /* PBXContainerItemProxy */;
+		};
 		0B800E652B681AEE00EADCA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0B800E5E2B681AEE00EADCA9 /* Batyrma */;
 			targetProxy = 0B800E642B681AEE00EADCA9 /* PBXContainerItemProxy */;
 		};
+		0B981F582BC2ECC2000308C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */;
+			targetProxy = 0B981F572BC2ECC2000308C2 /* PBXContainerItemProxy */;
+		};
+		0B981F5A2BC2ECC2000308C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B800E442B681A8900EADCA9 /* Qazaqsha */;
+			targetProxy = 0B981F592BC2ECC2000308C2 /* PBXContainerItemProxy */;
+		};
+		0B981F602BC2ECC2000308C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B981F4B2BC2ECC1000308C2 /* QazaqFoundation */;
+			targetProxy = 0B981F5F2BC2ECC2000308C2 /* PBXContainerItemProxy */;
+		};
+		0BEF66822BC2DCAF00829036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B800E442B681A8900EADCA9 /* Qazaqsha */;
+			targetProxy = 0BEF66812BC2DCAF00829036 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0B62F2162BC2EC170069E5CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0B62F2172BC2EC170069E5CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0B62F2182BC2EC170069E5CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
+			};
+			name = Debug;
+		};
+		0B62F2192BC2EC170069E5CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
+			};
+			name = Release;
+		};
 		0B800E512B681A8A00EADCA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -725,9 +1265,171 @@
 			};
 			name = Release;
 		};
+		0B981F642BC2ECC2000308C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0B981F652BC2ECC2000308C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0B981F672BC2ECC2000308C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
+			};
+			name = Debug;
+		};
+		0B981F682BC2ECC2000308C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
+			};
+			name = Release;
+		};
+		0BEF66832BC2DCAF00829036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqshaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
+			};
+			name = Debug;
+		};
+		0BEF66842BC2DCAF00829036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JNA8QM22SG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqshaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qazaqsha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Qazaqsha";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B62F21A2BC2EC170069E5CF /* Build configuration list for PBXNativeTarget "WordSuggestionsEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B62F2162BC2EC170069E5CF /* Debug */,
+				0B62F2172BC2EC170069E5CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B62F21B2BC2EC170069E5CF /* Build configuration list for PBXNativeTarget "WordSuggestionsEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B62F2182BC2EC170069E5CF /* Debug */,
+				0B62F2192BC2EC170069E5CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0B800E402B681A8900EADCA9 /* Build configuration list for PBXProject "Qazaqsha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -751,6 +1453,33 @@
 			buildConfigurations = (
 				0B800E682B681AEE00EADCA9 /* Debug */,
 				0B800E692B681AEE00EADCA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B981F632BC2ECC2000308C2 /* Build configuration list for PBXNativeTarget "QazaqFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B981F642BC2ECC2000308C2 /* Debug */,
+				0B981F652BC2ECC2000308C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B981F662BC2ECC2000308C2 /* Build configuration list for PBXNativeTarget "QazaqFoundationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B981F672BC2ECC2000308C2 /* Debug */,
+				0B981F682BC2ECC2000308C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BEF66852BC2DCAF00829036 /* Build configuration list for PBXNativeTarget "QazaqshaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BEF66832BC2DCAF00829036 /* Debug */,
+				0BEF66842BC2DCAF00829036 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -12,11 +12,8 @@ class ContentViewModel: ObservableObject {
     private enum Constants {
         static let neoQazaqKeyboardExtensionIdentifier = "com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq"
     }
-    func isKeyboardExtensionEnabled() -> Bool {
-        guard let appBundleIdentifier = Bundle.main.bundleIdentifier else {
-            fatalError("isKeyboardExtensionEnabled(): Cannot retrieve bundle identifier.")
-        }
 
+    func isKeyboardExtensionEnabled() -> Bool {
         guard let keyboards = UserDefaults.standard.dictionaryRepresentation()["AppleKeyboards"] as? [String] else {
             return false
         }
