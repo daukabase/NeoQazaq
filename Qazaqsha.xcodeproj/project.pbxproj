@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B1E44F62B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */; };
 		0B30DA722B8B2D5000215711 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
 		0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
@@ -19,10 +18,11 @@
 		0B4BA0C62BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B4BA0CA2BC2F0EF00F6E182 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0B5066EB2B80AE0000C01D14 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
+		0B4BA0CF2BC2F4D200F6E182 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
+		0B4BA0D02BC2F4D700F6E182 /* ShalaqazaqDatasetV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */; };
 		0B62F2022BC2EC170069E5CF /* WordSuggestionsEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */; };
 		0B62F2082BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
-		0B62F20F2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F20E2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift */; };
+		0B62F20F2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F20E2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift */; };
 		0B62F2102BC2EC170069E5CF /* WordSuggestionsEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B62F2132BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0B62F2142BC2EC170069E5CF /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -179,7 +179,7 @@
 		0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordSuggestionsEngine.h; sourceTree = "<group>"; };
 		0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = WordSuggestionsEngine.docc; sourceTree = "<group>"; };
 		0B62F2072BC2EC170069E5CF /* WordSuggestionsEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordSuggestionsEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B62F20E2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionsEngineTests.swift; sourceTree = "<group>"; };
+		0B62F20E2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqWordSuggestionsEngineTests.swift; sourceTree = "<group>"; };
 		0B800E452B681A8900EADCA9 /* Qazaqsha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qazaqsha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqshaApp.swift; sourceTree = "<group>"; };
 		0B800E4A2B681A8900EADCA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -273,9 +273,19 @@
 			path = WordSuggestionsEngine;
 			sourceTree = "<group>";
 		};
+		0B4BA0D12BC2F4DE00F6E182 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */,
+				0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
 		0B62F1FF2BC2EC170069E5CF /* WordSuggestionsEngine */ = {
 			isa = PBXGroup;
 			children = (
+				0B4BA0D12BC2F4DE00F6E182 /* Recources */,
 				0B981F3B2BC2EC8F000308C2 /* Core Layer */,
 				0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */,
 				0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */,
@@ -286,7 +296,7 @@
 		0B62F20D2BC2EC170069E5CF /* WordSuggestionsEngineTests */ = {
 			isa = PBXGroup;
 			children = (
-				0B62F20E2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift */,
+				0B62F20E2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift */,
 			);
 			path = WordSuggestionsEngineTests;
 			sourceTree = "<group>";
@@ -391,8 +401,6 @@
 		0BCA611D2B6BC7280038FAFB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */,
-				0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */,
 				0BCA611E2B6BC73F0038FAFB /* Images.xcassets */,
 				0BCA61242B6BCA060038FAFB /* Generated */,
 				0BCA61202B6BC8D50038FAFB /* Colors.xcassets */,
@@ -711,6 +719,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4BA0CF2BC2F4D200F6E182 /* qazaqWordsList.txt in Resources */,
+				0B4BA0D02BC2F4D700F6E182 /* ShalaqazaqDatasetV2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,8 +747,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */,
-				0B1E44F62B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json in Resources */,
-				0B5066EB2B80AE0000C01D14 /* qazaqWordsList.txt in Resources */,
 				0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,7 +785,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B62F20F2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift in Sources */,
+				0B62F20F2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

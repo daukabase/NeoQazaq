@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct GeneratedSimilarWord {
+public struct GeneratedSimilarWord: Equatable {
     public let word: String
     // from 0 to 1
     public let similarity: Double
