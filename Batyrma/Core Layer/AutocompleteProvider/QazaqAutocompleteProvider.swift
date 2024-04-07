@@ -7,6 +7,8 @@
 
 import Foundation
 import KeyboardKit
+import QazaqFoundation
+import WordSuggestionsEngine
 
 class QazaqAutocompleteProvider: AutocompleteProvider {
     let suggestionEngine: WordSuggestionsEngine = QazaqWordSuggestionsEngineV2()

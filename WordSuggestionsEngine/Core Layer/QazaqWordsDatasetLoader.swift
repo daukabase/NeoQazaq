@@ -12,8 +12,8 @@ struct SuggestionVariation: Codable {
     let percentage: Double
 }
 
-final class QazaqWordsDatasetLoader {
-    static let shared = QazaqWordsDatasetLoader()
+public final class QazaqWordsDatasetLoader {
+    public static let shared = QazaqWordsDatasetLoader()
 
     private let serialQueue = DispatchQueue(label: "com.qazaqsha.batyrma.datasetLoaderQueue")
     private var shalaqazaqDatasetCache: [String: [SuggestionVariation]]?
@@ -35,7 +35,7 @@ final class QazaqWordsDatasetLoader {
         }
     }
 
-    func loadData() {
+    public func loadData() {
         Task {
             try await loadShalaqazaqDataset()
         }

@@ -14,16 +14,12 @@
 		0B30DA762B8BB67900215711 /* AppSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* AppSetupView.swift */; };
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B5066EB2B80AE0000C01D14 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
-		0B5066ED2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5066EC2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift */; };
 		0B62F2022BC2EC170069E5CF /* WordSuggestionsEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */; };
 		0B62F2082BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0B62F20F2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F20E2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift */; };
 		0B62F2102BC2EC170069E5CF /* WordSuggestionsEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B62F2132BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0B62F2142BC2EC170069E5CF /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0B7943232B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7943222B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift */; };
-		0B7943252B7D1E3700CCA7AB /* PossessiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7943242B7D1E3700CCA7AB /* PossessiveService.swift */; };
-		0B7943272B7D1E5500CCA7AB /* QuantitativeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7943262B7D1E5500CCA7AB /* QuantitativeService.swift */; };
 		0B800E492B681A8900EADCA9 /* QazaqshaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */; };
 		0B800E4B2B681A8900EADCA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E4A2B681A8900EADCA9 /* ContentView.swift */; };
 		0B800E4D2B681A8A00EADCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */; };
@@ -49,7 +45,6 @@
 		0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
 		0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */; };
-		0BCA61452B6BDCC60038FAFB /* WordSuggestionsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */; };
 		0BD201292BC2EDA20065DBC1 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294172B91E43F001465DF /* UserDefaults+.swift */; };
 		0BD2012A2BC2EDA50065DBC1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613E2B6BDC310038FAFB /* String+.swift */; };
 		0BD2012B2BC2EDAC0065DBC1 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */; };
@@ -155,15 +150,11 @@
 		0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShalaqazaqDatasetV2.json; sourceTree = "<group>"; };
 		0B30DA752B8BB67900215711 /* AppSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetupView.swift; sourceTree = "<group>"; };
 		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
-		0B5066EC2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqWordsDatasetLoader.swift; sourceTree = "<group>"; };
 		0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WordSuggestionsEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordSuggestionsEngine.h; sourceTree = "<group>"; };
 		0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = WordSuggestionsEngine.docc; sourceTree = "<group>"; };
 		0B62F2072BC2EC170069E5CF /* WordSuggestionsEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordSuggestionsEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B62F20E2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionsEngineTests.swift; sourceTree = "<group>"; };
-		0B7943222B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqEndingsGenerator.swift; sourceTree = "<group>"; };
-		0B7943242B7D1E3700CCA7AB /* PossessiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossessiveService.swift; sourceTree = "<group>"; };
-		0B7943262B7D1E5500CCA7AB /* QuantitativeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitativeService.swift; sourceTree = "<group>"; };
 		0B800E452B681A8900EADCA9 /* Qazaqsha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qazaqsha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqshaApp.swift; sourceTree = "<group>"; };
 		0B800E4A2B681A8900EADCA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,7 +184,6 @@
 		0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqAutocompleteProvider.swift; sourceTree = "<group>"; };
 		0BCA613E2B6BDC310038FAFB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
-		0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSuggestionsEngine.swift; sourceTree = "<group>"; };
 		0BEF667D2BC2DCAF00829036 /* QazaqshaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QazaqshaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -271,16 +261,6 @@
 				0B62F20E2BC2EC170069E5CF /* WordSuggestionsEngineTests.swift */,
 			);
 			path = WordSuggestionsEngineTests;
-			sourceTree = "<group>";
-		};
-		0B7943212B7D1DFD00CCA7AB /* QazaqEndingsGenerator */ = {
-			isa = PBXGroup;
-			children = (
-				0B7943222B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift */,
-				0B7943242B7D1E3700CCA7AB /* PossessiveService.swift */,
-				0B7943262B7D1E5500CCA7AB /* QuantitativeService.swift */,
-			);
-			path = QazaqEndingsGenerator;
 			sourceTree = "<group>";
 		};
 		0B800E3C2B681A8900EADCA9 = {
@@ -437,20 +417,9 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
-		0BCA61432B6BDCB50038FAFB /* WordSuggestionsEngine */ = {
-			isa = PBXGroup;
-			children = (
-				0BCA61442B6BDCC60038FAFB /* WordSuggestionsEngine.swift */,
-				0B5066EC2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift */,
-				0B7943212B7D1DFD00CCA7AB /* QazaqEndingsGenerator */,
-			);
-			path = WordSuggestionsEngine;
-			sourceTree = "<group>";
-		};
 		0BEA16A22B7BE054000154C6 /* Core Layer */ = {
 			isa = PBXGroup;
 			children = (
-				0BCA61432B6BDCB50038FAFB /* WordSuggestionsEngine */,
 				0BCA61392B6BDBF40038FAFB /* AutocompleteProvider */,
 			);
 			path = "Core Layer";
@@ -831,16 +800,11 @@
 			files = (
 				0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */,
 				0BAB0BC42B8115E800DB06F5 /* ContentView.swift in Sources */,
-				0B7943272B7D1E5500CCA7AB /* QuantitativeService.swift in Sources */,
 				0BA2941B2B91E5DD001465DF /* AppSetupView.swift in Sources */,
 				0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */,
-				0B7943232B7D1E1900CCA7AB /* QazaqEndingsGenerator.swift in Sources */,
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
 				0BAB0BC32B8114D000DB06F5 /* QazaqshaApp.swift in Sources */,
-				0BCA61452B6BDCC60038FAFB /* WordSuggestionsEngine.swift in Sources */,
 				0BA2941A2B91E5D6001465DF /* OnboardingView.swift in Sources */,
-				0B5066ED2B80B8DB00C01D14 /* QazaqWordsDatasetLoader.swift in Sources */,
-				0B7943252B7D1E3700CCA7AB /* PossessiveService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,7 +894,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -964,7 +928,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -992,7 +956,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1011,7 +975,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.WordSuggestionsEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1279,7 +1243,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1313,7 +1277,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1341,7 +1305,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1360,7 +1324,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.QazaqFoundationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

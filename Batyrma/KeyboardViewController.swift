@@ -7,6 +7,7 @@
 
 import KeyboardKit
 import SwiftUI
+import WordSuggestionsEngine
 
 /**
  This keyboard demonstrates how to setup KeyboardKit and how

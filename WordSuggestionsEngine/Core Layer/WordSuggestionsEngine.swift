@@ -8,9 +8,9 @@
 import Foundation
 
 public struct GeneratedSimilarWord {
-    let word: String
+    public let word: String
     // from 0 to 1
-    let similarity: Double
+    public let similarity: Double
 }
 
 public protocol WordSuggestionsEngine {
