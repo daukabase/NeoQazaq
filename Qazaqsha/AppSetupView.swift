@@ -46,35 +46,32 @@ struct AppSetupView: View {
                 case 0:
                     iconText(
                         index: index,
-                        icon: Asset.Images.appleSettingsGear.swiftUIImage,
+                        icon: icon(for: Asset.Images.appleSettingsGear.swiftUIImage),
                         text: "Open Settings"
                     )
                 case 1:
                     iconText(
                         index: index,
-                        icon: Asset.Images.appIconWelcome.swiftUIImage,
+                        icon: icon(for: Asset.Images.appIconWelcome.swiftUIImage),
                         text: Constants.appName,
                         openAppEnabled: true
                     )
                 case 2:
                     iconText(
                         index: index,
-                        icon: Asset.Images.appleSettingsGear.swiftUIImage,
+                        icon: keyboardIcon,
                         text: "Keyboards"
                     )
                 case 3:
-                    iconText(
-                        index: index,
-                        text: "Enable \(Constants.keyboardName)"
-                    )
+                    text(index: index, text: "Enable \(Constants.keyboardName)")
                 case 4:
-                    iconText(
+                    text(
                         index: index,
                         text: "Allow Full Access",
                         subtitle: "Optional"
                     )
                 case 5:
-                    iconText(
+                    text(
                         index: index,
                         text: "Come back to finish setup"
                     )
@@ -86,11 +83,30 @@ struct AppSetupView: View {
         .padding(.leading, 36)
     }
 
+    var openAppButton: some View {
+        Button(action: {
+            openURL(URL(string: UIApplication.openSettingsURLString)!)
+        }, label: {
+            Text("open").foregroundStyle(Asset.Colors.lightAction.swiftUIColor)
+        })
+    }
+
+    var keyboardIcon: some View {
+        Image(systemName: "keyboard")
+            .renderingMode(.template)
+            .foregroundColor(.white)
+            .frame(width: Constants.iconSize.width, height: Constants.iconSize.height)
+            .background(Asset.Colors.lightAction.swiftUIColor)
+            .clipShape(RoundedRectangle(
+                cornerRadius: Constants.iOSIconRoundedCornersScale * Constants.iconSize.width,
+                style: .continuous
+            ))
+    }
+
     func iconText(
         index: Int,
-        icon: Image? = nil,
+        icon: (some View)?,
         text: String,
-        subtitle: String? = nil,
         openAppEnabled: Bool = false
     ) -> some View {
         HStack(alignment: .center, spacing: 12) {
@@ -100,13 +116,6 @@ struct AppSetupView: View {
 
             if let icon {
                 icon
-                    .resizable()
-                    .frame(width: Constants.iconSize.width, height: Constants.iconSize.height)
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(RoundedRectangle(
-                        cornerRadius: Constants.iOSIconRoundedCornersScale * Constants.iconSize.width,
-                        style: .continuous
-                    ))
             }
 
             VStack(alignment: .leading, content: {
@@ -114,12 +123,41 @@ struct AppSetupView: View {
                     Text(text).foregroundColor(Asset.Colors.text.swiftUIColor)
 
                     if openAppEnabled {
-                        Button(action: {
-                            openURL(URL(string: UIApplication.openSettingsURLString)!)
-                        }, label: {
-                            Text("open").foregroundStyle(Asset.Colors.lightAction.swiftUIColor)
-                        })
+                        openAppButton
                     }
+                }
+            })
+
+            Spacer()
+        }
+        .frame(height: 40)
+    }
+
+    func icon(for image: Image) -> some View {
+        image
+            .resizable()
+            .frame(width: Constants.iconSize.width, height: Constants.iconSize.height)
+            .aspectRatio(contentMode: .fit)
+            .clipShape(RoundedRectangle(
+                cornerRadius: Constants.iOSIconRoundedCornersScale * Constants.iconSize.width,
+                style: .continuous
+            ))
+    }
+
+    func text(
+        index: Int,
+        text: String,
+        subtitle: String? = nil
+    ) -> some View {
+        HStack(alignment: .center, spacing: 12) {
+            indexView(index: index + 1)
+
+            Spacer().frame(width: 12)
+
+
+            VStack(alignment: .leading, content: {
+                HStack {
+                    Text(text).foregroundColor(Asset.Colors.text.swiftUIColor)
                 }
 
                 if let subtitle {

@@ -12,7 +12,7 @@
 		<key>QazaqFoundation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>Qazaqsha Release.xcscheme</key>
 		<dict>
@@ -90,7 +90,7 @@
 		<key>WordSuggestionsEngine.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 		<key>WordSuggestionsEngineTests.xcscheme_^#shared#^_</key>
 		<dict>
