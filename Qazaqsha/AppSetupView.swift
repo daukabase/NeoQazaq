@@ -16,10 +16,10 @@ struct AppSetupView: View {
         static let keyboardName = appName
         static let appURL = URL(string: UIApplication.openSettingsURLString)!
     }
-
+    
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.openURL) var openURL
-
+    
     var body: some View {
         welcomeView
         Spacer()
@@ -27,18 +27,18 @@ struct AppSetupView: View {
         Spacer()
         policyView
     }
-
+    
     var welcomeView: some View {
         VStack(alignment: .center, content: {
             Text("Welcome to \(Constants.appName)").foregroundColor(Asset.Colors.text.swiftUIColor)
             Text("Follow steps below to setup keyboard").foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
         })
     }
-
+    
     var policyView: some View {
         Text("By installing, you are agreeing to \(Constants.appName)'s privacy policy")
     }
-
+    
     var setupStepsView: some View {
         VStack(alignment: .leading, spacing: 12) {
             ForEach(0 ..< 6, id: \.self) { index in
@@ -82,7 +82,7 @@ struct AppSetupView: View {
         }
         .padding(.leading, 36)
     }
-
+    
     var openAppButton: some View {
         Button(action: {
             openURL(URL(string: UIApplication.openSettingsURLString)!)
@@ -90,7 +90,7 @@ struct AppSetupView: View {
             Text("open").foregroundStyle(Asset.Colors.lightAction.swiftUIColor)
         })
     }
-
+    
     var keyboardIcon: some View {
         Image(systemName: "keyboard")
             .renderingMode(.template)
@@ -102,7 +102,7 @@ struct AppSetupView: View {
                 style: .continuous
             ))
     }
-
+    
     func iconText(
         index: Int,
         icon: (some View)?,
@@ -111,28 +111,28 @@ struct AppSetupView: View {
     ) -> some View {
         HStack(alignment: .center, spacing: 12) {
             indexView(index: index + 1)
-
+            
             Spacer().frame(width: 12)
-
+            
             if let icon {
                 icon
             }
-
+            
             VStack(alignment: .leading, content: {
                 HStack {
                     Text(text).foregroundColor(Asset.Colors.text.swiftUIColor)
-
+                    
                     if openAppEnabled {
                         openAppButton
                     }
                 }
             })
-
+            
             Spacer()
         }
         .frame(height: 40)
     }
-
+    
     func icon(for image: Image) -> some View {
         image
             .resizable()
@@ -143,7 +143,7 @@ struct AppSetupView: View {
                 style: .continuous
             ))
     }
-
+    
     func text(
         index: Int,
         text: String,
@@ -151,20 +151,19 @@ struct AppSetupView: View {
     ) -> some View {
         HStack(alignment: .center, spacing: 12) {
             indexView(index: index + 1)
-
+            
             Spacer().frame(width: 12)
-
-
+            
             VStack(alignment: .leading, content: {
                 HStack {
                     Text(text).foregroundColor(Asset.Colors.text.swiftUIColor)
                 }
-
+                
                 if let subtitle {
                     Text(subtitle).foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
                 }
             })
-
+            
             Spacer()
         }
         .frame(height: 40)

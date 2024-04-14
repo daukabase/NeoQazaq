@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AppMain.swift
 //  Qazaqsha
 //
 //  Created by Daulet Almagambetov on 29.01.2024.
@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-
-class ContentViewModel: ObservableObject {
+class AppMainModel: ObservableObject {
     private enum Constants {
         static let neoQazaqKeyboardExtensionIdentifier = "com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq"
     }
@@ -22,9 +21,9 @@ class ContentViewModel: ObservableObject {
     }
 }
 
-struct ContentView: View {
+struct AppMain: View {
     @ObservedObject
-    var viewModel: ContentViewModel
+    var viewModel: AppMainModel
 
     @Environment(\.openURL) var openURL
 
@@ -39,10 +38,10 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AppMain_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            ContentView(viewModel: ContentViewModel())
+            AppMain(viewModel: AppMainModel())
         }
     }
 }

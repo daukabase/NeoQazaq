@@ -11,7 +11,7 @@ import SwiftUI
 struct QazaqshaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ContentViewModel())
+            AppMain(viewModel: AppMainModel())
         }
     }
 }
