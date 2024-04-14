@@ -8,9 +8,13 @@
 import SwiftUI
 import QazaqFoundation
 
-class SettingsViewModel: ObservableObject {
+final class SettingsViewModel: ObservableObject {
     @UserDefault("isAutocompleteEnabled", store: .localAppGroup)
     var isAutocompleteEnabled: Bool = false
+    @UserDefault("isAutoCapitalizationEnabled", store: .localAppGroup)
+    var isAutoCapitalizationEnabled: Bool = false
+    @UserDefault("isKeyClicksSoundEnabled", store: .localAppGroup)
+    var isKeyClicksSoundEnabled: Bool = false
 }
 
 struct SettingsView: View {
@@ -31,17 +35,12 @@ struct SettingsView: View {
 
     var settings: some View {
         Section(content: {
-            Toggle(isOn: $viewModel.isAutocompleteEnabled) {
+            Toggle(isOn: $viewModel.isAutoCapitalizationEnabled) {
                 HStack {
                     Text("Auto-Capitalization")
                 }
             }
-            Toggle(isOn: $viewModel.isAutocompleteEnabled) {
-                HStack {
-                    Text("Key Click Sounds")
-                }
-            }
-            Toggle(isOn: $viewModel.isAutocompleteEnabled) {
+            Toggle(isOn: $viewModel.isKeyClicksSoundEnabled) {
                 HStack {
                     Text("Key Click Sounds")
                 }
@@ -60,17 +59,9 @@ struct SettingsView: View {
         Section(content: {
             TextRightChevronView(viewModel: TextRightChevronViewModel(
                 text: "Magic Auto-Correction", onTap: {
-                    print("tap")
+                    print("show magic autocorrection setup view")
                 }
             ))
-//            HStack {
-//                Toggle(isOn: $viewModel.isAutocompleteEnabled) {
-//                    HStack {
-//                        Text("Magic Auto-Correction")
-//                        autocorrectionInfoButton
-//                    }
-//                }
-//            }
         }, footer: {
             Text("BETA: This feature is still in development and may not work as expected.")
         })

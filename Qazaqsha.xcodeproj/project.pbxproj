@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		0B2D8B9E2BCAABCE00F4362C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */; };
 		0B2D8BA12BCC0DEE00F4362C /* TextRightChevronView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BA02BCC0DEE00F4362C /* TextRightChevronView.swift */; };
+		0B2D8BA32BCC115A00F4362C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BA22BCC115A00F4362C /* MainView.swift */; };
 		0B30DA722B8B2D5000215711 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
 		0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
-		0B30DA762B8BB67900215711 /* AppSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* AppSetupView.swift */; };
+		0B30DA762B8BB67900215711 /* KeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */; };
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
@@ -41,7 +42,7 @@
 		0B981F622BC2ECC2000308C2 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
 		0BA2941A2B91E5D6001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
-		0BA2941B2B91E5DD001465DF /* AppSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* AppSetupView.swift */; };
+		0BA2941B2B91E5DD001465DF /* KeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */; };
 		0BAB0BC32B8114D000DB06F5 /* QazaqshaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */; };
 		0BAB0BC42B8115E800DB06F5 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E4A2B681A8900EADCA9 /* AppMain.swift */; };
 		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
@@ -191,7 +192,8 @@
 		0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShalaqazaqDatasetV2.json; sourceTree = "<group>"; };
 		0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0B2D8BA02BCC0DEE00F4362C /* TextRightChevronView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRightChevronView.swift; sourceTree = "<group>"; };
-		0B30DA752B8BB67900215711 /* AppSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetupView.swift; sourceTree = "<group>"; };
+		0B2D8BA22BCC115A00F4362C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSetupView.swift; sourceTree = "<group>"; };
 		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
 		0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WordSuggestionsEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordSuggestionsEngine.h; sourceTree = "<group>"; };
@@ -364,8 +366,9 @@
 				0B2D8B9F2BCC0DDF00F4362C /* Common */,
 				0B800E4A2B681A8900EADCA9 /* AppMain.swift */,
 				0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */,
+				0B2D8BA22BCC115A00F4362C /* MainView.swift */,
 				0BA294152B91E22A001465DF /* OnboardingView.swift */,
-				0B30DA752B8BB67900215711 /* AppSetupView.swift */,
+				0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */,
 				0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */,
 				0B800E4E2B681A8A00EADCA9 /* Preview Content */,
 			);
@@ -826,9 +829,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B2D8BA12BCC0DEE00F4362C /* TextRightChevronView.swift in Sources */,
+				0B2D8BA32BCC115A00F4362C /* MainView.swift in Sources */,
 				0B800E4B2B681A8900EADCA9 /* AppMain.swift in Sources */,
 				0B800E492B681A8900EADCA9 /* QazaqshaApp.swift in Sources */,
-				0B30DA762B8BB67900215711 /* AppSetupView.swift in Sources */,
+				0B30DA762B8BB67900215711 /* KeyboardSetupView.swift in Sources */,
 				0B2D8B9E2BCAABCE00F4362C /* SettingsView.swift in Sources */,
 				0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */,
 				0B30DA722B8B2D5000215711 /* Assets.swift in Sources */,
@@ -841,7 +845,7 @@
 			files = (
 				0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */,
 				0BAB0BC42B8115E800DB06F5 /* AppMain.swift in Sources */,
-				0BA2941B2B91E5DD001465DF /* AppSetupView.swift in Sources */,
+				0BA2941B2B91E5DD001465DF /* KeyboardSetupView.swift in Sources */,
 				0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */,
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
 				0BAB0BC32B8114D000DB06F5 /* QazaqshaApp.swift in Sources */,

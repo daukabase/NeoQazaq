@@ -25,13 +25,11 @@ struct AppMain: View {
     @ObservedObject
     var viewModel: AppMainModel
 
-    @Environment(\.openURL) var openURL
-
     var body: some View {
         if viewModel.isKeyboardExtensionEnabled() {
             OnboardingView(viewModel: OnboardingViewModel())
         } else {
-            AppSetupView().onAppear(perform: {
+            KeyboardSetupView().onAppear(perform: {
                 
             })
         }

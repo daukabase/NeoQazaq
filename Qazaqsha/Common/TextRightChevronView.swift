@@ -9,10 +9,16 @@ import SwiftUI
 
 final class TextRightChevronViewModel: ObservableObject {
     var text: String
+    var isChevronHidden: Bool
     var onTap: () -> Void
     
-    init(text: String, onTap: @escaping () -> Void) {
+    init(
+        text: String,
+        isChevronHidden: Bool = false,
+        onTap: @escaping () -> Void)
+    {
         self.text = text
+        self.isChevronHidden = isChevronHidden
         self.onTap = onTap
     }
 }
@@ -20,16 +26,21 @@ final class TextRightChevronViewModel: ObservableObject {
 struct TextRightChevronView: View {
     @ObservedObject
     var viewModel: TextRightChevronViewModel
-    
+
     var body: some View {
         HStack {
             Text(viewModel.text)
             Spacer()
-            Image(systemName: "chevron.right")
-                .renderingMode(.template)
-                .resizable()
-                .frame(width: 8, height: 12)
-                .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
+            if !viewModel.isChevronHidden {
+                Image(systemName: "chevron.right")
+                    .renderingMode(.template)
+                    .resizable()
+                    .frame(width: 8, height: 12)
+                    .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
+            }
+        }
+        .onTapGesture {
+            viewModel.onTap()
         }
     }
 }

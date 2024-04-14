@@ -1,5 +1,5 @@
 //
-//  AppSetupView.swift
+//  KeyboardSetupView.swift
 //  Qazaqsha
 //
 //  Created by Daulet Almagambetov on 25.02.2024.
@@ -7,19 +7,27 @@
 
 import SwiftUI
 
-struct AppSetupView: View {
+enum GlobalConstants {
+    static let appName = "NeoQazaq"
+    static let appVersion = {
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        return version ?? "1.0.0"
+    }()
+}
+
+struct KeyboardSetupView: View {
     enum Constants {
         static let iconSize = CGSize(width: 32, height: 32)
         static let indexItemSize = CGSize(width: 28, height: 28)
         static let iOSIconRoundedCornersScale: CGFloat = 10 / 57
-        static let appName = "NeoQazaq"
+        static let appName = GlobalConstants.appName
         static let keyboardName = appName
         static let appURL = URL(string: UIApplication.openSettingsURLString)!
     }
-    
+
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.openURL) var openURL
-    
+
     var body: some View {
         welcomeView
         Spacer()
@@ -27,7 +35,7 @@ struct AppSetupView: View {
         Spacer()
         policyView
     }
-    
+
     var welcomeView: some View {
         VStack(alignment: .center, content: {
             Text("Welcome to \(Constants.appName)").foregroundColor(Asset.Colors.text.swiftUIColor)
@@ -168,7 +176,7 @@ struct AppSetupView: View {
         }
         .frame(height: 40)
     }
-
+    
     func indexView(index: Int) -> some View {
         Text(String(index))
             .frame(width: Constants.indexItemSize.width - 1, height: Constants.indexItemSize.height - 1)
@@ -180,10 +188,10 @@ struct AppSetupView: View {
     }
 }
 
-struct AppSetupView_Previews: PreviewProvider {
+struct KeyboardSetupView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            AppSetupView()
+            KeyboardSetupView()
         }
     }
 }
