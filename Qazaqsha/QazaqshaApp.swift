@@ -13,8 +13,8 @@ struct QazaqshaApp: App {
     var body: some Scene {
         WindowGroup {
 //            AppMain(viewModel: AppMainModel())
-//            MainView(viewModel: MainViewModel())
-            MagicAutocorrectionView(viewModel: viewModel)
+            MainView(viewModel: MainViewModel())
+//            MagicAutocorrectionView(viewModel: viewModel)
         }
     }
 }

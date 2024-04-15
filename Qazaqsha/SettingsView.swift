@@ -13,24 +13,24 @@ final class SettingsViewModel: ObservableObject {
     var isAutoCapitalizationEnabled: Bool = false
     @UserDefault("isKeyClicksSoundEnabled", store: .localAppGroup)
     var isKeyClicksSoundEnabled: Bool = false
+    
+    let magicAutocorrection = MagicAutocorrectionViewModel()
 }
 
 struct SettingsView: View {
     @ObservedObject
     var viewModel: SettingsViewModel
-
+    
     @State var downloadViaWifiEnabled: Bool = false
-
+    
     var body: some View {
-        NavigationView {
-            Form {
-                settings
-                autocorrectionSection
-            }
-            .navigationBarTitle("Settings")
+        Form {
+            settings
+            autocorrectionSection
         }
+        .navigationBarTitle("Settings")
     }
-
+    
     var settings: some View {
         Section(content: {
             Toggle(isOn: $viewModel.isAutoCapitalizationEnabled) {
@@ -52,19 +52,19 @@ struct SettingsView: View {
             }
         })
     }
-
+    
     var autocorrectionSection: some View {
         Section(content: {
-            TextRightChevronView(viewModel: TextRightChevronViewModel(
-                text: "Magic Auto-Correction", onTap: {
-                    print("show magic autocorrection setup view")
-                }
-            ))
+            NavigationLink {
+                MagicAutocorrectionView(viewModel: viewModel.magicAutocorrection)
+            } label: {
+                Text("Magic Auto-Correction")
+            }
         }, footer: {
             Text("BETA: This feature is still in development and may not work as expected.")
         })
     }
-
+    
     var autocorrectionInfoButton: some View {
         Button(action: {
             // show gif

@@ -11,12 +11,12 @@ class AppMainModel: ObservableObject {
     private enum Constants {
         static let neoQazaqKeyboardExtensionIdentifier = "com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq"
     }
-
+    
     func isKeyboardExtensionEnabled() -> Bool {
         guard let keyboards = UserDefaults.standard.dictionaryRepresentation()["AppleKeyboards"] as? [String] else {
             return false
         }
-
+        
         return keyboards.contains(Constants.neoQazaqKeyboardExtensionIdentifier)
     }
 }
@@ -24,7 +24,7 @@ class AppMainModel: ObservableObject {
 struct AppMain: View {
     @ObservedObject
     var viewModel: AppMainModel
-
+    
     var body: some View {
         if viewModel.isKeyboardExtensionEnabled() {
             OnboardingView(viewModel: OnboardingViewModel())
