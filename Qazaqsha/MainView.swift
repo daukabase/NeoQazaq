@@ -73,7 +73,12 @@ struct MainView: View {
                 Form {
                     Section(content: {
                         TextRightChevronView(viewModel: viewModel.language)
-                        TextRightChevronView(viewModel: viewModel.settings)
+                        NavigationLink {
+                            SettingsView(viewModel: SettingsViewModel())
+                        } label: {
+                            Text("Settings")
+//                            TextRightChevronView(viewModel: viewModel.settings)
+                        }
                         TextRightChevronView(viewModel: viewModel.design)
                     })
 

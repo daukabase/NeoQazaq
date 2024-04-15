@@ -9,8 +9,6 @@ import SwiftUI
 import QazaqFoundation
 
 final class SettingsViewModel: ObservableObject {
-    @UserDefault("isAutocompleteEnabled", store: .localAppGroup)
-    var isAutocompleteEnabled: Bool = false
     @UserDefault("isAutoCapitalizationEnabled", store: .localAppGroup)
     var isAutoCapitalizationEnabled: Bool = false
     @UserDefault("isKeyClicksSoundEnabled", store: .localAppGroup)

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct QazaqshaApp: App {
+    let viewModel = MagicAutocorrectionViewModel()
     var body: some Scene {
         WindowGroup {
-            AppMain(viewModel: AppMainModel())
+//            AppMain(viewModel: AppMainModel())
+//            MainView(viewModel: MainViewModel())
+            MagicAutocorrectionView(viewModel: viewModel)
         }
     }
 }

@@ -10,6 +10,14 @@
 		0B2D8B9E2BCAABCE00F4362C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */; };
 		0B2D8BA12BCC0DEE00F4362C /* TextRightChevronView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BA02BCC0DEE00F4362C /* TextRightChevronView.swift */; };
 		0B2D8BA32BCC115A00F4362C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BA22BCC115A00F4362C /* MainView.swift */; };
+		0B2D8BA52BCC954500F4362C /* MagicAutocorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BA42BCC954500F4362C /* MagicAutocorrectionView.swift */; };
+		0B2D8BA82BCD2D5F00F4362C /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BA72BCD2D5F00F4362C /* GifImage.swift */; };
+		0B2D8BAC2BCD303200F4362C /* EnvironmentValues+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BAB2BCD303200F4362C /* EnvironmentValues+.swift */; };
+		0B2D8BAD2BCD36E700F4362C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
+		0B2D8BAF2BCD37B200F4362C /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BAE2BCD37B200F4362C /* UIImage+Gif.swift */; };
+		0B2D8BB12BCD38CF00F4362C /* autocorrectionExampleWhite.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B2D8BB02BCD38CF00F4362C /* autocorrectionExampleWhite.gif */; };
+		0B2D8BB32BCD38D900F4362C /* autocorrectionExampleDark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */; };
+		0B2D8BB72BCD3A6600F4362C /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0B2D8BB62BCD3A6600F4362C /* FLAnimatedImage */; };
 		0B30DA722B8B2D5000215711 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
 		0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
@@ -43,8 +51,6 @@
 		0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
 		0BA2941A2B91E5D6001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
 		0BA2941B2B91E5DD001465DF /* KeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */; };
-		0BAB0BC32B8114D000DB06F5 /* QazaqshaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */; };
-		0BAB0BC42B8115E800DB06F5 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E4A2B681A8900EADCA9 /* AppMain.swift */; };
 		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
@@ -193,6 +199,12 @@
 		0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0B2D8BA02BCC0DEE00F4362C /* TextRightChevronView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRightChevronView.swift; sourceTree = "<group>"; };
 		0B2D8BA22BCC115A00F4362C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0B2D8BA42BCC954500F4362C /* MagicAutocorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicAutocorrectionView.swift; sourceTree = "<group>"; };
+		0B2D8BA72BCD2D5F00F4362C /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		0B2D8BAB2BCD303200F4362C /* EnvironmentValues+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+.swift"; sourceTree = "<group>"; };
+		0B2D8BAE2BCD37B200F4362C /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		0B2D8BB02BCD38CF00F4362C /* autocorrectionExampleWhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = autocorrectionExampleWhite.gif; sourceTree = "<group>"; };
+		0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = autocorrectionExampleDark.gif; sourceTree = "<group>"; };
 		0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSetupView.swift; sourceTree = "<group>"; };
 		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
 		0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WordSuggestionsEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +283,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2D8BB72BCD3A6600F4362C /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +305,31 @@
 				0B2D8BA02BCC0DEE00F4362C /* TextRightChevronView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		0B2D8BA62BCD2D4900F4362C /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				0B2D8BA72BCD2D5F00F4362C /* GifImage.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		0B2D8BAA2BCD302800F4362C /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				0B2D8BAB2BCD303200F4362C /* EnvironmentValues+.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		0B2D8BB42BCD38DD00F4362C /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				0B2D8BB02BCD38CF00F4362C /* autocorrectionExampleWhite.gif */,
+				0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */,
+			);
+			path = Gif;
 			sourceTree = "<group>";
 		};
 		0B4BA0CE2BC2F12800F6E182 /* WordSuggestionsEngine */ = {
@@ -363,6 +401,7 @@
 				0BA294132B91DF9A001465DF /* Qazaqsha.entitlements */,
 				0BAB0BC52B811AB600DB06F5 /* Info.plist */,
 				0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */,
+				0B2D8BA42BCC954500F4362C /* MagicAutocorrectionView.swift */,
 				0B2D8B9F2BCC0DDF00F4362C /* Common */,
 				0B800E4A2B681A8900EADCA9 /* AppMain.swift */,
 				0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */,
@@ -417,6 +456,7 @@
 		0B981F4D2BC2ECC1000308C2 /* QazaqFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				0B2D8BA62BCD2D4900F4362C /* SwiftUI */,
 				0BCA612B2B6BD0F20038FAFB /* Extensions */,
 				0B981F4E2BC2ECC1000308C2 /* QazaqFoundation.h */,
 				0B981F4F2BC2ECC1000308C2 /* QazaqFoundation.docc */,
@@ -427,6 +467,7 @@
 		0BCA611D2B6BC7280038FAFB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0B2D8BB42BCD38DD00F4362C /* Gif */,
 				0BCA611E2B6BC73F0038FAFB /* Images.xcassets */,
 				0BCA61242B6BCA060038FAFB /* Generated */,
 				0BCA61202B6BC8D50038FAFB /* Colors.xcassets */,
@@ -445,6 +486,7 @@
 		0BCA612B2B6BD0F20038FAFB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0B2D8BAA2BCD302800F4362C /* SwiftUI */,
 				0BCA61422B6BDC640038FAFB /* Swift */,
 				0BCA612C2B6BD0F90038FAFB /* UIKit */,
 			);
@@ -456,6 +498,7 @@
 			children = (
 				0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */,
 				0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */,
+				0B2D8BAE2BCD37B200F4362C /* UIImage+Gif.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -613,6 +656,9 @@
 			dependencies = (
 			);
 			name = QazaqFoundation;
+			packageProductDependencies = (
+				0B2D8BB62BCD3A6600F4362C /* FLAnimatedImage */,
+			);
 			productName = QazaqFoundation;
 			productReference = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */;
 			productType = "com.apple.product-type.framework";
@@ -734,6 +780,7 @@
 			mainGroup = 0B800E3C2B681A8900EADCA9;
 			packageReferences = (
 				0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
+				0B2D8BB52BCD3A4D00F4362C /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
 			);
 			productRefGroup = 0B800E462B681A8900EADCA9 /* Products */;
 			projectDirPath = "";
@@ -770,6 +817,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2D8BB32BCD38D900F4362C /* autocorrectionExampleDark.gif in Resources */,
+				0B2D8BB12BCD38CF00F4362C /* autocorrectionExampleWhite.gif in Resources */,
 				0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */,
 				0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */,
 				0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */,
@@ -790,6 +839,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2D8BAD2BCD36E700F4362C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,6 +885,7 @@
 				0B30DA762B8BB67900215711 /* KeyboardSetupView.swift in Sources */,
 				0B2D8B9E2BCAABCE00F4362C /* SettingsView.swift in Sources */,
 				0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */,
+				0B2D8BA52BCC954500F4362C /* MagicAutocorrectionView.swift in Sources */,
 				0B30DA722B8B2D5000215711 /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,11 +895,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */,
-				0BAB0BC42B8115E800DB06F5 /* AppMain.swift in Sources */,
 				0BA2941B2B91E5DD001465DF /* KeyboardSetupView.swift in Sources */,
 				0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */,
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
-				0BAB0BC32B8114D000DB06F5 /* QazaqshaApp.swift in Sources */,
 				0BA2941A2B91E5D6001465DF /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -859,8 +908,11 @@
 			files = (
 				0BD201292BC2EDA20065DBC1 /* UserDefaults+.swift in Sources */,
 				0BD2012A2BC2EDA50065DBC1 /* String+.swift in Sources */,
+				0B2D8BAC2BCD303200F4362C /* EnvironmentValues+.swift in Sources */,
+				0B2D8BA82BCD2D5F00F4362C /* GifImage.swift in Sources */,
 				0BD2012C2BC2EDAC0065DBC1 /* UIImage+.swift in Sources */,
 				0B981F502BC2ECC1000308C2 /* QazaqFoundation.docc in Sources */,
+				0B2D8BAF2BCD37B200F4362C /* UIImage+Gif.swift in Sources */,
 				0BD2012B2BC2EDAC0065DBC1 /* UIStackView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1495,6 +1547,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0B2D8BB52BCD3A4D00F4362C /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.0.17;
+			};
+		};
 		0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/daukabase/KeyboardKit.git";
@@ -1506,6 +1566,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0B2D8BB62BCD3A6600F4362C /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B2D8BB52BCD3A4D00F4362C /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
 		0B386FC42B6D128C008F0622 /* KeyboardKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
