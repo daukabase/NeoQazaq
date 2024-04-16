@@ -28,6 +28,9 @@
 		0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B4BA0CF2BC2F4D200F6E182 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
 		0B4BA0D02BC2F4D700F6E182 /* ShalaqazaqDatasetV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */; };
+		0B5BBE582BCEA90F0099F5F3 /* KeyboardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5BBE572BCEA90F0099F5F3 /* KeyboardSelectionView.swift */; };
+		0B5BBE5C2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B5BBE5A2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif */; };
+		0B5BBE5D2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B5BBE5B2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif */; };
 		0B62F2022BC2EC170069E5CF /* WordSuggestionsEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */; };
 		0B62F2082BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0B62F20F2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F20E2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift */; };
@@ -207,6 +210,9 @@
 		0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = autocorrectionExampleDark.gif; sourceTree = "<group>"; };
 		0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSetupView.swift; sourceTree = "<group>"; };
 		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
+		0B5BBE572BCEA90F0099F5F3 /* KeyboardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSelectionView.swift; sourceTree = "<group>"; };
+		0B5BBE5A2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = selectNeoQazaqKeyboardWhite.gif; sourceTree = "<group>"; };
+		0B5BBE5B2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = selectNeoQazaqKeyboardDark.gif; sourceTree = "<group>"; };
 		0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WordSuggestionsEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordSuggestionsEngine.h; sourceTree = "<group>"; };
 		0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = WordSuggestionsEngine.docc; sourceTree = "<group>"; };
@@ -302,6 +308,8 @@
 		0B2D8B9F2BCC0DDF00F4362C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0B2D8BA42BCC954500F4362C /* MagicAutocorrectionView.swift */,
+				0B5BBE572BCEA90F0099F5F3 /* KeyboardSelectionView.swift */,
 				0B2D8BA02BCC0DEE00F4362C /* TextRightChevronView.swift */,
 			);
 			path = Common;
@@ -326,6 +334,8 @@
 		0B2D8BB42BCD38DD00F4362C /* Gif */ = {
 			isa = PBXGroup;
 			children = (
+				0B5BBE5B2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif */,
+				0B5BBE5A2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif */,
 				0B2D8BB02BCD38CF00F4362C /* autocorrectionExampleWhite.gif */,
 				0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */,
 			);
@@ -401,7 +411,6 @@
 				0BA294132B91DF9A001465DF /* Qazaqsha.entitlements */,
 				0BAB0BC52B811AB600DB06F5 /* Info.plist */,
 				0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */,
-				0B2D8BA42BCC954500F4362C /* MagicAutocorrectionView.swift */,
 				0B2D8B9F2BCC0DDF00F4362C /* Common */,
 				0B800E4A2B681A8900EADCA9 /* AppMain.swift */,
 				0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */,
@@ -822,7 +831,9 @@
 				0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */,
 				0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */,
 				0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */,
+				0B5BBE5D2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif in Resources */,
 				0B800E4D2B681A8A00EADCA9 /* Assets.xcassets in Resources */,
+				0B5BBE5C2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,6 +889,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B5BBE582BCEA90F0099F5F3 /* KeyboardSelectionView.swift in Sources */,
 				0B2D8BA12BCC0DEE00F4362C /* TextRightChevronView.swift in Sources */,
 				0B2D8BA32BCC115A00F4362C /* MainView.swift in Sources */,
 				0B800E4B2B681A8900EADCA9 /* AppMain.swift in Sources */,
