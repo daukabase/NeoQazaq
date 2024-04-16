@@ -9,6 +9,17 @@ import SwiftUI
 
 public extension UserDefaults {
     static let localAppGroup = UserDefaults(suiteName: "group.com.almagambetov.daulet.qazaqsha.Qazaqsha")!
+
+    @UserDefault("isAutoCapitalizationEnabled", store: .localAppGroup)
+    static var isAutoCapitalizationEnabled: Bool = true
+
+    @UserDefault("isKeyClicksSoundEnabled", store: .localAppGroup)
+    static var isKeyClicksSoundEnabled: Bool = true
+}
+
+public struct UserDefaultValue<Value> {
+    public let key: String
+    public let defaultValue: Value
 }
 
 @propertyWrapper

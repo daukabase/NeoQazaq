@@ -17,8 +17,14 @@ import WordSuggestionsEngine
  ("Settings/General/Keyboards"). It needs full access to get
  access to features like haptic feedback.
  */
+
+import QazaqFoundation
+
 final class KeyboardViewController: KeyboardInputViewController {
-    /**
+    var isAutoCapitalizationEnabled = UserDefaults.isAutoCapitalizationEnabled
+    var isKeyClicksSoundEnabled = UserDefaults.isKeyClicksSoundEnabled
+
+/**
      This function is called when the controller loads. Here,
      we make demo-specific service configurations.
      */
@@ -65,6 +71,14 @@ final class KeyboardViewController: KeyboardInputViewController {
         /// keyboard has multiple locales.
         state.keyboardContext.spaceLongPressBehavior = .moveInputCursor
         
+        if !isAutoCapitalizationEnabled {
+            state.keyboardContext.autocapitalizationTypeOverride = nil
+        }
+
+        if !isKeyClicksSoundEnabled {
+            state.feedbackConfiguration.isAudioFeedbackEnabled = false
+        }
+
         /// 💡 Setup audio and haptic feedback.
         ///
         /// The code below enabled haptic feedback and plays
