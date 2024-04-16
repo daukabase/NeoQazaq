@@ -61,6 +61,8 @@ final class MainViewModel: ObservableObject {
             
         }
     )
+
+    let magicAutocorrection = MagicAutocorrectionViewModel()
 }
 
 struct MainView: View {
@@ -78,11 +80,18 @@ struct MainView: View {
                         } label: {
                             Text("Settings")
                         }
-                        TextRightChevronView(viewModel: viewModel.design)
+//                        TextRightChevronView(viewModel: viewModel.design)
                     })
 
+                    autocorrectionSection
+
                     Section(content: {
-                        TextRightChevronView(viewModel: viewModel.faq)
+                        NavigationLink {
+                            KeyboardSelectionView(viewModel: KeyboardSelectionViewModel())
+                        } label: {
+                            Text("How to switch to keyboard")
+                        }
+//                        TextRightChevronView(viewModel: viewModel.faq)
                         TextRightChevronView(viewModel: viewModel.support)
                         TextRightChevronView(viewModel: viewModel.reportBug)
                     })
@@ -108,6 +117,19 @@ struct MainView: View {
             
         }
     }
+    
+    var autocorrectionSection: some View {
+        Section(content: {
+            NavigationLink {
+                MagicAutocorrectionView(viewModel: viewModel.magicAutocorrection)
+            } label: {
+                Text("Magic Auto-Correction")
+            }
+        }, footer: {
+            Text("BETA: This feature is still in development and may not work as expected.")
+        })
+    }
+    
 }
 
 struct MainView_Preview: PreviewProvider {

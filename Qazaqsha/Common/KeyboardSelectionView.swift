@@ -25,11 +25,11 @@ struct KeyboardSelectionView: View {
                 gifSelectKeyboardExample
             }, header: {
                 headerView
-                    .padding(.bottom, 32)
+                    .padding(.vertical, 32)
             })
             .listRowInsets(EdgeInsets())
         }
-        .navigationBarTitle("How to Select Keyboard")
+        .navigationBarTitle("Switch to \(GlobalConstants.appName)")
     }
     
     func bulletPoint(_ text: String) -> some View {
@@ -44,8 +44,8 @@ struct KeyboardSelectionView: View {
     
     var headerView: some View {
         VStack(alignment: .leading, spacing: 10, content: {
-            Text("How to Switch to the \(GlobalConstants.appName) Keyboard")
-                .font(.title)
+            Text("How to Switch to the \(GlobalConstants.appName) Keyboard?")
+                .font(.title3)
                 .fontWeight(.semibold)
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
                 .textCase(nil) // Ensuring text case is not altered

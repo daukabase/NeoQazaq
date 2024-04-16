@@ -62,25 +62,6 @@ struct SettingsView: View {
             Text("BETA: This feature is still in development and may not work as expected.")
         })
     }
-    
-    var autocorrectionInfoButton: some View {
-        Button(action: {
-            // show gif
-        }, label: {
-            Image(systemName: "info")
-                .resizable()
-                .renderingMode(.template)
-                .foregroundColor(Asset.Colors.lightAction.swiftUIColor)
-                .frame(width: 6, height: 9)
-                .frame(width: 18, height: 18)
-                .background(
-                    Circle().strokeBorder(
-                        Asset.Colors.lightAction.swiftUIColor,
-                        lineWidth: 1
-                    )
-                )
-        })
-    }
 }
 
 struct SettingsView_Preview: PreviewProvider {
