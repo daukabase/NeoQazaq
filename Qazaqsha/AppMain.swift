@@ -8,8 +8,7 @@
 import SwiftUI
 import QazaqFoundation
 
-class AppMainModel: ObservableObject {
-
+final class AppMainModel: ObservableObject {
     @Published
     var didFinishOnboarding: Bool = false {
         didSet {

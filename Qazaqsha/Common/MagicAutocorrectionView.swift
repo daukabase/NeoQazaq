@@ -19,6 +19,8 @@ final class MagicAutocorrectionViewModel: ObservableObject {
         }
     }
     
+    let title: String?
+
     @Published
     var text: String = ""
     
@@ -27,7 +29,8 @@ final class MagicAutocorrectionViewModel: ObservableObject {
     @ObservedObject
     var keyboardResponder = KeyboardResponder()
     
-    init(action: (() -> Void)? = nil) {
+    init(title: String? = nil, action: (() -> Void)? = nil) {
+        self.title = title
         self.action = action
         isAutocompleteEnabled = isAutocompleteEnabledWrapper
     }
@@ -48,7 +51,6 @@ struct MagicAutocorrectionView: View {
             autocorrectionSection
             if viewModel.isAutocompleteEnabled {
                 autocompleteEnabledContent
-                    .padding(.bottom, viewModel.keyboardResponder.currentHeight)
             } else {
                 autocompleteExample
             }
@@ -106,17 +108,23 @@ struct MagicAutocorrectionView: View {
                 })
         }, header: {
             VStack(alignment: .leading) {
-                Text("1. Select NeoQazaq keyboard")
-                Text("2. Type \"Салем алем!\"\n    to see magic happen!")
+                HStack {
+                    Text("1.")
+                    Text("Select NeoQazaq keyboard")
+                }
+                HStack(alignment: .top, spacing: 8) {
+                    Text("2.")
+                    Text("Type \"Салем алем!\"\nto see magic happen!")
+                        .multilineTextAlignment(.leading)
+                }
             }
+            .font(.subheadline)
             .foregroundColor(Asset.Colors.text.swiftUIColor)
             .padding(.vertical, 12)
             .padding(.leading, 16)
             .frame(width: UIScreen.main.bounds.width - 38, alignment: .leading)
-            .background(Asset.Colors.lightPrimary.swiftUIColor)
-            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
+            .overlay(InnerBorder(color: Asset.Colors.text.swiftUIColor, width: 1, cornerRadius: 8))
             .padding(.bottom, 8)
-            
         })
     }
     
@@ -125,6 +133,19 @@ struct MagicAutocorrectionView: View {
     var autocorrectionSection: some View {
         Section(content: {
             Toggle("Magic Auto-Correction", isOn: $viewModel.isAutocompleteEnabled)
+        }, header: {
+            if let title = viewModel.title {
+                HStack {
+                    Text("Auto-Correction")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Asset.Colors.text.swiftUIColor)
+                        .padding(.bottom, 16)
+                        .textCase(nil)
+
+                    Spacer()
+                }
+            }
         }, footer: {
             Text("BETA: This feature is still in development and may not work as expected.")
         })
@@ -134,42 +155,23 @@ struct MagicAutocorrectionView: View {
 struct MagicAutocorrectionView_Preview: PreviewProvider {
     static var previews: some View {
         MagicAutocorrectionView(viewModel: MagicAutocorrectionViewModel())
+            .preferredColorScheme(.dark)
     }
 }
 
-struct ResponderTextField: UIViewRepresentable {
-    @Binding var text: String
-    var placeholder: String
-    @FocusState var isFocused: Bool
+struct InnerBorder: View {
+    var color: Color
+    var width: CGFloat
+    var cornerRadius: CGFloat
     
-    class Coordinator: NSObject, UITextFieldDelegate {
-        @Binding var text: String
-        
-        init(text: Binding<String>) {
-            _text = text
+    var body: some View {
+        GeometryReader { geometry in
+            Path { path in
+                let rect = CGRect(x: width / 2, y: width / 2, width: geometry.size.width - width, height: geometry.size.height - width)
+                path.addRoundedRect(in: rect, cornerSize: CGSize(width: cornerRadius, height: cornerRadius))
+            }
+            .stroke(color, lineWidth: width)
         }
-        
-        func textFieldDidChangeSelection(_ textField: UITextField) {
-            text = textField.text ?? ""
-        }
-    }
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(text: $text)
-    }
-    
-    func makeUIView(context: Context) -> UITextField {
-        let textField = UITextField()
-        textField.delegate = context.coordinator
-        textField.placeholder = placeholder
-        return textField
-    }
-    
-    func updateUIView(_ uiView: UITextField, context: Context) {
-        print(uiView.isHidden)
-        print(uiView.layer.opacity)
-        
-        uiView.text = text
-        uiView.becomeFirstResponder()
+        .drawingGroup()
     }
 }

@@ -26,9 +26,11 @@ struct KeyboardSelectionView: View {
             }, header: {
                 headerView
                     .padding(.vertical, 32)
+                    .padding(.horizontal, 16)
             })
             .listRowInsets(EdgeInsets())
         }
+        .modifier(FormHiddenBackground())
         .navigationBarTitle("Switch to \(GlobalConstants.appName)")
     }
     
@@ -45,7 +47,7 @@ struct KeyboardSelectionView: View {
     var headerView: some View {
         VStack(alignment: .leading, spacing: 10, content: {
             Text("How to Switch to the \(GlobalConstants.appName) Keyboard?")
-                .font(.title3)
+                .font(.title)
                 .fontWeight(.semibold)
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
                 .textCase(nil) // Ensuring text case is not altered
@@ -84,5 +86,22 @@ struct KeyboardSelectionView: View {
 struct KeyboardSelectionView_Preview: PreviewProvider {
     static var previews: some View {
         KeyboardSelectionView(viewModel: KeyboardSelectionViewModel())
+        
+        KeyboardSelectionView(viewModel: KeyboardSelectionViewModel()).preferredColorScheme(.dark)
+    }
+}
+
+struct FormHiddenBackground: ViewModifier {
+    func body(content: Content) -> some View {
+        if #available(iOS 16.0, *) {
+            content.scrollContentBackground(.hidden)
+        } else {
+            content.onAppear {
+                UITableView.appearance().backgroundColor = .clear
+            }
+            .onDisappear {
+                UITableView.appearance().backgroundColor = .systemGroupedBackground
+            }
+        }
     }
 }

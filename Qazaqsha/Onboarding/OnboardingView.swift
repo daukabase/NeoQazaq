@@ -39,12 +39,10 @@ class OnboardingViewModel: ObservableObject {
             return ""
         case .magicAutocorrection:
             if magicAutocorrection?.isAutocompleteEnabled == true {
-                return "Next"
+                return "Finish"
             } else {
                 return "Skip"
             }
-        case .done:
-            return "Finish"
         }
     }
 
@@ -52,7 +50,7 @@ class OnboardingViewModel: ObservableObject {
         switch currentPage {
         case .welcome, .keyboardSelection, .magicAutocorrection:
             return true
-        case .keyboardSetup, .done:
+        case .keyboardSetup:
             return false
         }
     }
@@ -68,8 +66,6 @@ class OnboardingViewModel: ObservableObject {
             MagicAutocorrectionView(viewModel: magicAutocorrection ?? .init())
         case .keyboardSetup:
             KeyboardSetupView()
-        case .done:
-            Text("Feel free to start")
         }
     }
 }
@@ -79,8 +75,7 @@ enum OnboardingPage: CaseIterable {
     case keyboardSetup
     case keyboardSelection
     case magicAutocorrection
-    case done
-    
+
     static let fullOnboarding = OnboardingPage.allCases
 }
 
@@ -90,7 +85,10 @@ struct OnboardingView: View {
 
     init(viewModel: OnboardingViewModel) {
         self.viewModel = viewModel
-        viewModel.magicAutocorrection = MagicAutocorrectionViewModel(action: primaryButtonAction)
+        viewModel.magicAutocorrection = MagicAutocorrectionViewModel(
+            title: "Auto-Correction",
+            action: primaryButtonAction
+        )
     }
 
     var body: some View {
@@ -104,11 +102,12 @@ struct OnboardingView: View {
                             removal: .move(edge: .leading))
                         )
                 }
-            }.animation(.easeInOut, value: viewModel.currentPage)
+            }
+            .animation(.easeInOut, value: viewModel.currentPage)
 
             if viewModel.shouldShowNextButton {
-                Button(action: showNextPage, label: {
-                    Text(viewModel.currentPage == .magicAutocorrection ? "Skip" : "Next")
+                Button(action: primaryButtonAction, label: {
+                    Text(viewModel.currentPageActionText)
                         .font(.system(size: 16, weight: .semibold, design: .default))
                         .foregroundColor(Asset.Colors.text.swiftUIColor)
                         .frame(maxWidth: .infinity)
@@ -117,7 +116,7 @@ struct OnboardingView: View {
                 .background(Asset.Colors.lightPrimary.swiftUIColor)
                 .roundCorners(value: 8)
                 .animation(.easeInOut, value: viewModel.currentPage)
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 50, trailing: 16))
+                .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
                 .transition(AnyTransition.asymmetric(
                     insertion: .move(edge: .trailing),
                     removal: .move(edge: .leading))
@@ -125,14 +124,10 @@ struct OnboardingView: View {
             }
         }
         .padding(.top, 32)
-        .background(Asset.Colors.backgroundSecondary.swiftUIColor)
-        .onAppear {
-//            viewModel.currentPage = viewModel.pages.first!
-        }
     }
 
     private func primaryButtonAction() {
-        if viewModel.currentPage == .done {
+        if viewModel.currentPage == .magicAutocorrection {
             viewModel.didFinishOnboarding = true
         } else {
             showNextPage()
