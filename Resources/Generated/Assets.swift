@@ -25,6 +25,7 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Colors {
+    internal static let backgroundSecondary = ColorAsset(name: "backgroundSecondary")
     internal static let keyboardBackground = ColorAsset(name: "keyboardBackground")
     internal static let lightAction = ColorAsset(name: "lightAction")
     internal static let lightInk = ColorAsset(name: "lightInk")
@@ -35,6 +36,8 @@ internal enum Asset {
   internal enum Images {
     internal static let appIconWelcome = ImageAsset(name: "appIconWelcome")
     internal static let appleSettingsGear = ImageAsset(name: "appleSettingsGear")
+    internal static let autocorrectionExampleDark = DataAsset(name: "autocorrectionExampleDark")
+    internal static let autocorrectionExampleWhite = DataAsset(name: "autocorrectionExampleWhite")
     internal static let keyBackspace = ImageAsset(name: "keyBackspace")
     internal static let keyEmoji = ImageAsset(name: "keyEmoji")
     internal static let keyLowercased = ImageAsset(name: "keyLowercased")
@@ -109,6 +112,30 @@ internal extension SwiftUI.Color {
   }
 }
 #endif
+
+internal struct DataAsset {
+  internal fileprivate(set) var name: String
+
+  @available(iOS 9.0, tvOS 9.0, watchOS 6.0, macOS 10.11, *)
+  internal var data: NSDataAsset {
+    guard let data = NSDataAsset(asset: self) else {
+      fatalError("Unable to load data asset named \(name).")
+    }
+    return data
+  }
+}
+
+@available(iOS 9.0, tvOS 9.0, watchOS 6.0, macOS 10.11, *)
+internal extension NSDataAsset {
+  convenience init?(asset: DataAsset) {
+    let bundle = BundleToken.bundle
+    #if os(iOS) || os(tvOS) || os(watchOS)
+    self.init(name: asset.name, bundle: bundle)
+    #elseif os(macOS)
+    self.init(name: NSDataAsset.Name(asset.name), bundle: bundle)
+    #endif
+  }
+}
 
 internal struct ImageAsset {
   internal fileprivate(set) var name: String

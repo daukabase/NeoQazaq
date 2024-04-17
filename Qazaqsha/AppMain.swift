@@ -6,32 +6,50 @@
 //
 
 import SwiftUI
+import QazaqFoundation
 
 class AppMainModel: ObservableObject {
-    private enum Constants {
-        static let neoQazaqKeyboardExtensionIdentifier = "com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq"
+
+    @Published
+    var didFinishOnboarding: Bool = false {
+        didSet {
+            isOnboardingCompleted = didFinishOnboarding
+        }
     }
     
+    @Published
+    var main: MainViewModel
+    
+    @UserDefault("isOnboardingFinished")
+    private var isOnboardingCompleted: Bool = false
+
+    init() {
+        main = MainViewModel()
+        didFinishOnboarding = isOnboardingCompleted
+    }
+
     func isKeyboardExtensionEnabled() -> Bool {
         guard let keyboards = UserDefaults.standard.dictionaryRepresentation()["AppleKeyboards"] as? [String] else {
             return false
         }
         
-        return keyboards.contains(Constants.neoQazaqKeyboardExtensionIdentifier)
+        return keyboards.contains(GlobalConstants.neoQazaqKeyboardExtensionIdentifier)
     }
 }
 
 struct AppMain: View {
     @ObservedObject
     var viewModel: AppMainModel
-    
+
     var body: some View {
-        if viewModel.isKeyboardExtensionEnabled() {
-            OnboardingView(viewModel: OnboardingViewModel())
+        if viewModel.didFinishOnboarding {
+            MainView(viewModel: viewModel.main)
         } else {
-            KeyboardSetupView().onAppear(perform: {
-                
-            })
+            OnboardingView(viewModel: OnboardingViewModel(
+                currentPage: viewModel.isKeyboardExtensionEnabled() ? .keyboardSelection : .welcome,
+                pages: OnboardingPage.fullOnboarding,
+                didFinishOnboarding: $viewModel.didFinishOnboarding
+            ))
         }
     }
 }

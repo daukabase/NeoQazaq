@@ -12,8 +12,8 @@ struct QazaqshaApp: App {
     let viewModel = MagicAutocorrectionViewModel()
     var body: some Scene {
         WindowGroup {
-//            AppMain(viewModel: AppMainModel())
-            MainView(viewModel: MainViewModel())
+            AppMain(viewModel: AppMainModel())
+//            MainView(viewModel: MainViewModel())
 //            MagicAutocorrectionView(viewModel: viewModel)
         }
     }

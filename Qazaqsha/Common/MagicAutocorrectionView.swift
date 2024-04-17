@@ -22,10 +22,13 @@ final class MagicAutocorrectionViewModel: ObservableObject {
     @Published
     var text: String = ""
     
+    let action: (() -> Void)?
+    
     @ObservedObject
     var keyboardResponder = KeyboardResponder()
     
-    init() {
+    init(action: (() -> Void)? = nil) {
+        self.action = action
         isAutocompleteEnabled = isAutocompleteEnabledWrapper
     }
 }
@@ -61,7 +64,7 @@ struct MagicAutocorrectionView: View {
         Section("Example") {
             gifAutocorrectionExample.clipped()
         }.listRowInsets(EdgeInsets())
-        
+
         Section {
             Button(action: {
                 viewModel.isAutocompleteEnabled = true
