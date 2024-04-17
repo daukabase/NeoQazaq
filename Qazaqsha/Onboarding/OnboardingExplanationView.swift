@@ -29,31 +29,6 @@ struct OnboardingExplanationView: View {
             .listRowInsets(EdgeInsets())
         }
         .modifier(FormHiddenBackground())
-//        .navigationBarTitle("Switch to \(GlobalConstants.appName)")
-//        
-//        
-//        
-//        VStack(alignment: .leading, spacing: 8) {
-//            Text("Welcome to the NeoQazaq")
-//                .font(.title)
-//                .foregroundColor(Asset.Colors.text.swiftUIColor)
-//
-//            Text("Our mission is to contribute kazakh language in digital world")
-//                .font(.headline)
-//                .padding(.vertical, 4)
-//
-//            VStack(alignment: .leading) {
-//                Text("You type in kazakh")
-//                Text("We correct mistakes")
-//                Text("Even if you type shalaqazaqsha 😁")
-//            }
-//            .font(.title3)
-//            .padding(.vertical, 16)
-//
-//            gifAutocorrectionExample
-//
-//        }
-//        .padding(.horizontal, 16)
     }
 
     var headerView: some View {

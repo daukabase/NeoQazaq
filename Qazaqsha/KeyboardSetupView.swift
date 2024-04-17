@@ -45,6 +45,7 @@ struct KeyboardSetupView: View {
         VStack(alignment: .leading, content: {
             Text("Keyboard setup")
                 .font(.title)
+                .fontWeight(.semibold)
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
             Text("Follow steps below to setup keyboard").foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
         })
@@ -53,8 +54,6 @@ struct KeyboardSetupView: View {
     var policyView: some View {
         Text("By installing, you are agreeing to [privacy policy](https://www.freeprivacypolicy.com/blog/privacy-policy-url/)")
             .font(.caption)
-        //        Text("By installing, you are agreeing to \(Constants.appName)'s privacy policy")
-        
     }
     
     var setupStepsView: some View {

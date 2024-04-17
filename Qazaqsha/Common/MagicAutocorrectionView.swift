@@ -136,7 +136,7 @@ struct MagicAutocorrectionView: View {
         }, header: {
             if let title = viewModel.title {
                 HStack {
-                    Text("Auto-Correction")
+                    Text(title)
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(Asset.Colors.text.swiftUIColor)
