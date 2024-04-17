@@ -6,78 +6,7 @@
 //
 
 import SwiftUI
-import Combine
 import QazaqFoundation
-
-class OnboardingViewModel: ObservableObject {
-    @Published
-    var currentPage: OnboardingPage = .welcome
-    @Published
-    var pages: [OnboardingPage]
-
-    @Published
-    var magicAutocorrection: MagicAutocorrectionViewModel?
-
-    @Binding
-    var didFinishOnboarding: Bool
-
-    init(
-        currentPage: OnboardingPage,
-        pages: [OnboardingPage],
-        didFinishOnboarding: Binding<Bool>
-    ) {
-        self.currentPage = currentPage
-        self.pages = pages
-        self._didFinishOnboarding = didFinishOnboarding
-    }
-
-    var currentPageActionText: String {
-        switch currentPage {
-        case .welcome, .keyboardSelection:
-            return "Next"
-        case .keyboardSetup:
-            return ""
-        case .magicAutocorrection:
-            if magicAutocorrection?.isAutocompleteEnabled == true {
-                return "Finish"
-            } else {
-                return "Skip"
-            }
-        }
-    }
-
-    var shouldShowNextButton: Bool {
-        switch currentPage {
-        case .welcome, .keyboardSelection, .magicAutocorrection:
-            return true
-        case .keyboardSetup:
-            return false
-        }
-    }
-
-    @ViewBuilder
-    func view(action: @escaping () -> Void) -> some View {
-        switch currentPage {
-        case .welcome:
-            OnboardingExplanationView()
-        case .keyboardSelection:
-            KeyboardSelectionView(viewModel: KeyboardSelectionViewModel())
-        case .magicAutocorrection:
-            MagicAutocorrectionView(viewModel: magicAutocorrection ?? .init())
-        case .keyboardSetup:
-            KeyboardSetupView()
-        }
-    }
-}
-
-enum OnboardingPage: CaseIterable {
-    case welcome
-    case keyboardSetup
-    case keyboardSelection
-    case magicAutocorrection
-
-    static let fullOnboarding = OnboardingPage.allCases
-}
 
 struct OnboardingView: View {
     @ObservedObject
@@ -116,7 +45,7 @@ struct OnboardingView: View {
                 .background(Asset.Colors.lightPrimary.swiftUIColor)
                 .roundCorners(value: 8)
                 .animation(.easeInOut, value: viewModel.currentPage)
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 16, trailing: 16))
+                .padding(16)
                 .transition(AnyTransition.asymmetric(
                     insertion: .move(edge: .trailing),
                     removal: .move(edge: .leading))

@@ -101,7 +101,9 @@ struct MagicAutocorrectionView: View {
             TextField("Type here", text: $viewModel.text)
                 .focused($isTextFieldFocused)
                 .onAppear(perform: {
-                    isTextFieldFocused = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        isTextFieldFocused = true
+                    }
                 })
                 .onDisappear(perform: {
                     isTextFieldFocused = false
@@ -110,7 +112,7 @@ struct MagicAutocorrectionView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text("1.")
-                    Text("Select NeoQazaq keyboard")
+                    Text("Switch to NeoQazaq keyboard")
                 }
                 HStack(alignment: .top, spacing: 8) {
                     Text("2.")

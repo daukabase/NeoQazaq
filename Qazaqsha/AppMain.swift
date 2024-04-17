@@ -26,26 +26,20 @@ final class AppMainModel: ObservableObject {
         main = MainViewModel()
         didFinishOnboarding = isOnboardingCompleted
     }
-
-    func isKeyboardExtensionEnabled() -> Bool {
-        guard let keyboards = UserDefaults.standard.dictionaryRepresentation()["AppleKeyboards"] as? [String] else {
-            return false
-        }
-        
-        return keyboards.contains(GlobalConstants.neoQazaqKeyboardExtensionIdentifier)
-    }
 }
 
 struct AppMain: View {
     @ObservedObject
     var viewModel: AppMainModel
 
+    @Environment(\.scenePhase) var scenePhase
+
     var body: some View {
         if viewModel.didFinishOnboarding {
             MainView(viewModel: viewModel.main)
         } else {
             OnboardingView(viewModel: OnboardingViewModel(
-                currentPage: viewModel.isKeyboardExtensionEnabled() ? .keyboardSelection : .welcome,
+                currentPage: GlobalConstants.isKeyboardExtensionEnabled ? .keyboardSetup : .welcome,
                 pages: OnboardingPage.fullOnboarding,
                 didFinishOnboarding: $viewModel.didFinishOnboarding
             ))

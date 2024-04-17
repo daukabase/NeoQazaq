@@ -15,6 +15,20 @@ enum GlobalConstants {
         return version ?? "1.0.0"
     }()
     static let neoQazaqKeyboardExtensionIdentifier = "com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq"
+
+    static var isKeyboardExtensionEnabled: Bool {
+        guard let keyboards = UserDefaults.standard.dictionaryRepresentation()["AppleKeyboards"] as? [String] else {
+            return false
+        }
+        
+        return keyboards.contains(neoQazaqKeyboardExtensionIdentifier)
+    }
+}
+
+final class KeyboardSetupViewModel: ObservableObject {
+    var isSetupFinished: Bool {
+        GlobalConstants.isKeyboardExtensionEnabled
+    }
 }
 
 struct KeyboardSetupView: View {
@@ -43,10 +57,17 @@ struct KeyboardSetupView: View {
     
     var titleView: some View {
         VStack(alignment: .leading, content: {
-            Text("Keyboard setup")
-                .font(.title)
-                .fontWeight(.semibold)
-                .foregroundColor(Asset.Colors.text.swiftUIColor)
+            HStack(content: {
+                Text("Keyboard setup")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Asset.Colors.text.swiftUIColor)
+                if GlobalConstants.isKeyboardExtensionEnabled {
+                    Image(systemName: "checkmark.circle")
+                        .foregroundColor(.green)  // Apple's standard green color
+                        .font(.system(size: 24, weight: .bold))  // Adjust the size and weight as needed
+                }
+            })
             Text("Follow steps below to setup keyboard").foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
         })
     }
@@ -97,7 +118,6 @@ struct KeyboardSetupView: View {
                 }
             }
         }
-        //        .padding(.leading, 36)
     }
     
     var openAppButton: some View {
