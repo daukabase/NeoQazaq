@@ -82,6 +82,7 @@
 		0BF808762BD10BEE0000DD96 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF808752BD10BEE0000DD96 /* FirebaseAnalyticsSwift */; };
 		0BF808782BD10BEE0000DD96 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF808772BD10BEE0000DD96 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		0BF8087A2BD10BEE0000DD96 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF808792BD10BEE0000DD96 /* FirebaseAppCheck */; };
+		0BF8087D2BD113B40000DD96 /* Instabug in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF8087C2BD113B40000DD96 /* Instabug */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -295,6 +296,7 @@
 				0B62F2132BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */,
 				0B18B01F2BD0FA2A005E8EBC /* FirebaseAnalytics in Frameworks */,
 				0B18B0272BD0FA2A005E8EBC /* FirebaseAppCheck in Frameworks */,
+				0BF8087D2BD113B40000DD96 /* Instabug in Frameworks */,
 				0B18B0212BD0FA2A005E8EBC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				0B18B0232BD0FA2A005E8EBC /* FirebaseAnalyticsSwift in Frameworks */,
 			);
@@ -672,6 +674,7 @@
 				0B18B0222BD0FA2A005E8EBC /* FirebaseAnalyticsSwift */,
 				0B18B0242BD0FA2A005E8EBC /* FirebaseAnalyticsWithoutAdIdSupport */,
 				0B18B0262BD0FA2A005E8EBC /* FirebaseAppCheck */,
+				0BF8087C2BD113B40000DD96 /* Instabug */,
 			);
 			productName = Qazaqsha;
 			productReference = 0B800E452B681A8900EADCA9 /* Qazaqsha.app */;
@@ -844,6 +847,7 @@
 				0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 				0B2D8BB52BCD3A4D00F4362C /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
 				0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0BF8087B2BD113B40000DD96 /* XCRemoteSwiftPackageReference "Instabug-SP" */,
 			);
 			productRefGroup = 0B800E462B681A8900EADCA9 /* Products */;
 			projectDirPath = "";
@@ -1642,6 +1646,14 @@
 				minimumVersion = 9.1.0;
 			};
 		};
+		0BF8087B2BD113B40000DD96 /* XCRemoteSwiftPackageReference "Instabug-SP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Instabug/Instabug-SP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.9.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1704,6 +1716,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAppCheck;
+		};
+		0BF8087C2BD113B40000DD96 /* Instabug */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BF8087B2BD113B40000DD96 /* XCRemoteSwiftPackageReference "Instabug-SP" */;
+			productName = Instabug;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

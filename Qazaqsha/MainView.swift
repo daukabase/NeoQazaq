@@ -7,28 +7,11 @@
 
 import SwiftUI
 import QazaqFoundation
+import Instabug
 
 final class MainViewModel: ObservableObject {
-    var language = TextRightChevronViewModel(
-        text: "Language",
-        onTap: {
-            
-        }
-    )
-    var settings = TextRightChevronViewModel(
-        text: "Settings",
-        onTap: {
-            
-        }
-    )
-    var design = TextRightChevronViewModel(
-        text: "Design",
-        onTap: {
-            
-        }
-    )
-    var faq = TextRightChevronViewModel(
-        text: "FAQ",
+    var keyboardSetup = TextRightChevronViewModel(
+        text: "Keyboard Setup",
         onTap: {
             
         }
@@ -37,14 +20,14 @@ final class MainViewModel: ObservableObject {
         text: "Technical Support",
         isChevronHidden: true,
         onTap: {
-            
+            BugReporting.show(with: .question, options: [.commentFieldRequired])
         }
     )
     var reportBug = TextRightChevronViewModel(
         text: "Report a bug",
         isChevronHidden: true,
         onTap: {
-            
+            BugReporting.show(with: .bug, options: [.emailFieldOptional, .commentFieldRequired])
         }
     )
     var donateProject = TextRightChevronViewModel(
@@ -91,7 +74,6 @@ struct MainView: View {
                         } label: {
                             Text("How to switch to keyboard")
                         }
-//                        TextRightChevronView(viewModel: viewModel.faq)
                         TextRightChevronView(viewModel: viewModel.support)
                         TextRightChevronView(viewModel: viewModel.reportBug)
                     })

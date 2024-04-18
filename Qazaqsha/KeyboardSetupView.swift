@@ -53,6 +53,7 @@ struct KeyboardSetupView: View {
             policyView
         })
         .padding(.horizontal, 32)
+        .navigationBarTitle("Keyboard Setup")
     }
     
     var titleView: some View {
