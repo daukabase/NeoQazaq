@@ -8,6 +8,8 @@
 import KeyboardKit
 import SwiftUI
 import WordSuggestionsEngine
+import FirebaseCore
+import FirebaseAnalytics
 
 /**
  This keyboard demonstrates how to setup KeyboardKit and how
@@ -21,14 +23,28 @@ import WordSuggestionsEngine
 import QazaqFoundation
 
 final class KeyboardViewController: KeyboardInputViewController {
-    var isAutoCapitalizationEnabled = UserDefaults.isAutoCapitalizationEnabled
-    var isKeyClicksSoundEnabled = UserDefaults.isKeyClicksSoundEnabled
+    @UserDefault(item: UserDefaults.autoCapitalizationItem)
+    var isAutoCapitalizationEnabled
+    @UserDefault(item: UserDefaults.isKeyClicksSoundItem)
+    var isKeyClicksSoundEnabled
+    
+    @UserDefault(item: UserDefaults.autocompleteItem)
+    var _isAutocompleteEnabled
 
 /**
      This function is called when the controller loads. Here,
      we make demo-specific service configurations.
      */
     override func viewDidLoad() {
+        FirebaseApp.configure()
+
+        Analytics.logEvent("launch_keybaord", parameters: [
+            "name": "keyboard_extension_opened",
+            "isAutocompleteEnabled": _isAutocompleteEnabled,
+            "isAutoCapitalizationEnabled": isAutoCapitalizationEnabled,
+            "isKeyClicksSoundEnabled": isKeyClicksSoundEnabled
+        ])
+
         QazaqWordsDatasetLoader.shared.loadData()
         /// 💡 Setup a fake autocomplete provider.
         ///

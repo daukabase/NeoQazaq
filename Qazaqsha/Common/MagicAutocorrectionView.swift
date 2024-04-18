@@ -9,8 +9,8 @@ import SwiftUI
 import QazaqFoundation
 
 final class MagicAutocorrectionViewModel: ObservableObject {
-    @UserDefault("isAutocompleteEnabled", store: .localAppGroup)
-    var isAutocompleteEnabledWrapper: Bool = false
+    @UserDefault(item: UserDefaults.autocompleteItem)
+    var isAutocompleteEnabledWrapper
     
     @Published
     var isAutocompleteEnabled: Bool = false {

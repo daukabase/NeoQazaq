@@ -19,8 +19,8 @@ final class AppMainModel: ObservableObject {
     @Published
     var main: MainViewModel
     
-    @UserDefault("isOnboardingFinished")
-    private var isOnboardingCompleted: Bool = false
+    @UserDefault(item: UserDefaults.isOnboardingFinishedItem)
+    private var isOnboardingCompleted
 
     init() {
         main = MainViewModel()
@@ -35,7 +35,7 @@ struct AppMain: View {
     @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
-        if viewModel.didFinishOnboarding {
+        if viewModel.didFinishOnboarding && GlobalConstants.isKeyboardExtensionEnabled {
             MainView(viewModel: viewModel.main)
         } else {
             OnboardingView(viewModel: OnboardingViewModel(

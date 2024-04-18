@@ -12,8 +12,9 @@ import WordSuggestionsEngine
 
 class QazaqAutocompleteProvider: AutocompleteProvider {
     let suggestionEngine: WordSuggestionsEngine = QazaqWordSuggestionsEngineV2()
-    @UserDefault("isAutocompleteEnabled", store: .localAppGroup)
-    var isAutocompleteEnabled: Bool = false
+
+    @UserDefault(item: UserDefaults.autocompleteItem)
+    var isAutocompleteEnabled
 
     init(context: AutocompleteContext) {
         self.context = context

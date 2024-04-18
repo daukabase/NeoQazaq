@@ -10,20 +10,45 @@ import SwiftUI
 public extension UserDefaults {
     static let localAppGroup = UserDefaults(suiteName: "group.com.almagambetov.daulet.qazaqsha.Qazaqsha")!
 
-    @UserDefault("isAutoCapitalizationEnabled", store: .localAppGroup)
-    static var isAutoCapitalizationEnabled: Bool = true
-
-    @UserDefault("isKeyClicksSoundEnabled", store: .localAppGroup)
-    static var isKeyClicksSoundEnabled: Bool = true
-}
-
-public struct UserDefaultValue<Value> {
-    public let key: String
-    public let defaultValue: Value
+    static let isOnboardingFinishedItem = UserDefault.Item(
+        key: "isOnboardingFinished",
+        defaultValue: false,
+        store: .standard
+    )
+    
+    static let autoCapitalizationItem = UserDefault.Item(
+        key: "isAutoCapitalizationEnabled",
+        defaultValue: true,
+        store: .localAppGroup
+    )
+    
+    static let isKeyClicksSoundItem = UserDefault.Item(
+        key: "isKeyClicksSoundEnabled",
+        defaultValue: true,
+        store: .localAppGroup
+    )
+    
+    static let autocompleteItem = UserDefault.Item(
+        key: "isAutocompleteEnabled",
+        defaultValue: false,
+        store: .localAppGroup
+    )
 }
 
 @propertyWrapper
 public struct UserDefault<Value>: DynamicProperty {
+    public struct Item {
+        let key: String
+        let defaultValue: Value
+        let store: UserDefaults
+
+        internal init(key: String, defaultValue: Value, store: UserDefaults = .standard) {
+            self.key = key
+            self.defaultValue = defaultValue
+            self.store = store
+        }
+    }
+
     private let get: () -> Value
     private let set: (Value) -> Void
     
@@ -34,6 +59,11 @@ public struct UserDefault<Value>: DynamicProperty {
 }
 
 public extension UserDefault {
+    
+    init(item: Item) where Value == Bool {
+        self.init(defaultValue: item.defaultValue, key: item.key, store: item.store)
+    }
+    
     init(wrappedValue: Value, _ key: String, store: UserDefaults = .standard) where Value == Bool {
         self.init(defaultValue: wrappedValue, key: key, store: store)
     }
