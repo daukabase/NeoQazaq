@@ -440,13 +440,8 @@
 				0BA294132B91DF9A001465DF /* Qazaqsha.entitlements */,
 				0BAB0BC52B811AB600DB06F5 /* Info.plist */,
 				0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */,
-				0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */,
-				0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */,
-				0B2D8B9F2BCC0DDF00F4362C /* Common */,
-				0B800E4A2B681A8900EADCA9 /* AppMain.swift */,
-				0BF8087E2BD11C010000DD96 /* Main */,
-				0B5BBE5E2BCFB9FD0099F5F3 /* Onboarding */,
-				0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */,
+				0BBDCEC52BD13FBA002781C8 /* Application Layer */,
+				0BBDCEC42BD13FAA002781C8 /* Presentation Layer */,
 				0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */,
 				0B800E4E2B681A8A00EADCA9 /* Preview Content */,
 			);
@@ -501,6 +496,27 @@
 				0B981F4F2BC2ECC1000308C2 /* QazaqFoundation.docc */,
 			);
 			path = QazaqFoundation;
+			sourceTree = "<group>";
+		};
+		0BBDCEC42BD13FAA002781C8 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				0B800E482B681A8900EADCA9 /* QazaqshaApp.swift */,
+				0B2D8B9F2BCC0DDF00F4362C /* Common */,
+				0BF8087E2BD11C010000DD96 /* Main */,
+				0B5BBE5E2BCFB9FD0099F5F3 /* Onboarding */,
+				0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		0BBDCEC52BD13FBA002781C8 /* Application Layer */ = {
+			isa = PBXGroup;
+			children = (
+				0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */,
+				0B800E4A2B681A8900EADCA9 /* AppMain.swift */,
+			);
+			path = "Application Layer";
 			sourceTree = "<group>";
 		};
 		0BCA611D2B6BC7280038FAFB /* Resources */ = {
@@ -1096,6 +1112,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1337,6 +1354,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = /Users/dauletalmagambetov/Documents/Qazaqsha/Qazaqsha/Qazaqsha/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NeoQazaq;
@@ -1400,6 +1418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JNA8QM22SG;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Batyrma/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NeoQazaq;
@@ -1471,6 +1490,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1526,6 +1546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JNA8QM22SG;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
