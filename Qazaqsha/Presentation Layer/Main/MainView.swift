@@ -73,7 +73,7 @@ struct MainView: View {
                         footer: {
                             HStack {
                                 Spacer()
-                                Text("NeoQazaq keyboard app \(GlobalConstants.appVersion)")
+                                Text("NeoQazaq 🇰🇿 keyboard app \(GlobalConstants.appVersion) 💛")
                                     .font(.caption)
                                     .foregroundColor(Asset.Colors.text.swiftUIColor)
                                     .padding(.top, 16)
