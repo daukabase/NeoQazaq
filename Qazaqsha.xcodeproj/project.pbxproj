@@ -83,6 +83,7 @@
 		0BF808782BD10BEE0000DD96 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF808772BD10BEE0000DD96 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		0BF8087A2BD10BEE0000DD96 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF808792BD10BEE0000DD96 /* FirebaseAppCheck */; };
 		0BF8087D2BD113B40000DD96 /* Instabug in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF8087C2BD113B40000DD96 /* Instabug */; };
+		0BF808802BD11C100000DD96 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8087F2BD11C100000DD96 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +269,7 @@
 		0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqAutocompleteProvider.swift; sourceTree = "<group>"; };
 		0BCA613E2B6BDC310038FAFB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0BEF667D2BC2DCAF00829036 /* QazaqshaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QazaqshaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BF8087F2BD11C100000DD96 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,8 +460,7 @@
 				0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */,
 				0B2D8B9F2BCC0DDF00F4362C /* Common */,
 				0B800E4A2B681A8900EADCA9 /* AppMain.swift */,
-				0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */,
-				0B2D8BA22BCC115A00F4362C /* MainView.swift */,
+				0BF8087E2BD11C010000DD96 /* Main */,
 				0B5BBE5E2BCFB9FD0099F5F3 /* Onboarding */,
 				0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */,
 				0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */,
@@ -587,6 +588,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BF8087E2BD11C010000DD96 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */,
+				0BF8087F2BD11C100000DD96 /* WebView.swift */,
+				0B2D8BA22BCC115A00F4362C /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -962,6 +973,7 @@
 				0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */,
 				0B2D8BA52BCC954500F4362C /* MagicAutocorrectionView.swift in Sources */,
 				0B30DA722B8B2D5000215711 /* Assets.swift in Sources */,
+				0BF808802BD11C100000DD96 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

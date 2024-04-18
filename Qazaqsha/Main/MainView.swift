@@ -10,22 +10,16 @@ import QazaqFoundation
 import Instabug
 
 final class MainViewModel: ObservableObject {
-    var keyboardSetup = TextRightChevronViewModel(
-        text: "Keyboard Setup",
-        onTap: {
-            
-        }
-    )
     var support = TextRightChevronViewModel(
         text: "Technical Support",
-        isChevronHidden: true,
+        isChevronHidden: false,
         onTap: {
             BugReporting.show(with: .question, options: [.commentFieldRequired])
         }
     )
     var reportBug = TextRightChevronViewModel(
         text: "Report a bug",
-        isChevronHidden: true,
+        isChevronHidden: false,
         onTap: {
             BugReporting.show(with: .bug, options: [.emailFieldOptional, .commentFieldRequired])
         }
@@ -37,14 +31,6 @@ final class MainViewModel: ObservableObject {
             
         }
     )
-    var privacyPolicy = TextRightChevronViewModel(
-        text: "Privacy policy",
-        isChevronHidden: true,
-        onTap: {
-            
-        }
-    )
-
     let magicAutocorrection = MagicAutocorrectionViewModel()
 }
 
@@ -57,13 +43,11 @@ struct MainView: View {
             NavigationView {
                 Form {
                     Section(content: {
-//                        TextRightChevronView(viewModel: viewModel.language)
                         NavigationLink {
                             SettingsView(viewModel: SettingsViewModel())
                         } label: {
                             Text("Settings")
                         }
-//                        TextRightChevronView(viewModel: viewModel.design)
                     })
 
                     autocorrectionSection
@@ -80,8 +64,11 @@ struct MainView: View {
 
                     Section(
                         content: {
-                            TextRightChevronView(viewModel: viewModel.donateProject)
-                            TextRightChevronView(viewModel: viewModel.privacyPolicy)
+                            NavigationLink {
+                                PrivacyPolicyView()
+                            } label: {
+                                Text("Privacy Policy")
+                            }
                         },
                         footer: {
                             HStack {
