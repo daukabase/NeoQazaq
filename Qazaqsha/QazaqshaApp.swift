@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct QazaqshaApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
     let viewModel = MagicAutocorrectionViewModel()
     var body: some Scene {
         WindowGroup {
             AppMain(viewModel: AppMainModel())
-//            MainView(viewModel: MainViewModel())
-//            MagicAutocorrectionView(viewModel: viewModel)
         }
     }
 }

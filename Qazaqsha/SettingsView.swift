@@ -9,8 +9,10 @@ import SwiftUI
 import QazaqFoundation
 
 final class SettingsViewModel: ObservableObject {
-    var isAutoCapitalizationEnabled = UserDefaults.isAutoCapitalizationEnabled
-    var isKeyClicksSoundEnabled = UserDefaults.isKeyClicksSoundEnabled
+    @UserDefault(item: UserDefaults.autoCapitalizationItem)
+    var isAutoCapitalizationEnabled
+    @UserDefault(item: UserDefaults.isKeyClicksSoundItem)
+    var isKeyClicksSoundEnabled
 
     let magicAutocorrection = MagicAutocorrectionViewModel()
 }
