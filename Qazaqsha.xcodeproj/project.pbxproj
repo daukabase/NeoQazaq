@@ -28,6 +28,7 @@
 		0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0B30DA762B8BB67900215711 /* KeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */; };
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
+		0B4690632BD7EF1B000FA0A7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B4690622BD7EF1B000FA0A7 /* Settings.bundle */; };
 		0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
@@ -59,7 +60,6 @@
 		0B981F612BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B981F622BC2ECC2000308C2 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
-		0BA2941B2B91E5DD001465DF /* KeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */; };
 		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
@@ -221,6 +221,7 @@
 		0B2D8BB02BCD38CF00F4362C /* autocorrectionExampleWhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = autocorrectionExampleWhite.gif; sourceTree = "<group>"; };
 		0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = autocorrectionExampleDark.gif; sourceTree = "<group>"; };
 		0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSetupView.swift; sourceTree = "<group>"; };
+		0B4690622BD7EF1B000FA0A7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "Qazaqsha/Application Layer/Configurations/Settings.bundle"; sourceTree = "<group>"; };
 		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
 		0B5BBE572BCEA90F0099F5F3 /* KeyboardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSelectionView.swift; sourceTree = "<group>"; };
 		0B5BBE5A2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = selectNeoQazaqKeyboardWhite.gif; sourceTree = "<group>"; };
@@ -411,6 +412,7 @@
 		0B800E3C2B681A8900EADCA9 = {
 			isa = PBXGroup;
 			children = (
+				0B4690622BD7EF1B000FA0A7 /* Settings.bundle */,
 				0BCA611D2B6BC7280038FAFB /* Resources */,
 				0B800E472B681A8900EADCA9 /* Qazaqsha */,
 				0B800E602B681AEE00EADCA9 /* Batyrma */,
@@ -889,6 +891,7 @@
 			files = (
 				0B2D8BB32BCD38D900F4362C /* autocorrectionExampleDark.gif in Resources */,
 				0B2D8BB12BCD38CF00F4362C /* autocorrectionExampleWhite.gif in Resources */,
+				0B4690632BD7EF1B000FA0A7 /* Settings.bundle in Resources */,
 				0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */,
 				0B18B0192BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */,
 				0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */,
@@ -974,7 +977,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */,
-				0BA2941B2B91E5DD001465DF /* KeyboardSetupView.swift in Sources */,
 				0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */,
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
 			);
@@ -1311,7 +1313,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
@@ -1329,7 +1331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1350,7 +1352,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
@@ -1369,7 +1371,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
