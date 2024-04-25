@@ -30,6 +30,7 @@ public final class QazaqWordSuggestionsEngineV2: WordSuggestionsEngine {
         return variations
             .sorted(by: { $0.percentage > $1.percentage })
             .map { variation -> GeneratedSimilarWord in
+                var percentage = variation.percentage
                 let word = {
                     guard let suffix = suffix(for: text, root: variation.taza) else {
                         return variation.taza
@@ -39,12 +40,13 @@ public final class QazaqWordSuggestionsEngineV2: WordSuggestionsEngine {
                         for: text,
                         root: variation.taza
                     ) else {
+                        percentage = 0.9
                         return variation.taza + suffix
                     }
 
                     return correctedEnding
                 }()
-                return GeneratedSimilarWord(word: word, similarity: variation.percentage)
+                return GeneratedSimilarWord(word: word, similarity: percentage)
             }
             .filter { $0.word != text }
     }
@@ -70,6 +72,8 @@ public final class QazaqWordSuggestionsEngineV2: WordSuggestionsEngine {
             return alteredVariations
         } else if let qazaqWord = findIfQazaqWordsContains(targetRoot: targetRoot) {
             return [SuggestionVariation(taza: qazaqWord, percentage: 1)]
+        } else if let rusWord = findIfCommonRussianWordsContains(targetRoot: targetRoot) {
+            return [SuggestionVariation(taza: rusWord, percentage: 0.9)]
         }
         return nil
     }
@@ -93,6 +97,13 @@ public final class QazaqWordSuggestionsEngineV2: WordSuggestionsEngine {
 
     func findIfQazaqWordsContains(targetRoot: String) -> String? {
         if qazaqWordsDatasetLoader.qazaqWordsList().contains(targetRoot) {
+            return targetRoot
+        }
+        return nil
+    }
+
+    func findIfCommonRussianWordsContains(targetRoot: String) -> String? {
+        if qazaqWordsDatasetLoader.commonRusWordsList().contains(targetRoot) {
             return targetRoot
         }
         return nil

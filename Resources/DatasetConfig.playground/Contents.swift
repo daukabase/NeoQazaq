@@ -128,39 +128,16 @@ func printAsJsonString(data: Any) {
 }
 
 var currentShalaDataset = json(filename: "ShalaqazaqDataset")
-let qazaqWordsList: Set<String> = Set(datasetFileURL(filename: "qazaqWordsList", ext: "txt"))
-let rusMostCommonWordsDataset: [String] = datasetFileURL(filename: "russianWordsDataset", ext: "txt")
+//let qazaqWordsList: Set<String> = Set(datasetFileURL(filename: "qazaqWordsList", ext: "txt"))
+let rusMostCommonWordsDataset = Set(datasetFileURL(filename: "russianWordsDataset", ext: "txt"))
 
-print(
-    rusMostCommonWordsDataset
-        .filter { word in
-            word.count >= 2
-        }
-        .joined(separator: "\n")
-)
-
-var newShalaDataset: [String: [String: Double]] = [:]
-
-qazaqWordsList.forEach { word in
-    let hasQazChar = word.contains(where: {
-        kazakhUniqueCharacters.contains(String($0))
-    })
-
-    guard hasQazChar else { return }
-
-    let shala = replaceQazaqCharsWithShalaqazaqIfNeeded(in: word)
-    
-    if !currentShalaDataset.keys.contains(shala) {
-        print("new shala [\(shala)] with taza [\(word)]")
-        currentShalaDataset[shala] = [word : 1.0]
-    }
-
-    if !currentShalaDataset[shala]!.keys.contains(word) {
-        print("old shala [\(shala)] added taza [\(word)]")
-        currentShalaDataset[shala]![word] = 0.93
-        let shalaDataset = currentShalaDataset[shala]?.mapValues { _ in 0.9 }
-        currentShalaDataset[shala] = shalaDataset
+print("COMMON_WORDS")
+currentShalaDataset.keys.forEach { key in
+    if rusMostCommonWordsDataset.contains(key) {
+        print(key)
     }
 }
+print("COMMON_WORDS")
+var newShalaDataset: [String: [String: Double]] = [:]
 
-printAsJsonString(data: currentShalaDataset)
+//printAsJsonString(data: currentShalaDataset)
