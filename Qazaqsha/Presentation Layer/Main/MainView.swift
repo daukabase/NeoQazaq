@@ -10,20 +10,6 @@ import QazaqFoundation
 import Instabug
 
 final class MainViewModel: ObservableObject {
-    var support = TextRightChevronViewModel(
-        text: "Technical Support",
-        isChevronHidden: false,
-        onTap: {
-            BugReporting.show(with: .question, options: [.commentFieldRequired])
-        }
-    )
-    var reportBug = TextRightChevronViewModel(
-        text: "Report a bug",
-        isChevronHidden: false,
-        onTap: {
-            BugReporting.show(with: .bug, options: [.emailFieldOptional, .commentFieldRequired])
-        }
-    )
     var donateProject = TextRightChevronViewModel(
         text: "Donate to project",
         isChevronHidden: true,
@@ -58,8 +44,18 @@ struct MainView: View {
                         } label: {
                             Text("How to switch to keyboard")
                         }
-                        TextRightChevronView(viewModel: viewModel.support)
-                        TextRightChevronView(viewModel: viewModel.reportBug)
+
+                        Button(action: {
+                            BugReporting.show(with: .question, options: [.commentFieldRequired])
+                        }, label: {
+                            Text("Technical Support")
+                        })
+
+                        Button(action: {
+                            BugReporting.show(with: .bug, options: [.emailFieldOptional, .commentFieldRequired])
+                        }, label: {
+                            Text("Report a bug")
+                        })
                     })
 
                     Section(
