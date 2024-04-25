@@ -59,7 +59,7 @@ func datasetFileURL(filename: String, ext: String) -> [String] {
         do {
             let data = try Data(contentsOf: fileURL)
             let textData = String(data: data, encoding: .utf8)!
-            return textData.split(separator: "\n").map { String($0) }
+            return textData.split(separator: "\r\n").map { String($0) }
         } catch {
             // Handle errors
             print("Error reading or parsing the JSON file: \(error.localizedDescription)")
@@ -129,7 +129,15 @@ func printAsJsonString(data: Any) {
 
 var currentShalaDataset = json(filename: "ShalaqazaqDataset")
 let qazaqWordsList: Set<String> = Set(datasetFileURL(filename: "qazaqWordsList", ext: "txt"))
-let rusMostCommonWordsDataset: [String] = datasetFileURL(filename: "rusWords", ext: "txt")
+let rusMostCommonWordsDataset: [String] = datasetFileURL(filename: "russianWordsDataset", ext: "txt")
+
+print(
+    rusMostCommonWordsDataset
+        .filter { word in
+            word.count >= 2
+        }
+        .joined(separator: "\n")
+)
 
 var newShalaDataset: [String: [String: Double]] = [:]
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B13E7DC2BDA7A9700CB11F9 /* russianWordsDataset.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B13E7DB2BDA7A9700CB11F9 /* russianWordsDataset.txt */; };
 		0B18B0162BD01C96005E8EBC /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */; };
 		0B18B0192BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */; };
 		0B18B01A2BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */; };
@@ -207,6 +208,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B13E7DB2BDA7A9700CB11F9 /* russianWordsDataset.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = russianWordsDataset.txt; sourceTree = "<group>"; };
 		0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 		0B4BA0D12BC2F4DE00F6E182 /* Recources */ = {
 			isa = PBXGroup;
 			children = (
+				0B13E7DB2BDA7A9700CB11F9 /* russianWordsDataset.txt */,
 				0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */,
 				0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */,
 			);
@@ -874,6 +877,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4BA0CF2BC2F4D200F6E182 /* qazaqWordsList.txt in Resources */,
+				0B13E7DC2BDA7A9700CB11F9 /* russianWordsDataset.txt in Resources */,
 				0B4BA0D02BC2F4D700F6E182 /* ShalaqazaqDatasetV2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,7 @@ public final class QazaqWordsDatasetLoader {
     enum DatasetLoadError: Error {
         case shalaqazaqLoadingFailed
         case qazaqDictionaryLoadingFailed
+        case rusDictionaryLoadingFailed
     }
 
     public static let shared = QazaqWordsDatasetLoader()
@@ -23,6 +24,7 @@ public final class QazaqWordsDatasetLoader {
     private let serialQueue = DispatchQueue(label: "com.qazaqsha.batyrma.datasetLoaderQueue")
     private var shalaqazaqDatasetCache: [String: [SuggestionVariation]]?
     private var qazaqWordsDatasetCache: Set<String>?
+    private var rusWordsDatasetCache: Set<String>?
 
     private var currentBundle: Bundle {
         return Bundle(for: type(of: self))
@@ -44,12 +46,21 @@ public final class QazaqWordsDatasetLoader {
         }
     }
 
+    func commonRusWordsList() -> Set<String> {
+        serialQueue.sync {
+            return rusWordsDatasetCache ?? Set()
+        }
+    }
+
     public func loadData() {
         Task {
             try await loadShalaqazaqDataset()
         }
         Task {
             try await loadWords()
+        }
+        Task {
+            try await loadRusWords()
         }
     }
 
@@ -97,6 +108,28 @@ public final class QazaqWordsDatasetLoader {
         print("Ended loading words: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
         serialQueue.sync {
             self.qazaqWordsDatasetCache = Set(textData)
+        }
+    }
+    
+    private func loadRusWords() async throws {
+        let loadStartDate = Date()
+        guard rusWordsDatasetCache == nil else {
+            return
+        }
+        print("Started loading rus words")
+
+        guard let fileURL = currentBundle.url(forResource: "russianWordsDataset", withExtension: "txt") else {
+            throw DatasetLoadError.rusDictionaryLoadingFailed
+        }
+
+        let data = try Data(contentsOf: fileURL)
+        let textData = String(data: data, encoding: .utf8)!
+            .split(separator: "\n")
+            .map(String.init)
+
+        print("Ended loading words: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
+        serialQueue.sync {
+            self.rusWordsDatasetCache = Set(textData)
         }
     }
 }

@@ -46,6 +46,7 @@ public final class QazaqWordSuggestionsEngineV2: WordSuggestionsEngine {
                 }()
                 return GeneratedSimilarWord(word: word, similarity: variation.percentage)
             }
+            .filter { $0.word != text }
     }
 
     func findRootVariationsFromDatabase(for text: String) -> [SuggestionVariation]? {
