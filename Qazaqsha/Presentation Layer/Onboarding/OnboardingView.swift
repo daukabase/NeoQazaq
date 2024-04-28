@@ -44,6 +44,7 @@ struct OnboardingView: View {
                 })
                 .background(Asset.Colors.lightPrimary.swiftUIColor)
                 .roundCorners(value: 8)
+                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 1, y: 2)
                 .animation(.easeInOut, value: viewModel.currentPage)
                 .padding(16)
                 .transition(AnyTransition.asymmetric(

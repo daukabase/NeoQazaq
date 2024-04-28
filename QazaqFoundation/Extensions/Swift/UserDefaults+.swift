@@ -30,7 +30,7 @@ public extension UserDefaults {
     
     static let autocompleteItem = UserDefault.Item(
         key: "isAutocompleteEnabled",
-        defaultValue: false,
+        defaultValue: true,
         store: .localAppGroup
     )
 }
