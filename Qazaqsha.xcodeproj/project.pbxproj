@@ -30,6 +30,13 @@
 		0B30DA762B8BB67900215711 /* KeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */; };
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B4690632BD7EF1B000FA0A7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B4690622BD7EF1B000FA0A7 /* Settings.bundle */; };
+		0B49BA092BE3D15500EFBE59 /* AmplitudeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B49BA082BE3D15500EFBE59 /* AmplitudeSwift */; };
+		0B49BA0B2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49BA0A2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift */; };
+		0B49BA0E2BE3D27E00EFBE59 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49BA0D2BE3D27E00EFBE59 /* AnalyticsService.swift */; };
+		0B49BA102BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49BA0F2BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift */; };
+		0B49BA122BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49BA112BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift */; };
+		0B49BA142BE3D3C100EFBE59 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0B49BA132BE3D3C100EFBE59 /* FirebaseAnalytics */; };
+		0B49BA162BE3D3C100EFBE59 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B49BA152BE3D3C100EFBE59 /* FirebaseAnalyticsSwift */; };
 		0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
@@ -224,6 +231,10 @@
 		0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = autocorrectionExampleDark.gif; sourceTree = "<group>"; };
 		0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSetupView.swift; sourceTree = "<group>"; };
 		0B4690622BD7EF1B000FA0A7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "Qazaqsha/Application Layer/Configurations/Settings.bundle"; sourceTree = "<group>"; };
+		0B49BA0A2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventProtocol.swift; sourceTree = "<group>"; };
+		0B49BA0D2BE3D27E00EFBE59 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		0B49BA0F2BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeAnalyticsService.swift; sourceTree = "<group>"; };
+		0B49BA112BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsService.swift; sourceTree = "<group>"; };
 		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
 		0B5BBE572BCEA90F0099F5F3 /* KeyboardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSelectionView.swift; sourceTree = "<group>"; };
 		0B5BBE5A2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = selectNeoQazaqKeyboardWhite.gif; sourceTree = "<group>"; };
@@ -310,7 +321,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B49BA162BE3D3C100EFBE59 /* FirebaseAnalyticsSwift in Frameworks */,
+				0B49BA092BE3D15500EFBE59 /* AmplitudeSwift in Frameworks */,
 				0B2D8BB72BCD3A6600F4362C /* FLAnimatedImage in Frameworks */,
+				0B49BA142BE3D3C100EFBE59 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +376,25 @@
 				0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */,
 			);
 			path = Gif;
+			sourceTree = "<group>";
+		};
+		0B49BA052BE3D13E00EFBE59 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				0B49BA0A2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift */,
+				0B49BA0C2BE3D27200EFBE59 /* Service */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		0B49BA0C2BE3D27200EFBE59 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0B49BA0D2BE3D27E00EFBE59 /* AnalyticsService.swift */,
+				0B49BA0F2BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift */,
+				0B49BA112BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		0B4BA0CE2BC2F12800F6E182 /* WordSuggestionsEngine */ = {
@@ -495,6 +528,7 @@
 		0B981F4D2BC2ECC1000308C2 /* QazaqFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				0B49BA052BE3D13E00EFBE59 /* Analytics */,
 				0B2D8BA62BCD2D4900F4362C /* SwiftUI */,
 				0BCA612B2B6BD0F20038FAFB /* Extensions */,
 				0B981F4E2BC2ECC1000308C2 /* QazaqFoundation.h */,
@@ -731,6 +765,9 @@
 			name = QazaqFoundation;
 			packageProductDependencies = (
 				0B2D8BB62BCD3A6600F4362C /* FLAnimatedImage */,
+				0B49BA082BE3D15500EFBE59 /* AmplitudeSwift */,
+				0B49BA132BE3D3C100EFBE59 /* FirebaseAnalytics */,
+				0B49BA152BE3D3C100EFBE59 /* FirebaseAnalyticsSwift */,
 			);
 			productName = QazaqFoundation;
 			productReference = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */;
@@ -856,6 +893,7 @@
 				0B2D8BB52BCD3A4D00F4362C /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
 				0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				0BF8087B2BD113B40000DD96 /* XCRemoteSwiftPackageReference "Instabug-SP" */,
+				0B49BA002BE3D08300EFBE59 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */,
 			);
 			productRefGroup = 0B800E462B681A8900EADCA9 /* Products */;
 			projectDirPath = "";
@@ -992,9 +1030,13 @@
 			files = (
 				0BD201292BC2EDA20065DBC1 /* UserDefaults+.swift in Sources */,
 				0BD2012A2BC2EDA50065DBC1 /* String+.swift in Sources */,
+				0B49BA102BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift in Sources */,
+				0B49BA0E2BE3D27E00EFBE59 /* AnalyticsService.swift in Sources */,
 				0B2D8BAC2BCD303200F4362C /* EnvironmentValues+.swift in Sources */,
+				0B49BA0B2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift in Sources */,
 				0B2D8BA82BCD2D5F00F4362C /* GifImage.swift in Sources */,
 				0BD2012C2BC2EDAC0065DBC1 /* UIImage+.swift in Sources */,
+				0B49BA122BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift in Sources */,
 				0B981F502BC2ECC1000308C2 /* QazaqFoundation.docc in Sources */,
 				0B2D8BAF2BCD37B200F4362C /* UIImage+Gif.swift in Sources */,
 				0B5BBE622BCFBE4D0099F5F3 /* RoundedCorners.swift in Sources */,
@@ -1317,7 +1359,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
@@ -1356,7 +1398,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
@@ -1661,6 +1703,14 @@
 				minimumVersion = 9.1.0;
 			};
 		};
+		0B49BA002BE3D08300EFBE59 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amplitude/Amplitude-Swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		0BF8087B2BD113B40000DD96 /* XCRemoteSwiftPackageReference "Instabug-SP" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Instabug/Instabug-SP";
@@ -1686,6 +1736,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
 			productName = KeyboardKit;
+		};
+		0B49BA082BE3D15500EFBE59 /* AmplitudeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B49BA002BE3D08300EFBE59 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */;
+			productName = AmplitudeSwift;
+		};
+		0B49BA132BE3D3C100EFBE59 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		0B49BA152BE3D3C100EFBE59 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
 		};
 		0BF808712BD10BEE0000DD96 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

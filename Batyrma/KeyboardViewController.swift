@@ -14,13 +14,14 @@ import FirebaseAnalytics
 /**
  This keyboard demonstrates how to setup KeyboardKit and how
  to customize the standard configuration.
-
+ 
  To use this keyboard, you must enable it in system settings
  ("Settings/General/Keyboards"). It needs full access to get
  access to features like haptic feedback.
  */
 
 import QazaqFoundation
+import AmplitudeSwift
 
 final class KeyboardViewController: KeyboardInputViewController {
     @UserDefault(item: UserDefaults.autoCapitalizationItem)
@@ -30,20 +31,23 @@ final class KeyboardViewController: KeyboardInputViewController {
     
     @UserDefault(item: UserDefaults.autocompleteItem)
     var _isAutocompleteEnabled
-
-/**
+    
+    /**
      This function is called when the controller loads. Here,
      we make demo-specific service configurations.
      */
     override func viewDidLoad() {
         FirebaseApp.configure()
 
-        Analytics.logEvent("launch_keybaord", parameters: [
-            "name": "keyboard_extension_opened",
-            "isAutocompleteEnabled": _isAutocompleteEnabled,
-            "isAutoCapitalizationEnabled": isAutoCapitalizationEnabled,
-            "isKeyClicksSoundEnabled": isKeyClicksSoundEnabled
-        ])
+        AnalyticsServiceFacade.shared.track(event: CommonAnalyticsEvent(
+            name: "launch_keybaord",
+            params: [
+                "name": "keyboard_extension_opened",
+                "isAutocompleteEnabled": _isAutocompleteEnabled,
+                "isAutoCapitalizationEnabled": isAutoCapitalizationEnabled,
+                "isKeyClicksSoundEnabled": isKeyClicksSoundEnabled
+            ]
+        ))
 
         QazaqWordsDatasetLoader.shared.loadData()
         /// 💡 Setup a fake autocomplete provider.
@@ -67,20 +71,20 @@ final class KeyboardViewController: KeyboardInputViewController {
         services.layoutProvider = StandardKeyboardLayoutProvider(
             baseProvider: NeoQazaqKeyboardLayoutProvider()
         )
-
+        
         /// 💡 Setup a custom keyboard locale.
         ///
         /// Without KeyboardKit Pro, changing locale will by
         /// default only affects localized texts.
         state.keyboardContext.setLocale(.kazakh)
-
+        
         /// 💡 Add more locales to the keyboard.
         ///
         /// The demo layout provider will add a "next locale"
         /// button if you have more than one locale.
         state.keyboardContext.localePresentationLocale = KeyboardLocale.kazakh.locale
         state.keyboardContext.locales = [KeyboardLocale.kazakh.locale]
-
+        
         /// 💡 Configure the space long press behavior.
         ///
         /// The locale context menu will only open up if the
@@ -90,11 +94,11 @@ final class KeyboardViewController: KeyboardInputViewController {
         if !isAutoCapitalizationEnabled {
             state.keyboardContext.autocapitalizationTypeOverride = nil
         }
-
+        
         if !isKeyClicksSoundEnabled {
             state.feedbackConfiguration.isAudioFeedbackEnabled = false
         }
-
+        
         /// 💡 Setup audio and haptic feedback.
         ///
         /// The code below enabled haptic feedback and plays
@@ -104,7 +108,7 @@ final class KeyboardViewController: KeyboardInputViewController {
         /// 💡 Call super to perform the base initialization.
         super.viewDidLoad()
     }
-
+    
     override func viewWillSetupKeyboard() {
         super.viewWillSetupKeyboard()
         setup { controller in

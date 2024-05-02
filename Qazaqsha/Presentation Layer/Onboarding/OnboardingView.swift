@@ -30,6 +30,16 @@ struct OnboardingView: View {
                             insertion: .move(edge: .trailing),
                             removal: .move(edge: .leading))
                         )
+                        .onAppear(perform: {
+//                            switch viewModel.currentPage {
+//                            case .keyboardSelection:
+//                                amplitude.track(eventType: "launch_keyboard")
+//                            case .keyboardSetup:
+//                            case .magicAutocorrection:
+//                            case .welcome:
+//                                
+//                            }
+                        })
                 }
             }
             .animation(.easeInOut, value: viewModel.currentPage)
