@@ -30,14 +30,13 @@ final class MagicAutocorrectionViewModel: ObservableObject {
     @Published
     var text: String = ""
     
-    let action: (() -> Void)?
+//    let action: (() -> Void)?
     
     @ObservedObject
     var keyboardResponder = KeyboardResponder()
     
-    init(title: String? = nil, action: (() -> Void)? = nil) {
+    init(title: String? = nil) {
         self.title = title
-        self.action = action
         isAutocompleteEnabled = isAutocompleteEnabledWrapper
     }
 }

@@ -14,17 +14,13 @@ struct OnboardingView: View {
 
     init(viewModel: OnboardingViewModel) {
         self.viewModel = viewModel
-        viewModel.magicAutocorrection = MagicAutocorrectionViewModel(
-            title: "Auto-Correction",
-            action: primaryButtonAction
-        )
     }
 
     var body: some View {
         VStack {
             ForEach($viewModel.pages, id: \.self) { page in
                 if page.wrappedValue == viewModel.currentPage {
-                    viewModel.view(action: primaryButtonAction)
+                    viewModel.view()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .transition(AnyTransition.asymmetric(
                             insertion: .move(edge: .trailing),
@@ -65,7 +61,6 @@ struct OnboardingView: View {
                 .background(Asset.Colors.lightPrimary.swiftUIColor)
                 .roundCorners(value: 8)
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 1, y: 2)
-                .animation(.easeInOut, value: viewModel.currentPage)
                 .padding(16)
                 .transition(AnyTransition.asymmetric(
                     insertion: .move(edge: .trailing),
@@ -78,7 +73,7 @@ struct OnboardingView: View {
 
     private func primaryButtonAction() {
         if viewModel.currentPage == .magicAutocorrection {
-            viewModel.didFinishOnboarding = true
+            viewModel.onFinishOnboarding?(true)
         } else {
             showNextPage()
         }
@@ -97,13 +92,13 @@ struct OnboardingView: View {
 }
 
 struct OnboardingView_Preview: PreviewProvider {
-    static let didFinishOnboarding = Binding.constant(false)
+    static let didFinishOnboarding = Published(initialValue: false)
 
     static var previews: some View {
         OnboardingView(viewModel: OnboardingViewModel(
             currentPage: .welcome,
             pages: OnboardingPage.fullOnboarding,
-            didFinishOnboarding: didFinishOnboarding
+            onFinishOnboarding: { _ in }
         ))
     }
 }

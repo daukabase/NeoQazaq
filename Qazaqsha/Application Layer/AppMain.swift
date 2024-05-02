@@ -18,13 +18,22 @@ final class AppMainModel: ObservableObject {
     
     @Published
     var main: MainViewModel
-    
+    var onboarding: OnboardingViewModel!
+
     @UserDefault(item: UserDefaults.isOnboardingFinishedItem)
     private var isOnboardingCompleted
 
     init() {
+        let currentPage: OnboardingPage = GlobalConstants.isKeyboardExtensionEnabled ? .keyboardSetup : .welcome
         main = MainViewModel()
         didFinishOnboarding = isOnboardingCompleted
+        onboarding = OnboardingViewModel(
+            currentPage: currentPage,
+            pages: OnboardingPage.fullOnboarding,
+            onFinishOnboarding: { [weak self] _ in
+                self?.didFinishOnboarding = true
+            }
+        )
     }
 }
 
@@ -38,11 +47,7 @@ struct AppMain: View {
         if viewModel.didFinishOnboarding && GlobalConstants.isKeyboardExtensionEnabled {
             MainView(viewModel: viewModel.main)
         } else {
-            OnboardingView(viewModel: OnboardingViewModel(
-                currentPage: GlobalConstants.isKeyboardExtensionEnabled ? .keyboardSetup : .welcome,
-                pages: OnboardingPage.fullOnboarding,
-                didFinishOnboarding: $viewModel.didFinishOnboarding
-            ))
+            OnboardingView(viewModel: viewModel.onboarding)
         }
     }
 }

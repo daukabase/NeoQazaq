@@ -18,17 +18,19 @@ final class OnboardingViewModel: ObservableObject {
     @Published
     var magicAutocorrection: MagicAutocorrectionViewModel?
 
-    @Binding
-    var didFinishOnboarding: Bool
+    var onFinishOnboarding: ((Bool) -> Void)?
 
     init(
         currentPage: OnboardingPage,
         pages: [OnboardingPage],
-        didFinishOnboarding: Binding<Bool>
+        onFinishOnboarding: @escaping (Bool) -> Void
     ) {
         self.currentPage = currentPage
         self.pages = pages
-        self._didFinishOnboarding = didFinishOnboarding
+        self.magicAutocorrection = MagicAutocorrectionViewModel(
+            title: "Auto-Correction"
+        )
+        self.onFinishOnboarding = onFinishOnboarding
     }
 
     var currentPageActionText: String {
@@ -50,7 +52,7 @@ final class OnboardingViewModel: ObservableObject {
     }
 
     @ViewBuilder
-    func view(action: @escaping () -> Void) -> some View {
+    func view() -> some View {
         switch currentPage {
         case .welcome:
             OnboardingExplanationView()
