@@ -16,6 +16,12 @@ final class MagicAutocorrectionViewModel: ObservableObject {
     var isAutocompleteEnabled: Bool = false {
         didSet {
             isAutocompleteEnabledWrapper = isAutocompleteEnabled
+            AnalyticsServiceFacade.shared.track(
+                event: CommonAnalyticsEvent(
+                    name: "toggle_magic_autocorrection",
+                    params: ["isEnabled": isAutocompleteEnabled]
+                )
+            )
         }
     }
     

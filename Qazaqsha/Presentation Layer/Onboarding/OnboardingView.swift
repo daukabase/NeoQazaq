@@ -31,14 +31,24 @@ struct OnboardingView: View {
                             removal: .move(edge: .leading))
                         )
                         .onAppear(perform: {
-//                            switch viewModel.currentPage {
-//                            case .keyboardSelection:
-//                                amplitude.track(eventType: "launch_keyboard")
-//                            case .keyboardSetup:
-//                            case .magicAutocorrection:
-//                            case .welcome:
-//                                
-//                            }
+                            switch viewModel.currentPage {
+                            case .keyboardSelection:
+                                AnalyticsServiceFacade.shared.track(
+                                    event: CommonAnalyticsEvent(name: "onboarding_keyboard_selection")
+                                )
+                            case .keyboardSetup:
+                                AnalyticsServiceFacade.shared.track(
+                                    event: CommonAnalyticsEvent(name: "onboarding_keyboard_setup")
+                                )
+                            case .magicAutocorrection:
+                                AnalyticsServiceFacade.shared.track(
+                                    event: CommonAnalyticsEvent(name: "onboarding_magic_autocorrection")
+                                )
+                            case .welcome:
+                                AnalyticsServiceFacade.shared.track(
+                                    event: CommonAnalyticsEvent(name: "onboarding_welcome")
+                                )
+                            }
                         })
                 }
             }
