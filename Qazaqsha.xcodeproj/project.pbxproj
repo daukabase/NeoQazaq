@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B096D142BE8004D00C86662 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B096D132BE8004D00C86662 /* GlobalConstants.swift */; };
 		0B13E7DC2BDA7A9700CB11F9 /* russianWordsDataset.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B13E7DB2BDA7A9700CB11F9 /* russianWordsDataset.txt */; };
 		0B18B0162BD01C96005E8EBC /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */; };
 		0B18B0192BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */; };
@@ -215,6 +216,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B096D132BE8004D00C86662 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		0B13E7DB2BDA7A9700CB11F9 /* russianWordsDataset.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = russianWordsDataset.txt; sourceTree = "<group>"; };
 		0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -340,6 +342,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B096D122BE8004200C86662 /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				0B096D132BE8004D00C86662 /* GlobalConstants.swift */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
 		0B2D8B9F2BCC0DDF00F4362C /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +538,7 @@
 		0B981F4D2BC2ECC1000308C2 /* QazaqFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				0B096D122BE8004200C86662 /* Recources */,
 				0B49BA052BE3D13E00EFBE59 /* Analytics */,
 				0B2D8BA62BCD2D4900F4362C /* SwiftUI */,
 				0BCA612B2B6BD0F20038FAFB /* Extensions */,
@@ -1032,6 +1043,7 @@
 				0BD2012A2BC2EDA50065DBC1 /* String+.swift in Sources */,
 				0B49BA102BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift in Sources */,
 				0B49BA0E2BE3D27E00EFBE59 /* AnalyticsService.swift in Sources */,
+				0B096D142BE8004D00C86662 /* GlobalConstants.swift in Sources */,
 				0B2D8BAC2BCD303200F4362C /* EnvironmentValues+.swift in Sources */,
 				0B49BA0B2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift in Sources */,
 				0B2D8BA82BCD2D5F00F4362C /* GifImage.swift in Sources */,
@@ -1359,7 +1371,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
@@ -1377,7 +1389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1398,7 +1410,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
@@ -1417,7 +1429,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.almagambetov.daulet.qazaqsha.Qazaqsha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

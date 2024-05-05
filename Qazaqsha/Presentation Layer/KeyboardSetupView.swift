@@ -6,24 +6,9 @@
 //
 
 import SwiftUI
+import QazaqFoundation
 
 // TODO: move to global constants
-enum GlobalConstants {
-    static let appName = "NeoQazaq"
-    static let appVersion = {
-        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        return version ?? "1.0.0"
-    }()
-    static let neoQazaqKeyboardExtensionIdentifier = "com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq"
-
-    static var isKeyboardExtensionEnabled: Bool {
-        guard let keyboards = UserDefaults.standard.dictionaryRepresentation()["AppleKeyboards"] as? [String] else {
-            return false
-        }
-        
-        return keyboards.contains(neoQazaqKeyboardExtensionIdentifier)
-    }
-}
 
 final class KeyboardSetupViewModel: ObservableObject {
     var isSetupFinished: Bool {

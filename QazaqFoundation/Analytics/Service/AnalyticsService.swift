@@ -21,4 +21,11 @@ public final class AnalyticsServiceFacade: AnalyticsService {
         amplitudeService.track(event: event)
         firebaseService.track(event: event)
     }
+
+    private func appendCommonParams(to params: [String: Any]) -> [String: Any] {
+        var newParams = params
+        newParams["timestamp"] = Date().timeIntervalSince1970
+        newParams["version"] = GlobalConstants.appVersion
+        return newParams
+    }
 }
