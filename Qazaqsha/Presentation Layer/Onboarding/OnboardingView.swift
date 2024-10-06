@@ -44,6 +44,10 @@ struct OnboardingView: View {
                                 AnalyticsServiceFacade.shared.track(
                                     event: CommonAnalyticsEvent(name: "onboarding_welcome")
                                 )
+                            case .longPressForAlternative:
+                                AnalyticsServiceFacade.shared.track(
+                                    event: CommonAnalyticsEvent(name: "onboarding_alternative_char_long_press")
+                                )
                             }
                         })
                 }

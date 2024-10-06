@@ -14,6 +14,9 @@
 		0B18B01A2BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */; };
 		0B18B01D2BD0F9EF005E8EBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */; };
 		0B18B01F2BD0FA2A005E8EBC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0B18B01E2BD0FA2A005E8EBC /* FirebaseAnalytics */; };
+		0B1C57032CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C57022CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift */; };
+		0B1C57062CB1619A00CE7FEC /* longPressWhite.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C57042CB1619A00CE7FEC /* longPressWhite.gif */; };
+		0B1C57072CB1619A00CE7FEC /* longPressDark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C57052CB1619A00CE7FEC /* longPressDark.gif */; };
 		0B2D8B9E2BCAABCE00F4362C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */; };
 		0B2D8BA12BCC0DEE00F4362C /* TextRightChevronView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BA02BCC0DEE00F4362C /* TextRightChevronView.swift */; };
 		0B2D8BA32BCC115A00F4362C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D8BA22BCC115A00F4362C /* MainView.swift */; };
@@ -59,6 +62,8 @@
 		0B800E4D2B681A8A00EADCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */; };
 		0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B800E4F2B681A8A00EADCA9 /* Preview Assets.xcassets */; };
 		0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */; };
+		0B9402F62C22E73E00C692EA /* PredictiveSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 0B9402F52C22E73E00C692EA /* PredictiveSDK */; };
+		0B9402F82C22E75300C692EA /* PredictiveTextEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9402F72C22E75300C692EA /* PredictiveTextEngine.swift */; };
 		0B981F422BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F3C2BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift */; };
 		0B981F432BC2EC8F000308C2 /* WordSuggestionsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F3D2BC2EC8F000308C2 /* WordSuggestionsEngine.swift */; };
 		0B981F442BC2EC8F000308C2 /* PossessiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B981F3F2BC2EC8F000308C2 /* PossessiveService.swift */; };
@@ -221,6 +226,9 @@
 		0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B1C57022CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternativeCharsOnboardingView.swift; sourceTree = "<group>"; };
+		0B1C57042CB1619A00CE7FEC /* longPressWhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = longPressWhite.gif; sourceTree = "<group>"; };
+		0B1C57052CB1619A00CE7FEC /* longPressDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = longPressDark.gif; sourceTree = "<group>"; };
 		0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShalaqazaqDatasetV2.json; sourceTree = "<group>"; };
 		0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0B2D8BA02BCC0DEE00F4362C /* TextRightChevronView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRightChevronView.swift; sourceTree = "<group>"; };
@@ -256,6 +264,7 @@
 		0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Batyrma.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0B800E632B681AEE00EADCA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B9402F72C22E75300C692EA /* PredictiveTextEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictiveTextEngine.swift; sourceTree = "<group>"; };
 		0B981F3C2BC2EC8F000308C2 /* QazaqWordsDatasetLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QazaqWordsDatasetLoader.swift; sourceTree = "<group>"; };
 		0B981F3D2BC2EC8F000308C2 /* WordSuggestionsEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSuggestionsEngine.swift; sourceTree = "<group>"; };
 		0B981F3F2BC2EC8F000308C2 /* PossessiveService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PossessiveService.swift; sourceTree = "<group>"; };
@@ -384,6 +393,8 @@
 				0B5BBE5A2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif */,
 				0B2D8BB02BCD38CF00F4362C /* autocorrectionExampleWhite.gif */,
 				0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */,
+				0B1C57052CB1619A00CE7FEC /* longPressDark.gif */,
+				0B1C57042CB1619A00CE7FEC /* longPressWhite.gif */,
 			);
 			path = Gif;
 			sourceTree = "<group>";
@@ -432,6 +443,7 @@
 				0BA294152B91E22A001465DF /* OnboardingView.swift */,
 				0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */,
 				0B5BBE5F2BCFBA1F0099F5F3 /* OnboardingExplanationView.swift */,
+				0B1C57022CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -942,6 +954,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1C57072CB1619A00CE7FEC /* longPressDark.gif in Resources */,
 				0B2D8BB32BCD38D900F4362C /* autocorrectionExampleDark.gif in Resources */,
 				0B2D8BB12BCD38CF00F4362C /* autocorrectionExampleWhite.gif in Resources */,
 				0B4690632BD7EF1B000FA0A7 /* Settings.bundle in Resources */,
@@ -949,6 +962,7 @@
 				0B18B0192BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */,
 				0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */,
 				0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */,
+				0B1C57062CB1619A00CE7FEC /* longPressWhite.gif in Resources */,
 				0B5BBE5D2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif in Resources */,
 				0B800E4D2B681A8A00EADCA9 /* Assets.xcassets in Resources */,
 				0B5BBE5C2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif in Resources */,
@@ -1010,6 +1024,7 @@
 			files = (
 				0B5BBE602BCFBA1F0099F5F3 /* OnboardingExplanationView.swift in Sources */,
 				0B5BBE582BCEA90F0099F5F3 /* KeyboardSelectionView.swift in Sources */,
+				0B1C57032CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift in Sources */,
 				0B2D8BA12BCC0DEE00F4362C /* TextRightChevronView.swift in Sources */,
 				0B2D8BA32BCC115A00F4362C /* MainView.swift in Sources */,
 				0B800E4B2B681A8900EADCA9 /* AppMain.swift in Sources */,
