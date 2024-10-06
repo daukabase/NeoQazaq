@@ -40,7 +40,7 @@ final class KeyboardViewController: KeyboardInputViewController {
         FirebaseApp.configure()
 
         AnalyticsServiceFacade.shared.track(event: CommonAnalyticsEvent(
-            name: "launch_keybaord",
+            name: "launch_keyboard",
             params: [
                 "name": "keyboard_extension_opened",
                 "isAutocompleteEnabled": _isAutocompleteEnabled,
