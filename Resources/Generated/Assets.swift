@@ -34,6 +34,7 @@ internal enum Asset {
     internal static let text = ColorAsset(name: "text")
   }
   internal enum Images {
+    internal static let appIconNoBackground = ImageAsset(name: "appIconNoBackground")
     internal static let appIconWelcome = ImageAsset(name: "appIconWelcome")
     internal static let appleSettingsGear = ImageAsset(name: "appleSettingsGear")
     internal static let autocorrectionExampleDark = DataAsset(name: "autocorrectionExampleDark")
