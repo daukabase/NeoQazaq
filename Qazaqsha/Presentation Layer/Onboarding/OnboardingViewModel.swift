@@ -61,7 +61,7 @@ final class OnboardingViewModel: ObservableObject {
         case .magicAutocorrection:
             MagicAutocorrectionView(viewModel: magicAutocorrection ?? .init())
         case .keyboardSetup:
-            KeyboardSetupView()
+            NewKeyboardSetupView()
         case .longPressForAlternative:
             AlternativeCharsOnboardingView()
         }

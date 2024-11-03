@@ -34,14 +34,7 @@ struct AlternativeCharsOnboardingView: View {
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
                 .textCase(nil) // Ensuring text case is not altered
                 .fixedSize(horizontal: false, vertical: true)
-            
-//            Text("Follow these steps to set \(GlobalConstants.appName) as your default keyboard:")
-//                .foregroundColor(Asset.Colors.text.swiftUIColor)
-//                .font(.body)
-//                .textCase(nil) // Ensuring text case is not altered
-//                .fixedSize(horizontal: false, vertical: true)
-//            
-            // Steps with custom alignment
+
             VStack(alignment: .leading, spacing: 5) {
                 bulletPoint("Long press that available letter.")
                 bulletPoint("Slide to select specific letter.")

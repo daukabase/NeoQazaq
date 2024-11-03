@@ -31,7 +31,7 @@
 		0B30DA722B8B2D5000215711 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
 		0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
-		0B30DA762B8BB67900215711 /* KeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */; };
+		0B30DA762B8BB67900215711 /* ManualKeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* ManualKeyboardSetupView.swift */; };
 		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B4690632BD7EF1B000FA0A7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B4690622BD7EF1B000FA0A7 /* Settings.bundle */; };
 		0B49BA092BE3D15500EFBE59 /* AmplitudeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B49BA082BE3D15500EFBE59 /* AmplitudeSwift */; };
@@ -80,6 +80,7 @@
 		0BD2012A2BC2EDA50065DBC1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA613E2B6BDC310038FAFB /* String+.swift */; };
 		0BD2012B2BC2EDAC0065DBC1 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */; };
 		0BD2012C2BC2EDAC0065DBC1 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */; };
+		0BD52E0C2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD52E0B2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift */; };
 		0BEDB0122BC30B830034027D /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0BEDB0132BC30B830034027D /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BEDB0162BC30B830034027D /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
@@ -237,7 +238,7 @@
 		0B2D8BAE2BCD37B200F4362C /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		0B2D8BB02BCD38CF00F4362C /* autocorrectionExampleWhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = autocorrectionExampleWhite.gif; sourceTree = "<group>"; };
 		0B2D8BB22BCD38D900F4362C /* autocorrectionExampleDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = autocorrectionExampleDark.gif; sourceTree = "<group>"; };
-		0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSetupView.swift; sourceTree = "<group>"; };
+		0B30DA752B8BB67900215711 /* ManualKeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualKeyboardSetupView.swift; sourceTree = "<group>"; };
 		0B4690622BD7EF1B000FA0A7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = "Qazaqsha/Application Layer/Configurations/Settings.bundle"; sourceTree = "<group>"; };
 		0B49BA0A2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventProtocol.swift; sourceTree = "<group>"; };
 		0B49BA0D2BE3D27E00EFBE59 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
@@ -282,6 +283,7 @@
 		0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqAutocompleteProvider.swift; sourceTree = "<group>"; };
 		0BCA613E2B6BDC310038FAFB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		0BD52E0B2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKeyboardSetupView.swift; sourceTree = "<group>"; };
 		0BEF667D2BC2DCAF00829036 /* QazaqshaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QazaqshaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF8087F2BD11C100000DD96 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -440,7 +442,8 @@
 				0BA294152B91E22A001465DF /* OnboardingView.swift */,
 				0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */,
 				0B5BBE5F2BCFBA1F0099F5F3 /* OnboardingExplanationView.swift */,
-				0B30DA752B8BB67900215711 /* KeyboardSetupView.swift */,
+				0B30DA752B8BB67900215711 /* ManualKeyboardSetupView.swift */,
+				0BD52E0B2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift */,
 				0B1C57022CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift */,
 			);
 			path = Onboarding;
@@ -1026,11 +1029,12 @@
 				0B2D8BA32BCC115A00F4362C /* MainView.swift in Sources */,
 				0B800E4B2B681A8900EADCA9 /* AppMain.swift in Sources */,
 				0B800E492B681A8900EADCA9 /* QazaqshaApp.swift in Sources */,
-				0B30DA762B8BB67900215711 /* KeyboardSetupView.swift in Sources */,
+				0B30DA762B8BB67900215711 /* ManualKeyboardSetupView.swift in Sources */,
 				0B18B0162BD01C96005E8EBC /* OnboardingViewModel.swift in Sources */,
 				0B18B01D2BD0F9EF005E8EBC /* AppDelegate.swift in Sources */,
 				0B2D8B9E2BCAABCE00F4362C /* SettingsView.swift in Sources */,
 				0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */,
+				0BD52E0C2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift in Sources */,
 				0B2D8BA52BCC954500F4362C /* MagicAutocorrectionView.swift in Sources */,
 				0B30DA722B8B2D5000215711 /* Assets.swift in Sources */,
 				0BF808802BD11C100000DD96 /* WebView.swift in Sources */,

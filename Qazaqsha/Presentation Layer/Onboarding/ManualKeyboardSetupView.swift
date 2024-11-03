@@ -1,5 +1,5 @@
 //
-//  KeyboardSetupView.swift
+//  ManualKeyboardSetupView.swift
 //  Qazaqsha
 //
 //  Created by Daulet Almagambetov on 25.02.2024.
@@ -10,13 +10,13 @@ import QazaqFoundation
 
 // TODO: move to global constants
 
-final class KeyboardSetupViewModel: ObservableObject {
+final class ManualKeyboardSetupViewModel: ObservableObject {
     var isSetupFinished: Bool {
         GlobalConstants.isKeyboardExtensionEnabled
     }
 }
 
-struct KeyboardSetupView: View {
+struct ManualKeyboardSetupView: View {
     enum Constants {
         static let iconSize = CGSize(width: 32, height: 32)
         static let indexItemSize = CGSize(width: 22, height: 22)
@@ -44,7 +44,7 @@ struct KeyboardSetupView: View {
     var titleView: some View {
         VStack(alignment: .leading, content: {
             HStack(content: {
-                Text("Keyboard setup")
+                Text("Manual keyboard setup")
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundColor(Asset.Colors.text.swiftUIColor)
@@ -202,10 +202,10 @@ struct KeyboardSetupView: View {
     }
 }
 
-struct KeyboardSetupView_Previews: PreviewProvider {
+struct ManualKeyboardSetupView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            KeyboardSetupView()
+            ManualKeyboardSetupView()
         }
     }
 }
