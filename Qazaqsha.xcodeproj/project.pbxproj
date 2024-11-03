@@ -81,6 +81,7 @@
 		0BD2012B2BC2EDAC0065DBC1 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612D2B6BD1070038FAFB /* UIStackView+.swift */; };
 		0BD2012C2BC2EDAC0065DBC1 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA612F2B6BD11A0038FAFB /* UIImage+.swift */; };
 		0BD52E0C2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD52E0B2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift */; };
+		0BD52E102CD8201E006A4B6A /* KeyboardSelectionGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD52E0F2CD8201E006A4B6A /* KeyboardSelectionGuideView.swift */; };
 		0BEDB0122BC30B830034027D /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0BEDB0132BC30B830034027D /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BEDB0162BC30B830034027D /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
@@ -284,6 +285,7 @@
 		0BCA613C2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqAutocompleteProvider.swift; sourceTree = "<group>"; };
 		0BCA613E2B6BDC310038FAFB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0BD52E0B2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKeyboardSetupView.swift; sourceTree = "<group>"; };
+		0BD52E0F2CD8201E006A4B6A /* KeyboardSelectionGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSelectionGuideView.swift; sourceTree = "<group>"; };
 		0BEF667D2BC2DCAF00829036 /* QazaqshaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QazaqshaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF8087F2BD11C100000DD96 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -443,6 +445,7 @@
 				0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */,
 				0B5BBE5F2BCFBA1F0099F5F3 /* OnboardingExplanationView.swift */,
 				0B30DA752B8BB67900215711 /* ManualKeyboardSetupView.swift */,
+				0BD52E0F2CD8201E006A4B6A /* KeyboardSelectionGuideView.swift */,
 				0BD52E0B2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift */,
 				0B1C57022CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift */,
 			);
@@ -1037,6 +1040,7 @@
 				0BD52E0C2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift in Sources */,
 				0B2D8BA52BCC954500F4362C /* MagicAutocorrectionView.swift in Sources */,
 				0B30DA722B8B2D5000215711 /* Assets.swift in Sources */,
+				0BD52E102CD8201E006A4B6A /* KeyboardSelectionGuideView.swift in Sources */,
 				0BF808802BD11C100000DD96 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

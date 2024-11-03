@@ -28,10 +28,6 @@ struct OnboardingView: View {
                         )
                         .onAppear(perform: {
                             switch viewModel.currentPage {
-                            case .keyboardSelection:
-                                AnalyticsServiceFacade.shared.track(
-                                    event: CommonAnalyticsEvent(name: "onboarding_keyboard_selection")
-                                )
                             case .keyboardSetup:
                                 AnalyticsServiceFacade.shared.track(
                                     event: CommonAnalyticsEvent(name: "onboarding_keyboard_setup")
@@ -86,8 +82,6 @@ struct OnboardingView: View {
         switch viewModel.currentPage {
         case .welcome:
             OnboardingExplanationView()
-        case .keyboardSelection:
-            KeyboardSelectionView(viewModel: KeyboardSelectionViewModel())
         case .magicAutocorrection:
             MagicAutocorrectionView(viewModel: viewModel.magicAutocorrection ?? .init())
         case .keyboardSetup:

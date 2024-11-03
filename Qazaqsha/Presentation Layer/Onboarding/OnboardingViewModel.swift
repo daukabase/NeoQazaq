@@ -39,7 +39,7 @@ final class OnboardingViewModel: ObservableObject {
 
     var currentPageActionText: String {
         switch currentPage {
-        case .welcome, .keyboardSelection, .keyboardSetup, .longPressForAlternative:
+        case .welcome, .keyboardSetup, .longPressForAlternative:
             return "Next"
         case .magicAutocorrection:
             return "Finish"
@@ -48,7 +48,7 @@ final class OnboardingViewModel: ObservableObject {
 
     var shouldShowNextButton: Bool {
         switch currentPage {
-        case .welcome, .keyboardSelection, .magicAutocorrection, .longPressForAlternative:
+        case .welcome, .magicAutocorrection, .longPressForAlternative:
             return true
         case .keyboardSetup:
             return GlobalConstants.isKeyboardExtensionEnabled
@@ -59,7 +59,6 @@ final class OnboardingViewModel: ObservableObject {
 enum OnboardingPage: CaseIterable {
     case welcome
     case longPressForAlternative
-    case keyboardSelection
     case keyboardSetup
     case magicAutocorrection
 

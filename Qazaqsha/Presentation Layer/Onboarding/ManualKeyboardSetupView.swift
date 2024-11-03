@@ -26,6 +26,7 @@ struct ManualKeyboardSetupView: View {
         static let appURL = URL(string: UIApplication.openSettingsURLString)!
     }
     
+    @State private var showKeyboardGuide = false
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.openURL) var openURL
     
@@ -34,11 +35,33 @@ struct ManualKeyboardSetupView: View {
             titleView
             setupStepsView
                 .padding(.top, 32)
+            
+            keyboardGuideButton
+                .padding(.top, 32)
             Spacer()
             policyView
         })
         .padding(.horizontal, 32)
         .navigationBarTitle("Keyboard Setup")
+        .sheet(isPresented: $showKeyboardGuide) {
+            if #available(iOS 16.0, *) {
+                KeyboardSelectionGuideView()
+            }
+        }
+    }
+
+    var keyboardGuideButton: some View {
+        Button(action: {
+            showKeyboardGuide = true
+        }) {
+            HStack(spacing: 8) {
+                Image(systemName: "globe")
+                    .imageScale(.small)
+                Text("How to switch to keyboard")
+                    .font(.subheadline)
+            }
+            .foregroundStyle(.blue)
+        }
     }
     
     var titleView: some View {
@@ -174,7 +197,7 @@ struct ManualKeyboardSetupView: View {
     ) -> some View {
         HStack(alignment: .center, spacing: 16) {
             indexView(index: index)
-
+            
             VStack(alignment: .leading, content: {
                 HStack {
                     Text(text).foregroundColor(Asset.Colors.text.swiftUIColor)
