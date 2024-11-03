@@ -8,7 +8,6 @@
 import SwiftUI
 import QazaqFoundation
 
-@available(iOS 16.0, *)
 struct KeyboardSelectionGuideView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
@@ -23,9 +22,8 @@ struct KeyboardSelectionGuideView: View {
         .padding(.top, 32)
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
-        .background(colorScheme == .dark ? Color.black : Color.white)
     }
-    
+
     var headerView: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text("Using the keyboard")
@@ -37,7 +35,7 @@ struct KeyboardSelectionGuideView: View {
                 .lineLimit(nil)
         }
     }
-    
+
     var stepsView: some View {
         VStack(alignment: .leading, spacing: 12) {
             text(
@@ -48,7 +46,7 @@ struct KeyboardSelectionGuideView: View {
             iconText(
                 index: 1,
                 icon: globeIcon,
-                text: "Tap globe icon",
+                text: "Long-press globe icon",
                 subtitle: "Located next to spacebar"
             )
             text(

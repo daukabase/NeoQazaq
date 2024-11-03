@@ -11,7 +11,13 @@ import QazaqFoundation
 final class MagicAutocorrectionViewModel: ObservableObject {
     @UserDefault(item: UserDefaults.autocompleteItem)
     var isAutocompleteEnabledWrapper
-    
+
+    @Published
+    var isKeyboardGuidePresented: Bool = false
+
+    @Published
+    var showCorrectionIndicator: Bool = false
+
     @Published
     var isAutocompleteEnabled: Bool = false {
         didSet {
@@ -24,14 +30,12 @@ final class MagicAutocorrectionViewModel: ObservableObject {
             )
         }
     }
-    
+
     let title: String?
 
     @Published
     var text: String = ""
-    
-//    let action: (() -> Void)?
-    
+
     @ObservedObject
     var keyboardResponder = KeyboardResponder()
     
@@ -99,10 +103,36 @@ struct MagicAutocorrectionView: View {
     }
     
     // MARK: - Autocomplete On
-    
     @ViewBuilder
     var autocompleteEnabledContent: some View {
-        Section(content: {
+        Section {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("1. Switch to NeoQazaq keyboard")
+                    
+                    Button {
+                        viewModel.isKeyboardGuidePresented = true
+                    } label: {
+                        Image(systemName: "questionmark.circle")
+                            .foregroundColor(Asset.Colors.lightAction.swiftUIColor)
+                    }
+                    .sheet(isPresented: $viewModel.isKeyboardGuidePresented) {
+                        KeyboardSelectionGuideView()
+                    }
+                }
+                
+                // Step 2: Example
+                
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("2. Try typing these:")
+                    makeExampleRow(input: "Салем", output: "Сәлем")
+                    makeExampleRow(input: "Кандай", output: "Қандай")
+                }
+                .padding(.top, 4)
+            }
+        }
+
+        Section {
             TextField("Type here", text: $viewModel.text)
                 .focused($isTextFieldFocused)
                 .onAppear(perform: {
@@ -110,29 +140,18 @@ struct MagicAutocorrectionView: View {
                         isTextFieldFocused = true
                     }
                 })
-                .onDisappear(perform: {
-                    isTextFieldFocused = false
-                })
-        }, header: {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("1.")
-                    Text("Switch to NeoQazaq keyboard")
-                }
-                HStack(alignment: .top, spacing: 8) {
-                    Text("2.")
-                    Text("Type \"Салем алем!\"\nto see magic happen!")
-                        .multilineTextAlignment(.leading)
-                }
-            }
-            .font(.subheadline)
-            .foregroundColor(Asset.Colors.text.swiftUIColor)
-            .padding(.vertical, 12)
-            .padding(.leading, 16)
-            .frame(width: UIScreen.main.bounds.width - 38, alignment: .leading)
-            .overlay(InnerBorder(color: Asset.Colors.text.swiftUIColor, width: 1, cornerRadius: 8))
-            .padding(.bottom, 8)
-        })
+        }
+    }
+
+    private func makeExampleRow(input: String, output: String) -> some View {
+        HStack {
+            Text(input)
+                .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
+            Image(systemName: "arrow.right")
+                .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
+            Text(output)
+                .foregroundColor(Asset.Colors.text.swiftUIColor)
+        }
     }
     
     // MARK: - Toggle
@@ -140,21 +159,16 @@ struct MagicAutocorrectionView: View {
     var autocorrectionSection: some View {
         Section(content: {
             Toggle("Magic Auto-Correction", isOn: $viewModel.isAutocompleteEnabled)
-        }, header: {
-            if let title = viewModel.title {
-                HStack {
-                    Text(title)
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Asset.Colors.text.swiftUIColor)
-                        .padding(.bottom, 16)
-                        .textCase(nil)
-
-                    Spacer()
-                }
-            }
         }, footer: {
-            Text("BETA: This feature is still in development and may not work as expected.")
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Auto-corrects Qazaq words as you type")
+                    .font(.footnote)
+                    .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
+                Text("BETA: This feature is still in development")
+                    .font(.caption)
+                    .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
+                    .padding(.top, 4)
+            }
         })
     }
 }
@@ -163,22 +177,5 @@ struct MagicAutocorrectionView_Preview: PreviewProvider {
     static var previews: some View {
         MagicAutocorrectionView(viewModel: MagicAutocorrectionViewModel())
             .preferredColorScheme(.dark)
-    }
-}
-
-struct InnerBorder: View {
-    var color: Color
-    var width: CGFloat
-    var cornerRadius: CGFloat
-    
-    var body: some View {
-        GeometryReader { geometry in
-            Path { path in
-                let rect = CGRect(x: width / 2, y: width / 2, width: geometry.size.width - width, height: geometry.size.height - width)
-                path.addRoundedRect(in: rect, cornerSize: CGSize(width: cornerRadius, height: cornerRadius))
-            }
-            .stroke(color, lineWidth: width)
-        }
-        .drawingGroup()
     }
 }

@@ -59,6 +59,9 @@ struct NewKeyboardSetupView: View {
             .padding(.horizontal, 32)
         }
         .navigationBarTitle("Keyboard Setup")
+        .sheet(isPresented: $manualSetupSheetShowing) {
+            ManualKeyboardSetupView()
+        }
     }
     
     private func getIconHeight(in geometry: GeometryProxy) -> CGFloat {
