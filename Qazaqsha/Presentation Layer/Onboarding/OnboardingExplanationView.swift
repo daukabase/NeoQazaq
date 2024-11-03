@@ -17,13 +17,11 @@ struct OnboardingExplanationView: View {
             Section(content: {
                 contentView
                 example
+                Spacer()
             }, header: {
                 headerView
             }, footer: {
-                Text("Our autocorrection algorithm is not finished yet, feel free to submit feedback (bugs and improvements)")
-                    .foregroundStyle(.secondary).font(.caption)
-                    .padding(.vertical, 8)
-                Spacer()
+                policyView
             })
             .listRowSeparator(.hidden)
             .listRowInsets(EdgeInsets())
@@ -102,6 +100,12 @@ struct OnboardingExplanationView: View {
         .clipShape(RoundedRectangle(cornerRadius: 32))
         .padding(16)
     }
+    
+    var policyView: some View {
+        Text("By continuing, you are agreeing to [privacy policy](https://www.freeprivacypolicy.com/blog/privacy-policy-url/)")
+            .font(.caption)
+    }
+    
 }
 
 struct OnboardingExplanationView_Preview: PreviewProvider {

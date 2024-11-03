@@ -32,14 +32,12 @@ struct NewKeyboardSetupView: View {
     @State var manualSetupSheetShowing = false
     
     var body: some View {
-        VStack(alignment: .leading, content: {
+        VStack(alignment: .center, content: {
             titleView
-
-            quickSetupView
-                .padding(.top, 32)
-
-            Spacer()
-            policyView
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.bottom, 24)
+            quickSetupIcon
+            actions
         })
         .sheet(isPresented: $manualSetupSheetShowing, content: {
             ManualKeyboardSetupView().padding(.top, 32)
@@ -61,15 +59,11 @@ struct NewKeyboardSetupView: View {
                         .font(.system(size: 24, weight: .bold))  // Adjust the size and weight as needed
                 }
             })
-            Text("Follow steps below to setup keyboard").foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
         })
     }
-    
-    @ViewBuilder
-    var quickSetupView: some View {
-        quickSetupIcon
 
-        VStack(spacing: 12) {
+    var actions: some View {
+        VStack(alignment: .center, spacing: 12) {
             Button(action: {
                 openURL(URL(string: UIApplication.openSettingsURLString)!)
             }, label: {
@@ -102,18 +96,32 @@ struct NewKeyboardSetupView: View {
     }
 
     var quickSetupIcon: some View {
-        Asset.Images.onboardingKeyboardSetup.swiftUIImage
+        GeometryReader(content: { geometry in
+            let availableWidth = geometry.size.width
+            let ratio = 1.51099831
+            let height = availableWidth * ratio
+            
+            quickSetupIcon(for: availableWidth, height: height)
+        })
+    }
+
+    func quickSetupIcon(for width: CGFloat, height: CGFloat) -> some View {
+        return Asset.Images.onboardingKeyboardSetup.swiftUIImage
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(maxWidth: .infinity)
-            .padding(.horizontal, 16)
+            .frame(width: width, height: height)
     }
-    
-    var policyView: some View {
-        Text("By continuing, you are agreeing to [privacy policy](https://www.freeprivacypolicy.com/blog/privacy-policy-url/)")
-            .font(.caption)
-    }
-    
+//    var quickSetupIcon: some View {
+//        let ratio = 1.51099831
+//        let width = UIScreen.main.bounds.width - 64
+//        let height = width * ratio
+//        
+//        return Asset.Images.onboardingKeyboardSetup.swiftUIImage
+//            .resizable()
+//            .aspectRatio(contentMode: .fit)
+////            .frame(width: width, height: height)
+//            .padding(.horizontal, 16)
+//    }
 }
 
 struct NewKeyboardSetupView_Previews: PreviewProvider {
