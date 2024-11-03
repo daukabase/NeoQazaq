@@ -73,6 +73,11 @@ struct OnboardingView: View {
             }
         }
         .padding(.top, 32)
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+            if viewModel.currentPage == .keyboardSetup, GlobalConstants.isKeyboardExtensionEnabled {
+                showNextPage()
+            }
+        }
     }
 
     private func primaryButtonAction() {

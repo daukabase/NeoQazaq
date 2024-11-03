@@ -12,6 +12,7 @@ import QazaqFoundation
 final class OnboardingViewModel: ObservableObject {
     @Published
     var currentPage: OnboardingPage = .welcome
+
     @Published
     var pages: [OnboardingPage]
 

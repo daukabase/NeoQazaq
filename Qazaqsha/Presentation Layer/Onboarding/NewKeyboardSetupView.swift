@@ -59,11 +59,13 @@ struct NewKeyboardSetupView: View {
                         .font(.system(size: 24, weight: .bold))  // Adjust the size and weight as needed
                 }
             })
+            Text("Set up \(GlobalConstants.appName) in the Settings")
+                .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
         })
     }
 
     var actions: some View {
-        VStack(alignment: .center, spacing: 12) {
+        VStack(alignment: .center, spacing: 4) {
             Button(action: {
                 openURL(URL(string: UIApplication.openSettingsURLString)!)
             }, label: {
@@ -92,6 +94,7 @@ struct NewKeyboardSetupView: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 16)
                 .padding(.horizontal, 24)
+                .padding(.vertical, 8)
         })
     }
 
