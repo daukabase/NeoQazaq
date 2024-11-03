@@ -37,7 +37,9 @@ struct NewKeyboardSetupView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 24)
             quickSetupIcon
-            actions
+            if !GlobalConstants.isKeyboardExtensionEnabled {
+                actions
+            }
         })
         .sheet(isPresented: $manualSetupSheetShowing, content: {
             ManualKeyboardSetupView().padding(.top, 32)
