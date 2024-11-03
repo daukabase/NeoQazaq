@@ -51,29 +51,13 @@ final class OnboardingViewModel: ObservableObject {
             return GlobalConstants.isKeyboardExtensionEnabled
         }
     }
-
-    @ViewBuilder
-    func view() -> some View {
-        switch currentPage {
-        case .welcome:
-            OnboardingExplanationView()
-        case .keyboardSelection:
-            KeyboardSelectionView(viewModel: KeyboardSelectionViewModel())
-        case .magicAutocorrection:
-            MagicAutocorrectionView(viewModel: magicAutocorrection ?? .init())
-        case .keyboardSetup:
-            NewKeyboardSetupView()
-        case .longPressForAlternative:
-            AlternativeCharsOnboardingView()
-        }
-    }
 }
 
 enum OnboardingPage: CaseIterable {
     case welcome
-    case keyboardSetup
     case longPressForAlternative
     case keyboardSelection
+    case keyboardSetup
     case magicAutocorrection
 
     static let fullOnboarding = OnboardingPage.allCases

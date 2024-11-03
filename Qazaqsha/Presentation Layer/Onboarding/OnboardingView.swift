@@ -20,7 +20,7 @@ struct OnboardingView: View {
         VStack {
             ForEach($viewModel.pages, id: \.self) { page in
                 if page.wrappedValue == viewModel.currentPage {
-                    viewModel.view()
+                    onboardingView()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .transition(AnyTransition.asymmetric(
                             insertion: .move(edge: .trailing),
@@ -58,11 +58,11 @@ struct OnboardingView: View {
                 Button(action: primaryButtonAction, label: {
                     Text(viewModel.currentPageActionText)
                         .font(.system(size: 16, weight: .semibold, design: .default))
-                        .foregroundColor(Asset.Colors.text.swiftUIColor)
+                        .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .frame(height: 48)
                 })
-                .background(Asset.Colors.lightPrimary.swiftUIColor)
+                .background(.blue.opacity(0.7))
                 .roundCorners(value: 8)
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 1, y: 2)
                 .padding(16)
@@ -75,8 +75,24 @@ struct OnboardingView: View {
         .padding(.top, 32)
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
             if viewModel.currentPage == .keyboardSetup, GlobalConstants.isKeyboardExtensionEnabled {
-                showNextPage()
+//                showNextPage()
             }
+        }
+    }
+
+    @ViewBuilder
+    func onboardingView() -> some View {
+        switch viewModel.currentPage {
+        case .welcome:
+            OnboardingExplanationView()
+        case .keyboardSelection:
+            KeyboardSelectionView(viewModel: KeyboardSelectionViewModel())
+        case .magicAutocorrection:
+            MagicAutocorrectionView(viewModel: viewModel.magicAutocorrection ?? .init())
+        case .keyboardSetup:
+            NewKeyboardSetupView()
+        case .longPressForAlternative:
+            AlternativeCharsOnboardingView()
         }
     }
 

@@ -44,7 +44,7 @@ struct ManualKeyboardSetupView: View {
     var titleView: some View {
         VStack(alignment: .leading, content: {
             HStack(content: {
-                Text("Manual keyboard setup")
+                Text("Manual setup guide")
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundColor(Asset.Colors.text.swiftUIColor)

@@ -63,7 +63,7 @@ struct OnboardingExplanationView: View {
                 .fontWeight(.semibold)
 
             VStack(alignment: .leading) {
-                Text("Type as you used to - we'll add proper Kazakh letters automatically")
+                Text("Type using Russian keyboard - we'll add proper Kazakh letters automatically")
             }
             .font(.callout)
             .foregroundStyle(.secondary)

@@ -3,8 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>StringsTable</key>
-	<string>Root</string>
+	<string>License</string>
 	<key>PreferenceSpecifiers</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>NeoQazaq SETTINGS</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>			
+How to activate the NeoQazaq keyboard:
+
+1. Go to your device settings and select Keyboards.
+2. Turn on "NeoQazaq".
+3. Turn on "Allow Full Access".
+
+Don't worry if "Full Access" sounds technical — it's actually quite simple. It just allows the keyboard to connect with the "NeoQazaq Keyboard app". This helps us gather general, anonymous usage data to improve our product and fix bugs, but it doesn't involve any of your personal data. 
+
+Your privacy is always protected! 🔒
+			</string>
+		</dict>
+	</array>
 </dict>
 </plist>
