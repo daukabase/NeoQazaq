@@ -78,7 +78,7 @@ struct NewKeyboardSetupView: View {
                     .frame(height: 48)
                     .padding(.horizontal, 24)
             })
-            .background(.blue.opacity(0.7))
+            .background(.blue)
             .clipShape(RoundedRectangle(cornerRadius: 24))
 
             showManualSteps
@@ -92,7 +92,7 @@ struct NewKeyboardSetupView: View {
             Text("Show manual setup steps")
                 .font(.footnote)
                 .font(.subheadline)
-                .foregroundStyle(.blue.opacity(0.7))
+                .foregroundStyle(.blue)
                 .frame(maxWidth: .infinity)
                 .frame(height: 16)
                 .padding(.horizontal, 24)
@@ -116,17 +116,6 @@ struct NewKeyboardSetupView: View {
             .aspectRatio(contentMode: .fit)
             .frame(width: width, height: height)
     }
-//    var quickSetupIcon: some View {
-//        let ratio = 1.51099831
-//        let width = UIScreen.main.bounds.width - 64
-//        let height = width * ratio
-//        
-//        return Asset.Images.onboardingKeyboardSetup.swiftUIImage
-//            .resizable()
-//            .aspectRatio(contentMode: .fit)
-////            .frame(width: width, height: height)
-//            .padding(.horizontal, 16)
-//    }
 }
 
 struct NewKeyboardSetupView_Previews: PreviewProvider {

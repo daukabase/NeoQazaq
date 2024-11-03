@@ -11,6 +11,9 @@ import QazaqFoundation
 
 final class OnboardingViewModel: ObservableObject {
     @Published
+    var reload = false
+
+    @Published
     var currentPage: OnboardingPage = .welcome
 
     @Published

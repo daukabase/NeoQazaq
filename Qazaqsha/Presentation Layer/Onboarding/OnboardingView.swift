@@ -54,6 +54,9 @@ struct OnboardingView: View {
             }
             .animation(.easeInOut, value: viewModel.currentPage)
 
+            if viewModel.reload {
+                EmptyView().frame(width: 0, height: 0)
+            }
             if viewModel.shouldShowNextButton {
                 Button(action: primaryButtonAction, label: {
                     Text(viewModel.currentPageActionText)
@@ -62,7 +65,7 @@ struct OnboardingView: View {
                         .frame(maxWidth: .infinity)
                         .frame(height: 48)
                 })
-                .background(.blue.opacity(0.7))
+                .background(.blue)
                 .roundCorners(value: 8)
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 1, y: 2)
                 .padding(16)
@@ -74,9 +77,7 @@ struct OnboardingView: View {
         }
         .padding(.top, 32)
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-            if viewModel.currentPage == .keyboardSetup, GlobalConstants.isKeyboardExtensionEnabled {
-//                showNextPage()
-            }
+            viewModel.reload.toggle()
         }
     }
 
