@@ -30,24 +30,65 @@ struct NewKeyboardSetupView: View {
     @Environment(\.openURL) var openURL
     
     @State var manualSetupSheetShowing = false
-    
+    @State var showKeyboardGuide = false
+
     var body: some View {
-        VStack(alignment: .center, content: {
-            titleView
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.bottom, 24)
-            quickSetupIcon
-            if !GlobalConstants.isKeyboardExtensionEnabled {
-                actions
+        GeometryReader { geometry in
+            VStack(alignment: .center, spacing: 0) {
+                titleView
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom, 24)
+                
+                // Flexible container for icon
+                quickSetupIcon
+                    .frame(height: getIconHeight(in: geometry))
+                    .animation(.easeInOut(duration: 1))
+
+                if !GlobalConstants.isKeyboardExtensionEnabled {
+                    actions
+                        .padding(.top, 24)
+                        .animation(.easeInOut(duration: 1))
+                } else {
+                    postSetupGuide
+                        .padding(.top, 24)
+                        .animation(.easeInOut(duration: 1))
+                }
+                
+                Spacer(minLength: 0)
             }
-        })
-        .sheet(isPresented: $manualSetupSheetShowing, content: {
-            ManualKeyboardSetupView().padding(.top, 32)
-        })
-        .padding(.horizontal, 32)
+            .padding(.horizontal, 32)
+        }
         .navigationBarTitle("Keyboard Setup")
     }
     
+    private func getIconHeight(in geometry: GeometryProxy) -> CGFloat {
+        let totalHeight = geometry.size.height
+        let titleHeight: CGFloat = 100
+        let actionsHeight: CGFloat = GlobalConstants.isKeyboardExtensionEnabled ? 120 : 140
+        let padding: CGFloat = 48
+
+        // Calculate available space for icon
+        let availableHeight = totalHeight - titleHeight - actionsHeight - padding
+
+        let ratio: CGFloat = 1.51099831
+        let width = geometry.size.width - 64
+        let idealHeight = width * ratio
+        
+        return min(idealHeight, availableHeight)
+    }
+    
+    var postSetupGuide: some View {
+        VStack(spacing: 16) {
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(.green)
+                .font(.system(size: 48))
+            
+            Text("Keyboard is ready!")
+                .font(.headline)
+                .foregroundColor(Asset.Colors.text.swiftUIColor)
+        }
+    }
+
     var titleView: some View {
         VStack(alignment: .leading, content: {
             HStack(content: {
@@ -101,20 +142,9 @@ struct NewKeyboardSetupView: View {
     }
 
     var quickSetupIcon: some View {
-        GeometryReader(content: { geometry in
-            let availableWidth = geometry.size.width
-            let ratio = 1.51099831
-            let height = availableWidth * ratio
-            
-            quickSetupIcon(for: availableWidth, height: height)
-        })
-    }
-
-    func quickSetupIcon(for width: CGFloat, height: CGFloat) -> some View {
-        return Asset.Images.onboardingKeyboardSetup.swiftUIImage
+        Asset.Images.onboardingKeyboardSetup.swiftUIImage
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(width: width, height: height)
     }
 }
 

@@ -44,9 +44,7 @@ struct ManualKeyboardSetupView: View {
         .padding(.horizontal, 32)
         .navigationBarTitle("Keyboard Setup")
         .sheet(isPresented: $showKeyboardGuide) {
-            if #available(iOS 16.0, *) {
-                KeyboardSelectionGuideView()
-            }
+            KeyboardSelectionGuideView()
         }
     }
 

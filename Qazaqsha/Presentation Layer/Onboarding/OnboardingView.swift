@@ -61,6 +61,7 @@ struct OnboardingView: View {
                         .frame(maxWidth: .infinity)
                         .frame(height: 48)
                 })
+                .animation(.easeInOut(duration: 1))
                 .background(.blue)
                 .roundCorners(value: 8)
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 1, y: 2)
