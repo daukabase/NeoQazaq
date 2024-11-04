@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import FirebaseCore
-import FirebaseAnalytics
 import Instabug
 import QazaqFoundation
 

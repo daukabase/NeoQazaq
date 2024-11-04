@@ -13,7 +13,6 @@
 		0B18B0192BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */; };
 		0B18B01A2BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */; };
 		0B18B01D2BD0F9EF005E8EBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */; };
-		0B18B01F2BD0FA2A005E8EBC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0B18B01E2BD0FA2A005E8EBC /* FirebaseAnalytics */; };
 		0B1C57032CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C57022CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift */; };
 		0B1C57062CB1619A00CE7FEC /* longPressWhite.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C57042CB1619A00CE7FEC /* longPressWhite.gif */; };
 		0B1C57072CB1619A00CE7FEC /* longPressDark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C57052CB1619A00CE7FEC /* longPressDark.gif */; };
@@ -324,7 +323,6 @@
 			files = (
 				0B981F612BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */,
 				0B62F2132BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */,
-				0B18B01F2BD0FA2A005E8EBC /* FirebaseAnalytics in Frameworks */,
 				0BF8087D2BD113B40000DD96 /* Instabug in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,7 +759,6 @@
 			);
 			name = Qazaqsha;
 			packageProductDependencies = (
-				0B18B01E2BD0FA2A005E8EBC /* FirebaseAnalytics */,
 				0BF8087C2BD113B40000DD96 /* Instabug */,
 			);
 			productName = Qazaqsha;
@@ -1724,11 +1721,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0B18B01E2BD0FA2A005E8EBC /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
 		0B2D8BB62BCD3A6600F4362C /* FLAnimatedImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0B2D8BB52BCD3A4D00F4362C /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
