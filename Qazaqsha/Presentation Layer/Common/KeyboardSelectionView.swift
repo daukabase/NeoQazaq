@@ -31,7 +31,6 @@ struct KeyboardSelectionView: View {
             .listRowInsets(EdgeInsets())
         }
         .modifier(FormHiddenBackground())
-        .navigationBarTitle("Switch to \(GlobalConstants.appName)")
     }
     
     func bulletPoint(_ text: String) -> some View {

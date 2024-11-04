@@ -42,7 +42,7 @@ struct ManualKeyboardSetupView: View {
             policyView
         })
         .padding(.horizontal, 32)
-        .navigationBarTitle("Keyboard Setup")
+        .navigationBarTitle("Keyboard setup")
         .sheet(isPresented: $showKeyboardGuide) {
             KeyboardSelectionGuideView()
         }
@@ -81,7 +81,7 @@ struct ManualKeyboardSetupView: View {
     }
     
     var policyView: some View {
-        Text("By installing, you are agreeing to [privacy policy](https://www.freeprivacypolicy.com/blog/privacy-policy-url/)")
+        Text("common_privacy_policy_content")
             .font(.caption)
     }
     

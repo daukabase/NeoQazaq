@@ -36,14 +36,14 @@ struct OnboardingExplanationView: View {
 
     var headerView: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Welcome to NeoQazaq")
+            Text("onboarding_welcome \(GlobalConstants.appName)")
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
                 .lineLimit(2)
                 .scaledToFit()
         }
-        .fixedSize(horizontal: false, vertical: true)
+        .fixedSize(horizontal: false, vertical: false)
         .textCase(nil)
         .padding(.bottom, 32)
     }
@@ -52,13 +52,13 @@ struct OnboardingExplanationView: View {
         VStack(alignment: .center, spacing: 0) {
             appIcon
 
-            Text("Smart Kazakh Keyboard")
+            Text("onboarding_welcome_subtitle")
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
                 .font(.title3)
                 .fontWeight(.semibold)
 
             VStack(alignment: .leading) {
-                Text("Type using Russian keyboard - we'll add proper Kazakh letters automatically")
+                Text("onboarding_welcome_description")
             }
             .font(.callout)
             .foregroundStyle(.secondary)
@@ -66,13 +66,14 @@ struct OnboardingExplanationView: View {
             .padding(.horizontal, 32)
             .multilineTextAlignment(.center)
         }
+        .frame(maxWidth: .infinity)
         .fixedSize(horizontal: false, vertical: true)
         .textCase(nil)
     }
 
     var example: some View {
         VStack(alignment: .center) {
-            Text("Example")
+            Text("common_example")
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .padding(.top, 8)
@@ -101,19 +102,16 @@ struct OnboardingExplanationView: View {
         let ratio = 1.16078431
         let width = UIScreen.main.bounds.width - 32 - 16
         let height = width / ratio
-        
+
         let gifName = colorScheme == .dark ? "autocorrectionExampleDark" : "autocorrectionExampleWhite"
-        
-        return GifImage(name: gifName)
-            .frame(width: width, height: height)
-            
+
+        return GifImage(name: gifName).frame(width: width, height: height)
     }
-    
+
     var policyView: some View {
-        Text("By continuing, you are agreeing to [privacy policy](https://www.freeprivacypolicy.com/blog/privacy-policy-url/)")
+        Text("common_privacy_policy_content")
             .font(.caption).multilineTextAlignment(.leading)
     }
-    
 }
 
 struct OnboardingExplanationView_Preview: PreviewProvider {

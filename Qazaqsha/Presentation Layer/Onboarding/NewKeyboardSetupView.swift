@@ -58,7 +58,7 @@ struct NewKeyboardSetupView: View {
             }
             .padding(.horizontal, 32)
         }
-        .navigationBarTitle("Keyboard Setup")
+        .navigationBarTitle("Keyboard setup")
         .sheet(isPresented: $manualSetupSheetShowing) {
             ManualKeyboardSetupView()
         }

@@ -61,7 +61,7 @@ struct SettingsView: View {
                 Text("Magic Auto-Correction")
             }
         }, footer: {
-            Text("BETA: This feature is still in development and may not work as expected.")
+            Text("common_beta_magic_autocorrection")
         })
     }
 }

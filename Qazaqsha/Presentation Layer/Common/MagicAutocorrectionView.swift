@@ -72,7 +72,7 @@ struct MagicAutocorrectionView: View {
     
     @ViewBuilder
     var autocompleteExample: some View {
-        Section("Example") {
+        Section("common_example") {
             gifAutocorrectionExample.clipped()
         }.listRowInsets(EdgeInsets())
 
@@ -164,7 +164,7 @@ struct MagicAutocorrectionView: View {
                 Text("Auto-corrects Qazaq words as you type")
                     .font(.footnote)
                     .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
-                Text("BETA: This feature is still in development")
+                Text("common_beta_magic_autocorrection")
                     .font(.caption)
                     .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
                     .padding(.top, 4)

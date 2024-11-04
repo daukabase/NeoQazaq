@@ -120,7 +120,7 @@ struct MainView: View {
             Button(action: {
                 BugReporting.show(with: .question, options: [.commentFieldRequired])
             }, label: {
-                Text("Technical Support")
+                Text("tech_support")
             })
 
             Button(action: {
@@ -139,7 +139,7 @@ struct MainView: View {
                 Text("Magic Auto-Correction")
             }
         }, footer: {
-            Text("BETA: This feature is still in development and may not work as expected.")
+            Text("common_beta_magic_autocorrection")
         })
     }
     

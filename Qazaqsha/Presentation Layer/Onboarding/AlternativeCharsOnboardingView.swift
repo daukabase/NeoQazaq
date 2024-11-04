@@ -62,7 +62,7 @@ struct AlternativeCharsOnboardingView: View {
     
     var instructionSteps: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("How it works:").font(.headline).padding(.top, 16)
+            Text("How it works" + ":").font(.headline).padding(.top, 16)
 
             bulletPoint("Press and hold any letter that has alternatives")
             bulletPoint("Slide your finger to the desired letter")
@@ -132,7 +132,7 @@ struct AlternativeCharsOnboardingView: View {
 
     var exampleView: some View {
         VStack(alignment: .center) {
-            Text("Example")
+            Text("common_example")
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .padding(.top, 8)
