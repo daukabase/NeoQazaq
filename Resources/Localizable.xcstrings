@@ -554,6 +554,63 @@
         }
       }
     },
+    "onboarding_alternative_chars_bullet_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press and hold any letter that has alternatives"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Альтернатив әріпі бар пернесін узақ басыңыз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите и удерживайте любую кнопку которая имеет альтернативные буквы"
+          }
+        }
+      }
+    },
+    "onboarding_alternative_chars_bullet_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slide your finger to the desired letter"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Саусағынызды жылжытып пернені таңданыз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Двигая пальцем выберите букву"
+          }
+        }
+      }
+    },
+    "onboarding_alternative_chars_bullet_3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Release to insert the selected letter"
+          }
+        }
+      }
+    },
     "onboarding_welcome %@" : {
       "extractionState" : "manual",
       "localizations" : {

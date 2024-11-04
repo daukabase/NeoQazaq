@@ -62,11 +62,11 @@ struct AlternativeCharsOnboardingView: View {
     
     var instructionSteps: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("How it works" + ":").font(.headline).padding(.top, 16)
+            Text("How it works").font(.headline).padding(.top, 16)
 
-            bulletPoint("Press and hold any letter that has alternatives")
-            bulletPoint("Slide your finger to the desired letter")
-            bulletPoint("Release to insert the selected letter")
+            bulletPoint("onboarding_alternative_chars_bullet_1")
+            bulletPoint("onboarding_alternative_chars_bullet_2")
+            bulletPoint("onboarding_alternative_chars_bullet_3")
         }
     }
     
