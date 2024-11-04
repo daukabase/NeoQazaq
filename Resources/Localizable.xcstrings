@@ -219,7 +219,7 @@
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Пример"
           }
         }
@@ -489,13 +489,13 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сиқырлы автоматты түзету"
+            "value" : "Сиқырлы автотүзету"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Магическая автоисправление"
+            "value" : "Magic Автокоррекция"
           }
         }
       }

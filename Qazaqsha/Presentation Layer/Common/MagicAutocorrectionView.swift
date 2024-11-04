@@ -164,10 +164,12 @@ struct MagicAutocorrectionView: View {
                 Text("Auto-corrects Qazaq words as you type")
                     .font(.footnote)
                     .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
+                    .lineLimit(nil)
                 Text("common_beta_magic_autocorrection")
-                    .font(.caption)
+                    .font(.footnote)
                     .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
                     .padding(.top, 4)
+                    .lineLimit(nil)
             }
         })
     }
