@@ -37,12 +37,16 @@ internal enum Asset {
     internal static let appIconNoBackground = ImageAsset(name: "appIconNoBackground")
     internal static let appIconWelcome = ImageAsset(name: "appIconWelcome")
     internal static let appleSettingsGear = ImageAsset(name: "appleSettingsGear")
+    internal static let instagram = ImageAsset(name: "instagram")
     internal static let keyBackspace = ImageAsset(name: "keyBackspace")
     internal static let keyEmoji = ImageAsset(name: "keyEmoji")
     internal static let keyLowercased = ImageAsset(name: "keyLowercased")
     internal static let keyUppercased = ImageAsset(name: "keyUppercased")
     internal static let keyUppercasedOnce = ImageAsset(name: "keyUppercasedOnce")
     internal static let onboardingKeyboardSetup = ImageAsset(name: "onboardingKeyboardSetup")
+    internal static let telegram = ImageAsset(name: "telegram")
+    internal static let tiktok = ImageAsset(name: "tiktok")
+    internal static let whatsapp = ImageAsset(name: "whatsapp")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

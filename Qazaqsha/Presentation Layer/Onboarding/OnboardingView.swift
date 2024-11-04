@@ -44,6 +44,10 @@ struct OnboardingView: View {
                                 AnalyticsServiceFacade.shared.track(
                                     event: CommonAnalyticsEvent(name: "onboarding_alternative_char_long_press")
                                 )
+                            case .finish:
+                                AnalyticsServiceFacade.shared.track(
+                                    event: CommonAnalyticsEvent(name: "onboarding_finish")
+                                )
                             }
                         })
                 }
@@ -89,11 +93,13 @@ struct OnboardingView: View {
             NewKeyboardSetupView()
         case .longPressForAlternative:
             AlternativeCharsOnboardingView()
+        case .finish:
+            FinishOnboardingView()
         }
     }
 
     private func primaryButtonAction() {
-        if viewModel.currentPage == .magicAutocorrection {
+        if viewModel.currentPage == .finish {
             viewModel.onFinishOnboarding?(true)
         } else {
             showNextPage()

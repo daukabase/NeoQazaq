@@ -39,16 +39,16 @@ final class OnboardingViewModel: ObservableObject {
 
     var currentPageActionText: String {
         switch currentPage {
-        case .welcome, .keyboardSetup, .longPressForAlternative:
+        case .welcome, .keyboardSetup, .longPressForAlternative, .magicAutocorrection:
             return "Next"
-        case .magicAutocorrection:
+        case .finish:
             return "Finish"
         }
     }
 
     var shouldShowNextButton: Bool {
         switch currentPage {
-        case .welcome, .magicAutocorrection, .longPressForAlternative:
+        case .welcome, .magicAutocorrection, .longPressForAlternative, .finish:
             return true
         case .keyboardSetup:
             return GlobalConstants.isKeyboardExtensionEnabled
@@ -61,6 +61,7 @@ enum OnboardingPage: CaseIterable {
     case longPressForAlternative
     case keyboardSetup
     case magicAutocorrection
+    case finish
 
     static let fullOnboarding = OnboardingPage.allCases
 }
