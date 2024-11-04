@@ -120,7 +120,7 @@ struct AlternativeCharsOnboardingView: View {
         )
     }
 
-    func bulletPoint(_ text: String) -> some View {
+    func bulletPoint(_ text: LocalizedStringKey) -> some View {
         HStack(alignment: .top, spacing: 5) {
             Text("•")
                 .foregroundColor(Asset.Colors.text.swiftUIColor)

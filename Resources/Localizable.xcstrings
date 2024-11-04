@@ -566,13 +566,13 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Альтернатив әріпі бар пернесін узақ басыңыз"
+            "value" : "Альтернатив әріпі бар пернесін узақ басу"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Нажмите и удерживайте любую кнопку которая имеет альтернативные буквы"
+            "value" : "Нажать и удерживать любую кнопку которая имеет скрытые буквы"
           }
         }
       }
@@ -589,13 +589,13 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Саусағынызды жылжытып пернені таңданыз"
+            "value" : "Саусағынызды жылжытып пернені таңдау"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Двигая пальцем выберите букву"
+            "value" : "Двигая пальцем выбрать букву"
           }
         }
       }
@@ -607,6 +607,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Release to insert the selected letter"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Саусағынызды таңдалған әріпті еңгізу үшін көтеру "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отпустиить палец над выбранной буквой"
           }
         }
       }
