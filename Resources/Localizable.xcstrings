@@ -2,13 +2,52 @@
   "sourceLanguage" : "en",
   "strings" : {
     "•" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "→" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "👋" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "👋"
+          }
+        }
+      }
     },
     "1. Switch to NeoQazaq keyboard" : {
       "localizations" : {
@@ -150,13 +189,13 @@
             "value" : "BETA: This feature is still in development and may not work as expected."
           }
         },
-        "kk": {
+        "kk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "BETA: Бұл функция әлі дамуда және күткендей жұмыс істемеуі мүмкін."
           }
         },
-        "ru": {
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Эта функция все еще находится в разработке и может работать не так, как ожидалось."
@@ -165,10 +204,43 @@
       }
     },
     "common_example" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мысал"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пример"
+          }
+        }
+      }
     },
     "common_privacy_policy_content" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "By continuing, you are agreeing to [privacy policy](https://www.termsfeed.com/live/b5039a8d-5c6d-4f8f-973c-1b032ab9b18b)"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жалғастыру арқылы сіз [құпиялылық саясатымызбен](https://www.freeprivacypolicy.com/blog/privacy-policy-url/) келісесіз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продолжая, вы соглашаетесь с [политикой конфиденциальности](https://www.termsfeed.com/live/b5039a8d-5c6d-4f8f-973c-1b032ab9b18b)"
+          }
+        }
+      }
     },
     "Emoji key" : {
       "localizations" : {
@@ -188,29 +260,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Клавиша эмодзи"
-          }
-        }
-      }
-    },
-    "Example" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Example"
-          }
-        },
-        "kk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Мысал"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Пример"
           }
         }
       }
@@ -326,30 +375,33 @@
       }
     },
     "How to switch to keyboard" : {
-
-    },
-    "How to Switch to the %@ Keyboard?" : {
-
-    },
-    "Key" : {
-      "extractionState" : "stale",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Key"
-          }
-        },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Перне"
+            "value" : "Пернетақтаға қалай ауысады"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Кнопка"
+            "value" : "Как выбрать клавиатуру"
+          }
+        }
+      }
+    },
+    "How to Switch to the %@ Keyboard?" : {
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ пернетақтасына қалай ауысады?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как выбрать клавиатуру %@?"
           }
         }
       }
@@ -465,7 +517,20 @@
       }
     },
     "NeoQazaq" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NeoQazaq"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NeoQazaq"
+          }
+        }
+      }
     },
     "NeoQazaq 🇰🇿 keyboard app %@ 💛" : {
       "localizations" : {
@@ -559,7 +624,27 @@
       }
     },
     "Privacy Policy" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smart Kazakh Keyboard"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy Policy"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Политика конфиденциальности"
+          }
+        }
+      }
     },
     "Quick access to Qazaq letters" : {
       "localizations" : {
@@ -760,10 +845,6 @@
       }
     },
     "tech_support" : {
-
-    },
-    "Technical Support" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
