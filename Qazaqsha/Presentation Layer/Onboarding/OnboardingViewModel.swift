@@ -42,7 +42,7 @@ final class OnboardingViewModel: ObservableObject {
         case .welcome, .keyboardSetup, .longPressForAlternative, .magicAutocorrection:
             return "Next"
         case .finish:
-            return "Finish"
+            return "Start Using NeoQazaq"
         }
     }
 

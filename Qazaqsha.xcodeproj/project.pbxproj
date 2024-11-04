@@ -83,6 +83,10 @@
 		0BD52E0C2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD52E0B2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift */; };
 		0BD52E102CD8201E006A4B6A /* KeyboardSelectionGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD52E0F2CD8201E006A4B6A /* KeyboardSelectionGuideView.swift */; };
 		0BD52E122CD83120006A4B6A /* FinishOnbaordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD52E112CD83120006A4B6A /* FinishOnbaordingView.swift */; };
+		0BD52E162CD8BCA1006A4B6A /* longPressShortGifDark.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0BD52E142CD8BCA1006A4B6A /* longPressShortGifDark.mov */; };
+		0BD52E1A2CD8C228006A4B6A /* longPressIDark.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0BD52E172CD8C228006A4B6A /* longPressIDark.mov */; };
+		0BD52E1B2CD8C228006A4B6A /* longPressODark.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0BD52E182CD8C228006A4B6A /* longPressODark.mov */; };
+		0BD52E1C2CD8C228006A4B6A /* longPressADark.mov in Resources */ = {isa = PBXBuildFile; fileRef = 0BD52E192CD8C228006A4B6A /* longPressADark.mov */; };
 		0BEDB0122BC30B830034027D /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0BEDB0132BC30B830034027D /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BEDB0162BC30B830034027D /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
@@ -288,6 +292,10 @@
 		0BD52E0B2CD6D0F1006A4B6A /* NewKeyboardSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKeyboardSetupView.swift; sourceTree = "<group>"; };
 		0BD52E0F2CD8201E006A4B6A /* KeyboardSelectionGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSelectionGuideView.swift; sourceTree = "<group>"; };
 		0BD52E112CD83120006A4B6A /* FinishOnbaordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishOnbaordingView.swift; sourceTree = "<group>"; };
+		0BD52E142CD8BCA1006A4B6A /* longPressShortGifDark.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = longPressShortGifDark.mov; sourceTree = "<group>"; };
+		0BD52E172CD8C228006A4B6A /* longPressIDark.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = longPressIDark.mov; sourceTree = "<group>"; };
+		0BD52E182CD8C228006A4B6A /* longPressODark.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = longPressODark.mov; sourceTree = "<group>"; };
+		0BD52E192CD8C228006A4B6A /* longPressADark.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = longPressADark.mov; sourceTree = "<group>"; };
 		0BEF667D2BC2DCAF00829036 /* QazaqshaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QazaqshaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF8087F2BD11C100000DD96 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,6 +400,10 @@
 		0B2D8BB42BCD38DD00F4362C /* Gif */ = {
 			isa = PBXGroup;
 			children = (
+				0BD52E142CD8BCA1006A4B6A /* longPressShortGifDark.mov */,
+				0BD52E192CD8C228006A4B6A /* longPressADark.mov */,
+				0BD52E172CD8C228006A4B6A /* longPressIDark.mov */,
+				0BD52E182CD8C228006A4B6A /* longPressODark.mov */,
 				0B5BBE5B2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif */,
 				0B5BBE5A2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif */,
 				0B2D8BB02BCD38CF00F4362C /* autocorrectionExampleWhite.gif */,
@@ -962,7 +974,10 @@
 			files = (
 				0B1C57072CB1619A00CE7FEC /* longPressDark.gif in Resources */,
 				0B2D8BB32BCD38D900F4362C /* autocorrectionExampleDark.gif in Resources */,
+				0BD52E1C2CD8C228006A4B6A /* longPressADark.mov in Resources */,
 				0B2D8BB12BCD38CF00F4362C /* autocorrectionExampleWhite.gif in Resources */,
+				0BD52E162CD8BCA1006A4B6A /* longPressShortGifDark.mov in Resources */,
+				0BD52E1A2CD8C228006A4B6A /* longPressIDark.mov in Resources */,
 				0B4690632BD7EF1B000FA0A7 /* Settings.bundle in Resources */,
 				0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */,
 				0B18B0192BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */,
@@ -971,6 +986,7 @@
 				0B1C57062CB1619A00CE7FEC /* longPressWhite.gif in Resources */,
 				0B5BBE5D2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif in Resources */,
 				0B800E4D2B681A8A00EADCA9 /* Assets.xcassets in Resources */,
+				0BD52E1B2CD8C228006A4B6A /* longPressODark.mov in Resources */,
 				0B5BBE5C2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

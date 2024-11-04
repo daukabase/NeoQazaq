@@ -9,24 +9,29 @@ import SwiftUI
 import QazaqFoundation
 
 struct OnboardingExplanationView: View {
+    static let iconSize = CGFloat(100)
+
     @Environment(\.colorScheme)
     private var colorScheme: ColorScheme
     
     var body: some View {
-        Form {
-            Section(content: {
-                contentView
-                example
-                Spacer()
-            }, header: {
-                headerView
-            }, footer: {
-                policyView
-            })
-            .listRowSeparator(.hidden)
-            .listRowInsets(EdgeInsets())
+        VStack(alignment: .leading) {
+            Form {
+                Section(content: {
+                    contentView
+                    example
+                }, header: {
+                    headerView
+                }, footer: {
+                    
+                })
+                .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets())
+            }
+            .modifier(FormHiddenBackground())
+            Spacer()
+            policyView.padding(16)
         }
-        .modifier(FormHiddenBackground())
     }
 
     var headerView: some View {
@@ -43,19 +48,9 @@ struct OnboardingExplanationView: View {
         .padding(.bottom, 32)
     }
 
-    static let iconSize = CGFloat(100)
     var contentView: some View {
         VStack(alignment: .center, spacing: 0) {
-            Asset.Images.appIconNoBackground.swiftUIImage
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: Self.iconSize, height: Self.iconSize)
-                .background(
-                    RoundedRectangle(cornerRadius: 25.0)
-                        .frame(width: Self.iconSize / 2, height: Self.iconSize / 2)
-                        .foregroundStyle(.white)
-                        .shadow(color: .blue, radius: 15, x: -8, y: 8)
-                )
+            appIcon
 
             Text("Smart Kazakh Keyboard")
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
@@ -75,6 +70,33 @@ struct OnboardingExplanationView: View {
         .textCase(nil)
     }
 
+    var example: some View {
+        VStack(alignment: .center) {
+            Text("Example")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .padding(.top, 8)
+
+            gifAutocorrectionExample
+        }
+        .background(Color.blue.opacity(0.1))
+        .clipShape(RoundedRectangle(cornerRadius: 32))
+        .padding([.top, .horizontal], 16)
+    }
+    
+    var appIcon: some View {
+        Asset.Images.appIconNoBackground.swiftUIImage
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: Self.iconSize, height: Self.iconSize)
+            .background(
+                RoundedRectangle(cornerRadius: 25.0)
+                    .frame(width: Self.iconSize / 2, height: Self.iconSize / 2)
+                    .foregroundStyle(.white)
+                    .shadow(color: .blue, radius: 15, x: -8, y: 8)
+            )
+    }
+
     var gifAutocorrectionExample: some View {
         let ratio = 1.16078431
         let width = UIScreen.main.bounds.width - 32 - 16
@@ -87,23 +109,9 @@ struct OnboardingExplanationView: View {
             
     }
     
-    var example: some View {
-        VStack(alignment: .center) {
-            Text("Example")
-                .font(.caption)
-                .foregroundStyle(.secondary)
-                .padding(.top, 8)
-
-            gifAutocorrectionExample
-        }
-        .background(Color.blue.opacity(0.1))
-        .clipShape(RoundedRectangle(cornerRadius: 32))
-        .padding(16)
-    }
-    
     var policyView: some View {
         Text("By continuing, you are agreeing to [privacy policy](https://www.freeprivacypolicy.com/blog/privacy-policy-url/)")
-            .font(.caption)
+            .font(.caption).multilineTextAlignment(.leading)
     }
     
 }

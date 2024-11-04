@@ -127,6 +127,12 @@ struct OnboardingView_Preview: PreviewProvider {
             pages: OnboardingPage.fullOnboarding,
             onFinishOnboarding: { _ in }
         ))
+        
+        OnboardingView(viewModel: OnboardingViewModel(
+            currentPage: .welcome,
+            pages: OnboardingPage.fullOnboarding,
+            onFinishOnboarding: { _ in }
+        )).preferredColorScheme(.dark)
     }
 }
 

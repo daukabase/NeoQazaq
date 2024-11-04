@@ -81,24 +81,6 @@ struct FinishOnboardingView: View {
             .padding(.horizontal, 20)
             
             Spacer()
-            
-            // Start Button
-            Button(action: {
-                UserDefaults.standard.set(true, forKey: "hasCompletedOnboarding")
-                dismiss()
-            }) {
-                Text("Start Using NeoQazaq")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(Asset.Colors.lightAction.swiftUIColor)
-                    )
-            }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 32)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.background)

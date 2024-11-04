@@ -27,6 +27,7 @@ internal enum Asset {
   internal enum Colors {
     internal static let backgroundSecondary = ColorAsset(name: "backgroundSecondary")
     internal static let keyboardBackground = ColorAsset(name: "keyboardBackground")
+    internal static let keyboardBackgroundInverted = ColorAsset(name: "keyboardBackgroundInverted")
     internal static let lightAction = ColorAsset(name: "lightAction")
     internal static let lightInk = ColorAsset(name: "lightInk")
     internal static let lightPrimary = ColorAsset(name: "lightPrimary")
