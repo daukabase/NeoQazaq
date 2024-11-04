@@ -204,7 +204,7 @@ struct LoopingVideoPlayer: View {
         VideoPlayer(player: player)
             .disabled(true)  // Disable player controls
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(400)) {
                     player.play()
                 }
             }
