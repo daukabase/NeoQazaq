@@ -10,6 +10,11 @@ import QazaqFoundation
 import Instabug
 
 final class MainViewModel: ObservableObject {
+    @Published
+    var keyboardSelectionShowing = false
+    @Published
+    var keyboardSetupShowing = false
+
     var donateProject = TextRightChevronViewModel(
         text: "Donate to project",
         isChevronHidden: true,
@@ -21,6 +26,7 @@ final class MainViewModel: ObservableObject {
 }
 
 struct MainView: View {
+    static let iconSize = CGFloat(100)
     @ObservedObject
     var viewModel: MainViewModel
 
@@ -34,55 +40,97 @@ struct MainView: View {
                         } label: {
                             Text("Settings")
                         }
+                    }, header: {
+                        HStack {
+                            appIcon
+                            Text("NeoQazaq")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundStyle(.text)
+                            Spacer()
+                        }
+                        .textCase(nil)
+                        .listRowInsets(EdgeInsets())
                     })
+                        
 
                     autocorrectionSection
+                    actionsSection
 
-                    Section(content: {
-                        NavigationLink {
-                            KeyboardSelectionView(viewModel: KeyboardSelectionViewModel())
-                        } label: {
-                            Text("How to switch to keyboard")
-                        }
-
-                        Button(action: {
-                            BugReporting.show(with: .question, options: [.commentFieldRequired])
-                        }, label: {
-                            Text("Technical Support")
-                        })
-
-                        Button(action: {
-                            BugReporting.show(with: .bug, options: [.emailFieldOptional, .commentFieldRequired])
-                        }, label: {
-                            Text("Report a bug")
-                        })
-                    })
-
-                    Section(
-                        content: {
-                            NavigationLink {
-                                PrivacyPolicyView()
-                            } label: {
-                                Text("Privacy Policy")
-                            }
-                        },
-                        footer: {
-                            HStack {
-                                Spacer()
-                                Text("NeoQazaq 🇰🇿 keyboard app \(GlobalConstants.appVersion) 💛")
-                                    .font(.caption)
-                                    .foregroundColor(Asset.Colors.text.swiftUIColor)
-                                    .padding(.top, 16)
-                                Spacer()
-                            }
-                        }
-                    )
-                }.navigationBarTitle("NeoQazaq")
+                    footerSection
+                }
+                .sheet(isPresented: $viewModel.keyboardSelectionShowing) {
+                    KeyboardSelectionGuideView()
+                }
+                .sheet(isPresented: $viewModel.keyboardSetupShowing) {
+                    NewKeyboardSetupView()
+                }
             }
-            
         }
     }
     
+    var appIcon: some View {
+        Asset.Images.appIconNoBackground.swiftUIImage
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: Self.iconSize, height: Self.iconSize)
+            .background(
+                RoundedRectangle(cornerRadius: 25.0)
+                    .frame(width: Self.iconSize / 2, height: Self.iconSize / 2)
+                    .foregroundStyle(.white)
+                    .shadow(color: .blue, radius: 15, x: -8, y: 8)
+            )
+    }
+
+    var footerSection: some View {
+        Section(
+            content: {
+                NavigationLink {
+                    PrivacyPolicyView()
+                } label: {
+                    Text("Privacy Policy")
+                }
+            },
+            footer: {
+                HStack {
+                    Spacer()
+                    Text("NeoQazaq 🇰🇿 keyboard app \(GlobalConstants.appVersion) 💛")
+                        .font(.caption)
+                        .foregroundColor(Asset.Colors.text.swiftUIColor)
+                        .padding(.top, 16)
+                    Spacer()
+                }
+            }
+        )
+    }
+    var actionsSection: some View {
+        Section(content: {
+            Button(action: {
+                viewModel.keyboardSelectionShowing = true
+            }, label: {
+                Text("How to switch to keyboard")
+            })
+
+            Button(action: {
+                viewModel.keyboardSetupShowing = true
+            }, label: {
+                Text("How to setupKeyboard")
+            })
+
+            Button(action: {
+                BugReporting.show(with: .question, options: [.commentFieldRequired])
+            }, label: {
+                Text("Technical Support")
+            })
+
+            Button(action: {
+                BugReporting.show(with: .bug, options: [.emailFieldOptional, .commentFieldRequired])
+            }, label: {
+                Text("Report a bug")
+            })
+        })
+    }
+
     var autocorrectionSection: some View {
         Section(content: {
             NavigationLink {
