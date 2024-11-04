@@ -205,6 +205,12 @@
     },
     "common_example" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Example"
+          }
+        },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -213,7 +219,7 @@
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Пример"
           }
         }
@@ -698,13 +704,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Smart Kazakh Keyboard"
+            "value" : "Privacy Policy"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Privacy Policy"
+            "value" : "Құпиялылық саясаты"
           }
         },
         "ru" : {
@@ -760,29 +766,6 @@
       }
     },
     "Say Сәлем!" : {
-      "localizations" : {
-              "en" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Say Сәлем!"
-                }
-              },
-              "kk" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Сәлем деп айтыңыз!"
-                }
-              },
-              "ru" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Скажите Сәлем!"
-                }
-              }
-            }
-    },
-    "Say Сәлем!" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
