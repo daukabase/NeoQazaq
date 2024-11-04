@@ -22,10 +22,10 @@ struct AlternativeCharsOnboardingView: View {
         Form {
             Section(content: {
                 VStack(alignment: .center, spacing: 0) {
-                    appIcon
                     bulletPoints
                         .padding(.trailing, 16)
                     exampleView
+                        .padding(.bottom, 8)
                 }.frame(maxWidth: .infinity)
             }, header: {
                 headerView
@@ -37,78 +37,61 @@ struct AlternativeCharsOnboardingView: View {
 
     var headerView: some View {
         VStack(alignment: .leading, spacing: 8, content: {
-            Text("Qazaq letters selection")
+            Text("Quick access to Qazaq letters")
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
                 .lineLimit(2)
+                .padding(.top, 8)
         })
         .textCase(nil)
         .fixedSize(horizontal: false, vertical: true)
         .padding(.bottom, 32)
     }
     
-    var appIcon: some View {
-        Asset.Images.appIconNoBackground.swiftUIImage
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: Self.iconSize, height: Self.iconSize)
-            .background(
-                RoundedRectangle(cornerRadius: 25.0)
-                    .frame(width: Self.iconSize / 2, height: Self.iconSize / 2)
-                    .foregroundStyle(.white)
-                    .shadow(color: .blue, radius: 15, x: -8, y: 8)
-            )
-    }
-
-//    var bulletPoints: some View {
-//        VStack(alignment: .leading, spacing: 5) {
-//            bulletPoint("Long press that available letter")
-//            Text("Letters that available for long press: А -> Ә, Ғ, Қ, Ң, Ө, Ұ, Ү, Һ, І")
-//                .font(.caption)
-//                .foregroundStyle(.lightSecondary)
-//            bulletPoint("Slide to select specific letter")
-//            bulletPoint("Release")
-//        }
-//        .foregroundColor(Asset.Colors.text.swiftUIColor)
-//        .font(.body)
-//        .textCase(nil) // Ensuring text case is not altered
-//        .padding([.bottom, .horizontal], 16)
-//    }
     var bulletPoints: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            bulletPoint("Long press available letter")
-            // Available letters mapping in grid
-            VStack(alignment: .leading, spacing: 4) {
-                LazyVGrid(
-                    columns: [
-                        GridItem(.flexible()),
-                        GridItem(.flexible()),
-                        GridItem(.flexible())
-                    ],
-                    alignment: .leading,
-                    spacing: 8
-                ) {
-                    letterMapping("А", "Ә")
-                    letterMapping("У", "Ұ, Ү")
-                    letterMapping("И", "І")
-                    letterMapping("Ы", "І")
-                    letterMapping("К", "Қ")
-                    letterMapping("Н", "Ң")
-                    letterMapping("Г", "Ғ")
-                    letterMapping("Х", "Һ")
-                }
-            }
-            .padding(.leading, 20)
-            .padding(.vertical, 8)
-            
-            bulletPoint("Slide to select specific letter")
-            bulletPoint("Release")
+        VStack(alignment: .leading, spacing: 12) {
+            instructionSteps
+            availableLetters
         }
         .foregroundColor(Asset.Colors.text.swiftUIColor)
         .font(.body)
         .textCase(nil)
         .padding([.bottom, .horizontal], 16)
+    }
+    
+    var instructionSteps: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("How it works:").font(.headline).padding(.top, 16)
+
+            bulletPoint("Press and hold any letter that has alternatives")
+            bulletPoint("Slide your finger to the desired letter")
+            bulletPoint("Release to insert the selected letter")
+        }
+    }
+    
+    var availableLetters: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            LazyVGrid(
+                columns: [
+                    GridItem(.flexible()),
+                    GridItem(.flexible()),
+                    GridItem(.flexible())
+                ],
+                alignment: .leading,
+                spacing: 8
+            ) {
+                letterMapping("А", "Ә")
+                letterMapping("У", "Ұ, Ү")
+                letterMapping("И", "І")
+                letterMapping("Ы", "І")
+                letterMapping("К", "Қ")
+                letterMapping("О", "Ө")
+                letterMapping("Н", "Ң")
+                letterMapping("Г", "Ғ")
+                letterMapping("Х", "Һ")
+            }
+        }
     }
 
     private func letterMapping(_ from: String, _ to: String) -> some View {
@@ -121,10 +104,10 @@ struct AlternativeCharsOnboardingView: View {
                 .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
             Text(to)
                 .frame(maxWidth: .infinity)
-                .foregroundColor(Asset.Colors.text.swiftUIColor)
+                .foregroundColor(Asset.Colors.lightAction.swiftUIColor)
         }
         .font(.caption)
-        .padding(.horizontal, 8)
+        .padding(.horizontal, 4)
         .padding(.vertical, 6)
         .frame(maxWidth: .infinity, alignment: .center)
         .background(
@@ -215,13 +198,15 @@ struct LoopingVideoPlayer: View {
         // Mute the video
         player.isMuted = true
     }
-    
+
     var body: some View {
         // Calculate dimensions based on screen size
         VideoPlayer(player: player)
             .disabled(true)  // Disable player controls
             .onAppear {
-                player.play()
+                RunLoop.main.perform {
+                    player.play()
+                }
             }
             .onDisappear {
                 player.pause()
