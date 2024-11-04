@@ -5,7 +5,6 @@
 //  Created by Daulet Almagambetov on 02.05.2024.
 //
 
-// TODO: Move analytics into separate module
 import FirebaseCore
 
 public protocol AnalyticsService {
@@ -14,17 +13,26 @@ public protocol AnalyticsService {
 
 public final class AnalyticsServiceFacade: AnalyticsService {
     public static let shared = AnalyticsServiceFacade()
+    private let queue: DispatchQueue
+
+    init() {
+        self.queue = DispatchQueue(label: "com.qazaq-foundation.analytics", qos: .background, attributes: .concurrent)
+    }
 
     private let amplitudeService = AmplitudeAnalyticsService()
     private let firebaseService = FirebaseAnalyticsService()
     
     public func configure() {
-        FirebaseApp.configure()
+        queue.async {
+            FirebaseApp.configure()
+        }
     }
 
     public func track(event: AnalyticsEventProtocol) {
-        amplitudeService.track(event: event)
-        firebaseService.track(event: event)
+        queue.async {
+            self.amplitudeService.track(event: event)
+            self.firebaseService.track(event: event)
+        }
     }
 
     private func appendCommonParams(to params: [String: Any]) -> [String: Any] {

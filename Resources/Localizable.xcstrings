@@ -761,6 +761,29 @@
     },
     "Say Сәлем!" : {
       "localizations" : {
+              "en" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Say Сәлем!"
+                }
+              },
+              "kk" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Сәлем деп айтыңыз!"
+                }
+              },
+              "ru" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Скажите Сәлем!"
+                }
+              }
+            }
+    },
+    "Say Сәлем!" : {
+      "extractionState" : "stale",
+      "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",

@@ -7,12 +7,14 @@
 
 import SwiftUI
 import QazaqFoundation
-
-// TODO: move to global constants
+import Combine
 
 final class NewKeyboardSetupViewModel: ObservableObject {
-    var isSetupFinished: Bool {
-        GlobalConstants.isKeyboardExtensionEnabled
+    @Published
+    var isKeyboardAdded = false
+
+    init() {
+        isKeyboardAdded = GlobalConstants.isKeyboardExtensionEnabled
     }
 }
 
@@ -32,6 +34,9 @@ struct NewKeyboardSetupView: View {
     @State var manualSetupSheetShowing = false
     @State var showKeyboardGuide = false
 
+    @ObservedObject
+    var viewModel: NewKeyboardSetupViewModel
+
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .center, spacing: 0) {
@@ -42,21 +47,22 @@ struct NewKeyboardSetupView: View {
                 // Flexible container for icon
                 quickSetupIcon
                     .frame(height: getIconHeight(in: geometry))
-                    .animation(.easeInOut(duration: 1))
+                    .animation(.easeInOut, value: viewModel.isKeyboardAdded)
 
                 if !GlobalConstants.isKeyboardExtensionEnabled {
                     actions
                         .padding(.top, 24)
-                        .animation(.easeInOut(duration: 1))
+                        .animation(.easeInOut, value: viewModel.isKeyboardAdded)
                 } else {
                     postSetupGuide
                         .padding(.top, 24)
-                        .animation(.easeInOut(duration: 1))
+                        .animation(.easeInOut, value: viewModel.isKeyboardAdded)
                 }
                 
                 Spacer(minLength: 0)
             }
             .padding(.horizontal, 32)
+            
         }
         .navigationBarTitle("Keyboard setup")
         .sheet(isPresented: $manualSetupSheetShowing) {
@@ -154,7 +160,7 @@ struct NewKeyboardSetupView: View {
 struct NewKeyboardSetupView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            NewKeyboardSetupView()
+            NewKeyboardSetupView(viewModel: NewKeyboardSetupViewModel())
         }
     }
 }

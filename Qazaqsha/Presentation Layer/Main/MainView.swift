@@ -63,7 +63,11 @@ struct MainView: View {
                     KeyboardSelectionGuideView()
                 }
                 .sheet(isPresented: $viewModel.keyboardSetupShowing) {
-                    NewKeyboardSetupView()
+                    NewKeyboardSetupView(viewModel: {
+                        let model = NewKeyboardSetupViewModel()
+                        model.isKeyboardAdded = GlobalConstants.isKeyboardExtensionEnabled
+                        return model
+                    }())
                 }
             }
         }

@@ -20,17 +20,17 @@ struct FinishOnboardingView: View {
         .init(
             icon: Asset.Images.whatsapp.swiftUIImage,
             name: "WhatsApp",
-            url: URL(string: "whatsapp://send?text=Сәлем")!
+            url: URL(string: "whatsapp://send?text=Салем")!
         ),
         .init(
             icon: Asset.Images.telegram.swiftUIImage,
             name: "Telegram",
-            url: URL(string: "tg://msg?text=Сәлем")!
+            url: URL(string: "tg://msg?text=Салем")!
         ),
         .init(
             icon: Asset.Images.instagram.swiftUIImage,
             name: "Instagram",
-            url: URL(string: "instagram://message?text=Сәлем")!
+            url: URL(string: "instagram://message?text=Салем")!
         ),
         .init(
             icon: Asset.Images.tiktok.swiftUIImage,

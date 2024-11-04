@@ -14,11 +14,14 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         AnalyticsServiceFacade.shared.configure()
         AnalyticsServiceFacade.shared.track(event: CommonAnalyticsEvent(name: "app_start"))
-        #if DEBUG
-        Instabug.start(withToken: "18b727b8703dec6fece469161e9b8d1f", invocationEvents: [.shake, .screenshot])
-        #else
-        Instabug.start(withToken: "18b727b8703dec6fece469161e9b8d1f", invocationEvents: [.screenshot])
-        #endif
+
+        DispatchQueue.main.async {
+            #if DEBUG
+            Instabug.start(withToken: "18b727b8703dec6fece469161e9b8d1f", invocationEvents: [.shake, .screenshot])
+            #else
+            Instabug.start(withToken: "18b727b8703dec6fece469161e9b8d1f", invocationEvents: [.screenshot])
+            #endif
+        }
 
         return true
     }

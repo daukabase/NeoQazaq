@@ -12,6 +12,9 @@ struct AlternativeCharsOnboardingView: View {
     @Environment(\.colorScheme)
     private var colorScheme: ColorScheme
     
+    @State
+    private var shouldPlay = false
+
     static let iconSize = CGFloat(100)
     private let playViewNames = ["longPressADark", "longPressShortGifDark", "longPressIDark", "longPressODark"]
     private let adaptiveColumn = [
@@ -24,14 +27,21 @@ struct AlternativeCharsOnboardingView: View {
                 VStack(alignment: .center, spacing: 0) {
                     bulletPoints
                         .padding(.trailing, 16)
-                    exampleView
-                        .padding(.bottom, 8)
+                    if shouldPlay {
+                        exampleView
+                            .padding(.bottom, 8)
+                    }
                 }.frame(maxWidth: .infinity)
             }, header: {
                 headerView
                     .padding(.top, 16)
             })
             .listRowInsets(EdgeInsets())
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
+                    shouldPlay = true
+                }
+            }
         }
         .modifier(FormHiddenBackground())
     }

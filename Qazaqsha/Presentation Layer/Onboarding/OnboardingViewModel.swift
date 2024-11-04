@@ -11,9 +11,6 @@ import QazaqFoundation
 
 final class OnboardingViewModel: ObservableObject {
     @Published
-    var reload = false
-
-    @Published
     var currentPage: OnboardingPage = .welcome
 
     @Published
@@ -21,6 +18,12 @@ final class OnboardingViewModel: ObservableObject {
 
     @Published
     var magicAutocorrection: MagicAutocorrectionViewModel?
+
+    @Published
+    var reload = false
+
+    @Published
+    var keyboardSetupViewModel: NewKeyboardSetupViewModel!
 
     var onFinishOnboarding: ((Bool) -> Void)?
 
@@ -34,6 +37,7 @@ final class OnboardingViewModel: ObservableObject {
         self.magicAutocorrection = MagicAutocorrectionViewModel(
             title: "Auto-Correction"
         )
+        self.keyboardSetupViewModel = NewKeyboardSetupViewModel()
         self.onFinishOnboarding = onFinishOnboarding
     }
 
@@ -51,7 +55,7 @@ final class OnboardingViewModel: ObservableObject {
         case .welcome, .magicAutocorrection, .longPressForAlternative, .finish:
             return true
         case .keyboardSetup:
-            return GlobalConstants.isKeyboardExtensionEnabled
+            return keyboardSetupViewModel.isKeyboardAdded
         }
     }
 }

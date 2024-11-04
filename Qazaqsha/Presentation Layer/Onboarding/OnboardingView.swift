@@ -21,7 +21,6 @@ struct OnboardingView: View {
             ForEach($viewModel.pages, id: \.self) { page in
                 if page.wrappedValue == viewModel.currentPage {
                     onboardingView()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .transition(AnyTransition.asymmetric(
                             insertion: .move(edge: .trailing),
                             removal: .move(edge: .leading))
@@ -69,14 +68,12 @@ struct OnboardingView: View {
                 .roundCorners(value: 8)
                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 1, y: 2)
                 .padding(16)
-                .transition(AnyTransition.asymmetric(
-                    insertion: .move(edge: .trailing),
-                    removal: .move(edge: .leading))
-                )
             }
         }
         .padding(.top, 32)
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+            viewModel.keyboardSetupViewModel.isKeyboardAdded = GlobalConstants.isKeyboardExtensionEnabled
+            
             viewModel.reload.toggle()
         }
     }
@@ -89,7 +86,7 @@ struct OnboardingView: View {
         case .magicAutocorrection:
             MagicAutocorrectionView(viewModel: viewModel.magicAutocorrection ?? .init())
         case .keyboardSetup:
-            NewKeyboardSetupView()
+            NewKeyboardSetupView(viewModel: viewModel.keyboardSetupViewModel)
         case .longPressForAlternative:
             AlternativeCharsOnboardingView()
         case .finish:
