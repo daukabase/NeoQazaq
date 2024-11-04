@@ -8,8 +8,6 @@
 import KeyboardKit
 import SwiftUI
 import WordSuggestionsEngine
-import FirebaseCore
-import FirebaseAnalytics
 
 /**
  This keyboard demonstrates how to setup KeyboardKit and how
@@ -21,7 +19,6 @@ import FirebaseAnalytics
  */
 
 import QazaqFoundation
-import AmplitudeSwift
 
 final class KeyboardViewController: KeyboardInputViewController {
     @UserDefault(item: UserDefaults.autoCapitalizationItem)
@@ -37,7 +34,7 @@ final class KeyboardViewController: KeyboardInputViewController {
      we make demo-specific service configurations.
      */
     override func viewDidLoad() {
-        FirebaseApp.configure()
+        AnalyticsServiceFacade.shared.configure()
 
         AnalyticsServiceFacade.shared.track(event: CommonAnalyticsEvent(
             name: "launch_keyboard",

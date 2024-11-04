@@ -93,7 +93,6 @@
 		0BEDB0162BC30B830034027D /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0BEDB0172BC30B830034027D /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BEDB01B2BC30F540034027D /* Batyrma.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0BF808722BD10BEE0000DD96 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF808712BD10BEE0000DD96 /* FirebaseAnalytics */; };
 		0BF8087D2BD113B40000DD96 /* Instabug in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF8087C2BD113B40000DD96 /* Instabug */; };
 		0BF808802BD11C100000DD96 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8087F2BD11C100000DD96 /* WebView.swift */; };
 /* End PBXBuildFile section */
@@ -336,7 +335,6 @@
 			files = (
 				0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */,
 				0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */,
-				0BF808722BD10BEE0000DD96 /* FirebaseAnalytics in Frameworks */,
 				0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -787,7 +785,6 @@
 			name = Batyrma;
 			packageProductDependencies = (
 				0B386FC42B6D128C008F0622 /* KeyboardKit */,
-				0BF808712BD10BEE0000DD96 /* FirebaseAnalytics */,
 			);
 			productName = Batyrma;
 			productReference = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */;
@@ -1756,11 +1753,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
-		};
-		0BF808712BD10BEE0000DD96 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
 		};
 		0BF8087C2BD113B40000DD96 /* Instabug */ = {
 			isa = XCSwiftPackageProductDependency;

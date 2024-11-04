@@ -6,6 +6,7 @@
 //
 
 // TODO: Move analytics into separate module
+import FirebaseCore
 
 public protocol AnalyticsService {
     func track(event: AnalyticsEventProtocol)
@@ -16,6 +17,10 @@ public final class AnalyticsServiceFacade: AnalyticsService {
 
     private let amplitudeService = AmplitudeAnalyticsService()
     private let firebaseService = FirebaseAnalyticsService()
+    
+    public func configure() {
+        FirebaseApp.configure()
+    }
 
     public func track(event: AnalyticsEventProtocol) {
         amplitudeService.track(event: event)
