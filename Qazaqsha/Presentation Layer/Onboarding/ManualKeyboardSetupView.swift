@@ -69,6 +69,7 @@ struct ManualKeyboardSetupView: View {
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundColor(Asset.Colors.text.swiftUIColor)
+                    .padding(.top, 16)
                 if GlobalConstants.isKeyboardExtensionEnabled {
                     Image(systemName: "checkmark.circle")
                         .foregroundColor(.green)  // Apple's standard green color

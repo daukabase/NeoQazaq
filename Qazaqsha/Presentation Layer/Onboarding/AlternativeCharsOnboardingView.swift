@@ -29,6 +29,7 @@ struct AlternativeCharsOnboardingView: View {
                 }.frame(maxWidth: .infinity)
             }, header: {
                 headerView
+                    .padding(.top, 16)
             })
             .listRowInsets(EdgeInsets())
         }
@@ -42,7 +43,6 @@ struct AlternativeCharsOnboardingView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
                 .lineLimit(2)
-                .padding(.top, 8)
         })
         .textCase(nil)
         .fixedSize(horizontal: false, vertical: true)
@@ -204,7 +204,7 @@ struct LoopingVideoPlayer: View {
         VideoPlayer(player: player)
             .disabled(true)  // Disable player controls
             .onAppear {
-                RunLoop.main.perform {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
                     player.play()
                 }
             }
