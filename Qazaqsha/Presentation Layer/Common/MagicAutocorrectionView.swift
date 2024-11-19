@@ -108,7 +108,7 @@ struct MagicAutocorrectionView: View {
         Section {
             VStack(alignment: .leading) {
                 HStack {
-                    Text("1. Switch to NeoQazaq keyboard")
+                    Text("autocomplete_explanation_step_one\(GlobalConstants.appName)")
                     
                     Button {
                         viewModel.isKeyboardGuidePresented = true

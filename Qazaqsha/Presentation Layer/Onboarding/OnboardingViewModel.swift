@@ -44,9 +44,9 @@ final class OnboardingViewModel: ObservableObject {
     var currentPageActionText: String {
         switch currentPage {
         case .welcome, .keyboardSetup, .longPressForAlternative, .magicAutocorrection:
-            return "Next"
+            return String(localized: "next")
         case .finish:
-            return "Start Using NeoQazaq"
+            return String(localized: "start_using\(GlobalConstants.appName)")
         }
     }
 

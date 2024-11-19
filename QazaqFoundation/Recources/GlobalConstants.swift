@@ -6,7 +6,7 @@
 //
 
 public enum GlobalConstants {
-    public static let appName = "NeoQazaq"
+    public static let appName = "QazType"
     public static let appVersion = {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         return version ?? "1.0.0"

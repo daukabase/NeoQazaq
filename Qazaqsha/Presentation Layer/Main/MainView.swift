@@ -38,12 +38,12 @@ struct MainView: View {
                         NavigationLink {
                             SettingsView(viewModel: SettingsViewModel())
                         } label: {
-                            Text("Settings")
+                            Text(String(localized: "settings"))
                         }
                     }, header: {
                         HStack {
                             appIcon
-                            Text("NeoQazaq")
+                            Text(String(localized: "app_name"))
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundStyle(.text)
@@ -98,7 +98,7 @@ struct MainView: View {
             footer: {
                 HStack {
                     Spacer()
-                    Text("NeoQazaq 🇰🇿 keyboard app \(GlobalConstants.appVersion) 💛")
+                    Text("keyboard_app\(GlobalConstants.appVersion)")
                         .font(.caption)
                         .foregroundColor(Asset.Colors.text.swiftUIColor)
                         .padding(.top, 16)

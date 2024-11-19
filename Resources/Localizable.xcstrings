@@ -49,28 +49,6 @@
         }
       }
     },
-    "1. Switch to NeoQazaq keyboard" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1. Switch to NeoQazaq keyboard"
-          }
-        },
-        "kk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1. NeoQazaq пернетақтасына ауысыңыз"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1. Переключитесь на клавиатуру NeoQazaq"
-          }
-        }
-      }
-    },
     "2. Try typing these:" : {
       "localizations" : {
         "en" : {
@@ -115,6 +93,28 @@
         }
       }
     },
+    "app_name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QazType"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
     "Auto-Capitalization" : {
       "localizations" : {
         "en" : {
@@ -155,6 +155,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Автоматически исправляет казахские слова по мере набора"
+          }
+        }
+      }
+    },
+    "autocomplete_explanation_step_one%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. Switch to %@ keyboard"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. %@ пернетақтасына ауысыңыз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. Переключитесь на клавиатуру %@"
           }
         }
       }
@@ -382,6 +404,12 @@
     },
     "How to switch to keyboard" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How to switch to keyboard"
+          }
+        },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -478,6 +506,28 @@
         }
       }
     },
+    "keyboard_app%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 🇰🇿 keyboard app 💛"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 🇰🇿 пернетақта қосымшасы 💛"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приложение %@ 🇰🇿 💛"
+          }
+        }
+      }
+    },
     "Magic Auto-Correction" : {
       "localizations" : {
         "en" : {
@@ -522,40 +572,24 @@
         }
       }
     },
-    "NeoQazaq" : {
-      "localizations" : {
-        "kk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "NeoQazaq"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "NeoQazaq"
-          }
-        }
-      }
-    },
-    "NeoQazaq 🇰🇿 keyboard app %@ 💛" : {
+    "next" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "NeoQazaq 🇰🇿 keyboard app %@ 💛"
+            "value" : "Next"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "NeoQazaq 🇰🇿 пернетақта қосымшасы %@ 💛"
+            "value" : "Келесі"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Приложение NeoQazaq 🇰🇿 %@ 💛"
+            "value" : "Далее"
           }
         }
       }
@@ -809,6 +843,28 @@
         }
       }
     },
+    "settings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Баптаулар"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
+        }
+      }
+    },
     "Settings" : {
       "localizations" : {
         "en" : {
@@ -871,6 +927,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Начните печатать в ваших любимых приложениях"
+          }
+        }
+      }
+    },
+    "start_using%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start using of %@"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ қолдануды бастау"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать использовать %@"
           }
         }
       }
