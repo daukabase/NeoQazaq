@@ -109,7 +109,7 @@ struct OnboardingExplanationView: View {
     }
 
     var policyView: some View {
-        Text("common_privacy_policy_content")
+        Text("data_not_collected")
             .font(.caption).multilineTextAlignment(.leading)
     }
 }
