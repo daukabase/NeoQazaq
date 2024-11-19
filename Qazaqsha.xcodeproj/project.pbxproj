@@ -31,7 +31,6 @@
 		0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0B30DA762B8BB67900215711 /* ManualKeyboardSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30DA752B8BB67900215711 /* ManualKeyboardSetupView.swift */; };
-		0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0B386FC42B6D128C008F0622 /* KeyboardKit */; };
 		0B4690632BD7EF1B000FA0A7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B4690622BD7EF1B000FA0A7 /* Settings.bundle */; };
 		0B49BA092BE3D15500EFBE59 /* AmplitudeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B49BA082BE3D15500EFBE59 /* AmplitudeSwift */; };
 		0B49BA0B2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49BA0A2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift */; };
@@ -71,6 +70,10 @@
 		0B981F612BC2ECC2000308C2 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B981F622BC2ECC2000308C2 /* QazaqFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0BA294162B91E22A001465DF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA294152B91E22A001465DF /* OnboardingView.swift */; };
+		0BAF84662CECD55700A6DE39 /* KeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0BAF84652CECD55700A6DE39 /* KeyboardKit */; };
+		0BAF84682CECD86E00A6DE39 /* QazaqCalloutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF84672CECD86E00A6DE39 /* QazaqCalloutService.swift */; };
+		0BAF846A2CECDF3200A6DE39 /* CyrillicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF84692CECDF3200A6DE39 /* CyrillicService.swift */; };
+		0BAF846C2CECDF4300A6DE39 /* CyrillicKeyboardLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAF846B2CECDF4300A6DE39 /* CyrillicKeyboardLayout.swift */; };
 		0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA611E2B6BC73F0038FAFB /* Images.xcassets */; };
 		0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BCA61202B6BC8D50038FAFB /* Colors.xcassets */; };
 		0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA61252B6BCA060038FAFB /* Assets.swift */; };
@@ -281,6 +284,9 @@
 		0BA294152B91E22A001465DF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0BA294172B91E43F001465DF /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		0BAB0BC52B811AB600DB06F5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BAF84672CECD86E00A6DE39 /* QazaqCalloutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaqCalloutService.swift; sourceTree = "<group>"; };
+		0BAF84692CECDF3200A6DE39 /* CyrillicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyrillicService.swift; sourceTree = "<group>"; };
+		0BAF846B2CECDF4300A6DE39 /* CyrillicKeyboardLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyrillicKeyboardLayout.swift; sourceTree = "<group>"; };
 		0BCA611E2B6BC73F0038FAFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0BCA61202B6BC8D50038FAFB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0BCA61252B6BCA060038FAFB /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -332,7 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */,
-				0B386FC52B6D128C008F0622 /* KeyboardKit in Frameworks */,
+				0BAF84662CECD55700A6DE39 /* KeyboardKit in Frameworks */,
 				0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +545,9 @@
 				0BA294142B91E0EA001465DF /* Batyrma.entitlements */,
 				0BEA16A22B7BE054000154C6 /* Core Layer */,
 				0B800E612B681AEE00EADCA9 /* KeyboardViewController.swift */,
+				0BAF84692CECDF3200A6DE39 /* CyrillicService.swift */,
+				0BAF846B2CECDF4300A6DE39 /* CyrillicKeyboardLayout.swift */,
+				0BAF84672CECD86E00A6DE39 /* QazaqCalloutService.swift */,
 				0B800E632B681AEE00EADCA9 /* Info.plist */,
 			);
 			path = Batyrma;
@@ -781,7 +790,7 @@
 			);
 			name = Batyrma;
 			packageProductDependencies = (
-				0B386FC42B6D128C008F0622 /* KeyboardKit */,
+				0BAF84652CECD55700A6DE39 /* KeyboardKit */,
 			);
 			productName = Batyrma;
 			productReference = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */;
@@ -876,11 +885,11 @@
 			);
 			mainGroup = 0B800E3C2B681A8900EADCA9;
 			packageReferences = (
-				0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 				0B2D8BB52BCD3A4D00F4362C /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
 				0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				0BF8087B2BD113B40000DD96 /* XCRemoteSwiftPackageReference "Instabug-SP" */,
 				0B49BA002BE3D08300EFBE59 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */,
+				0BAF84642CECD55700A6DE39 /* XCRemoteSwiftPackageReference "KeyboardKit" */,
 			);
 			productRefGroup = 0B800E462B681A8900EADCA9 /* Products */;
 			projectDirPath = "";
@@ -1016,9 +1025,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BAF846A2CECDF3200A6DE39 /* CyrillicService.swift in Sources */,
 				0BCA613D2B6BDC120038FAFB /* QazaqAutocompleteProvider.swift in Sources */,
 				0BCA61262B6BCA060038FAFB /* Assets.swift in Sources */,
+				0BAF846C2CECDF4300A6DE39 /* CyrillicKeyboardLayout.swift in Sources */,
 				0B800E622B681AEE00EADCA9 /* KeyboardViewController.swift in Sources */,
+				0BAF84682CECD86E00A6DE39 /* QazaqCalloutService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1694,20 +1706,20 @@
 				minimumVersion = 1.0.17;
 			};
 		};
-		0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/daukabase/KeyboardKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.1.0;
-			};
-		};
 		0B49BA002BE3D08300EFBE59 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/amplitude/Amplitude-Swift";
 			requirement = {
 				branch = main;
 				kind = branch;
+			};
+		};
+		0BAF84642CECD55700A6DE39 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.9.0;
 			};
 		};
 		0BF8087B2BD113B40000DD96 /* XCRemoteSwiftPackageReference "Instabug-SP" */ = {
@@ -1726,11 +1738,6 @@
 			package = 0B2D8BB52BCD3A4D00F4362C /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
 			productName = FLAnimatedImage;
 		};
-		0B386FC42B6D128C008F0622 /* KeyboardKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0B386FC32B6D128C008F0622 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
-			productName = KeyboardKit;
-		};
 		0B49BA082BE3D15500EFBE59 /* AmplitudeSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0B49BA002BE3D08300EFBE59 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */;
@@ -1745,6 +1752,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
+		};
+		0BAF84652CECD55700A6DE39 /* KeyboardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0BAF84642CECD55700A6DE39 /* XCRemoteSwiftPackageReference "KeyboardKit" */;
+			productName = KeyboardKit;
 		};
 		0BF8087C2BD113B40000DD96 /* Instabug */ = {
 			isa = XCSwiftPackageProductDependency;

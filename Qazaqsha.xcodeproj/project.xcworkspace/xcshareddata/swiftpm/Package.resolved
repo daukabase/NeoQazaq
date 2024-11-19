@@ -120,10 +120,10 @@
     {
       "identity" : "keyboardkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/daukabase/KeyboardKit.git",
+      "location" : "https://github.com/KeyboardKit/KeyboardKit",
       "state" : {
-        "revision" : "f46406d3e4d67aa3260e3357f28c81a848a4c975",
-        "version" : "9.2.2"
+        "revision" : "9cfacb000e607ea58873ebe0b069d0c709ed4964",
+        "version" : "8.9.6"
       }
     },
     {

@@ -10,7 +10,8 @@ import KeyboardKit
 import QazaqFoundation
 import WordSuggestionsEngine
 
-class QazaqAutocompleteProvider: AutocompleteProvider {
+class QazaqAutocompleteProvider: AutocompleteService {
+   
     let suggestionEngine: WordSuggestionsEngine = QazaqWordSuggestionsEngineV2()
 
     @UserDefault(item: UserDefaults.autocompleteItem)
@@ -35,19 +36,20 @@ class QazaqAutocompleteProvider: AutocompleteProvider {
     func learnWord(_ word: String) {}
     func removeIgnoredWord(_ word: String) {}
     func unlearnWord(_ word: String) {}
+
+    func autocompleteSuggestions(for text: String) async throws -> [KeyboardKit.Autocomplete.Suggestion] {
+        getAutocompleteSuggestions(for: text)
+    }
     
-    func autocompleteSuggestions(
+    func nextCharacterPredictions(forText text: String, suggestions: [KeyboardKit.Autocomplete.Suggestion]) async throws -> [Character : Double] {
+        [:]
+    }
+
+    private func getAutocompleteSuggestions(
         for text: String
-    ) async throws -> [Autocomplete.Suggestion] {
+    ) -> [Autocomplete.Suggestion] {
         guard text.count > 0 else { return [] }
         return suggestions(for: text)
-            .map {
-                var suggestion = $0
-                suggestion.isAutocorrect = $0.isAutocorrect
-                    && context.isAutocorrectEnabled
-                    && isAutocompleteEnabled == true
-                return suggestion
-            }
     }
 }
 
@@ -58,13 +60,13 @@ private extension QazaqAutocompleteProvider {
         let engineSuggestions = suggestionEngine.suggestWords(for: lowercased)
             .sorted(by: { $0.similarity > $1.similarity })
             .map { value in
-                // If user typed in uppercase, we should return suggestions in uppercase
                 let word = uppercaseLettersOfTextFor(uppercasedIndices: uppercasedIndices, text: value.word)
-                return Autocomplete.Suggestion(text: word, isAutocorrect: value.similarity > 0.95)
+                let isAutocorrect = value.similarity > 0.95 && isAutocompleteEnabled == true
+                return Autocomplete.Suggestion(text: word, type: isAutocorrect ? .autocorrect : .unknown)
             }
             .prefix(2)
 
-        let plainText = Autocomplete.Suggestion(text: text, isUnknown: true)
+        let plainText = Autocomplete.Suggestion(text: text, type: .unknown)
         let suggestions = [plainText] + engineSuggestions
 
         return suggestions
