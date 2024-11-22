@@ -182,7 +182,20 @@
       }
     },
     "Bring up the keyboard" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пернетақтаны ашу (WhatsApp арқылы болады)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вызовите клавиатуру"
+          }
+        }
+      }
     },
     "coming soon" : {
       "localizations" : {
@@ -554,10 +567,36 @@
       }
     },
     "Located next to spacebar" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"Бос орын\" пернесінің жанында"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Расположена рядом с пробелом"
+          }
+        }
+      }
     },
     "Long-press globe icon" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Глобус белгішесін басып тұрыңыз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удерживайте иконку глобуса"
+          }
+        }
+      }
     },
     "Magic Auto-Correction" : {
       "localizations" : {
@@ -764,7 +803,14 @@
       }
     },
     "Open any text field" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте любое текстовое поле"
+          }
+        }
+      }
     },
     "Privacy Policy" : {
       "extractionState" : "manual",
@@ -856,7 +902,20 @@
       }
     },
     "Select %@" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ таңдаңыз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите %@"
+          }
+        }
+      }
     },
     "Set up %@ in the Settings" : {
       "localizations" : {
@@ -1145,7 +1204,20 @@
       }
     },
     "Will remain active until changed" : {
-
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Келесі өзгертуге дейін негізгі пернетақта болады"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Останется активной до следующего изменения"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
