@@ -64,7 +64,11 @@ struct MagicAutocorrectionView: View {
                 autocompleteExample
             }
         }
-        .navigationTitle(!viewModel.isAutocompleteEnabled ? "How it works" : "Try it by yourself")
+        .navigationTitle(
+            viewModel.isAutocompleteEnabled
+                ? String(localized: "Try it by yourself")
+                : String(localized: "How it works")
+        )
         .animation(.easeInOut, value: viewModel.isAutocompleteEnabled)
     }
     

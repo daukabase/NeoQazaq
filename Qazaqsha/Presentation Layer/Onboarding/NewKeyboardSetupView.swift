@@ -42,6 +42,7 @@ struct NewKeyboardSetupView: View {
             VStack(alignment: .center, spacing: 0) {
                 titleView
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 16)
                     .padding(.bottom, 24)
                 
                 // Flexible container for icon

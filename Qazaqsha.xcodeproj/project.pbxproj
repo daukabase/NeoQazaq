@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B09458F2CF0A9600027F1FD /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B09458E2CF0A9600027F1FD /* FeedbackService.swift */; };
 		0B096D142BE8004D00C86662 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B096D132BE8004D00C86662 /* GlobalConstants.swift */; };
 		0B13E7DC2BDA7A9700CB11F9 /* russianWordsDataset.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B13E7DB2BDA7A9700CB11F9 /* russianWordsDataset.txt */; };
 		0B18B0162BD01C96005E8EBC /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */; };
@@ -228,6 +229,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B09458E2CF0A9600027F1FD /* FeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
 		0B096D132BE8004D00C86662 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		0B13E7DB2BDA7A9700CB11F9 /* russianWordsDataset.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = russianWordsDataset.txt; sourceTree = "<group>"; };
 		0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
@@ -684,6 +686,7 @@
 				0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */,
 				0BF8087F2BD11C100000DD96 /* WebView.swift */,
 				0B2D8BA22BCC115A00F4362C /* MainView.swift */,
+				0B09458E2CF0A9600027F1FD /* FeedbackService.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1002,6 +1005,7 @@
 			files = (
 				0B5BBE602BCFBA1F0099F5F3 /* OnboardingExplanationView.swift in Sources */,
 				0B5BBE582BCEA90F0099F5F3 /* KeyboardSelectionView.swift in Sources */,
+				0B09458F2CF0A9600027F1FD /* FeedbackService.swift in Sources */,
 				0B1C57032CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift in Sources */,
 				0B2D8BA12BCC0DEE00F4362C /* TextRightChevronView.swift in Sources */,
 				0B2D8BA32BCC115A00F4362C /* MainView.swift in Sources */,

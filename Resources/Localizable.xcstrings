@@ -6,13 +6,13 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "•"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "•"
           }
         }
       }
@@ -22,13 +22,13 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "→"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "→"
           }
         }
       }
@@ -38,7 +38,7 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "👋"
           }
         },
         "ru" : {
@@ -104,13 +104,13 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "QazType"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "QazType"
           }
         }
       }
@@ -326,6 +326,292 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Клавиша эмодзи"
+          }
+        }
+      }
+    },
+    "feedback_app_version" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Version"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Қосымша нұсқасы"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Версия приложения"
+          }
+        }
+      }
+    },
+    "feedback_bug_description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please describe what happened"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : " болғанын сипаттаңыз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Опишите, что произошло"
+          }
+        }
+      }
+    },
+    "feedback_bug_subject%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Bug Report"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ қате туралы хабарлама"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Cообщение об ошибке %@"
+          }
+        }
+      }
+    },
+    "feedback_copy_email" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Email"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Поштаны көшіру"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Скопировать почту"
+          }
+        }
+      }
+    },
+    "feedback_device_info" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Device Info"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Құрылғы туралы ақпарат"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Информация об устройстве"
+          }
+        }
+      }
+    },
+    "feedback_device_model" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Үлгі"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Модель"
+          }
+        }
+      }
+    },
+    "feedback_email_unavailable_message%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please send your feedback to %@"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Өтініш, хабарламаңызды %@ поштасына жіберіңіз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Пожалуйста, отправьте обратную связь на %@"
+          }
+        }
+      }
+    },
+    "feedback_email_unavailable_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email Not Available"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Электрондық пошта қолжетімсіз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Почта недоступна"
+          }
+        }
+      }
+    },
+    "feedback_expected_behavior" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Expected behavior"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Қалай жұмыс істелгені күтілуде"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ожидаемое поведение"
+          }
+        }
+      }
+    },
+    "feedback_ios_version" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iOS Version"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "iOS нұсқасы"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Версия iOS"
+          }
+        }
+      }
+    },
+    "feedback_ok" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Жақсы"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "feedback_steps_to_reproduce" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steps to reproduce"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Қателікті қайталау жолы"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Шаги для воспроизведения"
+          }
+        }
+      }
+    },
+    "feedback_support_subject%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ Support Question"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ қолдау сұрағы"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Вопрос для поддержки %@"
           }
         }
       }
@@ -804,6 +1090,12 @@
     },
     "Open any text field" : {
       "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жазатын жерді басыңыз (WhatsApp, SMS)"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",

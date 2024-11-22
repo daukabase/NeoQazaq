@@ -7,7 +7,7 @@
 
 import SwiftUI
 import QazaqFoundation
-import Instabug
+import MessageUI
 
 final class MainViewModel: ObservableObject {
     @Published
@@ -122,13 +122,13 @@ struct MainView: View {
             })
 
             Button(action: {
-                BugReporting.show(with: .question, options: [.commentFieldRequired])
+                presentFeedback(.question)  // Using our new FeedbackService
             }, label: {
                 Text("tech_support")
             })
 
             Button(action: {
-                BugReporting.show(with: .bug, options: [.emailFieldOptional, .commentFieldRequired])
+                presentFeedback(.bug)  // Using our new FeedbackService
             }, label: {
                 Text("Report a bug")
             })

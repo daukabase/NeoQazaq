@@ -32,6 +32,7 @@ public final class AnalyticsServiceFacade: AnalyticsService {
         queue.async {
             self.amplitudeService.track(event: event)
             self.firebaseService.track(event: event)
+            print("[DEBUG][Analytics] event: \(event.name), params: \(event.params)")
         }
     }
 

@@ -33,6 +33,7 @@ struct ManualKeyboardSetupView: View {
     var body: some View {
         VStack(alignment: .leading, content: {
             titleView
+                .padding(.top, 16)
             setupStepsView
                 .padding(.top, 32)
             
@@ -42,7 +43,6 @@ struct ManualKeyboardSetupView: View {
             policyView
         })
         .padding(.horizontal, 32)
-        .padding(.top, 16)
         .navigationBarTitle("Keyboard setup")
         .sheet(isPresented: $showKeyboardGuide) {
             KeyboardSelectionGuideView()
