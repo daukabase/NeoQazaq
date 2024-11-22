@@ -43,7 +43,10 @@ final class KeyboardViewController: KeyboardInputViewController {
         services.autocompleteService = QazaqAutocompleteProvider(
             context: state.autocompleteContext
         )
+
+        state.keyboardContext.locale = KeyboardLocale.kazakh.locale
         services.calloutService = QazaqCalloutService()
+
         let layoutService = CyrillicService(alphabeticInputSet: .russian)
         layoutService.localeKey = KeyboardLocale.russian.id
         services.layoutService = layoutService
