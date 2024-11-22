@@ -42,6 +42,7 @@ struct ManualKeyboardSetupView: View {
             policyView
         })
         .padding(.horizontal, 32)
+        .padding(.top, 16)
         .navigationBarTitle("Keyboard setup")
         .sheet(isPresented: $showKeyboardGuide) {
             KeyboardSelectionGuideView()

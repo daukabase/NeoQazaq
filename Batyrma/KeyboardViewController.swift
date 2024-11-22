@@ -47,6 +47,14 @@ final class KeyboardViewController: KeyboardInputViewController {
         state.keyboardContext.locale = KeyboardLocale.kazakh.locale
         services.calloutService = QazaqCalloutService()
 
+        if !isAutoCapitalizationEnabled {
+            state.keyboardContext.autocapitalizationTypeOverride = nil
+        } else {
+            state.keyboardContext.autocapitalizationTypeOverride = .sentences
+        }
+
+        state.feedbackContext.isAudioFeedbackEnabled = isKeyClicksSoundEnabled
+
         let layoutService = CyrillicService(alphabeticInputSet: .russian)
         layoutService.localeKey = KeyboardLocale.russian.id
         services.layoutService = layoutService

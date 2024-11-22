@@ -181,6 +181,9 @@
         }
       }
     },
+    "Bring up the keyboard" : {
+
+    },
     "coming soon" : {
       "localizations" : {
         "en" : {
@@ -550,6 +553,12 @@
         }
       }
     },
+    "Located next to spacebar" : {
+
+    },
+    "Long-press globe icon" : {
+
+    },
     "Magic Auto-Correction" : {
       "localizations" : {
         "en" : {
@@ -754,6 +763,9 @@
         }
       }
     },
+    "Open any text field" : {
+
+    },
     "Privacy Policy" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -842,6 +854,9 @@
           }
         }
       }
+    },
+    "Select %@" : {
+
     },
     "Set up %@ in the Settings" : {
       "localizations" : {
@@ -1128,6 +1143,9 @@
           }
         }
       }
+    },
+    "Will remain active until changed" : {
+
     }
   },
   "version" : "1.0"

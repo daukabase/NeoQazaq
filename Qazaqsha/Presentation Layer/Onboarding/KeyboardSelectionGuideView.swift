@@ -40,19 +40,19 @@ struct KeyboardSelectionGuideView: View {
         VStack(alignment: .leading, spacing: 12) {
             text(
                 index: 0,
-                text: "Open any text field",
-                subtitle: "Bring up the keyboard"
+                text: String(localized: "Open any text field"),
+                subtitle: String(localized: "Bring up the keyboard")
             )
             iconText(
                 index: 1,
                 icon: globeIcon,
-                text: "Long-press globe icon",
-                subtitle: "Located next to spacebar"
+                text: String(localized: "Long-press globe icon"),
+                subtitle: String(localized: "Located next to spacebar")
             )
             text(
                 index: 2,
-                text: "Select \(GlobalConstants.appName)",
-                subtitle: "Will remain active until changed"
+                text: String(localized: "Select \(GlobalConstants.appName)"),
+                subtitle: String(localized: "Will remain active until changed")
             )
         }
     }
