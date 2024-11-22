@@ -340,13 +340,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Қосымша нұсқасы"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Версия приложения"
           }
         }
@@ -362,13 +362,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : " болғанын сипаттаңыз"
+            "state" : "translated",
+            "value" : "Не болғанын сипаттаңыз"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Опишите, что произошло"
           }
         }
@@ -390,7 +390,7 @@
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Cообщение об ошибке %@"
           }
         }
@@ -406,13 +406,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Поштаны көшіру"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Скопировать почту"
           }
         }
@@ -428,13 +428,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Құрылғы туралы ақпарат"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Информация об устройстве"
           }
         }
@@ -450,13 +450,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Үлгі"
+            "state" : "translated",
+            "value" : "Девайс"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Модель"
           }
         }
@@ -472,13 +472,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Өтініш, хабарламаңызды %@ поштасына жіберіңіз"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Пожалуйста, отправьте обратную связь на %@"
           }
         }
@@ -494,13 +494,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Электрондық пошта қолжетімсіз"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Почта недоступна"
           }
         }
@@ -516,13 +516,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Қалай жұмыс істелгені күтілуде"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Ожидаемое поведение"
           }
         }
@@ -538,13 +538,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "iOS нұсқасы"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Версия iOS"
           }
         }
@@ -560,13 +560,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Жақсы"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "OK"
           }
         }
@@ -582,13 +582,13 @@
         },
         "kk" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Қателікті қайталау жолы"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Шаги для воспроизведения"
           }
         }
@@ -610,7 +610,7 @@
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Вопрос для поддержки %@"
           }
         }

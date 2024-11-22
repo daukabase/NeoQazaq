@@ -40,7 +40,12 @@ class FeedbackService: NSObject, MFMailComposeViewControllerDelegate {
             
             switch self {
             case .question:
-                return deviceInfo
+                return """
+                
+                
+                
+                \(deviceInfo)
+                """
             case .bug:
                 return """
                 \(String(localized: "feedback_bug_description")):
