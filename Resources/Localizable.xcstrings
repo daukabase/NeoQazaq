@@ -183,6 +183,12 @@
     },
     "Bring up the keyboard" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bring up the keyboard"
+          }
+        },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -326,6 +332,88 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Клавиша эмодзи"
+          }
+        }
+      }
+    },
+    "FAQ" : {
+      "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FAQ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FAQ"
+          }
+        }
+      }
+    },
+    "faq_frequently_asked" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frequently Asked Questions"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жиі қойылатын сұрақтар"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Часто задаваемые вопросы"
+          }
+        }
+      }
+    },
+    "faq_how_to_setup_keyboard%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How to setup %@"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ пернетақтасын қалай орнату керек"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как установить %@"
+          }
+        }
+      }
+    },
+    "faq_how_to_switch_keyboard%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How to switch to %@"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ пернетақтасына қалай ауысуға болады"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как переключиться на %@"
           }
         }
       }
@@ -704,28 +792,6 @@
         }
       }
     },
-    "How to setupKeyboard" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "How to setupKeyboard"
-          }
-        },
-        "kk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Пернетақтаны қалай орнатуға болады"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Как настроить клавиатуру"
-          }
-        }
-      }
-    },
     "How to switch to keyboard" : {
       "localizations" : {
         "en" : {
@@ -1090,6 +1156,12 @@
     },
     "Open any text field" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open any text field"
+          }
+        },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",

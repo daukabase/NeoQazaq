@@ -109,17 +109,24 @@ struct MainView: View {
     }
     var actionsSection: some View {
         Section(content: {
-            Button(action: {
-                viewModel.keyboardSelectionShowing = true
-            }, label: {
-                Text("How to switch to keyboard")
-            })
+//            Button(action: {
+//                viewModel.keyboardSelectionShowing = true
+//            }, label: {
+//                Text("How to switch to keyboard")
+//            })
+//
+//            Button(action: {
+//                viewModel.keyboardSetupShowing = true
+//            }, label: {
+//                Text("How to setupKeyboard")
+//            })
+            
+            NavigationLink {
+                FAQView(viewModel: FAQViewModel())
+            } label: {
+                Text("FAQ")
+            }
 
-            Button(action: {
-                viewModel.keyboardSetupShowing = true
-            }, label: {
-                Text("How to setupKeyboard")
-            })
 
             Button(action: {
                 presentFeedback(.question)  // Using our new FeedbackService
@@ -147,6 +154,15 @@ struct MainView: View {
         })
     }
     
+    var faqSection: some View {
+        Section {
+            NavigationLink {
+                MagicAutocorrectionView(viewModel: viewModel.magicAutocorrection)
+            } label: {
+                Text("FAQ")
+            }
+        }
+    }
 }
 
 struct MainView_Preview: PreviewProvider {
