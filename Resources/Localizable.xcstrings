@@ -95,6 +95,12 @@
     },
     "Allow Full Access" : {
       "localizations" : {
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Толық рұқсат беру"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
