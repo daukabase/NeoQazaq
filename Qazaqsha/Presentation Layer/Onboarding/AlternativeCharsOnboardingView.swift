@@ -38,7 +38,7 @@ struct AlternativeCharsOnboardingView: View {
             })
             .listRowInsets(EdgeInsets())
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(400)) {
                     shouldPlay = true
                 }
             }

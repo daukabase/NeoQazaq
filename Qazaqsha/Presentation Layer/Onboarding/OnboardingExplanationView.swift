@@ -50,7 +50,7 @@ struct OnboardingExplanationView: View {
 
     var contentView: some View {
         VStack(alignment: .center, spacing: 0) {
-            appIcon
+            AppIconView()
 
             Text("onboarding_welcome_subtitle")
                 .foregroundColor(Asset.Colors.text.swiftUIColor)
@@ -113,6 +113,36 @@ struct OnboardingExplanationView: View {
             .font(.caption).multilineTextAlignment(.leading)
     }
 }
+
+struct AppIconView: View {
+    static let iconSize = CGFloat(100)
+
+    @Environment(\.colorScheme)
+    private var colorScheme: ColorScheme
+
+    var body: some View {
+        appIcon
+    }
+
+    var appIcon: some View {
+        Asset.Images.appIconNoBackground.swiftUIImage
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: Self.iconSize, height: Self.iconSize)
+            .background(
+                RoundedRectangle(cornerRadius: 25.0)
+                    .frame(width: Self.iconSize / 2, height: Self.iconSize / 2)
+                    .foregroundStyle(.white)
+                    .shadow(color: .blue, radius: 15, x: -8, y: 8)
+            )
+    }
+
+    var policyView: some View {
+        Text("data_not_collected")
+            .font(.caption).multilineTextAlignment(.leading)
+    }
+}
+
 
 struct OnboardingExplanationView_Preview: PreviewProvider {
     static var previews: some View {

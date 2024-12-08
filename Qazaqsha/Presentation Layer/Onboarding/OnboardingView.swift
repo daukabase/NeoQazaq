@@ -11,12 +11,36 @@ import QazaqFoundation
 struct OnboardingView: View {
     @ObservedObject
     var viewModel: OnboardingViewModel
+    @State private var isLoading = true
 
     init(viewModel: OnboardingViewModel) {
         self.viewModel = viewModel
     }
 
     var body: some View {
+        Group {
+            if isLoading {
+                VStack {
+                    FakeLoadingView()
+                }
+            } else {
+                content
+            }
+        }
+        .onAppear {
+            startLoading()
+        }
+    }
+
+    private func startLoading() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            withAnimation {
+                isLoading = false
+            }
+        }
+    }
+
+    var content: some View {
         VStack {
             ForEach($viewModel.pages, id: \.self) { page in
                 if page.wrappedValue == viewModel.currentPage {
@@ -132,3 +156,67 @@ struct OnboardingView_Preview: PreviewProvider {
     }
 }
 
+
+struct FakeLoadingView: View {
+    static let iconSize = CGFloat(200)
+
+    @Environment(\.colorScheme)
+    private var colorScheme: ColorScheme
+
+    @State private var shadowOffsetX: CGFloat = 16
+    @State private var shadowOffsetY: CGFloat = 16
+    @State private var shadowOpacity: Double = 0.5
+    
+    let steps = [(1, -1), (-1, -1), (-1, 1), (1, 1)].reversed()
+
+    var body: some View {
+        VStack(spacing: 16) {
+            appIcon.onAppear {
+                animateShadow()
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemBackground).opacity(0.9))
+        
+    }
+
+    var appIcon: some View {
+        Asset.Images.appIconNoBackground.swiftUIImage
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: Self.iconSize, height: Self.iconSize)
+            .background(
+                RoundedRectangle(cornerRadius: 25.0)
+                    .fill(Color.white)
+                    .frame(width: Self.iconSize / 2, height: Self.iconSize / 2)
+                    .shadow(color: .blue.opacity(shadowOpacity),
+                            radius: 15,
+                            x: shadowOffsetX,
+                            y: shadowOffsetY)
+            )
+    }
+
+    var policyView: some View {
+        Text("We do not collect any personal data.")
+            .font(.caption)
+            .foregroundColor(.gray)
+            .multilineTextAlignment(.center)
+    }
+
+    private func animateShadow() {
+        for (index, step) in steps.enumerated() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index)) {
+                withAnimation(Animation.easeInOut(duration: 1)) {
+                    shadowOffsetX = CGFloat(step.0) * 16
+                    shadowOffsetY = CGFloat(step.1) * 16
+                    shadowOpacity = 0.8
+                }
+                if index == steps.count - 1 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        animateShadow()
+                    }
+                }
+            }
+        }
+    }
+}
