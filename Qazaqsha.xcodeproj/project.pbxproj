@@ -1457,7 +1457,7 @@
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Batyrma/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = NeoQazaq;
+				INFOPLIST_KEY_CFBundleDisplayName = Batyrma;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1488,7 +1488,7 @@
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Batyrma/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = NeoQazaq;
+				INFOPLIST_KEY_CFBundleDisplayName = Batyrma;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1726,8 +1726,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.9.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 8.8.0;
 			};
 		};
 		0BF8087B2BD113B40000DD96 /* XCRemoteSwiftPackageReference "Instabug-SP" */ = {

@@ -45,20 +45,21 @@ final class KeyboardViewController: KeyboardInputViewController {
         )
 
         state.keyboardContext.locale = KeyboardLocale.kazakh.locale
-        services.calloutService = QazaqCalloutService()
-
-        if !isAutoCapitalizationEnabled {
-            state.keyboardContext.autocapitalizationTypeOverride = nil
-        } else {
-            state.keyboardContext.autocapitalizationTypeOverride = .sentences
-        }
-
+        state.keyboardContext.isAutocapitalizationEnabled = isAutoCapitalizationEnabled
         state.feedbackContext.isAudioFeedbackEnabled = isKeyClicksSoundEnabled
 
+        services.calloutService = QazaqCalloutService()
+
         let layoutService = CyrillicService(alphabeticInputSet: .russian)
-        layoutService.localeKey = KeyboardLocale.russian.id
         services.layoutService = layoutService
 
         super.viewDidLoad()
+    }
+    
+    public override func textDidChange(_ textInput: UITextInput?) {
+        super.textDidChange(textInput)
+        DispatchQueue.main.async { [weak self] in
+            self?.textDidChangeAsync(textInput)
+        }
     }
 }
