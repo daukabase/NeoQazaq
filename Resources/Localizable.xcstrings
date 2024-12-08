@@ -98,19 +98,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Batyrma - Smart Qazaq Keyboard"
+            "value" : "Batyrma"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Batyrma - Ақылды Қазақ Пернетақтасы"
+            "value" : "Batyrma"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Batyrma - Умная Казахская Клавиатура"
+            "value" : "Batyrma"
           }
         }
       }
