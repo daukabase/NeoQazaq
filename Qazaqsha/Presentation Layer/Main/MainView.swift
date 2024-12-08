@@ -109,18 +109,6 @@ struct MainView: View {
     }
     var actionsSection: some View {
         Section(content: {
-//            Button(action: {
-//                viewModel.keyboardSelectionShowing = true
-//            }, label: {
-//                Text("How to switch to keyboard")
-//            })
-//
-//            Button(action: {
-//                viewModel.keyboardSetupShowing = true
-//            }, label: {
-//                Text("How to setupKeyboard")
-//            })
-            
             NavigationLink {
                 FAQView(viewModel: FAQViewModel())
             } label: {

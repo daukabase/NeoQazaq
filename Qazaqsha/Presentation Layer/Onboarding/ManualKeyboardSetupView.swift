@@ -94,7 +94,7 @@ struct ManualKeyboardSetupView: View {
                     iconText(
                         index: index,
                         icon: icon(for: Asset.Images.appleSettingsGear.swiftUIImage),
-                        text: "Settings"
+                        text: String(localized: "Settings")
                     )
                 case 1:
                     iconText(
@@ -107,20 +107,21 @@ struct ManualKeyboardSetupView: View {
                     iconText(
                         index: index,
                         icon: keyboardIcon,
-                        text: "Keyboards"
+                        text: String(localized: "Keyboards")
                     )
                 case 3:
                     text(index: index, text: "Enable \(Constants.keyboardName)")
                 case 4:
                     text(
                         index: index,
-                        text: "Allow Full Access",
-                        subtitle: "Optional"
+                        text: String(localized: "Allow Full Access"),
+                        subtitle: String(localized: "Optional")
                     )
                 case 5:
                     text(
                         index: index,
-                        text: "Come back to finish setup"
+                        text: String(localized: "If the keyboard does not appear"),
+                        subtitle: String(localized: "Try closing and reopening the Settings app")
                     )
                 default:
                     Rectangle()
@@ -200,7 +201,7 @@ struct ManualKeyboardSetupView: View {
             
             VStack(alignment: .leading, content: {
                 HStack {
-                    Text(text).foregroundColor(Asset.Colors.text.swiftUIColor)
+                    Text(text).foregroundColor(Asset.Colors.text.swiftUIColor).lineLimit(nil)
                 }
                 
                 if let subtitle {
@@ -210,7 +211,7 @@ struct ManualKeyboardSetupView: View {
             
             Spacer()
         }
-        .frame(height: 40)
+        .frame(minHeight: 40)
     }
     
     func indexView(index: Int) -> some View {

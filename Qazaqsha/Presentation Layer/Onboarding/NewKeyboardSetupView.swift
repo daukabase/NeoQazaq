@@ -33,7 +33,9 @@ struct NewKeyboardSetupView: View {
     
     @State var manualSetupSheetShowing = false
     @State var showKeyboardGuide = false
-
+    @State private var showTroubleshootingTip = false
+    @State private var isIOS18 = UIDevice.current.systemVersion.hasPrefix("18")
+    
     @ObservedObject
     var viewModel: NewKeyboardSetupViewModel
 
@@ -121,6 +123,11 @@ struct NewKeyboardSetupView: View {
         VStack(alignment: .center, spacing: 4) {
             Button(action: {
                 openURL(URL(string: UIApplication.openSettingsURLString)!)
+                if isIOS18 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        showTroubleshootingTip = true
+                    }
+                }
             }, label: {
                 Text("Add now")
                     .font(.headline)
@@ -132,6 +139,18 @@ struct NewKeyboardSetupView: View {
             .background(.blue)
             .clipShape(RoundedRectangle(cornerRadius: 24))
 
+            if showTroubleshootingTip {
+                VStack(spacing: 4) {
+                    Text("Don't see the keyboard?")
+                        .font(.caption)
+                        .foregroundColor(Asset.Colors.text.swiftUIColor)
+                    Text("Try closing and reopening the Settings app")
+                        .font(.caption)
+                        .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
+                }
+                .padding(.top, 8)
+            }
+            
             showManualSteps
         }
     }
