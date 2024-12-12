@@ -7,7 +7,7 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForTesting = "NO"
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
@@ -17,6 +17,20 @@
                BlueprintIdentifier = "0B62F1FD2BC2EC170069E5CF"
                BuildableName = "WordSuggestionsEngine.framework"
                BlueprintName = "WordSuggestionsEngine"
+               ReferencedContainer = "container:Qazaqsha.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0B62F2062BC2EC170069E5CF"
+               BuildableName = "WordSuggestionsEngineTests.xctest"
+               BlueprintName = "WordSuggestionsEngineTests"
                ReferencedContainer = "container:Qazaqsha.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

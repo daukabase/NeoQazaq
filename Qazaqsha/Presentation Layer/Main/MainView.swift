@@ -8,13 +8,14 @@
 import SwiftUI
 import QazaqFoundation
 import MessageUI
+import StoreKit
 
 final class MainViewModel: ObservableObject {
     @Published
     var keyboardSelectionShowing = false
     @Published
     var keyboardSetupShowing = false
-
+    
     var donateProject = TextRightChevronViewModel(
         text: "Donate to project",
         isChevronHidden: true,
@@ -23,6 +24,68 @@ final class MainViewModel: ObservableObject {
         }
     )
     let magicAutocorrection = MagicAutocorrectionViewModel()
+    
+    private let lastReviewRequestKey = "lastReviewRequest"
+    private let appLaunchCountKey = "appLaunchCount"
+
+    func shouldRequestReview() -> Bool {
+        let defaults = UserDefaults.standard
+        
+        // Increment launch count
+        let launchCount = (defaults.integer(forKey: appLaunchCountKey) + 1)
+        defaults.set(launchCount, forKey: appLaunchCountKey)
+        
+        let lastRequest = defaults.object(forKey: lastReviewRequestKey) as? Date
+        
+        var shouldRequest = false
+        if let lastRequest {
+            // Request review if last request was 2+ days ago
+            if let days = Calendar.current.dateComponents([.day], from: lastRequest, to: Date()).day, days >= 2 {
+                shouldRequest = true
+            }
+        } else if launchCount >= 2 {
+            // First time request: show after 2nd launch
+            shouldRequest = true
+        }
+        
+        if shouldRequest {
+            defaults.set(Date(), forKey: lastReviewRequestKey)
+        }
+        
+        return shouldRequest
+    }
+}
+
+final class AppReviewRequestManager {
+    private let lastReviewRequestKey = "lastReviewRequest"
+    private let appLaunchCountKey = "appLaunchCount"
+
+    func shouldRequestReview() -> Bool {
+        let defaults = UserDefaults.standard
+        
+        // Increment launch count
+        let launchCount = (defaults.integer(forKey: appLaunchCountKey) + 1)
+        defaults.set(launchCount, forKey: appLaunchCountKey)
+        
+        let lastRequest = defaults.object(forKey: lastReviewRequestKey) as? Date
+        
+        var shouldRequest = false
+        if let lastRequest {
+            // Request review if last request was 2+ days ago
+            if let days = Calendar.current.dateComponents([.day], from: lastRequest, to: Date()).day, days >= 2 {
+                shouldRequest = true
+            }
+        } else if launchCount >= 2 {
+            // First time request: show after 2nd launch
+            shouldRequest = true
+        }
+        
+        if shouldRequest {
+            defaults.set(Date(), forKey: lastReviewRequestKey)
+        }
+        
+        return shouldRequest
+    }
 }
 
 struct MainView: View {
@@ -69,6 +132,10 @@ struct MainView: View {
                         return model
                     }())
                 }
+            }
+        }.onAppear {
+            DispatchQueue.main.async {
+                AppReviewService.shared.requestReviewIfNeeded()
             }
         }
     }

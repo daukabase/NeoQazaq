@@ -46,6 +46,7 @@
 		0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B4BA0CF2BC2F4D200F6E182 /* qazaqWordsList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */; };
 		0B4BA0D02BC2F4D700F6E182 /* ShalaqazaqDatasetV2.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B1E44F52B72C7DA00796ED3 /* ShalaqazaqDatasetV2.json */; };
+		0B50920A2D0AD6EF00C632FE /* AppReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5092092D0AD6EF00C632FE /* AppReviewService.swift */; };
 		0B5BBE582BCEA90F0099F5F3 /* KeyboardSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5BBE572BCEA90F0099F5F3 /* KeyboardSelectionView.swift */; };
 		0B5BBE5C2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B5BBE5A2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif */; };
 		0B5BBE5D2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B5BBE5B2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif */; };
@@ -53,7 +54,6 @@
 		0B5BBE622BCFBE4D0099F5F3 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5BBE612BCFBE4D0099F5F3 /* RoundedCorners.swift */; };
 		0B62F2022BC2EC170069E5CF /* WordSuggestionsEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F2012BC2EC170069E5CF /* WordSuggestionsEngine.docc */; };
 		0B62F2082BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
-		0B62F20F2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F20E2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift */; };
 		0B62F2102BC2EC170069E5CF /* WordSuggestionsEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B62F2002BC2EC170069E5CF /* WordSuggestionsEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B62F2132BC2EC170069E5CF /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0B62F2142BC2EC170069E5CF /* WordSuggestionsEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -99,6 +99,7 @@
 		0BEDB01B2BC30F540034027D /* Batyrma.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0BF8087D2BD113B40000DD96 /* Instabug in Frameworks */ = {isa = PBXBuildFile; productRef = 0BF8087C2BD113B40000DD96 /* Instabug */; };
 		0BF808802BD11C100000DD96 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF8087F2BD11C100000DD96 /* WebView.swift */; };
+		0BFB2F0F2D069C0D00EC1058 /* QazaqWordSuggestionsEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62F20E2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +258,7 @@
 		0B49BA0F2BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeAnalyticsService.swift; sourceTree = "<group>"; };
 		0B49BA112BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsService.swift; sourceTree = "<group>"; };
 		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
+		0B5092092D0AD6EF00C632FE /* AppReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewService.swift; sourceTree = "<group>"; };
 		0B5BBE572BCEA90F0099F5F3 /* KeyboardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSelectionView.swift; sourceTree = "<group>"; };
 		0B5BBE5A2BCEABE70099F5F3 /* selectNeoQazaqKeyboardWhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = selectNeoQazaqKeyboardWhite.gif; sourceTree = "<group>"; };
 		0B5BBE5B2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = selectNeoQazaqKeyboardDark.gif; sourceTree = "<group>"; };
@@ -689,6 +691,7 @@
 				0B2D8B9D2BCAABCE00F4362C /* SettingsView.swift */,
 				0BF8087F2BD11C100000DD96 /* WebView.swift */,
 				0B2D8BA22BCC115A00F4362C /* MainView.swift */,
+				0B5092092D0AD6EF00C632FE /* AppReviewService.swift */,
 				0B09458E2CF0A9600027F1FD /* FeedbackService.swift */,
 			);
 			path = Main;
@@ -998,7 +1001,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B62F20F2BC2EC170069E5CF /* QazaqWordSuggestionsEngineTests.swift in Sources */,
+				0BFB2F0F2D069C0D00EC1058 /* QazaqWordSuggestionsEngineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,6 +1013,7 @@
 				0B5BBE582BCEA90F0099F5F3 /* KeyboardSelectionView.swift in Sources */,
 				0B09458F2CF0A9600027F1FD /* FeedbackService.swift in Sources */,
 				0B0945912CF0C55A0027F1FD /* FAQView.swift in Sources */,
+				0B50920A2D0AD6EF00C632FE /* AppReviewService.swift in Sources */,
 				0B1C57032CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift in Sources */,
 				0B2D8BA12BCC0DEE00F4362C /* TextRightChevronView.swift in Sources */,
 				0B2D8BA32BCC115A00F4362C /* MainView.swift in Sources */,
