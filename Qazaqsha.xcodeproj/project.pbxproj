@@ -1733,7 +1733,7 @@
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.24.0;
+				minimumVersion = 11.0.0;
 			};
 		};
 		0B2D8BB52BCD3A4D00F4362C /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
@@ -1748,8 +1748,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/amplitude/Amplitude-Swift";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.1;
 			};
 		};
 		0BAF84642CECD55700A6DE39 /* XCRemoteSwiftPackageReference "KeyboardKit" */ = {
@@ -1757,7 +1757,7 @@
 			repositoryURL = "https://github.com/KeyboardKit/KeyboardKit";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 8.8.0;
+				minimumVersion = 9.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

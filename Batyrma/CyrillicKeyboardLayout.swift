@@ -10,6 +10,7 @@ import KeyboardKit
 final class CyrillicKeyboardLayout {
 
     static func get(for layout: KeyboardKit.KeyboardLayout) -> KeyboardKit.KeyboardLayout {
+        var layout = layout
         var rows = layout.itemRows
         var row_1 = layout.itemRows[0]
         var row_2 = layout.itemRows[1]

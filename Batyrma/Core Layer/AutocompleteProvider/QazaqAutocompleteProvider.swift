@@ -11,20 +11,21 @@ import QazaqFoundation
 import WordSuggestionsEngine
 
 class QazaqAutocompleteProvider: AutocompleteService {
-   
-    let suggestionEngine: WordSuggestionsEngine = QazaqWordSuggestionsEngineV2()
+    private let suggestionEngine: WordSuggestionsEngine = QazaqWordSuggestionsEngineV2()
 
     @UserDefault(item: UserDefaults.autocompleteItem)
-    var isAutocompleteEnabled
-
+    private var isAutocompleteEnabled
+    
     init(context: AutocompleteContext) {
         self.context = context
     }
-
+    
     private var context: AutocompleteContext
-    
+
+    // MARK: - AutocompleteService
+
     var locale: Locale = .current
-    
+
     var canIgnoreWords: Bool { false }
     var canLearnWords: Bool { false }
     var ignoredWords: [String] = []
@@ -37,12 +38,9 @@ class QazaqAutocompleteProvider: AutocompleteService {
     func removeIgnoredWord(_ word: String) {}
     func unlearnWord(_ word: String) {}
 
-    func autocompleteSuggestions(for text: String) async throws -> [KeyboardKit.Autocomplete.Suggestion] {
-        getAutocompleteSuggestions(for: text)
-    }
-    
-    func nextCharacterPredictions(forText text: String, suggestions: [KeyboardKit.Autocomplete.Suggestion]) async throws -> [Character : Double] {
-        [:]
+    func autocomplete(_ text: String) async throws -> Autocomplete.ServiceResult {
+        let lastWord = text.components(separatedBy: .whitespaces).last ?? ""
+        return Autocomplete.ServiceResult(inputText: lastWord, suggestions: getAutocompleteSuggestions(for: lastWord))
     }
 
     private func getAutocompleteSuggestions(
