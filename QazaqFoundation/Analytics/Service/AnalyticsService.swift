@@ -24,7 +24,7 @@ public final class AnalyticsServiceFacade: AnalyticsService {
     
     public func configure() {
         queue.async {
-            FirebaseApp.configure()
+//            FirebaseApp.configure()
         }
     }
 
