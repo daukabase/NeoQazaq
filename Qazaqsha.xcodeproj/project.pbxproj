@@ -12,12 +12,12 @@
 		0B096D142BE8004D00C86662 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B096D132BE8004D00C86662 /* GlobalConstants.swift */; };
 		0B13E7DC2BDA7A9700CB11F9 /* russianWordsDataset.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0B13E7DB2BDA7A9700CB11F9 /* russianWordsDataset.txt */; };
 		0B18B0162BD01C96005E8EBC /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */; };
-		0B18B0192BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */; };
-		0B18B01A2BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */; };
 		0B18B01D2BD0F9EF005E8EBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */; };
 		0B1C3DD52D29337100307503 /* GoogleService-Info-Keyboard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C3DD42D29337100307503 /* GoogleService-Info-Keyboard.plist */; };
 		0B1C3DD72D2933EB00307503 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C3DD62D2933EB00307503 /* FirebaseService.swift */; };
-		0B1C3DD92D29343200307503 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0B1C3DD82D29343200307503 /* FirebaseCrashlytics */; };
+		0B1C3DDB2D2937C500307503 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C3DDA2D2937C500307503 /* GoogleService-Info.plist */; };
+		0B1C3DDD2D29392300307503 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C3DDC2D29392300307503 /* FirebaseService.swift */; };
+		0B1C3DDF2D293A6200307503 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0B1C3DDE2D293A6200307503 /* FirebaseCrashlytics */; };
 		0B1C57032CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C57022CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift */; };
 		0B1C57062CB1619A00CE7FEC /* longPressWhite.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C57042CB1619A00CE7FEC /* longPressWhite.gif */; };
 		0B1C57072CB1619A00CE7FEC /* longPressDark.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0B1C57052CB1619A00CE7FEC /* longPressDark.gif */; };
@@ -41,9 +41,6 @@
 		0B49BA0B2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49BA0A2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift */; };
 		0B49BA0E2BE3D27E00EFBE59 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49BA0D2BE3D27E00EFBE59 /* AnalyticsService.swift */; };
 		0B49BA102BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49BA0F2BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift */; };
-		0B49BA122BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49BA112BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift */; };
-		0B49BA142BE3D3C100EFBE59 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0B49BA132BE3D3C100EFBE59 /* FirebaseAnalytics */; };
-		0B49BA162BE3D3C100EFBE59 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B49BA152BE3D3C100EFBE59 /* FirebaseAnalyticsSwift */; };
 		0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
 		0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B62F1FE2BC2EC170069E5CF /* WordSuggestionsEngine.framework */; };
 		0B4BA0C92BC2F0EF00F6E182 /* QazaqFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */; };
@@ -239,10 +236,11 @@
 		0B096D132BE8004D00C86662 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		0B13E7DB2BDA7A9700CB11F9 /* russianWordsDataset.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = russianWordsDataset.txt; sourceTree = "<group>"; };
 		0B18B0152BD01C96005E8EBC /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B1C3DD42D29337100307503 /* GoogleService-Info-Keyboard.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Keyboard.plist"; sourceTree = "<group>"; };
 		0B1C3DD62D2933EB00307503 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		0B1C3DDA2D2937C500307503 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0B1C3DDC2D29392300307503 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		0B1C57022CB15F6700CE7FEC /* AlternativeCharsOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternativeCharsOnboardingView.swift; sourceTree = "<group>"; };
 		0B1C57042CB1619A00CE7FEC /* longPressWhite.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = longPressWhite.gif; sourceTree = "<group>"; };
 		0B1C57052CB1619A00CE7FEC /* longPressDark.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = longPressDark.gif; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 		0B49BA0A2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventProtocol.swift; sourceTree = "<group>"; };
 		0B49BA0D2BE3D27E00EFBE59 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		0B49BA0F2BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeAnalyticsService.swift; sourceTree = "<group>"; };
-		0B49BA112BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsService.swift; sourceTree = "<group>"; };
 		0B5066EA2B80AE0000C01D14 /* qazaqWordsList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = qazaqWordsList.txt; sourceTree = "<group>"; };
 		0B5092092D0AD6EF00C632FE /* AppReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewService.swift; sourceTree = "<group>"; };
 		0B5BBE572BCEA90F0099F5F3 /* KeyboardSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSelectionView.swift; sourceTree = "<group>"; };
@@ -349,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4BA0C12BC2F0E000F6E182 /* QazaqFoundation.framework in Frameworks */,
+				0B1C3DDF2D293A6200307503 /* FirebaseCrashlytics in Frameworks */,
 				0BAF84662CECD55700A6DE39 /* KeyboardKit in Frameworks */,
 				0B4BA0C52BC2F0E000F6E182 /* WordSuggestionsEngine.framework in Frameworks */,
 			);
@@ -358,11 +356,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B49BA162BE3D3C100EFBE59 /* FirebaseAnalyticsSwift in Frameworks */,
 				0B49BA092BE3D15500EFBE59 /* AmplitudeSwift in Frameworks */,
-				0B1C3DD92D29343200307503 /* FirebaseCrashlytics in Frameworks */,
 				0B2D8BB72BCD3A6600F4362C /* FLAnimatedImage in Frameworks */,
-				0B49BA142BE3D3C100EFBE59 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +441,6 @@
 				0B49BA0D2BE3D27E00EFBE59 /* AnalyticsService.swift */,
 				0B1C3DD62D2933EB00307503 /* FirebaseService.swift */,
 				0B49BA0F2BE3D29200EFBE59 /* AmplitudeAnalyticsService.swift */,
-				0B49BA112BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -536,7 +530,7 @@
 			children = (
 				0BA294132B91DF9A001465DF /* Qazaqsha.entitlements */,
 				0BAB0BC52B811AB600DB06F5 /* Info.plist */,
-				0B18B0182BD0F83B005E8EBC /* GoogleService-Info.plist */,
+				0B1C3DDA2D2937C500307503 /* GoogleService-Info.plist */,
 				0BBDCEC52BD13FBA002781C8 /* Application Layer */,
 				0BBDCEC42BD13FAA002781C8 /* Presentation Layer */,
 				0B800E4C2B681A8A00EADCA9 /* Assets.xcassets */,
@@ -616,6 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				0B18B01C2BD0F9EF005E8EBC /* AppDelegate.swift */,
+				0B1C3DDC2D29392300307503 /* FirebaseService.swift */,
 				0B800E4A2B681A8900EADCA9 /* AppMain.swift */,
 			);
 			path = "Application Layer";
@@ -773,6 +768,7 @@
 				0B800E412B681A8900EADCA9 /* Sources */,
 				0B800E422B681A8900EADCA9 /* Frameworks */,
 				0B800E432B681A8900EADCA9 /* Resources */,
+				0B2683732D294167004E65EB /* Upload dSYM into Crashlytics */,
 				0B62F2152BC2EC170069E5CF /* Embed Frameworks */,
 				0BEDB01E2BC30F540034027D /* Embed Foundation Extensions */,
 			);
@@ -808,6 +804,7 @@
 			name = Batyrma;
 			packageProductDependencies = (
 				0BAF84652CECD55700A6DE39 /* KeyboardKit */,
+				0B1C3DDE2D293A6200307503 /* FirebaseCrashlytics */,
 			);
 			productName = Batyrma;
 			productReference = 0B800E5F2B681AEE00EADCA9 /* Batyrma.appex */;
@@ -830,9 +827,6 @@
 			packageProductDependencies = (
 				0B2D8BB62BCD3A6600F4362C /* FLAnimatedImage */,
 				0B49BA082BE3D15500EFBE59 /* AmplitudeSwift */,
-				0B49BA132BE3D3C100EFBE59 /* FirebaseAnalytics */,
-				0B49BA152BE3D3C100EFBE59 /* FirebaseAnalyticsSwift */,
-				0B1C3DD82D29343200307503 /* FirebaseCrashlytics */,
 			);
 			productName = QazaqFoundation;
 			productReference = 0B981F4C2BC2ECC1000308C2 /* QazaqFoundation.framework */;
@@ -953,8 +947,8 @@
 				0BD52E1A2CD8C228006A4B6A /* longPressIDark.mov in Resources */,
 				0B4690632BD7EF1B000FA0A7 /* Settings.bundle in Resources */,
 				0B30DA732B8B2E0100215711 /* Images.xcassets in Resources */,
-				0B18B0192BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */,
 				0B30DA742B8B2E0500215711 /* Colors.xcassets in Resources */,
+				0B1C3DDB2D2937C500307503 /* GoogleService-Info.plist in Resources */,
 				0B800E502B681A8A00EADCA9 /* Preview Assets.xcassets in Resources */,
 				0B1C57062CB1619A00CE7FEC /* longPressWhite.gif in Resources */,
 				0B5BBE5D2BCEABE70099F5F3 /* selectNeoQazaqKeyboardDark.gif in Resources */,
@@ -968,7 +962,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B18B01A2BD0F83B005E8EBC /* GoogleService-Info.plist in Resources */,
 				0BCA611F2B6BC73F0038FAFB /* Images.xcassets in Resources */,
 				0B1C3DD52D29337100307503 /* GoogleService-Info-Keyboard.plist in Resources */,
 				0BCA61212B6BC8D50038FAFB /* Colors.xcassets in Resources */,
@@ -991,6 +984,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B2683732D294167004E65EB /* Upload dSYM into Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = "Upload dSYM into Crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B62F1FA2BC2EC170069E5CF /* Sources */ = {
@@ -1020,6 +1039,7 @@
 			files = (
 				0B5BBE602BCFBA1F0099F5F3 /* OnboardingExplanationView.swift in Sources */,
 				0B5BBE582BCEA90F0099F5F3 /* KeyboardSelectionView.swift in Sources */,
+				0B1C3DDD2D29392300307503 /* FirebaseService.swift in Sources */,
 				0B09458F2CF0A9600027F1FD /* FeedbackService.swift in Sources */,
 				0B0945912CF0C55A0027F1FD /* FAQView.swift in Sources */,
 				0B50920A2D0AD6EF00C632FE /* AppReviewService.swift in Sources */,
@@ -1069,7 +1089,6 @@
 				0B49BA0B2BE3D26500EFBE59 /* AnalyticsEventProtocol.swift in Sources */,
 				0B2D8BA82BCD2D5F00F4362C /* GifImage.swift in Sources */,
 				0BD2012C2BC2EDAC0065DBC1 /* UIImage+.swift in Sources */,
-				0B49BA122BE3D2A200EFBE59 /* FirebaseAnalyticsService.swift in Sources */,
 				0B981F502BC2ECC1000308C2 /* QazaqFoundation.docc in Sources */,
 				0B2D8BAF2BCD37B200F4362C /* UIImage+Gif.swift in Sources */,
 				0B5BBE622BCFBE4D0099F5F3 /* RoundedCorners.swift in Sources */,
@@ -1393,6 +1412,7 @@
 				CODE_SIGN_ENTITLEMENTS = Qazaqsha/Qazaqsha.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"Qazaqsha/Preview Content\"";
 				DEVELOPMENT_TEAM = JNA8QM22SG;
 				ENABLE_PREVIEWS = YES;
@@ -1747,7 +1767,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0B1C3DD82D29343200307503 /* FirebaseCrashlytics */ = {
+		0B1C3DDE2D293A6200307503 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
@@ -1761,16 +1781,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0B49BA002BE3D08300EFBE59 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */;
 			productName = AmplitudeSwift;
-		};
-		0B49BA132BE3D3C100EFBE59 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		0B49BA152BE3D3C100EFBE59 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0B18B01B2BD0F9C2005E8EBC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
 		};
 		0B50920B2D0AD98200C632FE /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -5,8 +5,6 @@
 //  Created by Daulet Almagambetov on 02.05.2024.
 //
 
-import FirebaseCore
-
 public protocol AnalyticsService {
     func track(event: AnalyticsEventProtocol)
 }
@@ -20,21 +18,13 @@ public final class AnalyticsServiceFacade: AnalyticsService {
     }
 
     private let amplitudeService = AmplitudeAnalyticsService()
-    private let firebaseService = FirebaseAnalyticsService()
-    
-    public func configure() {
-        queue.async {
-//            FirebaseApp.configure()
-        }
-    }
 
     public func track(event: AnalyticsEventProtocol) {
         queue.async {
             self.amplitudeService.track(event: event)
-            self.firebaseService.track(event: event)
-            print("[DEBUG][Analytics] event: \(event.name), params: \(event.params)")
+            print("[Analytics] event: \(event.name), params: \(event.params)")
         }
-    }
+    } 
 
     private func appendCommonParams(to params: [String: Any]) -> [String: Any] {
         var newParams = params

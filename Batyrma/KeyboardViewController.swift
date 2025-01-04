@@ -9,6 +9,8 @@ import KeyboardKit
 import SwiftUI
 import WordSuggestionsEngine
 import QazaqFoundation
+import FirebaseCore
+import FirebaseCrashlytics
 
 final class KeyboardViewController: KeyboardInputViewController {
     @UserDefault(item: UserDefaults.autoCapitalizationItem)
@@ -25,7 +27,10 @@ final class KeyboardViewController: KeyboardInputViewController {
      */
     override func viewDidLoad() {
         DispatchQueue.main.async {
-            AnalyticsServiceFacade.shared.configure()
+            if let path = Bundle.main.path(forResource: "GoogleService-Info-Keyboard", ofType: "plist"),
+               let options = FirebaseOptions(contentsOfFile: path) {
+                FirebaseApp.configure(options: options)
+            }
 
             AnalyticsServiceFacade.shared.track(event: CommonAnalyticsEvent(
                 name: "launch_keyboard",
