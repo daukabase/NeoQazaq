@@ -49,9 +49,9 @@ final class KeyboardViewController: KeyboardInputViewController {
             context: state.autocompleteContext
         )
 
-        state.keyboardContext.locale = KeyboardLocale.kazakh.locale
-        state.keyboardContext.isAutocapitalizationEnabled = isAutoCapitalizationEnabled
-        state.feedbackContext.isAudioFeedbackEnabled = isKeyClicksSoundEnabled
+        state.keyboardContext.locale = Locale.kazakh
+        state.keyboardContext.settings.isAutocapitalizationEnabled = isAutoCapitalizationEnabled
+        state.feedbackContext.settings.isAudioFeedbackEnabled = isKeyClicksSoundEnabled
 
         services.calloutService = QazaqCalloutService()
 
