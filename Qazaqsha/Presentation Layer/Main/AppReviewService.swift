@@ -35,6 +35,7 @@ final class AppReviewService {
         var shouldRequest = false
         if launchCount > 2 {
             shouldRequest = true
+            appLaunchCountKey = 0
         } else if let lastRequest {
             let daysFromLastRequest = Calendar.current.dateComponents([.day], from: lastRequest, to: Date()).day ?? 0
             if daysFromLastRequest >= 5 {

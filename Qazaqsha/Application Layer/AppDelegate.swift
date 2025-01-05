@@ -15,6 +15,14 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
 
+        // Enable Crashlytics debug logging for troubleshooting dSYM issues
+        #if DEBUG
+        Task {
+            Crashlytics.crashlytics().setCrashlyticsCollectionEnabled(true)
+            await Crashlytics.crashlytics().checkForUnsentReports()
+        }
+        #endif
+
         AnalyticsServiceFacade.shared.track(event: CommonAnalyticsEvent(name: "app_start"))
 
         return true
