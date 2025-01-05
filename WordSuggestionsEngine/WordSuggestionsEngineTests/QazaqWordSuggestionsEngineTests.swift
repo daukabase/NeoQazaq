@@ -30,6 +30,12 @@ final class QazaqWordSuggestionsEngineTests: XCTestCase {
         }
     }
 
+    func test_checkDataSetLoading() {
+        XCTAssertTrue(QazaqWordsDatasetLoader.shared.commonRusWordsList().count > 500)
+        XCTAssertTrue(QazaqWordsDatasetLoader.shared.qazaqWordsList().count > 10000)
+        XCTAssertTrue(QazaqWordsDatasetLoader.shared.shalaqazaqVariations().keys.count > 1000)
+    }
+
     func test_baseWords_endings() {
         suggestion(for: "казагым", isEqualTo: "қазағым")
         suggestion(for: "казагын", isEqualTo: "қазағың")

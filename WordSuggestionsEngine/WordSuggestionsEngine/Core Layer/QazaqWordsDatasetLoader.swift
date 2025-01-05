@@ -24,11 +24,15 @@ public final class QazaqWordsDatasetLoader {
     private let serialQueue = DispatchQueue(label: "com.qazaqsha.batyrma.datasetLoaderQueue")
     private var shalaqazaqDatasetCache: [String: [SuggestionVariation]]?
     private var qazaqWordsDatasetCache: Set<String>?
-    private var rusWordsDatasetCache: Set<String>?
+    internal var rusWordsDatasetCache: Set<String>?
 
     private var currentBundle: Bundle {
+        print("[DEBUG] type: \(type(of: self))")
+        print("[DEBUG] bundle: \(Bundle(for: type(of: self)))")
         return Bundle(for: type(of: self))
     }
+    
+    private var datasetAlreadyLoading = false
 
     private init() {
         loadData()
@@ -53,14 +57,29 @@ public final class QazaqWordsDatasetLoader {
     }
 
     public func loadData() {
+        guard !datasetAlreadyLoading else { return }
+        datasetAlreadyLoading = true
+
         Task {
-            try await loadShalaqazaqDataset()
+            do {
+                try await loadShalaqazaqDataset()
+            } catch {
+                print("[DEBUG] failed to load shalaqazaq dataset \(error)")
+            }
         }
         Task {
-            try await loadWords()
+            do {
+                try await loadWords()
+            } catch {
+                print("[DEBUG] failed to load QAZ words \(error)")
+            }
         }
         Task {
-            try await loadRusWords()
+            do {
+                try await loadRusWords()
+            } catch {
+                print("[DEBUG] failed to load RUS words \(error)")
+            }
         }
     }
 
@@ -94,7 +113,7 @@ public final class QazaqWordsDatasetLoader {
         guard qazaqWordsDatasetCache == nil else {
             return
         }
-        print("Started loading words")
+        print("Started loading QAZ words")
 
         guard let fileURL = currentBundle.url(forResource: "qazaqWordsList", withExtension: "txt") else {
             throw DatasetLoadError.qazaqDictionaryLoadingFailed
@@ -105,7 +124,7 @@ public final class QazaqWordsDatasetLoader {
             .split(separator: "\n")
             .map(String.init)
 
-        print("Ended loading words: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
+        print("Ended loading QAZ words: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
         serialQueue.sync {
             self.qazaqWordsDatasetCache = Set(textData)
         }
@@ -116,7 +135,7 @@ public final class QazaqWordsDatasetLoader {
         guard rusWordsDatasetCache == nil else {
             return
         }
-        print("Started loading rus words")
+        print("Started loading RUS words")
 
         guard let fileURL = currentBundle.url(forResource: "russianWordsDataset", withExtension: "txt") else {
             throw DatasetLoadError.rusDictionaryLoadingFailed
@@ -124,10 +143,9 @@ public final class QazaqWordsDatasetLoader {
 
         let data = try Data(contentsOf: fileURL)
         let textData = String(data: data, encoding: .utf8)!
-            .split(separator: "\n")
+            .split(separator: "\r\n")
             .map(String.init)
-
-        print("Ended loading words: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
+        print("Ended loading RUS words: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
         serialQueue.sync {
             self.rusWordsDatasetCache = Set(textData)
         }
