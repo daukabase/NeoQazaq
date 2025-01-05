@@ -5,41 +5,47 @@
 //  Created by Daulet Almagambetov on 12.12.2024.
 //
 
-import Foundation
+import QazaqFoundation
 import StoreKit
 
 final class AppReviewService {
-    static let shared = AppReviewService()
-    
-    private let lastReviewRequestKey = "lastReviewRequest"
-    private let appLaunchCountKey = "appLaunchCount"
-    private let defaults = UserDefaults.standard
-    
-    private init() {}
-    
-    func shouldRequestReview() -> Bool {
-        let launchCount = (defaults.integer(forKey: appLaunchCountKey) + 1)
-        defaults.set(launchCount, forKey: appLaunchCountKey)
+    enum Constants {
+        static let lastReviewRequestKey = "lastReviewRequest"
+        static let appLaunchCountKey = "appLaunchCount"
+    }
 
-        let lastRequest = defaults.object(forKey: lastReviewRequestKey) as? Date
+    static let shared = AppReviewService()
+
+    private let defaults = UserDefaults.standard
+
+    @UserDefault(wrappedValue: 0, Constants.appLaunchCountKey)
+    private var appLaunchCountKey: Int
+
+    @UserDefault(Constants.lastReviewRequestKey)
+    private var lastReviewDate: Date?
+
+    private init() {}
+
+    func shouldRequestReview() -> Bool {
+        appLaunchCountKey += 1
+
+        let launchCount = appLaunchCountKey
+        let lastRequest = lastReviewDate
 
         var shouldRequest = false
-        if launchCount >= 2 {
-            // First time request: show after 2nd launch
+        if launchCount > 2 {
             shouldRequest = true
-        }
-
-        if let lastRequest {
-            // Request review if last request was 2+ days ago
-            if let days = Calendar.current.dateComponents([.day], from: lastRequest, to: Date()).day, days >= 2 {
+        } else if let lastRequest {
+            let daysFromLastRequest = Calendar.current.dateComponents([.day], from: lastRequest, to: Date()).day ?? 0
+            if daysFromLastRequest >= 5 {
                 shouldRequest = true
             }
         }
 
         if shouldRequest {
-            defaults.set(Date(), forKey: lastReviewRequestKey)
+            lastReviewDate = Date()
         }
-        
+
         return shouldRequest
     }
 

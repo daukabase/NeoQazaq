@@ -88,6 +88,10 @@ public extension UserDefault {
         self.init(defaultValue: wrappedValue, key: key, store: store)
     }
     
+    init(wrappedValue: Value, _ key: String, store: UserDefaults = .standard) where Value == Date {
+        self.init(defaultValue: wrappedValue, key: key, store: store)
+    }
+    
     private init(defaultValue: Value, key: String, store: UserDefaults) {
         get = {
             let value = store.value(forKey: key) as? Value
@@ -123,6 +127,10 @@ public extension UserDefault where Value: ExpressibleByNilLiteral {
 
     init(_ key: String, store: UserDefaults = .standard) where Value == Data? {
         self.init(wrappedType: Data.self, key: key, store: store)
+    }
+    
+    init(_ key: String, store: UserDefaults = .standard) where Value == Date? {
+        self.init(wrappedType: Date.self, key: key, store: store)
     }
     
     private init<T>(wrappedType: T.Type, key: String, store: UserDefaults) {
