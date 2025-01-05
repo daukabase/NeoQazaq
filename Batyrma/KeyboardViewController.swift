@@ -26,12 +26,42 @@ final class KeyboardViewController: KeyboardInputViewController {
      we make demo-specific service configurations.
      */
     override func viewDidLoad() {
-        DispatchQueue.main.async {
+        setupKeyboardServices()
+
+        super.viewDidLoad()
+
+        setupAsyncServices()
+    }
+}
+
+private extension KeyboardViewController {
+    func setupKeyboardServices() {
+        // Setup core keyboard functionality first
+        services.autocompleteService = QazaqAutocompleteProvider(
+            context: state.autocompleteContext
+        )
+        
+        state.keyboardContext.locale = Locale.kazakh
+        state.keyboardContext.settings.isAutocapitalizationEnabled = isAutoCapitalizationEnabled
+        state.feedbackContext.settings.isAudioFeedbackEnabled = isKeyClicksSoundEnabled
+        
+        services.calloutService = QazaqCalloutService()
+        
+        let layoutService = CyrillicService(alphabeticInputSet: .russian)
+        services.layoutService = layoutService
+    }
+
+    func setupAsyncServices() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            // Configure Firebase
             if let path = Bundle.main.path(forResource: "GoogleService-Info-Keyboard", ofType: "plist"),
                let options = FirebaseOptions(contentsOfFile: path) {
                 FirebaseApp.configure(options: options)
             }
-
+            
+            // Track analytics
             AnalyticsServiceFacade.shared.track(event: CommonAnalyticsEvent(
                 name: "launch_keyboard",
                 params: [
@@ -41,30 +71,9 @@ final class KeyboardViewController: KeyboardInputViewController {
                     "isKeyClicksSoundEnabled": self.isKeyClicksSoundEnabled
                 ]
             ))
-        }
-
-        QazaqWordsDatasetLoader.shared.loadData()
-
-        services.autocompleteService = QazaqAutocompleteProvider(
-            context: state.autocompleteContext
-        )
-
-        state.keyboardContext.locale = Locale.kazakh
-        state.keyboardContext.settings.isAutocapitalizationEnabled = isAutoCapitalizationEnabled
-        state.feedbackContext.settings.isAudioFeedbackEnabled = isKeyClicksSoundEnabled
-
-        services.calloutService = QazaqCalloutService()
-
-        let layoutService = CyrillicService(alphabeticInputSet: .russian)
-        services.layoutService = layoutService
-
-        super.viewDidLoad()
-    }
-    
-    public override func textDidChange(_ textInput: UITextInput?) {
-        super.textDidChange(textInput)
-        DispatchQueue.main.async { [weak self] in
-            self?.textDidChangeAsync(textInput)
+            
+            // Load dataset
+            QazaqWordsDatasetLoader.shared.loadData()
         }
     }
 }
