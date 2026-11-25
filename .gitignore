@@ -16,3 +16,9 @@ DerivedData
 # *.xcodeproj
 # *.xcworkspace
 *.xcbkptlist
+# Local secrets
+Config/Secrets.xcconfig
+
+# Xcode per-user state and macOS metadata
+xcuserdata/
+.DS_Store
