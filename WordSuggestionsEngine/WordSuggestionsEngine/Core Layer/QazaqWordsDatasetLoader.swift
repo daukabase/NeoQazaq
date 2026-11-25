@@ -7,147 +7,77 @@
 
 import Foundation
 
-struct SuggestionVariation: Codable {
+struct SuggestionVariation: Codable, Equatable {
     let taza: String
     let percentage: Double
 }
 
+/// Read-only access to the bundled dictionaries.
+///
+/// The files are memory-mapped and binary-searched (see `SortedLinesFile`), so opening them
+/// is instant and costs almost no heap memory. The old loader decoded a 2 MB JSON into Swift
+/// dictionaries, which peaked at ~37 MB and could get the keyboard killed by iOS.
+///
+/// Regenerate the files with `scripts/build_dictionaries.py`.
 public final class QazaqWordsDatasetLoader {
-    enum DatasetLoadError: Error {
-        case shalaqazaqLoadingFailed
-        case qazaqDictionaryLoadingFailed
-        case rusDictionaryLoadingFailed
-    }
-
     public static let shared = QazaqWordsDatasetLoader()
 
-    private let serialQueue = DispatchQueue(label: "com.qazaqsha.batyrma.datasetLoaderQueue")
-    private var shalaqazaqDatasetCache: [String: [SuggestionVariation]]?
-    private var qazaqWordsDatasetCache: Set<String>?
-    internal var rusWordsDatasetCache: Set<String>?
-
-    private var currentBundle: Bundle {
-        print("[DEBUG] type: \(type(of: self))")
-        print("[DEBUG] bundle: \(Bundle(for: type(of: self)))")
-        return Bundle(for: type(of: self))
-    }
-    
-    private var datasetAlreadyLoading = false
+    /// Typed-with-Russian-letters key → proper Kazakh words with scores.
+    private let shala: SortedLinesFile?
+    /// Lower-cased Kazakh word forms.
+    private let kazakhWords: SortedLinesFile?
+    /// Lower-cased Russian words (small fallback list; the keyboard also asks the system spell checker).
+    private let russianWords: SortedLinesFile?
+    /// Typed forms that must auto-correct even though they look like dictionary words.
+    public let autocorrectAllowList: Set<String>
 
     private init() {
-        loadData()
-    }
-
-    func shalaqazaqVariations() -> [String: [SuggestionVariation]] {
-        serialQueue.sync {
-            return shalaqazaqDatasetCache ?? [:]
-        }
-    }
-
-    func qazaqWordsList() -> Set<String> {
-        serialQueue.sync {
-            return qazaqWordsDatasetCache ?? Set()
-        }
-    }
-
-    func commonRusWordsList() -> Set<String> {
-        serialQueue.sync {
-            return rusWordsDatasetCache ?? Set()
-        }
-    }
-
-    public func loadData() {
-        guard !datasetAlreadyLoading else { return }
-        datasetAlreadyLoading = true
-
-        Task {
-            do {
-                try await loadShalaqazaqDataset()
-            } catch {
-                print("[DEBUG] failed to load shalaqazaq dataset \(error)")
+        let bundle = Bundle(for: QazaqWordsDatasetLoader.self)
+        func open(_ name: String, _ ext: String) -> SortedLinesFile? {
+            guard let url = bundle.url(forResource: name, withExtension: ext) else {
+                assertionFailure("Missing dictionary \(name).\(ext); run scripts/build_dictionaries.py")
+                return nil
             }
+            return try? SortedLinesFile(url: url)
         }
-        Task {
-            do {
-                try await loadWords()
-            } catch {
-                print("[DEBUG] failed to load QAZ words \(error)")
-            }
-        }
-        Task {
-            do {
-                try await loadRusWords()
-            } catch {
-                print("[DEBUG] failed to load RUS words \(error)")
-            }
+        shala = open("shala", "tsv")
+        kazakhWords = open("kk_words", "txt")
+        russianWords = open("ru_words", "txt")
+
+        if let url = bundle.url(forResource: "autocorrect_allowlist", withExtension: "txt"),
+           let text = try? String(contentsOf: url, encoding: .utf8) {
+            autocorrectAllowList = Set(text.split(separator: "\n").map(String.init))
+        } else {
+            autocorrectAllowList = []
         }
     }
 
-    private func loadShalaqazaqDataset() async throws {
-        let loadStartDate = Date()
-        guard shalaqazaqDatasetCache == nil else {
-            return
-        }
-        print("Started loading shala")
+    /// Kept for call sites that warmed up the old asynchronous loader. Opening is now synchronous.
+    public func loadData() {}
 
-        guard let fileURL = currentBundle.url(forResource: "ShalaqazaqDatasetV2", withExtension: "json") else {
-            throw DatasetLoadError.shalaqazaqLoadingFailed
-        }
-        let data = try Data(contentsOf: fileURL)
-        let json = try JSONDecoder().decode([String: [String: Double]].self, from: data)
+    var isLoaded: Bool { shala != nil && kazakhWords != nil && russianWords != nil }
 
-        let shalaqazaqDataset = json.mapValues { rawVariations -> [SuggestionVariation] in
-            rawVariations.map { (key, value) in
-                SuggestionVariation(taza: key, percentage: value)
+    var shalaKeyCount: Int { shala?.count ?? 0 }
+    var kazakhWordCount: Int { kazakhWords?.count ?? 0 }
+    var russianWordCount: Int { russianWords?.count ?? 0 }
+
+    /// Proper-Kazakh variations for a typed key, most likely first.
+    func variations(for key: String) -> [SuggestionVariation]? {
+        guard let line = shala?.value(for: key), !line.isEmpty else { return nil }
+        let variations = line.split(separator: "|").compactMap { part -> SuggestionVariation? in
+            guard let colon = part.lastIndex(of: ":"), let score = Double(part[part.index(after: colon)...]) else {
+                return nil
             }
+            return SuggestionVariation(taza: String(part[..<colon]), percentage: score)
         }
-        print("Ended loading shala: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
-        
-        serialQueue.sync {
-            self.shalaqazaqDatasetCache = shalaqazaqDataset
-        }
+        return variations.isEmpty ? nil : variations
     }
 
-    private func loadWords() async throws {
-        let loadStartDate = Date()
-        guard qazaqWordsDatasetCache == nil else {
-            return
-        }
-        print("Started loading QAZ words")
-
-        guard let fileURL = currentBundle.url(forResource: "qazaqWordsList", withExtension: "txt") else {
-            throw DatasetLoadError.qazaqDictionaryLoadingFailed
-        }
-
-        let data = try Data(contentsOf: fileURL)
-        let textData = String(data: data, encoding: .utf8)!
-            .split(separator: "\n")
-            .map(String.init)
-
-        print("Ended loading QAZ words: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
-        serialQueue.sync {
-            self.qazaqWordsDatasetCache = Set(textData)
-        }
+    public func containsKazakhWord(_ word: String) -> Bool {
+        kazakhWords?.contains(word.lowercased()) ?? false
     }
-    
-    private func loadRusWords() async throws {
-        let loadStartDate = Date()
-        guard rusWordsDatasetCache == nil else {
-            return
-        }
-        print("Started loading RUS words")
 
-        guard let fileURL = currentBundle.url(forResource: "russianWordsDataset", withExtension: "txt") else {
-            throw DatasetLoadError.rusDictionaryLoadingFailed
-        }
-
-        let data = try Data(contentsOf: fileURL)
-        let textData = String(data: data, encoding: .utf8)!
-            .split(separator: "\r\n")
-            .map(String.init)
-        print("Ended loading RUS words: \(Date().timeIntervalSince1970 - loadStartDate.timeIntervalSince1970)")
-        serialQueue.sync {
-            self.rusWordsDatasetCache = Set(textData)
-        }
+    public func containsRussianWord(_ word: String) -> Bool {
+        russianWords?.contains(word.lowercased()) ?? false
     }
 }

@@ -4,8 +4,12 @@
 //
 //  Created by Daulet Almagambetov on 04.11.2024.
 //
+//  Done: the user picks a keyboard skin (free ones apply at once; paid ones show their price),
+//  then Batyrma sends them off to write their first message in a messenger.
+//
 
 import SwiftUI
+
 struct FinishOnboardingView: View {
     struct AppLink: Identifiable {
         let id = UUID()
@@ -13,9 +17,13 @@ struct FinishOnboardingView: View {
         let name: String
         let url: URL
     }
-    @Environment(\.dismiss) var dismiss
-    @Environment(\.colorScheme) var colorScheme
-    
+
+    static let lines = [
+        "Дайынсың! 🎉",
+        "Пернетақтаңның түсін таңда 🎨",
+        "Сосын достарыңа қазақша сәлем жаз 👋",
+    ]
+
     let links: [AppLink] = [
         .init(
             icon: Asset.Images.whatsapp.swiftUIImage,
@@ -38,73 +46,51 @@ struct FinishOnboardingView: View {
             url: URL(string: "snssdk1233://message/chat")!
         )
     ]
-    
+
+    var onReady: () -> Void = {}
+
+    @State private var showsApps = false
+
     var body: some View {
-        VStack(spacing: 32) {
-            Text("👋")
-                .font(.system(size: 80))
-                .padding(.top, 40)
-            
-            // Main Title
-            VStack(spacing: 8) {
-                Text("Say Сәлем!")
-                    .font(.system(size: 32, weight: .bold))
-                Text("Tap an app to start typing")
-                    .font(.body)
-                    .foregroundColor(Asset.Colors.lightSecondary.swiftUIColor)
-            }
-            
-            // Apps Section
-            VStack(spacing: 16) {
-                Text("Start typing in your favorite apps")
-                    .font(.headline)
-                
-                // App Icons
-                HStack(spacing: 24) {
-                    // WhatsApp
-                    ForEach(links) { link in
-                        appLink(
-                            icon: link.icon,
-                            name: link.name,
-                            url: link.url
-                        )
+        ScrollView {
+            VStack(alignment: .leading, spacing: 32) {
+                TypedLinesView(lines: Self.lines) {
+                    withAnimation(.easeOut) { showsApps = true }
+                    onReady()
+                }
+
+                if showsApps {
+                    SkinPickerView(showsRestore: false)
+                        .padding(.horizontal, -24)
+                        .transition(.opacity)
+
+                    HStack(spacing: 0) {
+                        ForEach(links) { link in
+                            appLink(link)
+                                .frame(maxWidth: .infinity)
+                        }
                     }
+                    .padding(.vertical, 20)
+                    .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(0.08)))
+                    .transition(.opacity.combined(with: .move(edge: .bottom)))
                 }
             }
-            .padding(.vertical, 20)
-            .frame(maxWidth: .infinity)
-            .background(
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(.backgroundSecondary)
-                    .shadow(color: Color.black.opacity(0.05), radius: 10, x: 0, y: 4)
-            )
-            .padding(.horizontal, 20)
-            
-            Spacer()
+            .padding(.horizontal, 24)
+            .padding(.vertical, 8)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.background)
     }
-    
-    @ViewBuilder
-    private func appLink(
-        icon: Image,
-        name: String,
-        url: URL,
-        size: CGSize = .init(width: 48, height: 48)
-    ) -> some View {
-        Link(destination: url) {
+
+    private func appLink(_ link: AppLink) -> some View {
+        Link(destination: link.url) {
             VStack(spacing: 8) {
-                icon
+                link.icon
                     .resizable()
                     .scaledToFit()
-                    .frame(width: size.width, height: size.height)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
-                
-                Text(name)
+                    .frame(width: 52, height: 52)
+                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                Text(link.name)
                     .font(.caption)
-                    .foregroundColor(Asset.Colors.text.swiftUIColor)
+                    .foregroundColor(.white.opacity(0.7))
             }
         }
     }
@@ -112,7 +98,10 @@ struct FinishOnboardingView: View {
 
 struct FinishOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        FinishOnboardingView()
-        FinishOnboardingView().preferredColorScheme(.dark)
+        ZStack {
+            OnboardingBackground()
+            FinishOnboardingView()
+        }
+        .preferredColorScheme(.dark)
     }
 }

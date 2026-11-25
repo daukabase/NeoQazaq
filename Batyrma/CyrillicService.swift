@@ -10,8 +10,8 @@ import KeyboardKit
 final class CyrillicService: KeyboardLayout.DeviceBasedService {
     override init(
         alphabeticInputSet: InputSet = .qwerty,
-        numericInputSet: InputSet = .numeric(currency: "$"),
-        symbolicInputSet: InputSet = .symbolic(currencies: ["€", "£", "¥"])
+        numericInputSet: InputSet = .numeric(currency: "₸"),
+        symbolicInputSet: InputSet = .symbolic(currencies: ["$", "€", "₽"])
     ) {
         super.init(
             alphabeticInputSet: alphabeticInputSet,

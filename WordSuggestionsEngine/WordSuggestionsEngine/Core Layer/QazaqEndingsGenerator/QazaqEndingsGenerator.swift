@@ -63,6 +63,13 @@ struct QazaqEndingsGenerator {
         return nil
     }
 
+    /// Like `generateTazaOutput`, but only when a generated form explains the *whole* input.
+    /// `generateTazaOutput` also accepts a match on all but the last letter and glues that raw
+    /// letter back on, which produces fragments while the user is mid-word (канд → қанд).
+    func generateTazaOutputMatchingWholeInput(for input: String, root: String) -> String? {
+        generateShalaqazaqDatasetForEndings(for: root)[input]
+    }
+
     func suffix(for text: String, root: String) -> String? {
         let hasSuffixes = root.count <= text.count
         let suffix = hasSuffixes ? text[root.count ..< text.count] : nil

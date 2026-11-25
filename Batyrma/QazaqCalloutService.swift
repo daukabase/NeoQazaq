@@ -43,13 +43,13 @@ class QazaqCalloutService: CalloutService {
         case "о": return "оө"
         case "и": return "иі"
         case "ь": return "ьъ"
-        case "б": return String("брат".reversed())
             
         case "0": return "0°"
             
         case "-": return "-–—•"
         case "/": return "/\\"
-        case "$": return "$₽¥€¢£₩"
+        case "₸": return "₸$€₽£¥"
+        case "$": return "$₸€₽£¥¢₩"
         case "&": return "&§"
         case "”": return "\"„“”«»"
         case ".": return ".…"

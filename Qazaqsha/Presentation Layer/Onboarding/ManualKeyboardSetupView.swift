@@ -88,7 +88,7 @@ struct ManualKeyboardSetupView: View {
     
     var setupStepsView: some View {
         VStack(alignment: .leading, spacing: 12) {
-            ForEach(0 ..< 6, id: \.self) { index in
+            ForEach(0 ..< 5, id: \.self) { index in
                 switch index {
                 case 0:
                     iconText(
@@ -112,12 +112,6 @@ struct ManualKeyboardSetupView: View {
                 case 3:
                     text(index: index, text: "Enable \(Constants.keyboardName)")
                 case 4:
-                    text(
-                        index: index,
-                        text: String(localized: "Allow Full Access"),
-                        subtitle: String(localized: "Optional")
-                    )
-                case 5:
                     text(
                         index: index,
                         text: String(localized: "If the keyboard does not appear"),

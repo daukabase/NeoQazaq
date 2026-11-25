@@ -1,0 +1,4 @@
+// Base build settings for the Qazaqsha app target.
+// Secrets (Telegram feedback bot) live in the git-ignored Secrets.xcconfig.
+// Copy Secrets.example.xcconfig to Secrets.xcconfig and fill it in.
+#include? "Secrets.xcconfig"

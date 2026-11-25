@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "•" : {
       "localizations" : {
         "kk" : {
@@ -34,6 +37,7 @@
       }
     },
     "👋" : {
+      "extractionState" : "stale",
       "localizations" : {
         "kk" : {
           "stringUnit" : {
@@ -72,6 +76,7 @@
       }
     },
     "Add now" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -94,6 +99,7 @@
       }
     },
     "Allow Full Access" : {
+      "extractionState" : "stale",
       "localizations" : {
         "kk" : {
           "stringUnit" : {
@@ -110,6 +116,7 @@
       }
     },
     "app_name" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -297,7 +304,7 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Жалғастыру арқылы сіз [құпиялылық саясатымызбен](https://www.freeprivacypolicy.com/blog/privacy-policy-url/) келісесіз"
+            "value" : "Жалғастыру арқылы сіз [құпиялылық саясатымызбен](https://www.termsfeed.com/live/b5039a8d-5c6d-4f8f-973c-1b032ab9b18b) келісесіз"
           }
         },
         "ru" : {
@@ -330,7 +337,30 @@
         }
       }
     },
+    "designed_by%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Designed by %@"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жасаған: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создано: %@"
+          }
+        }
+      }
+    },
     "Don't see the keyboard?" : {
+      "extractionState" : "stale",
       "localizations" : {
         "kk" : {
           "stringUnit" : {
@@ -450,222 +480,398 @@
         }
       }
     },
-    "feedback_app_version" : {
+    "feedback_advertising_format_name" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "App Version"
+            "value" : "Your name on the space bar: “[Company] қолдауымен” (supported by)"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Қосымша нұсқасы"
+            "value" : "Атыңыз бос орын пернесінде: «[Компания] қолдауымен»"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Версия приложения"
+            "value" : "Ваше имя на пробеле: «[Компания] қолдауымен»"
           }
         }
       }
     },
-    "feedback_bug_description" : {
+    "feedback_advertising_format_skin" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please describe what happened"
+            "value" : "A free keyboard style in your brand colours"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не болғанын сипаттаңыз"
+            "value" : "Брендіңіздің түсіндегі тегін пернетақта стилі"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Опишите, что произошло"
+            "value" : "Бесплатный стиль клавиатуры в цветах бренда"
           }
         }
       }
     },
-    "feedback_bug_subject%@" : {
+    "feedback_advertising_formats_title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ Bug Report"
+            "value" : "What supporters get"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ қате туралы хабарлама"
+            "value" : "Демеушіге не беріледі"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cообщение об ошибке %@"
+            "value" : "Что получает партнёр"
           }
         }
       }
     },
-    "feedback_copy_email" : {
+    "feedback_advertising_placeholder" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Copy Email"
+            "value" : "Company, your role and any ideas. A budget range, if you have one."
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Поштаны көшіру"
+            "value" : "Компания, лауазымыңыз, ойларыңыз. Бюджет шамасы болса, жазыңыз."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Скопировать почту"
+            "value" : "Компания, ваша роль и идеи. Ориентир по бюджету, если есть."
           }
         }
       }
     },
-    "feedback_device_info" : {
+    "feedback_advertising_reply_note" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Device Info"
+            "value" : "The founder replies personally within 2 days."
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Құрылғы туралы ақпарат"
+            "value" : "Негізін қалаушы 2 күн ішінде өзі жауап береді."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Информация об устройстве"
+            "value" : "Основатель лично ответит в течение 2 дней."
           }
         }
       }
     },
-    "feedback_device_model" : {
+    "feedback_advertising_request_title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Model"
+            "value" : "About your company"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Девайс"
+            "value" : "Компанияңыз туралы"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Модель"
+            "value" : "О вашей компании"
           }
         }
       }
     },
-    "feedback_email_unavailable_message%@" : {
+    "feedback_advertising_title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please send your feedback to %@"
+            "value" : "Become a supporter"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Өтініш, хабарламаңызды %@ поштасына жіберіңіз"
+            "value" : "Демеуші болу"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Пожалуйста, отправьте обратную связь на %@"
+            "value" : "Стать партнёром"
           }
         }
       }
     },
-    "feedback_email_unavailable_title" : {
+    "feedback_cancel" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Email Not Available"
+            "value" : "Cancel"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Электрондық пошта қолжетімсіз"
+            "value" : "Бас тарту"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Почта недоступна"
+            "value" : "Отмена"
           }
         }
       }
     },
-    "feedback_expected_behavior" : {
+    "feedback_collaboration_prompt" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Expected behavior"
+            "value" : "Tell us about your idea or proposal."
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Қалай жұмыс істелгені күтілуде"
+            "value" : "Идеяңыз немесе ұсынысыңыз туралы айтып беріңіз."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ожидаемое поведение"
+            "value" : "Расскажите о вашей идее или предложении."
           }
         }
       }
     },
-    "feedback_ios_version" : {
+    "feedback_collaboration_title" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "iOS Version"
+            "value" : "Collaboration"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "iOS нұсқасы"
+            "value" : "Ынтымақтастық"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Версия iOS"
+            "value" : "Сотрудничество"
+          }
+        }
+      }
+    },
+    "feedback_contact_footer" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leave a contact if you'd like a reply."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жауап алғыңыз келсе, байланыс қалдырыңыз."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оставьте контакт, если хотите получить ответ."
+          }
+        }
+      }
+    },
+    "feedback_contact_placeholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email or Telegram (optional)"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email немесе Telegram (міндетті емес)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email или Telegram (необязательно)"
+          }
+        }
+      }
+    },
+    "feedback_contact_required_footer" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We'll use this to get back to you."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сізбен осы арқылы хабарласамыз."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мы свяжемся с вами по этому контакту."
+          }
+        }
+      }
+    },
+    "feedback_contact_required_placeholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email or Telegram"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email немесе Telegram"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email или Telegram"
+          }
+        }
+      }
+    },
+    "feedback_error_message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check your internet connection and try again."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Интернет байланысын тексеріп, қайталап көріңіз."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверьте подключение к интернету и попробуйте снова."
+          }
+        }
+      }
+    },
+    "feedback_error_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't send"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жіберу мүмкін болмады"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось отправить"
+          }
+        }
+      }
+    },
+    "feedback_message_placeholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type your message…"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хабарламаңызды жазыңыз…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Напишите сообщение…"
+          }
+        }
+      }
+    },
+    "feedback_min_length_hint%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please write at least %lld characters."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кемінде %lld таңба жазыңыз."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Напишите не менее %lld символов."
           }
         }
       }
@@ -692,46 +898,112 @@
         }
       }
     },
-    "feedback_steps_to_reproduce" : {
+    "feedback_question_prompt" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Steps to reproduce"
+            "value" : "How can we help? Describe your question or the problem you ran into."
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Қателікті қайталау жолы"
+            "value" : "Қалай көмектесе аламыз? Сұрағыңызды немесе кездескен мәселені сипаттаңыз."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Шаги для воспроизведения"
+            "value" : "Чем мы можем помочь? Опишите ваш вопрос или проблему."
           }
         }
       }
     },
-    "feedback_support_subject%@" : {
+    "feedback_rate_limited_message" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ Support Question"
+            "value" : "Please wait a moment before sending another message."
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ қолдау сұрағы"
+            "value" : "Келесі хабарламаны жібермес бұрын сәл күте тұрыңыз."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Вопрос для поддержки %@"
+            "value" : "Подождите немного перед отправкой следующего сообщения."
+          }
+        }
+      }
+    },
+    "feedback_send" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жіберу"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отправить"
+          }
+        }
+      }
+    },
+    "feedback_sent_message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your message has been sent."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хабарламаңыз жіберілді."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваше сообщение отправлено."
+          }
+        }
+      }
+    },
+    "feedback_sent_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thank you!"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рахмет!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спасибо!"
           }
         }
       }
@@ -798,6 +1070,270 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Следуйте этим шагам, чтобы начать использование"
+          }
+        }
+      }
+    },
+    "home_keyboard_on" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma is on"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma қосулы"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma включена"
+          }
+        }
+      }
+    },
+    "home_more" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тағы"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ещё"
+          }
+        }
+      }
+    },
+    "home_privacy_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We never see what you type"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не жазғаныңды біз көрмейміз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мы не видим, что ты пишешь"
+          }
+        }
+      }
+    },
+    "home_skins_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keyboard style"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пернетақта стилі"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стиль клавиатуры"
+          }
+        }
+      }
+    },
+    "home_sponsor_body" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For companies: your name on Batyrma’s space bar, and a hand in helping Kazakh live on iPhone."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Компанияларға: атыңыз Batyrma пернетақтасында, үлесіңіз қазақ тілінде."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для компаний: ваше имя на пробеле Batyrma и вклад в живой казахский язык."
+          }
+        }
+      }
+    },
+    "home_sponsor_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support Kazakh on iPhone"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Қазақ тілін бірге қолдайық"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержите казахский на iPhone"
+          }
+        }
+      }
+    },
+    "home_stats_full_access" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your typing stats appear here when Full Access is on."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full Access қосулы болса, статистикаң осында көрінеді."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статистика появится здесь, когда включён полный доступ."
+          }
+        }
+      }
+    },
+    "home_stats_letters" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "letters restored this month"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "әріп осы айда түзетілді"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "букв исправлено в этом месяце"
+          }
+        }
+      }
+    },
+    "home_stats_share" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бөлісу"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поделиться"
+          }
+        }
+      }
+    },
+    "home_stats_share_text%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma restored %lld Kazakh letters for me this month 🇰🇿"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma осы айда маған %lld қазақ әрпін қайтарып берді 🇰🇿"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma вернула мне %lld казахских букв в этом месяце 🇰🇿"
+          }
+        }
+      }
+    },
+    "home_stats_words%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld words corrected in total"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Барлығы %lld сөз түзетілді"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Всего исправлено слов: %lld"
+          }
+        }
+      }
+    },
+    "home_try_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try it"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жазып көр"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попробуй"
           }
         }
       }
@@ -1092,13 +1628,13 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Альтернатив әріпі бар пернесін узақ басу"
+            "value" : "Қосымша әріптері бар пернені ұзақ басып тұрыңыз"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Нажать и удерживать любую кнопку которая имеет скрытые буквы"
+            "value" : "Нажмите и удерживайте клавишу со скрытыми буквами"
           }
         }
       }
@@ -1115,13 +1651,13 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Саусағынызды жылжытып пернені таңдау"
+            "value" : "Саусағыңызды керекті әріпке жылжытыңыз"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Двигая пальцем выбрать букву"
+            "value" : "Проведите пальцем к нужной букве"
           }
         }
       }
@@ -1138,13 +1674,171 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Саусағынызды таңдалған әріпті еңгізу үшін көтеру "
+            "value" : "Әріпті енгізу үшін саусағыңызды көтеріңіз"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Отпустиить палец над выбранной буквой"
+            "value" : "Отпустите палец, чтобы вставить букву"
+          }
+        }
+      }
+    },
+    "onboarding_get_started" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get started"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бастау"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать"
+          }
+        }
+      }
+    },
+    "onboarding_offline" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Works offline"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Интернетсіз жұмыс істейді"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Работает без интернета"
+          }
+        }
+      }
+    },
+    "onboarding_try_subtitle" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type these words without Kazakh letters, then add a space:"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мына сөздерді қазақ әріптерінсіз теріп, бос орын қойыңыз:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Наберите эти слова без казахских букв и поставьте пробел:"
+          }
+        }
+      }
+    },
+    "onboarding_try_success" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It works! Batyrma added the Kazakh letters."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жұмыс істейді! Batyrma қазақ әріптерін қойды."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Работает! Batyrma добавила казахские буквы."
+          }
+        }
+      }
+    },
+    "onboarding_try_switch_hint" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Different keyboard showing? Switch with 🌐"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Басқа пернетақта шықты ма? 🌐 арқылы ауыстырыңыз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Другая клавиатура? Переключите через 🌐"
+          }
+        }
+      }
+    },
+    "onboarding_try_tip" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tip: hold а, о, у, к, н, г, х or и to type ә, ө, ұ/ү, қ, ң, ғ, һ, і."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кеңес: ә, ө, ұ/ү, қ, ң, ғ, һ, і үшін а, о, у, к, н, г, х немесе и пернесін басып тұрыңыз."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Совет: удерживайте а, о, у, к, н, г, х или и, чтобы ввести ә, ө, ұ/ү, қ, ң, ғ, һ, і."
+          }
+        }
+      }
+    },
+    "onboarding_try_title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try it"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Байқап көріңіз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попробуйте"
           }
         }
       }
@@ -1161,7 +1855,7 @@
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ қош келдіңіз"
+            "value" : "%@ қолданбасына қош келдіңіз"
           }
         },
         "ru" : {
@@ -1218,6 +1912,29 @@
         }
       }
     },
+    "onboarding_welcome_title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type Kazakh correctly — even without ә, қ, ң"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Қазақша дұрыс жазыңыз — ә, қ, ң әріптерінсіз де"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пишите по-казахски правильно — даже без ә, қ, ң"
+          }
+        }
+      }
+    },
     "Open any text field" : {
       "localizations" : {
         "en" : {
@@ -1241,6 +1958,7 @@
       }
     },
     "Optional" : {
+      "extractionState" : "stale",
       "localizations" : {
         "kk" : {
           "stringUnit" : {
@@ -1252,6 +1970,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Опционально"
+          }
+        }
+      }
+    },
+    "prediction_data_credit" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Word suggestions use word statistics from Wikipedia (CC BY-SA 4.0)."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сөз ұсыныстары Уикипедиядағы сөз статистикасына негізделген (CC BY-SA 4.0)."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подсказки слов основаны на статистике слов из Википедии (CC BY-SA 4.0)."
           }
         }
       }
@@ -1279,6 +2019,116 @@
         }
       }
     },
+    "privacy_got_it" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Got it"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Түсінікті"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Понятно"
+          }
+        }
+      }
+    },
+    "privacy_point_analytics" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We only count anonymous events like “keyboard opened” and crash reports — never your words."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Біз тек «пернетақта ашылды» сияқты анонимді оқиғаларды және қате есептерін санаймыз — сөздеріңді ешқашан."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мы считаем только анонимные события вроде «клавиатура открыта» и отчёты о сбоях — но никогда твои слова."
+          }
+        }
+      }
+    },
+    "privacy_point_text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What you type never leaves your iPhone."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жазғаның iPhone-ыңнан ешқайда шықпайды."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "То, что ты пишешь, никогда не покидает iPhone."
+          }
+        }
+      }
+    },
+    "privacy_point_words" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Words Batyrma learns are kept only on your device. Reset them anytime in Settings."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma үйренген сөздер тек құрылғыңда сақталады. Оларды Баптаулардан кез келген уақытта өшіре аласың."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слова, которые запоминает Batyrma, хранятся только на устройстве. Их можно сбросить в настройках."
+          }
+        }
+      }
+    },
+    "privacy_read_policy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Read the privacy policy"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Құпиялық саясатын оқу"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Читать политику конфиденциальности"
+          }
+        }
+      }
+    },
     "Quick access to Qazaq letters" : {
       "localizations" : {
         "en" : {
@@ -1301,29 +2151,76 @@
         }
       }
     },
-    "Report a bug" : {
+    "reset_learned_words" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Report a bug"
+            "value" : "Reset learned words"
           }
         },
         "kk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Қате туралы хабарлау"
+            "value" : "Үйренген сөздерді өшіру"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сообщить об ошибке"
+            "value" : "Сбросить выученные слова"
+          }
+        }
+      }
+    },
+    "reset_learned_words_done" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Learned words will be cleared the next time the keyboard opens"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Үйренген сөздер пернетақта келесі ашылғанда өшіріледі"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выученные слова удалятся при следующем открытии клавиатуры"
+          }
+        }
+      }
+    },
+    "reset_learned_words_footer" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Words the keyboard learns from you stay only on this iPhone."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пернетақта үйренген сөздер тек осы iPhone-да сақталады."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слова, которые выучила клавиатура, хранятся только на этом iPhone."
           }
         }
       }
     },
     "Say Сәлем!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1427,6 +2324,316 @@
         }
       }
     },
+    "setup_banner_title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add the keyboard to start typing"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жазу үшін пернетақтаны қосыңыз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавьте клавиатуру, чтобы начать печатать"
+          }
+        }
+      }
+    },
+    "setup_later" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do it later"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кейінірек"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Позже"
+          }
+        }
+      }
+    },
+    "setup_not_there_body" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If Batyrma isn’t in the list, close Settings completely (swipe it up in the app switcher), open it again and repeat the two steps."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma тізімде болмаса, Баптауларды толық жабыңыз (қолданбалар тізімінде жоғары сырғытыңыз), қайта ашып, екі қадамды қайталаңыз."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если Batyrma нет в списке, полностью закройте Настройки (смахните вверх в переключателе приложений), откройте снова и повторите два шага."
+          }
+        }
+      }
+    },
+    "setup_not_there_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not added yet?"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Әлі қосылмады ма?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ещё не добавили?"
+          }
+        }
+      }
+    },
+    "setup_open_settings" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Settings"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Баптауларды ашу"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть Настройки"
+          }
+        }
+      }
+    },
+    "setup_steps_header" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Settings:"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Баптауларда:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В Настройках:"
+          }
+        }
+      }
+    },
+    "setup_try_again" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Қайта көру"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попробовать снова"
+          }
+        }
+      }
+    },
+    "share_card_button" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Share"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бөлісу"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поделиться"
+          }
+        }
+      }
+    },
+    "share_card_destinations" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stories, TikTok, WhatsApp, Telegram"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stories, TikTok, WhatsApp, Telegram"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stories, TikTok, WhatsApp, Telegram"
+          }
+        }
+      }
+    },
+    "share_card_find" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma on the App Store"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App Store-да: Batyrma"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma в App Store"
+          }
+        }
+      }
+    },
+    "share_card_letters_month" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kazakh letters Batyrma restored for me this month"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "қазақ әрпін Batyrma осы айда маған қайтарып берді"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "казахских букв Batyrma вернула мне в этом месяце"
+          }
+        }
+      }
+    },
+    "share_card_letters_total" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kazakh letters Batyrma has restored for me"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "қазақ әрпін Batyrma маған қайтарып берді"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "казахских букв Batyrma мне уже вернула"
+          }
+        }
+      }
+    },
+    "share_card_share_text_total%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma has restored %lld Kazakh letters for me 🇰🇿"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma маған %lld қазақ әрпін қайтарып берді 🇰🇿"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batyrma вернула мне уже %lld казахских букв 🇰🇿"
+          }
+        }
+      }
+    },
+    "share_card_tagline" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type in Kazakh without switching keyboards"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Қазақша жаз, пернетақта ауыстырмай"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пиши по-казахски без смены клавиатуры"
+          }
+        }
+      }
+    },
     "Show manual setup steps" : {
       "localizations" : {
         "en" : {
@@ -1449,7 +2656,470 @@
         }
       }
     },
+    "skins_only_in_march" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "March only"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тек наурызда"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Только в марте"
+          }
+        }
+      }
+    },
+    "skins_restore" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore purchases"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сатып алғандарды қалпына келтіру"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восстановить покупки"
+          }
+        }
+      }
+    },
+    "skins_soon" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soon"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жақында"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скоро"
+          }
+        }
+      }
+    },
+    "sponsor_cta" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Become a supporter"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Демеуші болыңыз"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стать партнёром"
+          }
+        }
+      }
+    },
+    "sponsor_data_note%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Figures from Batyrma analytics, %@. Anonymous counts only; supporters never receive user data."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Деректер Batyrma аналитикасынан, %@. Тек анонимді сандар; демеушілерге пайдаланушы деректері берілмейді."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные аналитики Batyrma, %@. Только обезличенная статистика; данные пользователей партнёрам не передаются."
+          }
+        }
+      }
+    },
+    "sponsor_metric_days_per_week" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "days a week the average user types with Batyrma"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "күн аптасына орта есеппен Batyrma-мен жазады"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "дня в неделю в среднем пишут с Batyrma"
+          }
+        }
+      }
+    },
+    "sponsor_metric_minutes_per_day" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "minutes a day the keyboard is on screen"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "минут күніне пернетақта экранда тұрады"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "минут в день клавиатура на экране"
+          }
+        }
+      }
+    },
+    "sponsor_metric_next_day" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "come back to type the next day"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "келесі күні де Batyrma-мен жазады"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "возвращаются к Batyrma на следующий день"
+          }
+        }
+      }
+    },
+    "sponsor_metric_opens_per_day" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "times a day the average user opens the keyboard"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "рет күніне орта есеппен пернетақта ашылады"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "раз в день в среднем открывают клавиатуру"
+          }
+        }
+      }
+    },
+    "sponsor_metric_privacy" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "characters of user text we collect. Ever."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "жиналған мәтін таңбасы. Ешқашан."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "символов набранного текста мы собираем. Никогда."
+          }
+        }
+      }
+    },
+    "sponsor_metric_week_later" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "still typing with Batyrma a week later"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "апта өткен соң да жазып жүр"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "всё ещё пишут с Batyrma через неделю"
+          }
+        }
+      }
+    },
+    "sponsor_pitch_subtitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "People type the way they always do, and Batyrma turns every word into correct Kazakh. As a supporter, your name lives on a keyboard people open dozens of times a day."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адамдар әдеттегідей жаза береді, Batyrma әр сөзді сол сәтте дұрыс қазақшаға түзетеді. Демеуші болсаңыз, атыңыз адамдар күніне ондаған рет ашатын пернетақтада тұрады."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Люди пишут как привыкли, а Batyrma на лету превращает каждое слово в грамотный казахский. Как партнёр, вы будете на клавиатуре, которую открывают десятки раз в день."
+          }
+        }
+      }
+    },
+    "sponsor_pitch_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help Kazakh live on iPhone"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Қазақ тілі iPhone-да өмір сүрсін"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пусть казахский живёт на iPhone"
+          }
+        }
+      }
+    },
+    "sponsor_placement_home" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A supporter card on the app’s home screen."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Қосымшаның басты экранындағы демеуші картасы."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карточка партнёра на главном экране приложения."
+          }
+        }
+      }
+    },
+    "sponsor_placement_skin" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A keyboard style in your brand colours, free for everyone. People choose it themselves and see it every time they type."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Брендіңіздің түсіндегі пернетақта стилі, бәріне тегін. Адамдар оны өздері таңдап, әр жазған сайын көреді."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стиль клавиатуры в цветах вашего бренда, бесплатно для всех. Люди сами выбирают его и видят при каждом наборе."
+          }
+        }
+      }
+    },
+    "sponsor_placement_space" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On the space bar: “[Company] қолдауымен”, Kazakh for “supported by [Company]”. Seen every time people type."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бос орын пернесінде: «[Компания] қолдауымен». Адамдар әр жазған сайын көреді."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На пробеле: «[Компания] қолдауымен», по-казахски «при поддержке [компания]». Видно при каждом наборе."
+          }
+        }
+      }
+    },
+    "sponsor_placements_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where your name appears"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Атыңыз қайда көрінеді"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Где будет ваше имя"
+          }
+        }
+      }
+    },
+    "sponsor_why_audience" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A daily habit: people type with Batyrma in every app and every chat."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Күнделікті әдет: адамдар Batyrma-мен кез келген қосымшада, кез келген чатта жазады."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ежедневная привычка: с Batyrma пишут в любом приложении и любом чате."
+          }
+        }
+      }
+    },
+    "sponsor_why_mission" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meaningful, not noisy: your name helps Kazakh live on iPhone without interrupting anyone."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мағыналы әрі мазаламайды: атыңыз қазақ тілінің iPhone-да өмір сүруіне үлес қосады."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Со смыслом и без навязчивости: ваше имя помогает казахскому жить на iPhone."
+          }
+        }
+      }
+    },
+    "sponsor_why_safe" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trust built in: Batyrma never reads, keeps or sends what people type. Your name stands next to a product people trust."
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сенім: Batyrma адамдардың жазғанын оқымайды, сақтамайды, ешқайда жібермейді. Атыңыз адамдар сенетін өнімнің қасында тұрады."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доверие: Batyrma не читает, не хранит и не отправляет то, что пишут люди. Ваше имя — рядом с продуктом, которому доверяют."
+          }
+        }
+      }
+    },
+    "sponsor_why_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why Batyrma"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Неге Batyrma"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему Batyrma"
+          }
+        }
+      }
+    },
     "Start typing in your favorite apps" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1476,7 +3146,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Start using of %@"
+            "value" : "Start using %@"
           }
         },
         "kk" : {
@@ -1516,6 +3186,7 @@
       }
     },
     "Tap an app to start typing" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1533,6 +3204,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите на приложение, чтобы начать печатать"
+          }
+        }
+      }
+    },
+    "tap_to_skip" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to skip"
+          }
+        },
+        "kk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Өткізу үшін түрт"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажми, чтобы пропустить"
           }
         }
       }
@@ -1664,6 +3357,7 @@
       }
     },
     "We do not collect any personal data." : {
+      "extractionState" : "stale",
       "localizations" : {
         "kk" : {
           "stringUnit" : {

@@ -13,9 +13,6 @@ final class QazaqWordSuggestionsEngineTests: XCTestCase {
 
     override func setUp() {
         engine = QazaqWordSuggestionsEngineV2()
-        QazaqWordsDatasetLoader.shared.loadData()
-        // need some time to load data from memory
-        sleep(1)
     }
 
     override func tearDown() {
@@ -31,9 +28,31 @@ final class QazaqWordSuggestionsEngineTests: XCTestCase {
     }
 
     func test_checkDataSetLoading() {
-        XCTAssertTrue(QazaqWordsDatasetLoader.shared.commonRusWordsList().count > 500)
-        XCTAssertTrue(QazaqWordsDatasetLoader.shared.qazaqWordsList().count > 10000)
-        XCTAssertTrue(QazaqWordsDatasetLoader.shared.shalaqazaqVariations().keys.count > 1000)
+        let loader = QazaqWordsDatasetLoader.shared
+        XCTAssertTrue(loader.isLoaded)
+        XCTAssertTrue(loader.russianWordCount > 500)
+        XCTAssertTrue(loader.kazakhWordCount > 10000)
+        XCTAssertTrue(loader.shalaKeyCount > 1000)
+        XCTAssertFalse(loader.autocorrectAllowList.isEmpty)
+    }
+
+    func test_lookups() {
+        let loader = QazaqWordsDatasetLoader.shared
+        XCTAssertEqual(loader.variations(for: "салем"), [SuggestionVariation(taza: "сәлем", percentage: 1)])
+        XCTAssertNil(loader.variations(for: "абвгдеёжз"))
+        XCTAssertTrue(loader.containsKazakhWord("мектеп"))
+        XCTAssertTrue(loader.containsKazakhWord("Мектеп"), "lookups ignore case")
+        XCTAssertFalse(loader.containsKazakhWord("салем"))
+        XCTAssertTrue(loader.containsRussianWord("спасибо"))
+    }
+
+    func test_matchKinds() {
+        XCTAssertEqual(engine.suggestWords(for: "салем").first?.kind, .exactKey)
+        XCTAssertEqual(engine.suggestWords(for: "казагым").first?.kind, .rootWithGeneratedEnding)
+        XCTAssertTrue(engine.suggestWords(for: "канд").allSatisfy { $0.kind == .rootWithRawSuffix },
+                      "partial words glued to a raw ending are fragments")
+        XCTAssertEqual(engine.suggestWords(for: "барамын").first?.kind, .endingOnlyChange,
+                       "the root is already correct; only the ending would change")
     }
 
     func test_baseWords_endings() {

@@ -21,12 +21,13 @@ struct SettingsView: View {
     @ObservedObject
     var viewModel: SettingsViewModel
     
-    @State var downloadViaWifiEnabled: Bool = false
-    
+    @State private var didRequestLearnedWordsReset = false
+
     var body: some View {
         Form {
             settings
             autocorrectionSection
+            learnedWordsSection
         }
         .navigationBarTitle("Settings")
     }
@@ -62,6 +63,26 @@ struct SettingsView: View {
             }
         }, footer: {
             Text("common_beta_magic_autocorrection")
+        })
+    }
+
+    /// The keyboard keeps learned words in its own storage, which the app can't write. The app
+    /// leaves a new token in the shared app group; the keyboard sees it on its next launch and
+    /// clears its store (see PersonalStore.resetIfRequested).
+    var learnedWordsSection: some View {
+        Section(content: {
+            Button(role: .destructive) {
+                UserDefaults.localAppGroup.set(UUID().uuidString, forKey: UserDefaults.personalStoreResetTokenKey)
+                didRequestLearnedWordsReset = true
+            } label: {
+                Text("reset_learned_words")
+            }
+            .disabled(didRequestLearnedWordsReset)
+        }, footer: {
+            VStack(alignment: .leading, spacing: 8) {
+                Text(LocalizedStringKey(didRequestLearnedWordsReset ? "reset_learned_words_done" : "reset_learned_words_footer"))
+                Text("prediction_data_credit")
+            }
         })
     }
 }

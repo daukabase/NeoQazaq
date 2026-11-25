@@ -12,11 +12,21 @@ final class CyrillicKeyboardLayout {
     static func get(for layout: KeyboardKit.KeyboardLayout) -> KeyboardKit.KeyboardLayout {
         var layout = layout
         var rows = layout.itemRows
+
+        // KeyboardKit is expected to hand back at least 3 rows for the layouts we customize.
+        // Guard instead of force-indexing so an unexpected layout (future KeyboardKit change,
+        // device/locale edge case) degrades gracefully instead of crashing the extension.
+        guard rows.count >= 3 else {
+            return layout
+        }
+
         var row_1 = layout.itemRows[0]
         var row_2 = layout.itemRows[1]
         var row_3 = layout.itemRows[2]
 
-        let next = row_1[0]
+        guard let next = row_1.first else {
+            return layout
+        }
 
         for i in 0..<row_1.count {
             row_1[i].size = .init(width: .available, height: next.size.height)

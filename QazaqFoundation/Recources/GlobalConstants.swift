@@ -11,6 +11,8 @@ public enum GlobalConstants {
         let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         return version ?? "1.0.0"
     }()
+    /// App Store page, added to shared stats. TODO: set to https://apps.apple.com/app/id<APP_ID>.
+    public static let appStoreURL: URL? = nil
     public static let neoQazaqKeyboardExtensionIdentifier = "com.almagambetov.daulet.qazaqsha.Qazaqsha.NeoQazaq"
 
     public static var isKeyboardExtensionEnabled: Bool {

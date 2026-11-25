@@ -25,6 +25,17 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 
         AnalyticsServiceFacade.shared.track(event: CommonAnalyticsEvent(name: "app_start"))
 
+        // Once a day: is the keyboard enabled, and does it have Full Access? This is the only way
+        // to count keyboard users without Full Access (their keyboard has no network).
+        NotificationCenter.default.addObserver(
+            forName: UIApplication.didBecomeActiveNotification, object: nil, queue: .main
+        ) { _ in
+            KeyboardStatusReporter.reportIfNeeded(
+                isKeyboardEnabled: GlobalConstants.isKeyboardExtensionEnabled,
+                isOnboardingFinished: UserDefaults.standard.bool(forKey: UserDefaults.isOnboardingFinishedItem.key)
+            )
+        }
+
         return true
     }
 }

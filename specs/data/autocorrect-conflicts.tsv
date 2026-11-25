@@ -1,0 +1,312 @@
+typed	candidates	proposed_action	confidence	note
+аз	әз:1	keep	default	common Kazakh word: never replace
+ай	әй:1	keep	default	common Kazakh word: never replace
+ам	әм:1	keep	default	
+ан	ән:1, аң:0.9	keep	default	
+ап	әп:1	keep	default	
+ар	әр:1	keep	default	
+аш	әш:1	keep	default	common Kazakh word: never replace
+ен	ең:1	autocorrect	verify	candidate is much more common; typed form is rare
+ки	қи:1	keep	default	
+ма	мә:1	keep	default	common Kazakh word: never replace
+мо	мө:1	keep	default	
+ой	өй:1	keep	default	common Kazakh word: never replace
+ол	өл:1	keep	default	common Kazakh word: never replace
+ом	өм:1	keep	default	
+оп	өп:1	keep	default	
+ор	өр:1	keep	default	
+ос	өс:1	keep	default	
+уа	уә:1	keep	default	
+шу	шұ:1	keep	default	
+ын	ың:1	keep	default	
+айт	әйт:1	keep	default	
+аян	аяң:1	keep	default	
+баз	бәз:1	keep	default	
+бай	бәй:1	keep	default	common Kazakh word: never replace
+бар	бәр:1	keep	default	common Kazakh word: never replace
+бат	бәт:1	keep	default	
+бит	біт:1	keep	default	Russian/international loanword: never replace
+боз	бөз:1	keep	default	
+боп	бөп:1	keep	default	
+ган	ған:1	keep	default	
+дал	дәл:1	keep	default	valid Russian word
+дам	дәм:1	keep	default	valid Russian word
+дап	дәп:1	keep	default	
+дар	дәр:1	keep	default	
+дат	дәт:1	keep	default	
+дау	дәу:1	keep	default	
+ден	дең:1	keep	default	
+доп	дөп:1	keep	default	
+ене	еңе:1	keep	default	
+жай	жәй:1	keep	default	common Kazakh word: never replace
+жон	жөн:1	autocorrect	verify	candidate is much more common; typed form is rare
+жын	жың:1	keep	default	
+зай	зәй:1	keep	default	
+зар	зәр:1	keep	default	
+зау	зәу:1	keep	default	
+иле	іле:1	keep	default	
+кен	кең:1	keep	default	
+кит	қит:1	keep	default	valid Russian word
+кию	қию:1	keep	default	
+куд	күд:1	keep	default	
+кып	қып:1	keep	default	
+лак	лақ:1	keep	default	Russian/international loanword: never replace
+лан	лаң:1	keep	default	
+лап	ләп:1	keep	default	
+маз	мәз:1	keep	default	
+мак	мақ:1	keep	default	valid Russian word
+мат	мәт:1	keep	default	valid Russian word
+мау	мәу:1	keep	default	
+моп	мөп:1	keep	default	
+мор	мөр:1	keep	default	
+нам	нәм:1	keep	default	
+нан	нән:1	keep	default	common Kazakh word: never replace
+нар	нәр:1	keep	default	
+обу	өбу:1	autocorrect	high	misspelling that slipped into the word list
+ойт	өйт:1	keep	default	
+онк	өңк:1	keep	default	
+оны	оңы:1	keep	default	
+ору	өру:1	keep	default	
+осу	өсу:1	autocorrect	high	misspelling that slipped into the word list
+оян	ояң:1	keep	default	
+пал	пәл:1	keep	default	
+пан	пән:1, паң:0.9	keep	default	valid Russian word
+пас	пәс:1	keep	default	valid Russian word
+сал	сәл:1	keep	default	common Kazakh word: never replace
+сау	сәу:1	keep	default	common Kazakh word: never replace
+сен	сең:1	keep	default	common Kazakh word: never replace
+соз	сөз:1	autocorrect	verify	candidate is much more common; typed form is rare
+сол	сөл:1	keep	default	common Kazakh word: never replace
+таж	тәж:1	keep	default	
+тай	тәй:1	keep	default	
+тап	тәп:1	keep	default	common Kazakh word: never replace
+тау	тәу:1	keep	default	common Kazakh word: never replace
+тен	тең:1	autocorrect	high	misspelling that slipped into the word list
+тир	тір:1	keep	default	
+тол	төл:1	keep	default	
+том	төм:1	keep	default	Russian/international loanword: never replace
+топ	төп:1	keep	default	common Kazakh word: never replace
+тор	төр:1	keep	default	
+тос	төс:1	keep	default	
+туз	тұз:1, түз:0.9	keep	default	valid Russian word
+тур	тұр:1, түр:0.9	keep	default	valid Russian word
+туу	түу:1	keep	default	
+туш	тұш:1	keep	default	
+тын	тың:1	keep	default	
+уле	үле:1	keep	default	
+улы	ұлы:1	keep	default	common Kazakh word: never replace
+ура	ұра:1	keep	default	Russian/international loanword: never replace
+усу	үсу:1	keep	default	
+шай	шәй:1	keep	default	common Kazakh word: never replace
+шан	шаң:1	keep	default	
+шар	шәр:1	keep	default	
+шау	шәу:1	keep	default	
+шин	шін:1	keep	default	
+шол	шөл:1	keep	default	
+шоп	шөп:1	keep	default	
+шын	шың:1	keep	default	common Kazakh word: never replace
+абын	абың:1	keep	default	
+ажуа	әжуа:1	keep	default	
+айда	әйда:1	keep	default	
+алан	алаң:1	keep	default	
+амин	әмин:1	keep	default	
+анда	аңда:1	keep	default	
+арын	арың:1	keep	default	
+атын	атың:1	keep	default	common Kazakh word: never replace
+биле	біле:1	keep	default	
+болу	бөлу:1	keep	default	common Kazakh word: never replace
+борт	бөрт:1	keep	default	Russian/international loanword: never replace
+босу	бөсу:1	keep	default	
+була	бұла:1	keep	default	
+бура	бұра:1	keep	default	
+дами	дәмі:1	keep	default	
+елен	елең:1	keep	default	
+жайт	жәйт:1	keep	default	
+жана	жаңа:1	autocorrect	verify	candidate is much more common; typed form is rare
+изен	изең:1	keep	default	
+изет	ізет:1	keep	default	
+илес	ілес:1	keep	default	
+имен	имең:1	keep	default	
+ирек	ірек:1	keep	default	
+карт	қарт:1	keep	default	Russian/international loanword: never replace
+коды	қоды:1	keep	default	
+купе	күпе:1	keep	default	Russian/international loanword: never replace
+курс	күрс:1	keep	default	Russian/international loanword: never replace
+март	мәрт:1	keep	default	Russian/international loanword: never replace
+маса	мәсә:1	keep	default	
+ойын	ойың:1	keep	default	common Kazakh word: never replace
+онда	оңда:1	keep	default	common Kazakh word: never replace
+онды	оңды:1	keep	default	
+оран	ораң:1	keep	default	
+оршу	өршу:1	keep	default	
+орын	орың:1	keep	default	common Kazakh word: never replace
+осер	өсер:1	keep	default	
+сире	сіре:1	keep	default	
+сула	сұла:1	keep	default	
+сулы	сұлы:1	keep	default	
+тани	тәні:1	keep	default	
+танк	таңқ:1	keep	default	Russian/international loanword: never replace
+тану	таңу:1	keep	default	common Kazakh word: never replace
+тарт	тәрт:1	keep	default	
+торт	төрт:1	keep	default	Russian/international loanword: never replace
+тула	тұла:1	keep	default	
+тума	тұма:1	keep	default	
+тура	тұра:1	keep	default	common Kazakh word: never replace
+туса	тұса:1	keep	default	
+тусу	түсу:1	autocorrect	high	misspelling that slipped into the word list
+удай	ұдай:1	keep	default	
+улан	ұлан:1	keep	default	
+улеу	үлеу:1	keep	default	
+уран	ұран:1	keep	default	
+шайт	шәйт:1	keep	default	
+шали	шәлі:1	keep	default	
+шеки	шекі:1	keep	default	
+шыны	шыңы:1	keep	default	
+ынта	ыңта:1	keep	default	
+айбат	әйбат:1	keep	default	
+айдай	әйдай:1	keep	default	
+айдын	айдың:1	keep	default	
+акыры	ақыры:1	autocorrect	high	misspelling that slipped into the word list
+ангар	аңғар:1	keep	default	Russian/international loanword: never replace
+андат	аңдат:1	keep	default	
+аудан	аудаң:1	keep	default	
+ауком	әукөм:1	keep	default	
+аумин	әумин:1	keep	default	
+балан	балаң:1	keep	default	
+барби	бәрбі:1	keep	default	
+билен	білен:1	keep	default	
+билер	білер:1	keep	default	
+билеу	білеу:1	keep	default	common Kazakh word: never replace
+босан	босаң:1	keep	default	common Kazakh word: never replace
+будыр	бұдыр:1	keep	default	
+булау	бұлау:1	keep	default	
+бурыл	бұрыл:1	keep	default	
+газел	ғазел:1	keep	default	Russian/international loanword: never replace
+далан	далаң:1	keep	default	
+далди	дәлди:1	keep	default	
+ермен	ермең:1	keep	default	
+еткен	етқен:1	keep	default	
+жаксы	жақсы:1	autocorrect	high	misspelling that slipped into the word list
+жакып	жақып:1	keep	default	
+жалан	жалаң:1	keep	default	
+жанан	жаңан:1	keep	default	
+жанар	жаңар:1	keep	default	
+жанат	жаңат:1	keep	default	
+жаныл	жаңыл:1	keep	default	
+жасан	жасаң:1	keep	default	
+желен	желең:1	keep	default	
+жырын	жырың:1	keep	default	
+зерен	зерең:1	keep	default	
+зулым	зұлым:1	keep	default	
+ислам	іслам:1	keep	default	Russian/international loanword: never replace
+кадет	қадет:1	keep	default	Russian/international loanword: never replace
+казак	қазақ:0.95	autocorrect	high	Russian word too, but in KZ text almost always means қазақ; score is 0.95, so it needs an explicit allow entry
+калып	қалып:1	autocorrect	high	misspelling that slipped into the word list
+канал	қанал:1	keep	default	Russian/international loanword: never replace
+карап	қарап:1	autocorrect	high	misspelling that slipped into the word list
+карат	қарат:1	keep	default	
+каска	қасқа:1	keep	default	
+катар	қатар:1	keep	default	Russian/international loanword: never replace; valid Russian word
+кезен	кезең:1	autocorrect	high	misspelling that slipped into the word list
+кейки	кейкі:1	keep	default	
+кеней	кеңей:1	autocorrect	high	misspelling that slipped into the word list
+кешен	кешең:1	keep	default	
+койды	қойды:1	autocorrect	high	misspelling that slipped into the word list
+курып	құрып:1	autocorrect	high	misspelling that slipped into the word list
+лакта	лақта:1	keep	default	
+майек	мәйек:1	keep	default	
+манет	мәнет:1	keep	default	
+марка	марқа:1	keep	default	Russian/international loanword: never replace
+менде	меңде:1	keep	default	common Kazakh word: never replace
+менше	меңше:1	keep	default	
+минер	мінер:1	keep	default	
+парша	пәрша:1	keep	default	
+ракым	рақым:1	autocorrect	high	misspelling that slipped into the word list
+саран	сараң:1	autocorrect	verify	candidate is much more common; typed form is rare
+селен	селең:1	keep	default	
+сиреу	сіреу:1	keep	default	
+солпи	сөлпи:1	keep	default	
+сулат	сұлат:1	keep	default	
+сулау	сұлау:1	keep	default	
+сумен	сүмең:1	keep	default	
+сынар	сыңар:1	keep	default	
+тайга	тайға:1	keep	default	Russian/international loanword: never replace
+тайла	тәйла:1	keep	default	
+талти	тәлти:1	keep	default	
+таныл	таңыл:1	keep	default	
+таныс	таңыс:1	keep	default	common Kazakh word: never replace
+таран	тараң:1	keep	default	
+тауап	тәуап:1	keep	default	
+тулан	тұлан:1	keep	default	
+турба	тұрба:1	keep	default	
+турин	түрін:1	keep	default	
+тында	тыңда:1	autocorrect	high	misspelling that slipped into the word list
+тыншы	тыңшы:1	autocorrect	verify	candidate is much more common; typed form is rare
+тыран	тыраң:1	keep	default	
+урала	ұрала:1	keep	default	
+шайка	шайқа:1	keep	default	Russian/international loanword: never replace
+шалан	шалаң:1	keep	default	
+шанда	шаңда:1	autocorrect	verify	candidate is much more common; typed form is rare
+шанды	шаңды:1	autocorrect	verify	candidate is much more common; typed form is rare
+шында	шыңда:1	keep	default	
+шынды	шыңды:1	keep	default	
+ажуала	әжуала:1	keep	default	
+аманда	әманда:1	keep	default	
+балгер	бәлгер:1	keep	default	
+балпан	балпаң:1	keep	default	
+булану	бұлану:1	keep	default	
+даукес	дәукес:1	keep	default	
+жайран	жайраң:1	keep	default	
+жалман	жалмаң:1	keep	default	
+иректе	іректе:1	keep	default	
+калган	қалған:1	autocorrect	high	misspelling that slipped into the word list
+калдыр	қалдыр:1	autocorrect	high	misspelling that slipped into the word list
+касына	қасына:1	autocorrect	high	misspelling that slipped into the word list
+колхоз	қолхоз:1	keep	default	Russian/international loanword: never replace
+корсет	көрсет:1	autocorrect	verify	also a Russian word (corset); көрсет ("show") is far more common in Kazakh text
+куаныш	қуаныш:1	autocorrect	verify	personal name; people often write it in Russian spelling, so verify
+куртка	құртқа:1	keep	default	Russian/international loanword: never replace
+лактау	лақтау:1	keep	default	
+мандат	маңдат:1	keep	default	Russian/international loanword: never replace
+мансап	мәнсап:1	keep	default	
+мастек	мәстек:1	keep	default	
+монтан	монтаң:1	keep	default	
+мундир	мүндир:1	keep	default	Russian/international loanword: never replace
+нанбай	нәнбай:1	keep	default	
+наркоз	наркөз:1	keep	default	Russian/international loanword: never replace
+ойынды	ойыңды:1	keep	default	
+опалан	опалаң:1	keep	default	
+рахман	раһман:1	keep	default	
+салмак	салмақ:1	autocorrect	high	misspelling that slipped into the word list
+солпию	сөлпию:1	keep	default	
+талтит	тәлтит:1	keep	default	
+тандыр	таңдыр:1	keep	default	
+тарпан	тарпаң:1	keep	default	
+турала	тұрала:1	keep	default	
+туралы	тұралы:1	keep	default	common Kazakh word: never replace
+тындау	тыңдау:1	autocorrect	high	misspelling that slipped into the word list
+тырбан	тырбаң:1	keep	default	
+тырбын	тырбың:1	keep	default	
+хайран	һәйран:1	keep	default	
+шапшан	шапшаң:1	autocorrect	high	misspelling that slipped into the word list
+шаркей	шәркей:1	keep	default	
+абжылан	әбжылан:1	keep	default	
+ажуашыл	әжуашыл:1	keep	default	
+бадыран	бадыраң:1	keep	default	
+домалан	домалаң:1	keep	default	
+кезенде	кезеңде:1	autocorrect	high	misspelling that slipped into the word list
+курсант	құрсант:1	keep	default	Russian/international loanword: never replace
+манпаси	мәнпаси:1	keep	default	
+орталык	орталық:1	autocorrect	high	misspelling that slipped into the word list
+саранын	сараның:1	autocorrect	high	misspelling that slipped into the word list
+тандырт	таңдырт:1	keep	default	
+тарелка	тәрелка:1	keep	default	Russian/international loanword: never replace
+турабас	тұрабас:1	keep	default	
+туралау	тұралау:1	keep	default	
+шабалан	шабалаң:1	keep	default	
+аудандык	аудандық:1	autocorrect	high	misspelling that slipped into the word list
+маркалау	марқалау:1	keep	default	Russian/international loanword: never replace
+ракымшыл	рақымшыл:1	autocorrect	high	misspelling that slipped into the word list
+сценарий	сцеңарий:1	keep	default	Russian/international loanword: never replace
+тостабан	төстабан:1	keep	default	
+шерменде	шермеңде:1	keep	default	

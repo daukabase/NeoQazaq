@@ -10,6 +10,17 @@ import SwiftUI
 public extension UserDefaults {
     static let localAppGroup = UserDefaults(suiteName: "group.com.almagambetov.daulet.qazaqsha.Qazaqsha")!
 
+    /// App-group key the app sets to a new value when the user taps "Reset learned words".
+    /// The keyboard reads it on launch and clears its device-only word store once per value.
+    static let personalStoreResetTokenKey = "personalStoreResetToken"
+
+    /// App-group key the keyboard sets to the current date whenever it runs WITH Full Access.
+    /// iOS only lets a keyboard write to the app group with Full Access, so the value is proof.
+    static let keyboardFullAccessLastSeenKey = "keyboardFullAccessLastSeen"
+
+    /// App-group key holding the app's Amplitude device ID, so keyboard events count as the same user.
+    static let sharedAnalyticsDeviceIdKey = "sharedAnalyticsDeviceId"
+
     static let isOnboardingFinishedItem = UserDefault.Item(
         key: "isOnboardingFinished",
         defaultValue: false,
@@ -38,7 +49,7 @@ public extension UserDefaults {
 @propertyWrapper
 public struct UserDefault<Value>: DynamicProperty {
     public struct Item {
-        let key: String
+        public let key: String
         let defaultValue: Value
         let store: UserDefaults
 
